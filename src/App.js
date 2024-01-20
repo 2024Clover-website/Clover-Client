@@ -15,7 +15,7 @@ function App() {
 		<Suspense fallback={<div>Loading...</div>}>
 			<div>
 				<Routes>
-					<Route exact path="/" element={<HomePage />} />
+					<Route exact path="/" element={<InvitePage />} />
 				</Routes>
 			</div>
 		</Suspense>
