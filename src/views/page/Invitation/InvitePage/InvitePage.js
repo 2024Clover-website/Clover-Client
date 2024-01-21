@@ -11,7 +11,6 @@ function InvitePage() {
                 <div className='cardName'>
                     초대장
                 </div>
-
             </div>
             <div className='titleContainer'>
                 <div className='titleName'>
