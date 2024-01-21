@@ -4,8 +4,8 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 import '../../../style/Invitation/LastPage/LastPage.css';
 
 const mapStyles = {
-  width: '376px',
-  height: '300px'
+    width: '376px',
+    height: '300px'
 };
 
 function LastPage() {
