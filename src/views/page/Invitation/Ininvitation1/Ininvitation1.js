@@ -3,6 +3,9 @@ import React, { useState } from 'react';
 import '../../../style/Invitation/Ininvitation1/Ininvitation1.css'
 
 function Ininvitation1() {
+    function handleClick(e) {
+        window.location.href = '/invite2'
+    }
     return (
         <div className='container'>
             <div className='smartContainer'>
@@ -20,9 +23,9 @@ function Ininvitation1() {
             <div className='blankContainer'>
             </div>
             <div className='openContainer'>
-                <div className='openButton'>
+                <button onClick={handleClick} className='openButton'>
                     다음
-                </div>
+                </button>
             </div>
         </div>
     )
