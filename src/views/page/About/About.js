@@ -2,11 +2,9 @@ import React from "react";
 
 function About() {
 	return (
-		<>
-			<div>
-				<div> About Screen</div>
-			</div>
-		</>
+		<div style={{ paddingTop: 100 }}>
+			<div> About Screen</div>
+		</div>
 	);
 }
 

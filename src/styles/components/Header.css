@@ -13,8 +13,12 @@
 	src: url(../../../font/-윤고딕330-smha1177.ttf);
 }
 
-.container {
+.header-container {
+	left: 0px;
+	top: 0px;
+	position: fixed;
 	height: 100px;
+	width: 100%;
 	background-color: #d9d9d9;
 	display: flex;
 	flex-direction: row;

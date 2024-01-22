@@ -15,7 +15,7 @@ function Header() {
 	}
 
 	return (
-		<div className="container">
+		<div className="header-container">
 			<div className="logo-left">in a row</div>
 			<div className="nav-element">
 				<div onClick={handleAboutClick}>About</div>
