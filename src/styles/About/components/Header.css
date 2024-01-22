@@ -1,0 +1,57 @@
+@font-face {
+	font-family: "Avenir";
+	src: url(../../../../font/Avenir.ttc);
+}
+
+@font-face {
+	font-family: "neulis";
+	src: url(../../../../font/neulis.rar);
+}
+
+@font-face {
+	font-family: "yoon";
+	src: url(../../../../font/-윤고딕330-smha1177.ttf);
+}
+
+.container {
+	height: 100px;
+	background-color: #d9d9d9;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	cursor: default;
+}
+
+.logo-left {
+	width: 140.8px;
+	height: 25.27px;
+	flex-shrink: 0;
+	margin-left: 20px;
+	margin-top: 30px;
+}
+
+.nav-element {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-top: 30px;
+	width: 675px;
+	height: 36px;
+}
+
+.nav-element > div {
+	color: #000;
+	font-family: "Avenir";
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 800;
+	line-height: 150%;
+}
+
+.logo-right {
+	width: 142.23px;
+	height: 20.46px;
+	flex-shrink: 0;
+	margin-right: 19.8px;
+	margin-top: 35px;
+}
