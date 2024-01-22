@@ -1,5 +1,5 @@
 import React from "react";
-import "../../../../styles/About/components/Header.css";
+import "../../styles/components/Header.css";
 
 function Header() {
 	function handleAboutClick() {

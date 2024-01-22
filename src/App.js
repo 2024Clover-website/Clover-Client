@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 
 import About from "./views/page/About/About";
-import Header from "./views/page/About/components/Header";
+import Header from "./views/components/Header";
 
 function App() {
 	return (

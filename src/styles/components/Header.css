@@ -1,16 +1,16 @@
 @font-face {
 	font-family: "Avenir";
-	src: url(../../../../font/Avenir.ttc);
+	src: url(../../../font/-윤고딕330-smha1177.ttf);
 }
 
 @font-face {
 	font-family: "neulis";
-	src: url(../../../../font/neulis.rar);
+	src: url(../../../font/neulis.rar);
 }
 
 @font-face {
 	font-family: "yoon";
-	src: url(../../../../font/-윤고딕330-smha1177.ttf);
+	src: url(../../../font/-윤고딕330-smha1177.ttf);
 }
 
 .container {
