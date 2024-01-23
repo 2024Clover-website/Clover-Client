@@ -3,16 +3,19 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 import '../../../style/Invitation/LastPage/LastPage.css';
 
 function LastPage() {
-    const [value] = useState('서울 종로구 인사동길 35-4'); // 복사할 텍스트를 '서울 종로구 인사동길 35-4'로 설정합니다.
-    const [copied, setCopied] = useState(false); // 복사 상태를 추적합니다.
-    const [time, setTime] = useState(new Date()); // 현재 시간을 설정합니다.
+    const [value] = useState('서울 종로구 인사동길 35-4');
+    const [copied, setCopied] = useState(false);
+    const [time, setTime] = useState(180); // 초대장 '폭파'까지 남은 시간을 초 단위로 설정합니다.
 
     useEffect(() => {
-        const interval = setInterval(() => {
-            setTime(new Date());
-        }, 1000);
-        return () => clearInterval(interval);
-    }, []);
+        // 만약 남은 시간이 0보다 크다면, 1초마다 남은 시간을 감소시킵니다.
+        if (time > 0) {
+            const timer = setTimeout(() => {
+                setTime(time - 1);
+            }, 1000);
+            return () => clearTimeout(timer);
+        }
+    }, [time]);
 
     return (
         <div className='container'>
@@ -26,7 +29,8 @@ function LastPage() {
             <div className='titleContainer'>
                 <div className='titleName'>
                     <div className='cardName'>
-                        현재 시간: {time.toLocaleTimeString()}
+                        {/* 남은 시간이 0이면 '폭파' 메시지를 표시하고, 그렇지 않으면 남은 시간을 표시합니다. */}
+                        {time === 0 ? "초대장 폭파!" : `남은 시간: ${time}초`}
                     </div>
                 </div>
             </div>
@@ -47,4 +51,3 @@ function LastPage() {
     )
 }
 export default LastPage;
-
