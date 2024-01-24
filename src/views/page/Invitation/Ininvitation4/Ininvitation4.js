@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-import '../../../style/Invitation/Ininvitation4/Ininvitation4.css'
+import '../../../style/Invitation/Ininvitation4/Ininvitation4.css';
 
 function Ininvitation4() {
     function handleClick(e) {
         window.location.href = '/invite5'
     }
     return (
-        <div className='container'>
+        <div className='Container' style={{ backgroundImage: `url("./bg.png")`, backgroundSize: 'cover' }}>
             <div className='smartContainer'>
             </div>
             <div className='cardContainer'>

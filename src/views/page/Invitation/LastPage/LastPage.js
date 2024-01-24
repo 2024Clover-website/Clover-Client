@@ -1,48 +1,65 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
+import { Link } from 'react-router-dom'; // 추가된 부분
 import '../../../style/Invitation/LastPage/LastPage.css';
 
 function LastPage() {
-    const [value] = useState('서울 종로구 인사동길 35-4');
+    const [value, setValue] = useState('인사동 마루아트 센터 신관');
     const [copied, setCopied] = useState(false);
-    const [time, setTime] = useState(180); // 초대장 '폭파'까지 남은 시간을 초 단위로 설정합니다.
-
-    useEffect(() => {
-        // 만약 남은 시간이 0보다 크다면, 1초마다 남은 시간을 감소시킵니다.
-        if (time > 0) {
-            const timer = setTimeout(() => {
-                setTime(time - 1);
-            }, 1000);
-            return () => clearTimeout(timer);
-        }
-    }, [time]);
 
     return (
-        <div className='container'>
-            <div className='smartContainer'>
-            </div>
-            <div className='cardContainer'>
-                <div className='cardName'>
-                    초대장
+        <div className='Container' style={{ backgroundImage: `url("./bg.png")`, backgroundSize: 'cover' }}>
+            <div className='Container1'>
+                <div className='Container1Frame'>
+                    전시까지
+                </div>
+                <div className='Container1Name'>
+                    72:00:00
                 </div>
             </div>
-            <div className='titleContainer'>
-                <div className='titleName'>
-                    <div className='cardName'>
-                        {/* 남은 시간이 0이면 '폭파' 메시지를 표시하고, 그렇지 않으면 남은 시간을 표시합니다. */}
-                        {time === 0 ? "초대장 폭파!" : `남은 시간: ${time}초`}
-                    </div>
+            <div className='Container2'>
+                <div className='Container2Name'>
+                    Clover 2024 Exhibition
                 </div>
             </div>
-            <div className='blankContainer'>
-                <div className='titleName'>
-                    서울 종로구 인사동길 35-4
+            <div className='Container3'>
+                <div className='Container3Frame'>
+                    일정
+                </div>
+                <div className='Container3Name'>
+                    2.29(목)-3.4(월)
                 </div>
             </div>
-            <div className='openContainer'>
+            <div className='Container4'>
+                <div className='Container4Frame'>
+                    관람시간
+                </div>
+                <div className='Container4Name'>
+                    10:00-17:00
+                </div>
+            </div>
+            <div className='Container5'>
+                <div className='Container5Frame'>
+                    장소
+                </div>
+                <div className='Container5Name' onClick={() => setValue('인사동 마루아트 센터 신관')}>
+                    인사동<br/>
+                    마루아트 센터<br/>
+                    신관 3F<br/>
+                </div>
+            </div>
+            <div className='Container6'>
+                <div className='goBackButton'>
+                    <Link to="/">처음으로</Link>
+                </div>
+                <div className='Container6Name'>
+                    clover
+                </div>
+            </div>
+            <div className='button'>
                 <CopyToClipboard text={value}
                     onCopy={() => setCopied(true)}>
-                    <div className='openButton'>
+                    <div className='buttonFont'>
                         {copied ? "복사 완료!" : "주소 복사하기"}
                     </div>
                 </CopyToClipboard>

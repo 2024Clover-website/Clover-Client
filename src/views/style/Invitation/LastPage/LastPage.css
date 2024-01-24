@@ -1,72 +1,123 @@
-.container{
+.Container{
+    width: 375.213px;
+    height: 812px;
+    flex-shrink: 0;
+    background: #E5FD4D;
+}
+.Container1{
     width: 375px;
-    height: 821px;
-    background-color: #E5FD4D;
+    height: 94px;
+    flex-shrink: 0;
+    border-top: 1px solid rgba(52, 45, 45, 0.75);
+    border-bottom: 1px solid rgba(169, 93, 93, 0.75);
 }
-.smartContainer{
-    height: 100px;
-}
-.cardContainer{
-    height: 100px;
-}
-.cardName{
-    display: flex;
-    width: 201px;
-    height: 30px;
-    margin-left: 87px;
-    margin-right: 87px;
-    justify-content: center;
-    align-items: center;
-    background: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-}
-.titleContainer{
-    height: 150px;
-}
-.titleName{
-    display: flex;
-    width: 334px;
-    height: 300px;
-    margin-left: 20.5px;
-    margin-right: 20.5px;
-    justify-content: center;
-    align-items: center;
-    background: rgb(0, 0, 0);
-    display: flex;
-    border-color: white;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    font-family: 'NotoSansKR';
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 25px;
-    text-transform: uppercase;
-}
-.blankContainer{
-    height: 380px;
-}
-.openContainer{
-    height: 91px;
-}
-.openButton{
-    display: flex;
-    width: 334px;
-    height: 65px;
-    margin-left: 20.5px;
-    margin-right: 20.5px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    background: rgb(0, 0, 0);
-    display: flex;
-    border-color: white;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    font-family: 'NotoSansKR';
+.Container2{
+    width: 375px;
+    height: 45px;
+    flex-shrink: 0;
+    border-top: 1px solid rgba(241, 241, 241, 0.75);
+    border-bottom: 1px solid rgba(169, 93, 93, 0.75);
+    color: rgba(241, 241, 241, 0.75);
+    text-shadow: 0px 3px 18px rgba(0, 0, 0, 0.20);
+    font-family: Avenir;
     font-size: 15px;
     font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 22.5px */
+}
+.Container3{
+    width: 375px;
+    height: 101px;
+    flex-shrink: 0;
+    border-top: 1px solid rgba(241, 241, 241, 0.75);
+    border-bottom: 1px solid rgba(241, 241, 241, 0.75);
+}
+.Container4{
+    width: 375px;
+    height: 101px;
+    flex-shrink: 0;
+    border-top: 1px solid rgba(241, 241, 241, 0.75);
+    border-bottom: 1px solid rgba(241, 241, 241, 0.75);
+}
+.Container5{
+    width: 375px;
+    height: 179px;
+    flex-shrink: 0;
+    border-top: 1px solid rgba(241, 241, 241, 0.75);
+    border-bottom: 1px solid rgba(241, 241, 241, 0.75);
+}
+.Container6{
+    width: 375px;
+    height: 63px;
+    flex-shrink: 0;
+    border-top: 1px solid rgba(241, 241, 241, 0.75);
+    border-bottom: 1px solid rgba(241, 241, 241, 0.75);
+    
+}
+
+.button{
+    width: 375px;
+    height: 65px;
+    flex-shrink: 0;
+    border-top: 2px solid rgba(241, 241, 241, 0.75);
+    background: rgba(241, 241, 241, 0.25);
+    box-shadow: 0px 3px 18px 0px rgba(0, 0, 0, 0.20);
+    backdrop-filter: blur(2.5px);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.05) 0.01%, rgba(0, 0, 0, 0.15) 100%);
+}
+
+.Container1Name,
+.Container3Name,
+.Container4Name,
+.Container5Name{
+    text-align: right;
+    color: #F1F1F1;
+    text-shadow: 0px 3px 18px rgba(0, 0, 0, 0.20);
+    font-family: YDIYGO340;
+    font-size: 32px;
+    font-style: normal;
     font-weight: 400;
-    line-height: 21px;
-    text-transform: uppercase;
+    line-height: 130%; /* 41.6px */
+}
+.Container6Name{
+    text-align: right;
+    color: #F1F1F1;
+}
+
+.Container1Frame,
+.Container3Frame,
+.Container4Frame,
+.Container5Frame{
+    display: inline-flex;
+    padding: 5px 15px 6px 15px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    border: 1px solid rgba(241, 241, 241, 0.50);
+    background: rgba(241, 241, 241, 0.25);
+    box-shadow: 0px 3px 18px 0px rgba(0, 0, 0, 0.10);
+    backdrop-filter: blur(2.5px);
+    color: #F1F1F1;
+    font-family: YDIYGO340;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 16.9px */
+}
+
+.buttonFont{
+    display: flex;
+    width: 375px;
+    height: 65px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #F1F1F1;
+    text-align: center;
+    font-family: YDIYGO350;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }

@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-import '../../../style/Invitation/Ininvitation2/Ininvitation2.css'
+import '../../../style/Invitation/Ininvitation2/Ininvitation2.css';
 
 function Ininvitation2() {
     function handleClick(e) {
         window.location.href = '/invite3'
     }
     return (
-        <div className='container'>
+        <div className='Container' style={{ backgroundImage: `url("./bg.png")`, backgroundSize: 'cover' }}>
             <div className='smartContainer'>
             </div>
             <div className='cardContainer'>
@@ -25,7 +25,7 @@ function Ininvitation2() {
             </div>
             <div className='blankContainer'>
             </div>
-            <div className='openContainer'>
+            <div className='button'>
                 <button onClick={handleClick} className='openButton'>
                     다음
                 </button>
