@@ -12,14 +12,26 @@ function Ininvitation4() {
             </div>
             <div className='cardContainer'>
                 <div className='cardName'>
-                    최근에 저도 비슷한 고민을 했어요.
-                    '나는 어떤 작업을 할때 가장 행복하지?' 하고요.
+                    최근에 문득 이런 생각이 들었어요.
+                </div>
+                <div className='titleContainer'>
+                    <div className='titleName'>
+                        6.Think<br/>
+                        I suddenly had this thought recently.
+                    </div>
                 </div>
             </div>
-            <div className='titleContainer'>
-                <div className='titleName'>
-                    페이지4
+            <div className='cardContainer'>
+                <div className='cardName'>
+                    나는 어떤 작업을 할때,<br/>
+                    자극을 받지? 하고요.
                 </div>
+                <div className='titleContainer'>
+                    <div className='titleName'>
+                        7.Passion<br/>
+                        What kind of work I get stimulated about?
+                    </div>
+                </div> {/* 추가된 부분 */}
             </div>
             <div className='blankContainer'>
             </div>

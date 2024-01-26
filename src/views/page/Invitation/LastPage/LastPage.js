@@ -56,7 +56,7 @@ function LastPage() {
                     clover
                 </div>
             </div>
-            <div className='button'>
+            <div className='openContainer'>
                 <CopyToClipboard text={value}
                     onCopy={() => setCopied(true)}>
                     <div className='buttonFont'>

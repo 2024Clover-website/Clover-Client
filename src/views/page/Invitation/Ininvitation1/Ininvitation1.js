@@ -12,22 +12,22 @@ function Ininvitation1() {
             </div>
             <div className='cardContainer'>
                 <div className='cardName'>
-                학교<br/>
-                알바<br/>
-                집<br/>
-                학교<br/>
-                알바<br/>
-                집<br/>
-                .<br/>
-                .<br/>
-                .
+                    학교<br/>
+                    알바<br/>
+                    집<br/>
+                    학교<br/>
+                    알바<br/>
+                    집<br/>
+                    .<br/>
+                    .<br/>
+                    .
                 </div>
-            </div>
-            <div className='titleContainer'>
-                <div className='titleName'>
-                1.merry-go-round <br/>
-                School, Part time job, Home,School,<br/>
-                Part time job, Home...
+                <div className='titleContainer'>
+                    <div className='titleName'>
+                        1.merry-go-round <br/>
+                        School, Part time job, Home,School,<br/>
+                        Part time job, Home...
+                    </div>
                 </div>
             </div>
             <div className='blankContainer'>

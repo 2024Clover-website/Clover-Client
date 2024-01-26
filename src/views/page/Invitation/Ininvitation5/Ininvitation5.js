@@ -12,13 +12,26 @@ function Ininvitation5() {
             </div>
             <div className='cardContainer'>
                 <div className='cardName'>
-                    제가 만든 작품을 살짝 보여드릴게요.
-                    꼭 와서 함께 봐주세요.
+                    제가 만든 걸 살짝<br/>
+                    보여드릴게요.<br/>
+                </div>
+                <div className='titleContainer'>
+                    <div className='titleName'>
+                    8.Spoiler<br/>
+                    I wanna show you a little bit of what I made.
+                    </div>
                 </div>
             </div>
-            <div className='titleContainer'>
-                <div className='titleName'>
-                    페이지5
+            <div className='cardContainer'>
+                <div className='cardName'>
+                    꼭 와서 눈으로도<br/>
+                    즐겼으면 좋겠어요.
+                </div>
+                <div className='titleContainer'>
+                    <div className='titleName'>
+                    9.Wish<br/>
+                    But I really hope you come and enjoy it.
+                    </div>
                 </div>
             </div>
             <div className='blankContainer'>
