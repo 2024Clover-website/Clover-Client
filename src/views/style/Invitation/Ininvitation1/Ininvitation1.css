@@ -6,10 +6,11 @@
 .smartContainer{
     height: 117px;
 }
-.cardContainer{
-    
+.textContainer{
+    height: 564px;
 }
-.cardName{
+.text{
+    height: 39px;
     display: block;
     padding-left: 28px;
     color: #F1F1F1;
@@ -21,13 +22,24 @@
     line-height: 130%; /* 39px */
 }
 
-
-.titleContainer{
-    
+.commitContainer{
+    height: 89px;
 }
-.titleName{
-    
-    padding-left: 23px;
+.commit1{
+    height: 23px;
+    padding-left: 28px;
+    color: rgba(241, 241, 241, 0.75);
+    text-shadow: 0px 3px 18px rgba(0, 0, 0, 0.20);
+    font-family: Avenir;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 22.5px */
+    margin-top: 20px;
+}
+.commit{
+    height: 23px;
+    padding-left: 28px;
     color: rgba(241, 241, 241, 0.75);
     text-shadow: 0px 3px 18px rgba(0, 0, 0, 0.20);
     font-family: Avenir;
@@ -37,11 +49,11 @@
     line-height: 150%; /* 22.5px */
 }
 
-.Container{
-    height: 10px;
+.blankContainer{
+    height: 115px;
 }
 .openContainer{
-    height: 91px;
+    height: 65px;
 }
 .openButton{
     display: flex;

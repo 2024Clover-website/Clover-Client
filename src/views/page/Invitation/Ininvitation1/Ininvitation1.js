@@ -7,30 +7,50 @@ function Ininvitation1() {
         window.location.href = '/invite2'
     }
     return (
-        <div className='Container' style={{ backgroundImage: `url("./bg.png")`, backgroundSize: 'cover' }}>
+        <div className='container' style={{ backgroundImage: `url("./bg.png")`, backgroundSize: 'cover' }}>
             <div className='smartContainer'>
             </div>
-            <div className='cardContainer'>
-                <div className='cardName'>
+            <div className='textContainer'>
+                <div className='text'>
                     학교<br/>
-                    알바<br/>
-                    집<br/>
-                    학교<br/>
-                    알바<br/>
-                    집<br/>
-                    .<br/>
-                    .<br/>
-                    .
                 </div>
-                <div className='titleContainer'>
-                    <div className='titleName'>
-                        1.merry-go-round <br/>
-                        School, Part time job, Home,School,<br/>
-                        Part time job, Home...
+                <div className='text'>
+                    알바<br/>
+                </div>
+                <div className='text'>
+                    집<br/>
+                </div>
+                <div className='text'>
+                    학교<br/>
+                </div>
+                <div className='text'>
+                    알바<br/>
+                </div>
+                <div className='text'>
+                    집<br/>
+                </div>
+                <div className='text'>
+                    .<br/>
+                </div>
+                <div className='text'>
+                    .<br/>
+                </div>
+                <div className='text'>
+                    .<br/>
+                </div>
+                <div className='commitContainer'>
+                    <div className='commit1'>
+                        1.merry-go-round
+                    </div>
+                    <div className='commit'>
+                        School, Part time job, Home,
+                    </div>
+                    <div className='commit'>
+                        School, Part time job, Home...
                     </div>
                 </div>
-            </div>
-            <div className='blankContainer'>
+                <div className='blankContainer'>
+                </div>
             </div>
             <div className='openContainer'>
                 <button onClick={handleClick} className='openButton'>
