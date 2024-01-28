@@ -49,9 +49,9 @@ function Ininvitation1() {
                         School, Part time job, Home...
                     </div>
                 </div>
-                <div className='blankContainer'>
-                </div>
             </div>
+            <div className='blankContainer'>
+                </div>
             <div className='openContainer'>
                 <button onClick={handleClick} className='openButton'>
                     다음

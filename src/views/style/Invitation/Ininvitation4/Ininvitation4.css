@@ -1,0 +1,98 @@
+.container{
+    width: 375px;
+    height: 812px;
+    background-color: #E5FD4D;
+}
+.smartContainer{
+    height: 117px;
+}
+.textContainer{
+    height: 317px;
+}
+.textContainer1{
+    height: 78px;
+}
+.textContainer2{
+    height: 117px;
+}
+.text{
+    height: 39px;
+    display: block;
+    padding-left: 28px;
+    color: #F1F1F1;
+    text-shadow: 0px 3px 18px rgba(0, 0, 0, 0.20);
+    font-family: YDIYGO340;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 39px */
+}
+.commitContainer{
+    height: 89px;
+}
+.commitContainer1{
+    height: 66px;
+}
+.commit1{
+    height: 23px;
+    padding-left: 28px;
+    color: rgba(241, 241, 241, 0.75);
+    text-shadow: 0px 3px 18px rgba(0, 0, 0, 0.20);
+    font-family: Avenir;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 22.5px */
+    margin-top: 20px;
+}
+.commit2{
+    height: 23px;
+    padding-left: 28px;
+    color: rgba(241, 241, 241, 0.75);
+    text-shadow: 0px 3px 18px rgba(0, 0, 0, 0.20);
+    font-family: Avenir;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 22.5px */
+    margin-bottom: 20px;
+}
+.commit{
+    height: 23px;
+    padding-left: 28px;
+    color: rgba(241, 241, 241, 0.75);
+    text-shadow: 0px 3px 18px rgba(0, 0, 0, 0.20);
+    font-family: Avenir;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 22.5px */
+}
+
+.blankContainer{
+    height: 247px;
+}
+.openContainer{
+    height: 65px;
+}
+.openButton{
+    display: flex;
+    width: 375px;
+    height: 65px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    color: #F1F1F1;
+    text-align: center;
+    font-family: YDIYGO350;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-top: 2px solid rgba(241, 241, 241, 0.75);
+    background: rgba(241, 241, 241, 0.25);
+    box-shadow: 0px 3px 18px 0px rgba(0, 0, 0, 0.20);
+    backdrop-filter: blur(2.5px);
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.05) 0.01%, rgba(0, 0, 0, 0.15) 100%);
+}

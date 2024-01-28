@@ -7,32 +7,49 @@ function Ininvitation3() {
         window.location.href = '/invite4'
     }
     return (
-        <div className='Container' style={{ backgroundImage: `url("./bg.png")`, backgroundSize: 'cover' }}>
+        <div className='container' style={{ backgroundImage: `url("./bg.png")`, backgroundSize: 'cover' }}>
             <div className='smartContainer'>
             </div>
-            <div className='cardContainer'>
-                <div className='cardName'>
-                    느슨해진 마음을<br/>
-                    팽팽하게 만드려면,<br/>
-                    무언가 자극이 필요해요.
-                    <div className='titleContainer'>
-                        <div className='titleName'>
-                            4.Needs<br/>
-                            To tighten your loose mind, you have to seek new stimulation.
-                        </div>
+            <div className='textContainer'>
+                <div className='textContainer1'>
+                    <div className='text'>
+                        느슨해진 마음을
+                    </div>
+                    <div className='text'>
+                        팽팽하게 만드려면,
+                    </div>
+                    <div className='text'>
+                        무언가 자극이 필요해요.
                     </div>
                 </div>
-            </div>
-            <div className='cardContainer'>
-                <div className='cardName'>
-                    마치 카세트 테이프에<br/>
-                    연필을 꽃아 돌리는
-                    것 처럼요.<br/>
-                    <div className='titleContainer'>
-                        <div className='titleName'>
-                            5.Pencil<br/>
-                            Seems like putting a pencil on a cassette tape.
-                        </div>
+                <div className='commitContainer'>
+                    <div className='commit1'>
+                        4.Needs
+                    </div>
+                    <div className='commit'>
+                        To tighten your loose mind, you have to seek 
+                    </div>
+                    <div className='commit2'>
+                        new stimulation.
+                    </div>
+                </div>
+                <div className='textContainer1'>
+                    <div className='text'>
+                        마치 카세트 테이프에
+                    </div>
+                    <div className='text'>
+                        연필을 꽂아 돌리는
+                    </div>
+                    <div className='text'>
+                        것처럼요.
+                    </div>
+                </div>
+                <div className='commitContainer1'>
+                    <div className='commit1'>
+                        5.Pencil
+                    </div>
+                    <div className='commit'>
+                        Seems like putting a pencil on a cassette tape.
                     </div>
                 </div>
             </div>
