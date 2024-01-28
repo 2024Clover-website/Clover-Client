@@ -9,6 +9,8 @@ function LastPage() {
 
     return (
         <div className='Container' style={{ backgroundImage: `url("./bg.png")`, backgroundSize: 'cover' }}>
+            <div className='blankContainer1'>
+            </div>
             <div className='Container1'>
                 <div className='Container1Frame'>
                     전시까지
@@ -55,6 +57,8 @@ function LastPage() {
                 <div className='Container6Name'>
                     clover
                 </div>
+            </div>
+            <div className='blankContainer2'>
             </div>
             <div className='openContainer'>
                 <CopyToClipboard text={value}
