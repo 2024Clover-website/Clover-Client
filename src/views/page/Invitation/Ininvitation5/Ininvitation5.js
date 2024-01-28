@@ -10,31 +10,42 @@ function Ininvitation5() {
         <div className='Container' style={{ backgroundImage: `url("./bg.png")`, backgroundSize: 'cover' }}>
             <div className='smartContainer'>
             </div>
-            <div className='cardContainer'>
-                <div className='cardName'>
-                    제가 만든 걸 살짝<br/>
-                    보여드릴게요.<br/>
-                </div>
-                <div className='titleContainer'>
-                    <div className='titleName'>
-                    8.Spoiler<br/>
-                    I wanna show you a little bit of what I made.
+            <div className='textContainer'>
+                <div className='textContainer1'>
+                    <div className='text'>
+                        제가 만든 걸 살짝
+                    </div>
+                    <div className='text'>
+                        보여드릴게요.
                     </div>
                 </div>
-            </div>
-            <div className='cardContainer'>
-                <div className='cardName'>
-                    꼭 와서 눈으로도<br/>
-                    즐겼으면 좋겠어요.
+                <div className='commitContainer'>
+                    <div className='commit1'>
+                        8.Spoiler
+                    </div>
+                    <div className='commit2'>
+                        I wanna show you a little bit of what I made.
+                    </div>
                 </div>
-                <div className='titleContainer'>
-                    <div className='titleName'>
-                    9.Wish<br/>
-                    But I really hope you come and enjoy it.
+                <div className='textContainer1'>
+                    <div className='text'>
+                        꼭 와서 눈으로도
+                    </div>
+                    <div className='text'>
+                        즐겼으면 좋겠어요.
+                    </div>
+                </div>
+                <div className='commitContainer'>
+                    <div className='commit1'>
+                        9.Wish
+                    </div>
+                    <div className='commit2'>
+                        But I really hope you come and enjoy it.
                     </div>
                 </div>
             </div>
             <div className='blankContainer'>
+                <img className='invitation5Image' src='../../../../img/image-3 2.png' />
             </div>
             <div className='openContainer'>
                 <button onClick={handleClick} className='openButton'>
