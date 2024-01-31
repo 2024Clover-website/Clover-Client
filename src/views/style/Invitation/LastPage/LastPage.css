@@ -69,11 +69,29 @@
     font-style: normal;
     font-weight: 400;
     line-height: 150%; /* 22.5px */
+    margin-top: 5%;
+    margin-left: 5%;
 }
 
 .Container1Name,
 .Container3Name,
-.Container4Name,
+.Container4Name{
+    text-align: right;
+    color: #F1F1F1;
+    text-shadow: 0px 3px 18px rgba(0, 0, 0, 0.20);
+    font-family: YDIYGO340;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 41.6px */
+    margin-top: -10%;
+    margin-right: 5%;
+}
+
+.Container2Name{
+    margin-top: 3%;
+    margin-left: 3%;
+}
 .Container5Name{
     text-align: right;
     color: #F1F1F1;
@@ -83,15 +101,40 @@
     font-style: normal;
     font-weight: 400;
     line-height: 130%; /* 41.6px */
+    margin-top: -20%;
+    margin-right: 5%;
 }
 .Container6Name{
     text-align: right;
     color: #F1F1F1;
+    margin-top: -5%;
+    margin-right: 5%;
+    filter: drop-shadow(0px 3px 18px rgba(0, 0, 0, 0.20));
 }
+
 
 .Container1Frame,
 .Container3Frame,
-.Container4Frame,
+.Container4Frame{
+    display: inline-flex;
+    padding: 5px 15px 6px 15px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    border: 1px solid rgba(241, 241, 241, 0.50);
+    background: rgba(241, 241, 241, 0.25);
+    box-shadow: 0px 3px 18px 0px rgba(0, 0, 0, 0.10);
+    backdrop-filter: blur(2.5px);
+    color: #F1F1F1;
+    font-family: YDIYGO340;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 16.9px */
+    margin-left: 5%;
+    margin-top: 10%;
+}
 .Container5Frame{
     display: inline-flex;
     padding: 5px 15px 6px 15px;
@@ -109,6 +152,8 @@
     font-style: normal;
     font-weight: 400;
     line-height: 130%; /* 16.9px */
+    margin-left: 5%;
+    margin-top: 20%;
 }
 .openContainer{
     display: flex;
