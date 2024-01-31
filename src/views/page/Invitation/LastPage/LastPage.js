@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import { Link } from 'react-router-dom'; // 추가된 부분
+import { Link } from 'react-router-dom';
 import '../../../style/Invitation/LastPage/LastPage.css';
 
 function LastPage() {
-    const [value, setValue] = useState('');
+    const [value, setValue] = useState('유민기!!!');
     const [copied, setCopied] = useState(false);
     const [showModal, setShowModal] = useState(false);
 
     const handleCopy = () => {
         setCopied(true);
         setShowModal(true);
-        setTimeout(() => setShowModal(false), 2000); // 모달창이 2초 후에 사라집니다.
+        setTimeout(() => setShowModal(false), 2000);
     };
 
     return (
@@ -77,8 +77,9 @@ function LastPage() {
             </div>
             {showModal && (
                 <div className='modal'>
+                    <img src="./Exclude.svg" />
                     <div className= 'modalText'>
-                        주소를 복사했습니다!
+                        주소를 복사했어요
                     </div>
                 </div>
             )}
