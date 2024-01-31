@@ -45,7 +45,7 @@ function Ininvitation5() {
                 </div>
             </div>
             <div className='blankContainer'>
-                <img className='invitation5Image' src='../../../../img/image-3 2.png' />
+                <img className='invitation5Image' src='./image-3 1.png' />
             </div>
             <div className='openContainer'>
                 <button onClick={handleClick} className='openButton'>

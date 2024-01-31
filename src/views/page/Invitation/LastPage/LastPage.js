@@ -4,8 +4,15 @@ import { Link } from 'react-router-dom'; // 추가된 부분
 import '../../../style/Invitation/LastPage/LastPage.css';
 
 function LastPage() {
-    const [value, setValue] = useState('인사동 마루아트 센터 신관');
+    const [value, setValue] = useState('');
     const [copied, setCopied] = useState(false);
+    const [showModal, setShowModal] = useState(false);
+
+    const handleCopy = () => {
+        setCopied(true);
+        setShowModal(true);
+        setTimeout(() => setShowModal(false), 2000); // 모달창이 2초 후에 사라집니다.
+    };
 
     return (
         <div className='Container' style={{ backgroundImage: `url("./bg.png")`, backgroundSize: 'cover' }}>
@@ -62,12 +69,19 @@ function LastPage() {
             </div>
             <div className='openContainer'>
                 <CopyToClipboard text={value}
-                    onCopy={() => setCopied(true)}>
+                    onCopy={handleCopy}>
                     <div className='buttonFont'>
-                        {copied ? "복사 완료!" : "주소 복사하기"}
+                        {copied ? "주소 복사하기" : "주소 복사하기"}
                     </div>
                 </CopyToClipboard>
             </div>
+            {showModal && (
+                <div className='modal'>
+                    <div className= 'modalText'>
+                        주소를 복사했습니다!
+                    </div>
+                </div>
+            )}
         </div>
     )
 }
