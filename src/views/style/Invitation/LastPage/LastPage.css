@@ -120,12 +120,6 @@
     font-weight: 400;
     line-height: 130%; /* 41.6px */
 }
-.Container6Name{
-    text-align: right;
-    color: #F1F1F1;
-    filter: drop-shadow(0px 3px 18px rgba(0, 0, 0, 0.20));
-}
-
 
 .Container1Frame,
 .Container3Frame,
@@ -220,4 +214,10 @@ a {
     font-style: normal;
     font-weight: 400;
     line-height: 130%; /* 19.5px */
+}
+
+
+/* IconStyle.css */
+.iconStyle {
+    filter: drop-shadow(0px 3px 18px rgba(0, 0, 0, 0.20));
 }

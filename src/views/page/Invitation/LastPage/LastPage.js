@@ -72,7 +72,7 @@ function LastPage() {
                     <Link to="/">처음으로</Link>
                 </div>
                 <div className='Container6Name'>
-                    clover
+                    <img src="./Clover.svg" alt="Icon" className="iconStyle" />
                 </div>
             </div>
             <div className='blankContainer2'>
