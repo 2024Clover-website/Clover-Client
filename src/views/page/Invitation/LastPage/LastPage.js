@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import { Link } from 'react-router-dom'; // 추가된 부분
+import { Link } from 'react-router-dom';
 import '../../../style/Invitation/LastPage/LastPage.css';
+import Backdrop from './components/Backdrop/Backdrop';
+import Modal from './components/Modal/Modal';
 
 function LastPage() {
     const [value, setValue] = useState('인사동 마루아트 센터 신관');
@@ -10,8 +12,16 @@ function LastPage() {
 
     const handleCopy = () => {
         setCopied(true);
-        setShowModal(true);
+        showModalHandler();
         setTimeout(() => setShowModal(false), 2000);
+    };
+
+    const showModalHandler = () => {
+        setShowModal(true);
+    };
+
+    const closeModalHandler = () => {
+        setShowModal(false);
     };
 
     return (
@@ -75,14 +85,8 @@ function LastPage() {
                     </div>
                 </CopyToClipboard>
             </div>
-            {showModal && (
-                <div className='modal'>
-                    <img src="./Exclude.svg" />
-                    <div className= 'modalText'>
-                        주소를 복사했어요
-                    </div>
-                </div>
-            )}
+            <Modal show={showModal} closed={closeModalHandler} />
+            {showModal && <Backdrop show={showModal} />}
         </div>
     )
 }
