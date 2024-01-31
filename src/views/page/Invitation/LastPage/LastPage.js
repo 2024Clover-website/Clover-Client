@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'; // 추가된 부분
 import '../../../style/Invitation/LastPage/LastPage.css';
 
 function LastPage() {
-    const [value, setValue] = useState('유민기!!!');
+    const [value, setValue] = useState('인사동 마루아트 센터 신관');
     const [copied, setCopied] = useState(false);
     const [showModal, setShowModal] = useState(false);
 

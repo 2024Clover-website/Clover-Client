@@ -2,7 +2,6 @@ import React, { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 
 //페이지 연결
-import './App.css';
 import Invitation1 from "./views/page/Invitation/Ininvitation1/Ininvitation1";
 import Invitation2 from "./views/page/Invitation/Ininvitation2/Ininvitation2";
 import Invitation3 from "./views/page/Invitation/Ininvitation3/Ininvitation3";
