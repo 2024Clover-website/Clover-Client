@@ -11,18 +11,20 @@
     height: 75px;
 }
 .Container1{
-    width: 375px;
     height: 94px;
     flex-shrink: 0;
-    border-top: 1px solid rgba(52, 45, 45, 0.75);
-    border-bottom: 1px solid rgba(169, 93, 93, 0.75);
+    border-bottom: 2px solid rgba(241, 241, 241, 0.75);
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 .Container2{
-    width: 375px;
     height: 45px;
     flex-shrink: 0;
-    border-top: 1px solid rgba(241, 241, 241, 0.75);
-    border-bottom: 1px solid rgba(169, 93, 93, 0.75);
+    border-bottom: 2px solid rgba(241, 241, 241, 0.75);
     color: rgba(241, 241, 241, 0.75);
     text-shadow: 0px 3px 18px rgba(0, 0, 0, 0.20);
     font-family: Avenir;
@@ -30,34 +32,57 @@
     font-style: normal;
     font-weight: 500;
     line-height: 150%; /* 22.5px */
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 .Container3{
-    width: 375px;
     height: 101px;
     flex-shrink: 0;
-    border-top: 1px solid rgba(241, 241, 241, 0.75);
-    border-bottom: 1px solid rgba(241, 241, 241, 0.75);
+    border-bottom: 2px solid rgba(241, 241, 241, 0.75);
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 .Container4{
-    width: 375px;
     height: 101px;
     flex-shrink: 0;
-    border-top: 1px solid rgba(241, 241, 241, 0.75);
-    border-bottom: 1px solid rgba(241, 241, 241, 0.75);
+    border-bottom: 2px solid rgba(241, 241, 241, 0.75);
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 .Container5{
-    width: 375px;
     height: 179px;
     flex-shrink: 0;
-    border-top: 1px solid rgba(241, 241, 241, 0.75);
-    border-bottom: 1px solid rgba(241, 241, 241, 0.75);
+    border-bottom: 2px solid rgba(241, 241, 241, 0.75);
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 .Container6{
-    width: 375px;
+    
     height: 63px;
     flex-shrink: 0;
-    border-top: 1px solid rgba(241, 241, 241, 0.75);
-    border-bottom: 1px solid rgba(241, 241, 241, 0.75);
+    border-bottom: 2px solid rgba(241, 241, 241, 0.75);
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     
 }
 
@@ -69,8 +94,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: 150%; /* 22.5px */
-    margin-top: 5%;
-    margin-left: 5%;
+    text-align: left;
 }
 
 .Container1Name,
@@ -84,14 +108,8 @@
     font-style: normal;
     font-weight: 400;
     line-height: 130%; /* 41.6px */
-    margin-top: -10%;
-    margin-right: 5%;
 }
 
-.Container2Name{
-    margin-top: 3%;
-    margin-left: 3%;
-}
 .Container5Name{
     text-align: right;
     color: #F1F1F1;
@@ -101,14 +119,10 @@
     font-style: normal;
     font-weight: 400;
     line-height: 130%; /* 41.6px */
-    margin-top: -20%;
-    margin-right: 5%;
 }
 .Container6Name{
     text-align: right;
     color: #F1F1F1;
-    margin-top: -5%;
-    margin-right: 5%;
     filter: drop-shadow(0px 3px 18px rgba(0, 0, 0, 0.20));
 }
 
@@ -132,8 +146,6 @@
     font-style: normal;
     font-weight: 400;
     line-height: 130%; /* 16.9px */
-    margin-left: 5%;
-    margin-top: 10%;
 }
 .Container5Frame{
     display: inline-flex;
@@ -152,8 +164,6 @@
     font-style: normal;
     font-weight: 400;
     line-height: 130%; /* 16.9px */
-    margin-left: 5%;
-    margin-top: 20%;
 }
 .openContainer{
     display: flex;
@@ -170,9 +180,19 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    border-top: 2px solid rgba(241, 241, 241, 0.75);
     background: rgba(241, 241, 241, 0.25);
     box-shadow: 0px 3px 18px 0px rgba(0, 0, 0, 0.20);
     backdrop-filter: blur(2.5px);
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.05) 0.01%, rgba(0, 0, 0, 0.15) 100%);
+}
+
+a {
+    text-decoration: none;
+    color: #F1F1F1;
+    text-shadow: 0px 3px 18px rgba(0, 0, 0, 0.20);
+    font-family: YDIYGO340;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 22.5px */
 }
