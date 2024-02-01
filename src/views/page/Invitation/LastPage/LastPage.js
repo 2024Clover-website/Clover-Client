@@ -30,7 +30,28 @@ function LastPage() {
     const closeModalHandler = () => {
         setShowModal(false);
     };
+    // 카운트다운을 위한 상태 변수 추가
+    const [timeLeft, setTimeLeft] = useState(72 * 60 * 60); // 초 단위로 72시간 설정
 
+    useEffect(() => {
+        // ... 나머지 setTimeout ...
+
+        // 카운트다운 시작
+        const timer = setInterval(() => {
+            setTimeLeft(timeLeft => timeLeft - 1);
+        }, 1000);
+
+        // 컴포넌트가 언마운트될 때 타이머 정리
+        return () => clearInterval(timer);
+    }, []);
+
+    // 초를 시간:분:초 형태로 변환하는 함수
+    const formatTime = (time) => {
+        const hours = Math.floor(time / 3600);
+        const minutes = Math.floor((time % 3600) / 60);
+        const seconds = time % 60;
+        return `${hours}:${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    };
     // 페이지가 로드되면 컨테이너 애니메이션을 시작
     useEffect(() => {
         setTimeout(() => setShowContainer1(true), 400);
@@ -52,7 +73,7 @@ function LastPage() {
                         전시까지
                     </div>
                     <div className='Container1Name'>
-                        72:00:00
+                        {formatTime(timeLeft)}
                     </div>
                 </div>
             </CSSTransition>
