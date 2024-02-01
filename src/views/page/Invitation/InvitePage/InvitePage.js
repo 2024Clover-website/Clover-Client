@@ -6,12 +6,11 @@ function InvitePage() {
         window.location.href = '/invite1'
     }
     return (
-        <div className='container' style={{ backgroundImage: `url("./438259dc684760fd3f80b8e0c8b03949 (1).png")`, backgroundSize: 'cover' }}>
+        <div className='container' style={{ backgroundImage: `url("./438259dc684760fd3f80b8e0c8b03949 (1).png")`, backgroundSize: 'cover'}}>
             <div className='smartContainer'>
             </div>
             <div className='cardContainer'>
                 <div className='cardName'>
-                    초대장
                 </div>
             </div>
             <div className='titleContainer'>
@@ -21,7 +20,7 @@ function InvitePage() {
             </div>
             <div className='blankContainer'>
             </div>
-            <div className='button'>
+            <div className='openContainer'>
                 <button onClick={handleClick} className='openButton'>
                     초대장 열기
                 </button>

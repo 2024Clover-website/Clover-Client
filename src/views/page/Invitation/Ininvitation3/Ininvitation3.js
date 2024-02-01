@@ -10,8 +10,8 @@ function Ininvitation3() {
         <div className='container' style={{ backgroundImage: `url("./bg.png")`, backgroundSize: 'cover' }}>
             <div className='smartContainer'>
             </div>
-            <div className='textContainer'>
-                <div className='textContainer1'>
+            <div className='textContainer3'>
+                <div className='textContainer3'>
                     <div className='text'>
                         느슨해진 마음을
                     </div>
@@ -27,13 +27,13 @@ function Ininvitation3() {
                         4.Needs
                     </div>
                     <div className='commit'>
-                        To tighten your loose mind, you have to seek 
+                        To tighten your loose mind, you have to seek
                     </div>
                     <div className='commit2'>
                         new stimulation.
                     </div>
                 </div>
-                <div className='textContainer1'>
+                <div className='textContainer3'>
                     <div className='text'>
                         마치 카세트 테이프에
                     </div>

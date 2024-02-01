@@ -7,7 +7,7 @@ function Ininvitation5() {
         window.location.href = '/last'
     }
     return (
-        <div className='Container' style={{ backgroundImage: `url("./bg.png")`, backgroundSize: 'cover' }}>
+        <div className='container' style={{ backgroundImage: `url("./bg.png")`, backgroundSize: 'cover' }}>
             <div className='smartContainer'>
             </div>
             <div className='textContainer'>

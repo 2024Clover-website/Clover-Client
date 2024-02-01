@@ -30,12 +30,10 @@ function LastPage() {
     const closeModalHandler = () => {
         setShowModal(false);
     };
-    // 카운트다운을 위한 상태 변수 추가
+    // 카운트다운을 위한 상태 변수
     const [timeLeft, setTimeLeft] = useState(72 * 60 * 60); // 초 단위로 72시간 설정
 
     useEffect(() => {
-        // ... 나머지 setTimeout ...
-
         // 카운트다운 시작
         const timer = setInterval(() => {
             setTimeLeft(timeLeft => timeLeft - 1);
@@ -126,7 +124,7 @@ function LastPage() {
                 </div>
             </div>
             </CSSTransition>
-            <div className='openContainer'>
+            <div className='copyContainers'>
                 <CopyToClipboard text={value}
                     onCopy={handleCopy}>
                     <div className='buttonFont'>
