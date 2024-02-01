@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 
 import About from "./page/About/Mobile/About";
 
-function PC() {
+function MOBILE() {
 	return (
 		<div>
 			<Routes>
@@ -13,4 +13,4 @@ function PC() {
 	);
 }
 
-export default PC;
+export default MOBILE;
