@@ -16,7 +16,7 @@ function LastPage() {
     const [showContainer4, setShowContainer4] = useState(false);
     const [showContainer5, setShowContainer5] = useState(false);
     const [showContainer6, setShowContainer6] = useState(false);
-    setTimeout(() => setShowModal(false), 2000);
+    setTimeout(() => setShowModal(false), 6000);
     
     const handleCopy = () => {
         setCopied(true);
