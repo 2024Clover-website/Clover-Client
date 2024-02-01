@@ -1,8 +1,70 @@
+@font-face {
+	font-family: "Avenir";
+	src: url(../../../font/Avenir.ttc);
+}
+
 .container {
 	position: fixed;
+	display: flex;
+	flex-direction: row;
 	left: 0px;
 	bottom: 0px;
 	height: 100px;
 	width: 100%;
 	background-color: #d9d9d9;
+	cursor: default;
+}
+
+.team {
+	/* MJU Division of Design CLOVER Final Exhibition 2024 */
+	width: 271px;
+	height: 60px;
+	margin-left: 20px;
+	margin-top: 20px;
+
+	font-family: "Avenir";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 150%;
+
+	color: #000000;
+}
+
+.location {
+	/* Maru Art Center 3F The Second Gallery */
+	width: 204px;
+	height: 60px;
+	margin-left: 18.177%;
+
+	margin-top: 20px;
+
+	font-family: "Avenir";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 150%;
+	/* or 30px */
+
+	color: #000000;
+}
+
+.instagram {
+	/* Instagram */
+
+	position: absolute;
+	width: 89px;
+	height: 30px;
+	right: 20px;
+	bottom: 35px;
+
+	font-family: "Avenir";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 150%;
+	/* identical to box height, or 30px */
+	text-decoration-line: underline;
+
+	color: #000000;
 }

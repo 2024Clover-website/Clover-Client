@@ -1,6 +1,6 @@
 @font-face {
 	font-family: "Avenir";
-	src: url(../../../font/-330-smha1177.ttf);
+	src: url(../../../font/Avenir.ttc);
 }
 
 @font-face {
@@ -19,7 +19,7 @@
 	position: fixed;
 	height: 100px;
 	width: 100%;
-	background-color: #d9d9d9;
+	background-color: #ffffff;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
