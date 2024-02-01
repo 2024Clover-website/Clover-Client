@@ -37,7 +37,8 @@
 .nav-element {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: space-evenly;
+	align-items: center;
 	margin-top: 30px;
 	width: 675px;
 	height: 36px;
@@ -50,6 +51,13 @@
 	font-style: normal;
 	font-weight: 800;
 	line-height: 150%;
+}
+
+.record {
+	color: #fd4d4d;
+	width: 18px;
+	height: 18px;
+	flex-shrink: 0;
 }
 
 .logo-right {
