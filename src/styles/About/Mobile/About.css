@@ -1,5 +1,47 @@
+@font-face {
+	font-family: "Avenir";
+	src: url(../../../../font/Avenir.ttc);
+}
+
 .about-header {
+	position: absolute;
 	width: 100%;
 	height: 88px;
-	background-color: gray;
+	background-color: #ffffff;
+}
+
+.menu-container {
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	left: 14px;
+	top: 55px;
+}
+
+.menu-icon {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.menu-footer {
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	bottom: 0px;
+	width: 100%;
+	height: 100px;
+
+	background: #000000;
+}
+
+.menu-footer > p {
+	font-family: "Avenir";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 13px;
+	line-height: 150%;
+	text-align: center;
+
+	color: #ffffff;
 }
