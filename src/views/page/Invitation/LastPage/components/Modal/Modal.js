@@ -17,7 +17,7 @@ const modal = (props) => {
       classNames="fade-slide"
     >
       <div className="Modal">
-          <img src="./Exclude.svg" alt="Icon" />
+          <img src="/Exclude.svg" alt="Icon" />
           주소를 복사했어요
       </div>
     </CSSTransition>
