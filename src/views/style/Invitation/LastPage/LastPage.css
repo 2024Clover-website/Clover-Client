@@ -201,29 +201,38 @@ a {
     filter: drop-shadow(0px 3px 18px rgba(0, 0, 0, 0.20));
 }
 
-.fade-slide-enter {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: ani 1s 1s;
-    
+@keyframes slideInFromBottom {
+    0% {
+      transform: translateY(100%);
+    }
+    50% {
+      transform: translateY(50%);
+    }
+    100% {
+      transform: translateY(0);
+    }
 }
 
-.fade-slide-enter-active {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
-    transition-timing-function: ease-in-out; /* 추가 */
-    animation: ani 1s 1s;
+.Container1 {
+    animation: slideInFromBottom 0.8s ease-out forwards;
 }
 
-.fade-slide-exit {
-    opacity: 1;
-    animation: ani 1s 1s;
+.Container2 {
+    animation: slideInFromBottom 1.8s ease-out forwards;
 }
 
-.fade-slide-exit-active {
-    opacity: 0;
-    transition: opacity 300ms ease-in-out;
-    transition-timing-function: ease-in-out; /* 추가 */
-    animation: ani 1s 1s;
+.Container3 {
+    animation: slideInFromBottom 1.8s ease-out forwards;
+}
+
+.Container4 {
+    animation: slideInFromBottom 1.8s ease-out forwards;
+}
+
+.Container5 {
+    animation: slideInFromBottom 1.8s ease-out forwards;
+}
+
+.Container6 {
+    animation: slideInFromBottom 1.8s ease-out forwards;
 }

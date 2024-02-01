@@ -46,6 +46,7 @@
     animation: closeModal 0.5s ease-out forwards;
   }
   
+   
   @keyframes openModal {
     0% {
       opacity: 0;

@@ -17,7 +17,7 @@ function LastPage() {
     const [showContainer5, setShowContainer5] = useState(false);
     const [showContainer6, setShowContainer6] = useState(false);
     setTimeout(() => setShowModal(false), 6000);
-    
+
     const handleCopy = () => {
         setCopied(true);
         showModalHandler();
@@ -58,14 +58,14 @@ function LastPage() {
         setTimeout(() => setShowContainer4(true), 1600);
         setTimeout(() => setShowContainer5(true), 2000);
         setTimeout(() => setShowContainer6(true), 2400);
-        // ... 나머지 컨테이너에 대한 setTimeout ...
+        
     }, []);
 
     return (
         <div className='Container' style={{ backgroundImage: `url("./bg.png")`, backgroundSize: 'cover' }}>
                 <div className='blankContainer1'>
                 </div>
-            <CSSTransition in={showContainer1} timeout={300} classNames="fade-slide" unmountOnExit>
+            <CSSTransition in={showContainer1} timeout={300} classNames="motion-slide" unmountOnExit>
                 <div className='Container1'>
                     <div className='Container1Frame'>
                         전시까지
@@ -75,14 +75,14 @@ function LastPage() {
                     </div>
                 </div>
             </CSSTransition>
-            <CSSTransition in={showContainer2} timeout={300} classNames="fade-slide" unmountOnExit>
+            <CSSTransition in={showContainer2} timeout={300} classNames="motion-slide" unmountOnExit>
             <div className='Container2'>
                 <div className='Container2Name'>
                     Clover 2024 Exhibition
                 </div>
             </div>
             </CSSTransition>
-            <CSSTransition in={showContainer3} timeout={30000} classNames="fade-slide" unmountOnExit>
+            <CSSTransition in={showContainer3} timeout={30000} classNames="motion-slide" unmountOnExit>
             <div className='Container3'>
                 <div className='Container3Frame'>
                     일정
@@ -92,7 +92,7 @@ function LastPage() {
                 </div>
             </div>
             </CSSTransition>
-            <CSSTransition in={showContainer4} timeout={30000} classNames="fade-slide" unmountOnExit>
+            <CSSTransition in={showContainer4} timeout={30000} classNames="motion-slide" unmountOnExit>
             <div className='Container4'>
                 <div className='Container4Frame'>
                     관람시간
@@ -102,7 +102,7 @@ function LastPage() {
                 </div>
             </div>
             </CSSTransition>
-            <CSSTransition in={showContainer5} timeout={30000} classNames="fade-slide" unmountOnExit>
+            <CSSTransition in={showContainer5} timeout={30000} classNames="motion-slide" unmountOnExit>
             <div className='Container5'>
                 <div className='Container5Frame'>
                     장소
@@ -114,7 +114,7 @@ function LastPage() {
                 </div>
             </div>
             </CSSTransition>
-            <CSSTransition in={showContainer6} timeout={3000} classNames="fade-slide" unmountOnExit>
+            <CSSTransition in={showContainer6} timeout={3000} classNames="motion-slide" unmountOnExit>
             <div className='Container6'>
                 <div className='goBackButton'>
                     <Link to="/">처음으로</Link>
