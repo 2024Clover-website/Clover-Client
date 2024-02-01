@@ -20,11 +20,15 @@ function Header() {
 		<div className="header-container">
 			<div className="logo-left">in a row</div>
 			<div className="nav-element">
-				<div onClick={handleAboutClick}>About</div>
-				<div onClick={handleProjectsClick}>Projects</div>
+				<div onClick={handleAboutClick}>
+					<p>About</p>
+				</div>
+				<div onClick={handleProjectsClick}>
+					<p>Projects</p>
+				</div>
 				<div onClick={handleRecordTapeClick}>
-					REC
-					<BsFillRecordFill className="record" />
+					<p>REC</p>
+					<BsFillRecordFill className="record-icon" />
 				</div>
 			</div>
 			<div className="logo-right">CLOVER</div>

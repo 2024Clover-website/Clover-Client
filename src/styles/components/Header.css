@@ -37,7 +37,7 @@
 .nav-element {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-evenly;
+	justify-content: space-around;
 	align-items: center;
 	margin-top: 30px;
 	width: 675px;
@@ -45,19 +45,30 @@
 }
 
 .nav-element > div {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.nav-element > div > p {
 	color: #000;
 	font-family: "Avenir";
 	font-size: 24px;
 	font-style: normal;
 	font-weight: 800;
 	line-height: 150%;
+	margin: 0;
 }
 
-.record {
-	color: #fd4d4d;
+.record-icon {
 	width: 18px;
 	height: 18px;
-	flex-shrink: 0;
+	border-radius: 50%;
+	margin-left: 5px;
+
+	background: #fd4d4d;
+	color: #fd4d4d;
 }
 
 .logo-right {
