@@ -179,62 +179,129 @@ a {
 }
 
 
-@keyframes slideInFromBottom {
-    0% {
-        transform: translateY(60px);
-        opacity: 0;
-        visibility: visible;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
 
-@keyframes slideInFromBottom40 {
+@keyframes container1 {
     0% {
-        transform: translateY(40px);
-        opacity: 0;
-        visibility: visible;
+      transform: translateY(60px);
+      opacity: 0;
+    }
+    135% {
+      transform: translateY(0);
+      opacity: 0;
     }
     100% {
-        transform: translateY(0);
-        opacity: 1;
+      transform: translateY(0);
+      opacity: 1;
     }
-}
+  }
+  
+  @keyframes container2 {
+    0% {
+      transform: translateY(40px);
+      opacity: 0;
+    }
+    140% {
+      transform: translateY(0);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes container3 {
+    0% {
+      transform: translateY(60px);
+      opacity: 0;
+    }
+    145% {
+      transform: translateY(0);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes container4 {
+    0% {
+      transform: translateY(60px);
+      opacity: 0;
+    }
+    150% {
+      transform: translateY(0);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes container5 {
+    0% {
+      transform: translateY(60px);
+      opacity: 0;
+    }
+    155% {
+      transform: translateY(0);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes container6 {
+    0% {
+      transform: translateY(40px);
+      opacity: 0;
+    }
+    160% {
+      transform: translateY(0);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 
 .Container1 {
-    animation: slideInFromBottom 1s cubic-bezier(0.23, 1, 0.32, 1) 0.35s forwards;
+    animation: container1 1s cubic-bezier(0.15,1,0.5,1) 0.35s forwards;
     transform: translateY(60px);
     opacity: 0;
 }
 
 .Container2 {
-    animation: slideInFromBottom40 1s cubic-bezier(0.23, 1, 0.32, 1) 0.4s forwards;
+    animation: container2 1s cubic-bezier(0.15,1,0.5,1) 0.4s forwards;
     transform: translateY(40px);
     opacity: 0;
 }
 
 .Container3 {
-    animation: slideInFromBottom 1s cubic-bezier(0.23, 1, 0.32, 1) 0.45s forwards;
+    animation: container3 1s cubic-bezier(0.15,1,0.5,1) 0.45s forwards;
     transform: translateY(60px);
     opacity: 0;
 }
 
 .Container4 {
-    animation: slideInFromBottom 1s cubic-bezier(0.23, 1, 0.32, 1) 0.5s forwards;
+    animation: container4 1s cubic-bezier(0.15,1,0.5,1) 0.5s forwards;
     transform: translateY(60px);
     opacity: 0;
 }
 
 .Container5 {
-    animation: slideInFromBottom 1s cubic-bezier(0.23, 1, 0.32, 1) 0.55s forwards;
+    animation: container5 1s cubic-bezier(0.15,1,0.5,1) 0.55s forwards;
     transform: translateY(60px);
     opacity: 0;
 }
 
 .Container6 {
-    animation: slideInFromBottom40 1s cubic-bezier(0.23, 1, 0.32, 1) 0.6s forwards;
+    animation: container6 1s cubic-bezier(0.15,1,0.5,1) 0.6s forwards;
     transform: translateY(40px);
     opacity: 0;
 }
