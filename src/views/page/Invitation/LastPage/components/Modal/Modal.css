@@ -24,19 +24,18 @@
   }
   
   .ModalOpen {
-    animation: openModal 0.4s ease-out forwards;
-  }
-  
-  .ModalClosed {
-    animation: closeModal 0.5s ease-out forwards;
-  }
-  
+    animation: toastIn 0.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+.ModalClosed {
+    animation: toastOut 0.5s cubic-bezier(0.755, 0.05, 0.855, 0.06) 1s forwards;
+}
   .fade-slide-enter {
     
   }
   
   .fade-slide-enter-active {
-    animation: openModal 0.4s ease-out forwards;
+    animation: openModal 0.5s ease-out forwards;
   }
   
   .fade-slide-exit {
@@ -46,7 +45,6 @@
     animation: closeModal 0.5s ease-out forwards;
   }
   
-   
   @keyframes openModal {
     0% {
       opacity: 0;

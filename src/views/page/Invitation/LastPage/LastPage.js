@@ -16,7 +16,7 @@ function LastPage() {
     const [showContainer4, setShowContainer4] = useState(false);
     const [showContainer5, setShowContainer5] = useState(false);
     const [showContainer6, setShowContainer6] = useState(false);
-    setTimeout(() => setShowModal(false), 6000);
+    setTimeout(() => setShowModal(false), 5000);
 
     const handleCopy = () => {
         setCopied(true);
@@ -78,7 +78,7 @@ function LastPage() {
             <CSSTransition in={showContainer2} timeout={300} classNames="motion-slide" unmountOnExit>
             <div className='Container2'>
                 <div className='Container2Name'>
-                    Clover 2024 Exhibition
+                    {'<Clover 2024 Exhibition>'}
                 </div>
             </div>
             </CSSTransition>
@@ -98,7 +98,7 @@ function LastPage() {
                     관람시간
                 </div>
                 <div className='Container4Name'>
-                    10:00-17:00
+                    10:00-18:30
                 </div>
             </div>
             </CSSTransition>
