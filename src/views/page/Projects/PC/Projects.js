@@ -4,6 +4,12 @@ import styles from "../../../../styles/Projects/PC/Projects.module.css";
 import { IoPlayCircle } from "react-icons/io5";
 
 function Projects() {
+	function handleDocentButton() {
+		window.location.href = "/projects/docentAnnounce";
+	}
+
+	function handlePodcastButton() {}
+
 	return (
 		<div className={styles.container}>
 			<div className={styles.imageContainer}>
@@ -31,7 +37,10 @@ function Projects() {
 					</div>
 					<p className={styles.tagContents}>
 						2:00
-						<IoPlayCircle className={styles.playButton} />
+						<IoPlayCircle
+							className={styles.playButton}
+							onClick={handleDocentButton}
+						/>
 					</p>
 				</div>
 				<div className={styles.innerBox}>
@@ -40,7 +49,10 @@ function Projects() {
 					</div>
 					<p className={styles.tagContents}>
 						10:00
-						<IoPlayCircle className={styles.playButton} />
+						<IoPlayCircle
+							className={styles.playButton}
+							onClick={handlePodcastButton}
+						/>
 					</p>
 				</div>
 			</div>
