@@ -2,9 +2,11 @@ import React, { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 
+import REC from "./views/page/REC/REC";
 import About from "./views/page/About/About";
 import Header from "./views/components/Header";
 import Footer from "./views/components/Footer";
+// import { Recoverable } from "repl";
 
 function App() {
 
@@ -24,7 +26,8 @@ function App() {
 			<div>
 				<Header />
 				<Routes>
-					<Route exact path="/" element={<About />} />
+					<Route exact path="/About" element={<About />} />
+					<Route exact path="/Rec" element={<REC/>} />
 				</Routes>
 				<Footer />
 			</div>
