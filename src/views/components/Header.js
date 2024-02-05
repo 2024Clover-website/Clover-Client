@@ -9,7 +9,7 @@ function Header() {
 	}
 
 	function handleProjectsClick() {
-		window.location.href = "/";
+		window.location.href = "/projects";
 	}
 
 	function handleRecordTapeClick() {

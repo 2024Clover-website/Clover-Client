@@ -1,9 +1,11 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 
-import About from "./page/About/PC/About";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+
+import About from "./page/About/PC/About";
+import Projects from "./page/Projects/PC/Projects";
 
 function PC() {
 	return (
@@ -11,6 +13,7 @@ function PC() {
 			<Header />
 			<Routes>
 				<Route exact path="/" element={<About />} />
+				<Route exact path="/projects" element={<Projects />} />
 			</Routes>
 			<Footer />
 		</div>
