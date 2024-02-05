@@ -1,63 +1,52 @@
-import React from 'react';
-
+import React, { useEffect, useState } from 'react';
+import { CSSTransition } from 'react-transition-group';
 import '../../../style/Invitation/Ininvitation1/Ininvitation1.css';
+
+function AnimatedText({children, delay, className}) {
+    const [show, setShow] = useState(false);
+
+    useEffect(() => {
+        setTimeout(() => setShow(true), delay);
+    }, [delay]);
+
+    return (
+        <CSSTransition in={show} timeout={750} classNames="motion-slide" unmountOnExit>
+            <div className={className}>{children}</div>
+        </CSSTransition>
+    );
+}
 
 function Ininvitation1() {
     function handleClick(e) {
         window.location.href = '/invite2'
     }
+
     return (
         <div className='container' style={{ backgroundImage: `url("./bg.png")`, backgroundSize: 'cover' }}>
-            <div className='smartContainer'>
-            </div>
             <div className='textContainer'>
-                <div className='text'>
-                    학교<br/>
-                </div>
-                <div className='text'>
-                    알바<br/>
-                </div>
-                <div className='text'>
-                    집<br/>
-                </div>
-                <div className='text'>
-                    학교<br/>
-                </div>
-                <div className='text'>
-                    알바<br/>
-                </div>
-                <div className='text'>
-                    집<br/>
-                </div>
-                <div className='text'>
-                    .<br/>
-                </div>
-                <div className='text'>
-                    .<br/>
-                </div>
-                <div className='text'>
-                    .<br/>
-                </div>
-                <div className='commitContainer'>
-                    <div className='commit1'>
-                        1.merry-go-round
+                <AnimatedText delay={100} className='text1'>학교<br/></AnimatedText>
+                <AnimatedText delay={200} className='text2'>알바<br/></AnimatedText>
+                <AnimatedText delay={300} className='text3'>집<br/></AnimatedText>
+                <AnimatedText delay={400} className='text4'>학교<br/></AnimatedText>
+                <AnimatedText delay={500} className='text5'>알바<br/></AnimatedText>
+                <AnimatedText delay={600} className='text6'>집<br/></AnimatedText>
+                <AnimatedText delay={700} className='text7'>.<br/></AnimatedText>
+                <AnimatedText delay={800} className='text8'>.<br/></AnimatedText>
+                <AnimatedText delay={900} className='text9'>.<br/></AnimatedText>
+                <CSSTransition in={true} timeout={750} classNames="motion-slide" unmountOnExit>
+                    <div className='commitContainer'>
+                        <AnimatedText delay={1000} className='commit'>{'<1.merry-go-round>'}</AnimatedText>
+                        <AnimatedText delay={1100} className='commit'>School, Part time job, Home,</AnimatedText>
+                        <AnimatedText delay={1200} className='commit'>School, Part time job, Home...</AnimatedText>
                     </div>
-                    <div className='commit'>
-                        School, Part time job, Home,
-                    </div>
-                    <div className='commit'>
-                        School, Part time job, Home...
-                    </div>
-                </div>
+                </CSSTransition>
             </div>
-            <div className='blankContainer'>
-                </div>
+            <div className='blankContainer2'></div>
             <div className='openContainer'>
-                <button onClick={handleClick} className='openButton'>
-                    다음
-                </button>
+                <button onClick={handleClick} className='openButton'>다음</button>
             </div>
         </div>
     )
 }
+
 export default Ininvitation1;

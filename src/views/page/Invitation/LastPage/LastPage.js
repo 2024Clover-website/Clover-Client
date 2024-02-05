@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'; // useEffect 추가
+import React, { useEffect, useState } from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { Link } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
@@ -30,27 +30,27 @@ function LastPage() {
     const closeModalHandler = () => {
         setShowModal(false);
     };
-    // 카운트다운을 위한 상태 변수
-    const [timeLeft, setTimeLeft] = useState(72 * 60 * 60); // 초 단위로 72시간 설정
+    
+    const countDownDate = new Date('2024-03-02T00:00:00').getTime();
+    const now = new Date().getTime();
+    const distance = countDownDate - now;
+    const timeLeftInitial = Math.floor(distance / 1000);
+
+    const [timeLeft, setTimeLeft] = useState(timeLeftInitial);
 
     useEffect(() => {
-        // 카운트다운 시작
         const timer = setInterval(() => {
             setTimeLeft(timeLeft => timeLeft - 1);
         }, 1000);
-
-        // 컴포넌트가 언마운트될 때 타이머 정리
         return () => clearInterval(timer);
     }, []);
 
-    // 초를 시간:분:초 형태로 변환하는 함수
     const formatTime = (time) => {
         const hours = Math.floor(time / 3600);
         const minutes = Math.floor((time % 3600) / 60);
         const seconds = time % 60;
         return `${hours}:${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
     };
-    // 페이지가 로드되면 컨테이너 애니메이션을 시작
     useEffect(() => {
         setTimeout(() => setShowContainer1(true), 400);
         setTimeout(() => setShowContainer2(true), 800);
@@ -134,8 +134,6 @@ function LastPage() {
             </div>
             <Modal show={showModal} closed={closeModalHandler} />
             {showModal && <Backdrop show={showModal} />}
-            <div className='blankContainer2'>
-            </div>
         </div>
     )
 }

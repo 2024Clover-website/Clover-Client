@@ -1,66 +1,63 @@
-import React from 'react';
-
+import React, { useEffect, useState } from 'react';
+import { CSSTransition } from 'react-transition-group';
 import '../../../style/Invitation/Ininvitation3/Ininvitation3.css';
+
+function AnimatedText({children, delay, className}) {
+    const [show, setShow] = useState(false);
+
+    useEffect(() => {
+        setTimeout(() => setShow(true), delay);
+    }, [delay]);
+
+    return (
+        <CSSTransition in={show} timeout={750} classNames="motion-slide" unmountOnExit>
+            <div className={className}>{children}</div>
+        </CSSTransition>
+    );
+}
 
 function Ininvitation3() {
     function handleClick(e) {
         window.location.href = '/invite4'
     }
+
     return (
         <div className='container' style={{ backgroundImage: `url("./bg.png")`, backgroundSize: 'cover' }}>
-            <div className='smartContainer'>
-            </div>
-            <div className='textContainer3'>
-                <div className='textContainer3'>
-                    <div className='text'>
-                        느슨해진 마음을
+            <div className='textContainer'>
+                <CSSTransition in={true} timeout={300} classNames="motion-slide" unmountOnExit>
+                    <div className='textContainer3'>
+                        <AnimatedText delay={400} className='text1'>느슨해진 마음을</AnimatedText>
+                        <AnimatedText delay={500} className='text2'>팽팽하게 만드려면,</AnimatedText>
+                        <AnimatedText delay={600} className='text3'>무언가 자극이 필요해요.</AnimatedText>
                     </div>
-                    <div className='text'>
-                        팽팽하게 만드려면,
+                </CSSTransition>
+                <CSSTransition in={true} timeout={300} classNames="motion-slide" unmountOnExit>
+                    <div className='commitContainer'>
+                        <AnimatedText delay={700} className='commit'>{'<4.Needs>'}</AnimatedText>
+                        <AnimatedText delay={800} className='commit'>To tighten your loose mind, you have to seek</AnimatedText>
+                        <AnimatedText delay={900} className='commit'>new stimulation.</AnimatedText>
                     </div>
-                    <div className='text'>
-                        무언가 자극이 필요해요.
+                </CSSTransition>
+                <CSSTransition in={true} timeout={300} classNames="motion-slide" unmountOnExit>
+                    <div className='textContainer3'>
+                        <AnimatedText delay={1000} className='text4'>마치 카세트 테이프에</AnimatedText>
+                        <AnimatedText delay={1100} className='text5'>연필을 꽂아 돌리는</AnimatedText>
+                        <AnimatedText delay={1200} className='text6'>것처럼요.</AnimatedText>
                     </div>
+                </CSSTransition>
+                <CSSTransition in={true} timeout={1300} classNames="motion-slide" unmountOnExit>
+                    <div className='commitContainer1'>
+                        <AnimatedText delay={1400} className='commit'>{'<5.Pencil>'}</AnimatedText>
+                        <AnimatedText delay={1500} className='commit'>Seems like putting a pencil on a cassette tape.</AnimatedText>
+                    </div>
+                </CSSTransition>
                 </div>
-                <div className='commitContainer'>
-                    <div className='commit1'>
-                        4.Needs
-                    </div>
-                    <div className='commit'>
-                        To tighten your loose mind, you have to seek
-                    </div>
-                    <div className='commit2'>
-                        new stimulation.
-                    </div>
-                </div>
-                <div className='textContainer3'>
-                    <div className='text'>
-                        마치 카세트 테이프에
-                    </div>
-                    <div className='text'>
-                        연필을 꽂아 돌리는
-                    </div>
-                    <div className='text'>
-                        것처럼요.
-                    </div>
-                </div>
-                <div className='commitContainer1'>
-                    <div className='commit1'>
-                        5.Pencil
-                    </div>
-                    <div className='commit'>
-                        Seems like putting a pencil on a cassette tape.
-                    </div>
-                </div>
-            </div>
-            <div className='blankContainer'>
-            </div>
+            <div className='blankContainer'></div>
             <div className='openContainer'>
-                <button onClick={handleClick} className='openButton'>
-                    다음
-                </button>
+                <button onClick={handleClick} className='openButton'>다음</button>
             </div>
         </div>
     )
 }
+
 export default Ininvitation3;

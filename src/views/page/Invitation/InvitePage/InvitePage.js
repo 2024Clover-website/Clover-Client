@@ -6,22 +6,12 @@ function InvitePage() {
         window.location.href = '/invite1'
     }
     return (
-        <div className='container' style={{ backgroundImage: `url("./438259dc684760fd3f80b8e0c8b03949 (1).png")`, backgroundSize: 'cover'}}>
-            <div className='smartContainer'>
-            </div>
-            <div className='cardContainer'>
-                <div className='cardName'>
-                </div>
-            </div>
-            <div className='titleContainer'>
-                <div className='titleName'>
-                    <img src="./KakaoTalk_Photo_2024-01-22-12-50-16 2.png" alt="In A Row" />
-                </div>
-            </div>
-            <div className='blankContainer'>
-            </div>
-            <div className='openContainer'>
-                <button onClick={handleClick} className='openButton'>
+        <div className='PIG1'>
+            <div className= 'hiddenContainer1'></div>
+            <div className='PIG2'></div>
+            <div className= 'hiddenContainer2'></div>
+            <div className='StartContainer'>
+                <button onClick={handleClick} className='StartButton'>
                     초대장 열기
                 </button>
             </div>

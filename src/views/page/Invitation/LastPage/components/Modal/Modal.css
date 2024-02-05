@@ -3,7 +3,7 @@
     width: 141px;
     height: 19px;
     margin: auto;
-    margin-top: -570px;
+    margin-top: -560px;
     padding: 15px 20px;
     flex-direction: row;
     align-items: center;
@@ -50,10 +50,7 @@
       opacity: 0;
       transform: translateY(-100%);
     }
-    50% {
-      opacity: 1;
-      transform: translateY(20%);
-    }
+
     100% {
       opacity: 1;
       transform: translateY(0%);
@@ -65,10 +62,7 @@
       opacity: 1;
       transform: translateY(0%);
     }
-    50% {
-      opacity: 0.8;
-      transform: translateY(60%);
-    }
+
     100% {
       opacity: 0;
       transform: translateY(-100%);
