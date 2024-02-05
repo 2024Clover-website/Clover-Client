@@ -10,13 +10,15 @@ import AnnouncementDocent from "./page/Projects/Docent/PC/Announcement";
 import AnnouncementPodcast from "./page/Projects/Podcast/PC/Announcement";
 
 function PC() {
-	const isAnnounce =
-		window.location.pathname === "/projects/docentAnnounce" ||
-		"/projects/podcastAnnounce";
+	const isDocentAnnounce =
+		window.location.pathname === "/projects/docentAnnounce";
+
+	const isPodcastAnnounce =
+		window.location.pathname === "/projects/podcastAnnounce";
 
 	return (
 		<div>
-			{!isAnnounce && <Header />}
+			{!(isDocentAnnounce || isPodcastAnnounce) && <Header />}
 			<Routes>
 				<Route exact path="/" element={<About />} />
 				<Route exact path="/projects" element={<Projects />} />
@@ -31,7 +33,7 @@ function PC() {
 					element={<AnnouncementPodcast />}
 				/>
 			</Routes>
-			{!isAnnounce && <Footer />}
+			{!(isDocentAnnounce || isPodcastAnnounce) && <Footer />}
 		</div>
 	);
 }
