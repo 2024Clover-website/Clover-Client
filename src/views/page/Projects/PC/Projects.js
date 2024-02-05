@@ -8,7 +8,9 @@ function Projects() {
 		window.location.href = "/projects/docentAnnounce";
 	}
 
-	function handlePodcastButton() {}
+	function handlePodcastButton() {
+		window.location.href = "/projects/podcastAnnounce";
+	}
 
 	return (
 		<div className={styles.container}>

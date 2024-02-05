@@ -7,14 +7,16 @@ import Footer from "./components/Footer";
 import About from "./page/About/PC/About";
 import Projects from "./page/Projects/PC/Projects";
 import AnnouncementDocent from "./page/Projects/Docent/PC/Announcement";
+import AnnouncementPodcast from "./page/Projects/Podcast/PC/Announcement";
 
 function PC() {
-	const isDocentAnnounce =
-		window.location.pathname === "/projects/docentAnnounce";
+	const isAnnounce =
+		window.location.pathname === "/projects/docentAnnounce" ||
+		"/projects/podcastAnnounce";
 
 	return (
 		<div>
-			{!isDocentAnnounce && <Header />}
+			{!isAnnounce && <Header />}
 			<Routes>
 				<Route exact path="/" element={<About />} />
 				<Route exact path="/projects" element={<Projects />} />
@@ -23,8 +25,13 @@ function PC() {
 					path="/projects/docentAnnounce"
 					element={<AnnouncementDocent />}
 				/>
+				<Route
+					exact
+					path="/projects/podcastAnnounce"
+					element={<AnnouncementPodcast />}
+				/>
 			</Routes>
-			{!isDocentAnnounce && <Footer />}
+			{!isAnnounce && <Footer />}
 		</div>
 	);
 }
