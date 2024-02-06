@@ -10,7 +10,9 @@ function Footer() {
 	return (
 		<div className="container">
 			<div className="team">
-				MJU Division of Design CLOVER Final Exhibition 2024
+				MJU Division of Design
+				<br />
+				CLOVER Final Exhibition 2024
 			</div>
 			<div className="location">Maru Art Center 3F The Second Gallery</div>
 			<div className="instagram" onClick={handleInstagramClick}>
