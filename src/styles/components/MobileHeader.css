@@ -3,6 +3,12 @@
 	src: url(../../../font/AvenirLTStd-Black.ttf);
 }
 
+.about-container {
+	position: fixed;
+	background-color: #ffffff;
+	z-index: 1;
+}
+
 .about-header {
 	position: absolute;
 	width: 100%;
