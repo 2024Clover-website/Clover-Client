@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BsFillRecordFill } from "react-icons/bs";
 
-import "../../../../../styles/About/Mobile/components/Menu.css";
+import styles from "../../styles/components/Menu.module.css";
 
 function Menu() {
 	function handleAboutClick() {
@@ -9,7 +9,7 @@ function Menu() {
 	}
 
 	function handleProjectsClick() {
-		window.location.href = "/";
+		window.location.href = "/projects";
 	}
 
 	function handleRecClick() {
@@ -17,20 +17,26 @@ function Menu() {
 	}
 
 	return (
-		<div style={{ paddingTop: 100 }}>
-			<div className="menu-box">
+		<div
+			style={{
+				paddingTop: 100,
+				width: window.screen.width,
+				height: window.screen.height,
+			}}
+		>
+			<div className={styles.menuBox}>
 				<p onClick={handleAboutClick}>ABOUT</p>
 			</div>
-			<div className="menu-box">
+			<div className={styles.menuBox}>
 				<p onClick={handleProjectsClick}>PROJECTS</p>
 			</div>
-			<div className="menu-box">
+			<div className={styles.menuBox}>
 				<p onClick={handleRecClick}>
 					REC
-					<BsFillRecordFill className="record" />
+					<BsFillRecordFill className={styles.record} />
 				</p>
 			</div>
-			<div className="menu-box">
+			<div className={styles.menuBox}>
 				<a>Instagram</a>
 			</div>
 		</div>

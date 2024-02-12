@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { IoMenu, IoClose } from "react-icons/io5";
 
-import Menu from "./components/Menu";
-import "../../../../styles/About/Mobile/About.css";
+import Menu from "./Menu";
+import "../../styles/components/MobileHeader.css";
 
-function About() {
+function MobileHeader() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 	useEffect(() => {
@@ -41,4 +41,4 @@ function About() {
 	);
 }
 
-export default About;
+export default MobileHeader;
