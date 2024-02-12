@@ -5,11 +5,11 @@ import { IoPlayCircle } from "react-icons/io5";
 
 function Projects() {
 	function handleDocentButton() {
-		window.location.href = "/projects/docentAnnounce";
+		window.location.href = "/projects/docent/title";
 	}
 
 	function handlePodcastButton() {
-		window.location.href = "/projects/podcastAnnounce";
+		window.location.href = "/projects/podcast";
 	}
 
 	return (

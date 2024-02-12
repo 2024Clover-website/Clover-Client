@@ -1,0 +1,98 @@
+@font-face {
+	font-family: "Avenir-Black";
+	src: url(../../../../../font/AvenirLTStd-Black.ttf);
+}
+
+@font-face {
+	font-family: "YDIYGO340";
+	src: url(../../../../../font/윤고딕340.ttf);
+}
+
+.container {
+	background: rgba(0, 0, 0, 0.7);
+	padding-top: 110px;
+	padding-left: 14px;
+}
+
+.backButton {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 14px;
+	top: 50px;
+}
+
+.demoLoadingBar {
+	width: 92.533%;
+	height: 2px;
+
+	background: #716f6f;
+}
+
+.category {
+	margin-top: 40px;
+	margin-left: 14px;
+	height: 26px;
+}
+
+.category > p {
+	margin: 0;
+
+	font-family: "Avenir-Black";
+	font-style: normal;
+	font-weight: 900;
+	font-size: 20px;
+	line-height: 130%;
+	/* identical to box height, or 26px */
+	display: flex;
+	align-items: center;
+
+	color: #f1f1f1;
+}
+
+.title {
+	width: 319px;
+	height: 204px;
+	margin-top: 30px;
+	margin-left: 14px;
+}
+
+.title > p {
+	margin: 0;
+
+	font-family: "Avenir-Black";
+	font-style: normal;
+	font-weight: 800;
+	font-size: 39px;
+	line-height: 130%;
+	/* or 51px */
+
+	color: #f1f1f1;
+}
+
+.designer {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	margin-left: 14px;
+	margin-top: 60px;
+}
+
+.designer > p {
+	font-family: "YDIYGO340";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 130%;
+	/* identical to box height, or 26px */
+	display: flex;
+	align-items: center;
+
+	color: #f1f1f1;
+
+	/* Inside auto layout */
+	flex: none;
+	order: 1;
+	flex-grow: 0;
+}
