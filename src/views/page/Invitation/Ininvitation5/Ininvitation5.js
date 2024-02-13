@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
-import '../../../style/Invitation/Ininvitation5/Ininvitation5.css';
+import '../../../style/Invitation/Ininvitation1/Ininvitation1.css';
 
 function AnimatedText({children, delay, className}) {
     const [show, setShow] = useState(false);
@@ -68,7 +68,6 @@ function Ininvitation5() {
                 <AnimatedImage delay={1200} className='invitation5Image' src='./image-3 1.png' />
             </div>
             </CSSTransition>
-            <div className='blankContainer2'></div>
             <div className='openContainer'>
                 <button onClick={handleClick} className='openButton'>
                     다음

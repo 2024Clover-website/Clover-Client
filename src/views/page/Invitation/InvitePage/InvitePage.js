@@ -7,9 +7,7 @@ function InvitePage() {
     }
     return (
         <div className='PIG1'>
-            <div className= 'hiddenContainer1'></div>
             <div className='PIG2'></div>
-            <div className= 'hiddenContainer2'></div>
             <div className='StartContainer'>
                 <button onClick={handleClick} className='StartButton'>
                     초대장 열기
