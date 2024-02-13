@@ -9,7 +9,7 @@ function Projects() {
 	}
 
 	function handlePodcastButton() {
-		window.location.href = "/projects/podcast";
+		window.location.href = "/projects/podcast/title";
 	}
 
 	return (

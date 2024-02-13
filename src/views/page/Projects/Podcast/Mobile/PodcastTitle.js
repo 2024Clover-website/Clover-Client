@@ -1,14 +1,15 @@
 import React, { useEffect } from "react";
 
 import styles from "../../../../../styles/Projects/Docent/Mobile/DocentTitle.module.css";
+import podStyle from "../../../../../styles/Projects/Podcast/Mobile/PodcastTitle.module.css";
 import { useNavigate } from "react-router-dom";
 
-function DocentTitle() {
+function PodcastTitle() {
 	const navigate = useNavigate();
 
 	useEffect(() => {
 		setTimeout(() => {
-			window.location.href = "/projects/docent/content";
+			window.location.href = "/projects/podcast/content";
 		}, 5000);
 	}, []);
 
@@ -38,10 +39,49 @@ function DocentTitle() {
 			</svg>
 			<div className={styles.demoLoadingBar}></div>
 			<div className={styles.category}>
-				<p>DOCENT</p>
+				<p>PODCAST</p>
 			</div>
-			<div className={styles.title}>
-				<p>Dopamine Addiction: Visualization of symptoms</p>
+			<div className={podStyle.title}>
+				<p>자고 일어났더니 과제가 증발했다</p>
+			</div>
+			<div className={styles.designer}>
+				<p>옥수수수염</p>
+			</div>
+			<div className={styles.designer}>
+				<div
+					style={{
+						width: 30,
+						height: 30,
+						marginRight: 10,
+						borderRadius: "50%",
+						backgroundColor: "blue",
+					}}
+				></div>
+				<p>강지수·시각디자인 3D</p>
+			</div>
+			<div className={styles.designer}>
+				<div
+					style={{
+						width: 30,
+						height: 30,
+						marginRight: 10,
+						borderRadius: "50%",
+						backgroundColor: "blue",
+					}}
+				></div>
+				<p>강지수·시각디자인 3D</p>
+			</div>
+			<div className={styles.designer}>
+				<div
+					style={{
+						width: 30,
+						height: 30,
+						marginRight: 10,
+						borderRadius: "50%",
+						backgroundColor: "blue",
+					}}
+				></div>
+				<p>강지수·시각디자인 3D</p>
 			</div>
 			<div className={styles.designer}>
 				<div
@@ -59,4 +99,4 @@ function DocentTitle() {
 	);
 }
 
-export default DocentTitle;
+export default PodcastTitle;
