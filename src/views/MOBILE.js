@@ -4,7 +4,9 @@ import { Route, Routes } from "react-router-dom";
 import MobileHeader from "./components/MobileHeader";
 import Projects from "./page/Projects/Mobile/Projects";
 import DocentTitle from "./page/Projects/Docent/Mobile/DocentTitle";
+import DocentContent from "./page/Projects/Docent/Mobile/DocentContent";
 import PodcastTitle from "./page/Projects/Podcast/Mobile/PodcastTitle";
+import PodcastContent from "./page/Projects/Podcast/Mobile/PodcastContent";
 
 function MOBILE() {
 	const isDocent =
@@ -27,6 +29,16 @@ function MOBILE() {
 					exact
 					path="/projects/podcast/title"
 					element={<PodcastTitle />}
+				/>
+				<Route
+					exact
+					path="/projects/docent/content"
+					element={<DocentContent />}
+				/>
+				<Route
+					exact
+					path="/projects/podcast/content"
+					element={<PodcastContent />}
 				/>
 			</Routes>
 		</div>
