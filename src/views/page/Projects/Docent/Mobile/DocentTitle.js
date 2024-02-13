@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import styles from "../../../../../styles/Projects/Docent/Mobile/DocentTitle.module.css";
 import { useNavigate } from "react-router-dom";
@@ -6,7 +6,13 @@ import { useNavigate } from "react-router-dom";
 function DocentTitle() {
 	const navigate = useNavigate();
 
+	const [progress, setProgress] = useState(0);
+
 	useEffect(() => {
+		const interval = setInterval(() => {
+			setProgress((progress) => progress + 0.1);
+		}, 10);
+
 		setTimeout(() => {
 			window.location.href = "/projects/docent/content";
 		}, 5000);
@@ -36,7 +42,15 @@ function DocentTitle() {
 					fill="white"
 				/>
 			</svg>
-			<div className={styles.demoLoadingBar}></div>
+			<div className={styles.demoLoadingBar}>
+				<div
+					style={{
+						width: `${progress}%`,
+						height: "100%",
+						backgroundColor: "#ffffff",
+					}}
+				></div>
+			</div>
 			<div className={styles.category}>
 				<p>DOCENT</p>
 			</div>

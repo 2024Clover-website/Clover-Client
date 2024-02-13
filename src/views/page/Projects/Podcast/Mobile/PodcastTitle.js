@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import styles from "../../../../../styles/Projects/Docent/Mobile/DocentTitle.module.css";
 import podStyle from "../../../../../styles/Projects/Podcast/Mobile/PodcastTitle.module.css";
@@ -7,8 +7,15 @@ import { useNavigate } from "react-router-dom";
 function PodcastTitle() {
 	const navigate = useNavigate();
 
+	const [progress, setProgress] = useState(0);
+
 	useEffect(() => {
+		const interval = setInterval(() => {
+			setProgress((progress) => progress + 0.1);
+		}, 10);
+
 		setTimeout(() => {
+			clearInterval(interval);
 			window.location.href = "/projects/podcast/content";
 		}, 5000);
 	}, []);
@@ -37,7 +44,15 @@ function PodcastTitle() {
 					fill="white"
 				/>
 			</svg>
-			<div className={styles.demoLoadingBar}></div>
+			<div className={styles.demoLoadingBar}>
+				<div
+					style={{
+						width: `${progress}%`,
+						height: "100%",
+						backgroundColor: "#ffffff",
+					}}
+				></div>
+			</div>
 			<div className={styles.category}>
 				<p>PODCAST</p>
 			</div>
