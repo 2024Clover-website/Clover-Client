@@ -41,7 +41,6 @@ function Ininvitation1() {
                     </div>
                 </CSSTransition>
             </div>
-            <div className='blankContainer2'></div>
             <div className='openContainer'>
                 <button onClick={handleClick} className='openButton'>다음</button>
             </div>

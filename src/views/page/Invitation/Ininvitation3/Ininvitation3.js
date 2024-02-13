@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
-import '../../../style/Invitation/Ininvitation3/Ininvitation3.css';
+import '../../../style/Invitation/Ininvitation1/Ininvitation1.css';
 
 function AnimatedText({children, delay, className}) {
     const [show, setShow] = useState(false);
@@ -52,7 +52,6 @@ function Ininvitation3() {
                     </div>
                 </CSSTransition>
                 </div>
-            <div className='blankContainer'></div>
             <div className='openContainer'>
                 <button onClick={handleClick} className='openButton'>다음</button>
             </div>
