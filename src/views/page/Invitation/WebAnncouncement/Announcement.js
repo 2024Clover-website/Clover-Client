@@ -1,5 +1,5 @@
-import React, { useCallback } from "react";
 import moment from "moment";
+import React, { useCallback } from "react";
 
 import "../../../../styles/invitation/WebAnnouncement/Announcement.css";
 
@@ -9,6 +9,7 @@ function Announcement() {
 		let _second = 1000;
 		let _minute = _second * 60;
 		let _hour = _minute * 60;
+		let _day = _hour * 24;
 		let timer;
 
 		function showRemaining() {
@@ -18,19 +19,19 @@ function Announcement() {
 
 				if (distDt < 0) {
 					clearInterval(timer);
-					let HapDate = "00:00:00";
+					let HapDate = "00:00:00:00";
 					document.getElementById("timer").innerHTML = HapDate;
 					return;
 				}
-				let hours = Math.floor(distDt / _hour);
+				let days = Math.floor(distDt / _day);
+				let hours = Math.floor((distDt % _day) / _hour);
 				let minutes = Math.floor((distDt % _hour) / _minute);
 				let seconds = Math.floor((distDt % _minute) / _second);
 
 				let HapDate =
-					hours.toString().padStart(2, "0") +
-					":" +
-					minutes.toString().padStart(2, "0") +
-					":" +
+					days.toString().padStart(2, "0") + ":" +
+					hours.toString().padStart(2, "0") + ":" +
+					minutes.toString().padStart(2, "0") + ":" +
 					seconds.toString().padStart(2, "0");
 				document.getElementById("timer").innerHTML = HapDate;
 			} catch (e) {
@@ -42,21 +43,31 @@ function Announcement() {
 
 	return (
 		<div className="container">
-			<div className="title">
-				<p>모바일로 봐주세요!</p>
+			<div className="CT1">
+				<div className="Textbox">
+					<p>전시까지 남은 시간</p>
+				</div>
+				<div className="timer-container">
+					<p id="timer">{countDownTimer("2024-03-02")}</p>
+				</div>
 			</div>
-			<div className="text-content">
-				<p>
-					초대장은 모바일로 확인할 수 있어요
-					<br />
-					카메라로 아래 QR 코드를 찍어 접속해주세요
-				</p>
-			</div>
-			<div className="qr-container">
-				<img src="./mobileInvitationQRcode.jpeg" alt />
-			</div>
-			<div className="timer-container">
-				<p id="timer">{countDownTimer("2024-03-02")}</p>
+			<div className="blankLine"></div>
+			<div className="CT2">
+				<div className="qr-container">
+					<img src="./mobileInvitationQRcode.jpeg" alt />
+				</div>
+				<div className="text-content">
+					<div className="text-content1">
+						<p>모바일로 봐주세요!</p>
+					</div>
+					<div className="text-content2">
+						<p>
+							초대장은 모바일로 확인할 수 있어요
+							<br />
+							카메라로 아래 QR 코드를 찍어 접속해주세요
+						</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	);
