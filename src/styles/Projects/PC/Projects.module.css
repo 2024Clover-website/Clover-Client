@@ -19,18 +19,181 @@
 	cursor: default;
 }
 
-.imageContainer {
-	width: 768px;
-	height: 535px;
-	border: 1px solid black;
+.CTMain {
+	width: 780px;
+	height: 502.69px;
+	
+	left: 0%;
+	right: 0%;
+	top: 0%;
+	bottom: 0%;
+	
+	background: rgba(255, 255, 255, 0.25);
+	border: 2px solid rgba(255, 255, 255, 0.75);
+	/* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1); */
+	backdrop-filter: blur(37.5px);
+	/* Note: backdrop-filter has minimal browser support */
+	
+}
+.CTA{
+
+	position: absolute;
+	box-sizing: border-box;
+	left: -0.62%;
+	right: -30.11%;
+	top: 68.46%;
+	bottom: 1.57%;
+	
+
+	
+}
+.CTB{
+
+
+	box-sizing: border-box;
+
+	position: absolute;
+	left: 32.33%;
+	right: 49.8%;
+	top: 41.53%;
+	bottom: 15.09%;
+
+
 }
 
+.CTC{
+	position: absolute;
+	
+	box-sizing: border-box;
+
+	left: 41.98%;
+	right: 25.83%;
+	top: 27.6%;
+	bottom: 60.23%;
+	
+
+	
+}
+.CTD{
+	position: absolute;
+
+	box-sizing: border-box;
+
+	
+	left: 85.41%;
+	right: 5.37%;
+	top: 9.05%;
+	bottom: 60.24%;
+	
+
+}
+.CTE{
+
+	box-sizing: border-box;
+
+	position: absolute;
+	left: 63.27%;
+	right: 22.7%;
+	top: -0.95%;
+	bottom: 79.97%;
+
+
+
+}
+.CTF{
+	position: absolute;
+
+	box-sizing: border-box;
+
+	left: 29.17%;
+	right: 34.3%;
+	top: -0.95%;
+	bottom: 79.96%;
+	
+	
+}
+.CT01{
+	position: absolute;
+	left: 9.26%;
+	right: 85.01%;
+	top: 56.3%;
+	bottom: 30.67%;
+	
+}
+.CT02{
+	
+	position: absolute;
+	left: 11.3%;
+	right: 71.25%;
+	top: 12.41%;
+	bottom: 57.85%;
+
+
+
+}
+.CT03{
+	position: absolute;
+	left: 3.78%;
+	right: 86.16%;
+	top: 32.02%;
+	bottom: 48.84%;
+
+
+}
+
+.alphabetA{
+	position: absolute;
+	left: 11.26%;
+	right: 84.99%;
+	top: 73.53%;
+	bottom: 3.9%;
+	
+	
+}
+.alphabetB{
+	position: absolute;
+	left: 42.06%;
+	right: 54.19%;
+	top: 48.33%;
+	bottom: 86.7%;
+}
+.alphabetC{
+	position: absolute;
+	left: 56.71%;
+	right: 39.54%;
+	top: 39.32%;
+	bottom: 61.71%;
+	
+}
+.alphabetD{
+	position: absolute;
+	left: 90.06%;
+	right: 6.19%;
+	top: 45.6%;
+	bottom: 71.43%;
+	
+}
+.alphabetE{
+	position: absolute;
+	left: 70.71%;
+	right: 25.54%;
+	top: 42.33%;
+	bottom: 86.7%;
+}
+.alphabetF{
+	position: absolute;
+	left: 42.06%;
+	right: 54.19%;
+	top: 40.33%;
+	bottom: 86.7%;
+	
+}
 .descriptionContainer {
 	display: flex;
 	flex-direction: column;
 	width: 590px;
 	height: 484px;
-	margin-left: 16.852%;
+	margin-left: 6.852%;
 }
 
 .titleBox {
