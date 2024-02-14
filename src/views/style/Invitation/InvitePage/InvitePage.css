@@ -1,29 +1,16 @@
-.PIG1{
-    position: absolute;
+* {
+    padding: 0;
+    margin: 0;
+}
+video{
     width: 100%;
-    min-height: 120vh;
-    background-image: url("../../../../../img/100.png");
-    background-size: cover;
 }
-
-
-.PIG2{
-    background-image: url("../../../../../img/200.png");
-    position: absolute;
-    width: 387.09px;
-    height: 406.45px;
-    top: 214.91px;
-    mix-blend-mode: darken;
-    transform: rotate(-7.18deg);
-
-}
-
-.StartContainer{
+.startContainer{
     position: fixed;
     bottom: 0%;
     width: 100%;
 }
-.StartButton{
+.startButton{
     display: flex;
     width: 100%;
     height: 65px;
