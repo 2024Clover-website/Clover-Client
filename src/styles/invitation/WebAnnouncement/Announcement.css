@@ -134,7 +134,6 @@
 .Textbox{
 	text-align: center;
 	box-sizing: border-box;
-
 	/* Auto layout */
 	display: flex;
 	flex-direction: column;
@@ -142,7 +141,7 @@
 	align-items: center;
 	padding: 13px 25px 15px;
 	margin-top: 165px;
-	width: 212px;
+	width: 240px;
 	height: 54px;
 	
 	background: rgba(241, 241, 241, 0.4);
@@ -156,9 +155,7 @@
 }
 
 .Textbox > p{
-	width: 162px;
 	height: 26px;
-	
 	font-family: 'YDIYGO340';
 	font-style: normal;
 	font-weight: 400;

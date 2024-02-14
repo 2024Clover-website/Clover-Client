@@ -27,7 +27,6 @@ function Announcement() {
 				let hours = Math.floor((distDt % _day) / _hour);
 				let minutes = Math.floor((distDt % _hour) / _minute);
 				let seconds = Math.floor((distDt % _minute) / _second);
-
 				let HapDate =
 					days.toString().padStart(2, "0") + ":" +
 					hours.toString().padStart(2, "0") + ":" +

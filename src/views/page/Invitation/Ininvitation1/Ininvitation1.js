@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import '../../../style/Invitation/Ininvitation1/Ininvitation1.css';
+import video2 from '../../../../video/publicPageVideo.mp4';
 
 function AnimatedText({children, delay, className}) {
     const [show, setShow] = useState(false);
@@ -22,7 +23,10 @@ function Ininvitation1() {
     }
 
     return (
-        <div className='container' style={{ backgroundImage: `url("./bg.png")`, backgroundSize: 'cover' }}>
+        <div className='container'>
+            <video style={{height: window.screen.height}} autoPlay loop muted>
+                <source src={video2} type='video/mp4'/>
+            </video>
             <div className='textContainer'>
                 <AnimatedText delay={100} className='text1'>학교<br/></AnimatedText>
                 <AnimatedText delay={200} className='text2'>알바<br/></AnimatedText>

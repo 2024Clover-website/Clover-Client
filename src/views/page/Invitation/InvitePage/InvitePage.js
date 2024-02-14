@@ -1,6 +1,6 @@
 import React from "react";
 import '../../../style/Invitation/InvitePage/InvitePage.css';
-import video1 from '../../../../video/InvitePageVideo.mp4';
+import video1 from '../../../../video/invitePageVideo.mp4';
 
 function InvitePage() {
     function handleClick(e) {
@@ -8,7 +8,7 @@ function InvitePage() {
     }
     return (
         <div className='PIG1'>
-            <video autoPlay loop muted>
+            <video style={{height: window.screen.height}} autoPlay loop muted>
                 <source src={video1} type='video/mp4'/>
             </video>
             <div className='startContainer'>

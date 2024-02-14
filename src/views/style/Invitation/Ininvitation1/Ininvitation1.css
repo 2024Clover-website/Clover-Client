@@ -1,8 +1,17 @@
+* {
+    padding: 0;
+    margin: 0;
+}
 .container{
     position: absolute;
     width: 100%;
     min-height: 120vh;
     mix-blend-mode: normal;
+}
+video{
+    position:fixed;
+    object-fit: cover;
+    width: 100%;
 }
 .textContainer{
     position: absolute;
