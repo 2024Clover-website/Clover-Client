@@ -47,10 +47,11 @@ function LastPage() {
     }, []);
 
     const formatTime = (time) => {
-        const hours = Math.floor(time / 3600);
+        const days = Math.floor(time / 86400)
+        const hours = Math.floor((time % 600) / 24);
         const minutes = Math.floor((time % 3600) / 60);
         const seconds = time % 60;
-        return `${hours}:${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+        return `${days}:${hours < 10 ? '0' : ''}${hours}:${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
     };
     useEffect(() => {
         setTimeout(() => setShowContainer1(true), 400);

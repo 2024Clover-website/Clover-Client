@@ -33,7 +33,7 @@ function AnimatedImage({src, delay, className}) {
 
 function Ininvitation5() {
     function handleClick(e) {
-        window.location.href = '/last'
+        window.location.href = '/invite/1/2/3/4/5'
     }
 
     return (
