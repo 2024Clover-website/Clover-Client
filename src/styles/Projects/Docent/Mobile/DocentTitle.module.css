@@ -12,9 +12,18 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	background: rgba(0, 0, 0, 0.7);
+	background: rgba(0, 0, 0, 0.1);
 	padding-top: 110px;
 	padding-left: 14px;
+}
+
+.background {
+	position: fixed;
+	background-image: url(../../../../../public/docent.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	z-index: -1;
+	margin: 0 auto;
 }
 
 .backButton {
@@ -29,7 +38,8 @@
 	width: 92.533%;
 	height: 2px;
 
-	background: #716f6f;
+	background: rgba(255, 255, 255, 0.25);
+	box-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
 }
 
 .category {
@@ -50,7 +60,9 @@
 	display: flex;
 	align-items: center;
 
-	color: #f1f1f1;
+	color: #ffffff;
+
+	text-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
 }
 
 .title {
@@ -73,6 +85,8 @@
 	/* or 51px */
 
 	color: #f1f1f1;
+
+	text-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
 }
 
 .designer {
@@ -96,6 +110,8 @@
 	align-items: center;
 
 	color: #f1f1f1;
+
+	text-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
 
 	/* Inside auto layout */
 	flex: none;
