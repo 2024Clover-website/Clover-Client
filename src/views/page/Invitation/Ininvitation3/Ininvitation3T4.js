@@ -19,7 +19,7 @@ function AnimatedText({children, delay, className}) {
 
 function Ininvitation3T4() {
     function handleClick(e) {
-        window.location.href = '/invite/도파민중독자들/1/2/3/4'
+        window.location.href = '/invite/도파민중독자들/4'
     }
 
     return (

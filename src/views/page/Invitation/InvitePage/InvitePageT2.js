@@ -2,9 +2,9 @@ import React from "react";
 import '../../../style/Invitation/InvitePage/InvitePage.css';
 import video1 from '../../../../video/invitePageVideo.mp4';
 
-function InvitePage() {
+function InvitePageT2() {
     function handleClick(e) {
-        window.location.href = '/invite/public/1'
+        window.location.href = '/invite/이따/1'
     }
     return (
         <div className='PIG1'>
@@ -19,4 +19,4 @@ function InvitePage() {
         </div>
     )
 }
-export default InvitePage;
+export default InvitePageT2;

@@ -19,7 +19,7 @@ function AnimatedText({children, delay, className}) {
 
 function IninvitationT2() {
     function handleClick(e) {
-        window.location.href = '/invite/이따/1/2'
+        window.location.href = '/invite/이따/2'
     }
 
     return (

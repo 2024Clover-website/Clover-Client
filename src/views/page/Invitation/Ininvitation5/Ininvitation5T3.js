@@ -36,7 +36,7 @@ function AnimatedImage({src, delay, className}) {
 
 function Ininvitation5T3() {
     function handleClick(e) {
-        window.location.href = '/invite/VIBE MAKERS/1/2/3/4/5/6'
+        window.location.href = '/invite/VIBE MAKERS/6'
     }
 
     return (

@@ -33,7 +33,7 @@ function AnimatedImage({src, delay, className}) {
 
 function Ininvitation5T1() {
     function handleClick(e) {
-        window.location.href = '/invite/태산/1/2/3/4/5/6'
+        window.location.href = '/invite/태산/6'
     }
 
     return (

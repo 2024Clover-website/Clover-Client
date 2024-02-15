@@ -19,7 +19,7 @@ function AnimatedText({children, delay, className}) {
 
 function Ininvitation4T3() {
     function handleClick(e) {
-        window.location.href = '/invite/VIBE MAKERS/1/2/3/4/5'
+        window.location.href = '/invite/VIBE MAKERS/5'
     }
 
     return (

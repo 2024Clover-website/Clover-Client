@@ -19,7 +19,7 @@ function AnimatedText({children, delay, className}) {
 
 function Ininvitation3T5() {
     function handleClick(e) {
-        window.location.href = '/invite/옥수수수염/1/2/3/4'
+        window.location.href = '/invite/옥수수수염/4'
     }
 
     return (

@@ -36,7 +36,7 @@ function AnimatedImage({src, delay, className}) {
 
 function Ininvitation5T2() {
     function handleClick(e) {
-        window.location.href = '/invite/이따/1/2/3/4/5/6'
+        window.location.href = '/invite/이따/6'
     }
 
     return (

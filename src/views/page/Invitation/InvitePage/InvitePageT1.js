@@ -1,6 +1,6 @@
 import React from "react";
 import '../../../style/Invitation/InvitePage/InvitePage.css';
-import video3 from '../../../../video/taishanTeamVideo.mp4';
+import video1 from '../../../../video/invitePageVideo.mp4';
 
 function InvitePageT1() {
     function handleClick(e) {
@@ -9,7 +9,7 @@ function InvitePageT1() {
     return (
         <div className='PIG1'>
             <video style={{height: window.screen.height}} autoPlay loop muted>
-                <source src={video3} type='video/mp4'/>
+                <source src={video1} type='video/mp4'/>
             </video>
             <div className='startContainer'>
                 <button onClick={handleClick} className='startButton'>

@@ -100,40 +100,40 @@ function App() {
 					<Route exact path="/invite/도파민중독자들/1" element={<InvitationT4 />} />
 					<Route exact path="/invite/옥수수수염/1" element={<InvitationT5 />} />
 
-					<Route exact path="/invite/public/1/2" element={<Invitation2 />} />
-					<Route exact path="/invite/태산/1/2" element={<Invitation2T1 />} />
-					<Route exact path="/invite/이따/1/2" element={<Invitation2T2 />} />
-					<Route exact path="/invite/VIBE MAKERS/1/2" element={<Invitation2T3 />} />
-					<Route exact path="/invite/도파민중독자들/1/2" element={<Invitation2T4 />} />
-					<Route exact path="/invite/옥수수수염/1/2" element={<Invitation2T5 />} />
+					<Route exact path="/invite/public/2" element={<Invitation2 />} />
+					<Route exact path="/invite/태산/2" element={<Invitation2T1 />} />
+					<Route exact path="/invite/이따/2" element={<Invitation2T2 />} />
+					<Route exact path="/invite/VIBE MAKERS/2" element={<Invitation2T3 />} />
+					<Route exact path="/invite/도파민중독자들/2" element={<Invitation2T4 />} />
+					<Route exact path="/invite/옥수수수염/2" element={<Invitation2T5 />} />
 
-					<Route exact path="/invite/public/1/2/3" element={<Invitation3 />} />
-					<Route exact path="/invite/태산/1/2/3" element={<Invitation3T1 />} />
-					<Route exact path="/invite/이따/1/2/3" element={<Invitation3T2 />} />
-					<Route exact path="/invite/VIBE MAKERS/1/2/3" element={<Invitation3T3 />} />
-					<Route exact path="/invite/도파민중독자들/1/2/3" element={<Invitation3T4 />} />
-					<Route exact path="/invite/옥수수수염/1/2/3" element={<Invitation3T5 />} />
+					<Route exact path="/invite/public/3" element={<Invitation3 />} />
+					<Route exact path="/invite/태산/3" element={<Invitation3T1 />} />
+					<Route exact path="/invite/이따/3" element={<Invitation3T2 />} />
+					<Route exact path="/invite/VIBE MAKERS/3" element={<Invitation3T3 />} />
+					<Route exact path="/invite/도파민중독자들/3" element={<Invitation3T4 />} />
+					<Route exact path="/invite/옥수수수염/3" element={<Invitation3T5 />} />
 
-					<Route exact path="/invite/public/1/2/3/4" element={<Invitation4 />} />
-					<Route exact path="/invite/태산/1/2/3/4" element={<Invitation4T1 />} />
-					<Route exact path="/invite/이따/1/2/3/4" element={<Invitation4T2 />} />
-					<Route exact path="/invite/VIBE MAKERS/1/2/3/4" element={<Invitation4T3 />} />
-					<Route exact path="/invite/도파민중독자들/1/2/3/4" element={<Invitation4T4 />} />
-					<Route exact path="/invite/옥수수수염/1/2/3/4" element={<Invitation4T5 />} />
+					<Route exact path="/invite/public/4" element={<Invitation4 />} />
+					<Route exact path="/invite/태산/4" element={<Invitation4T1 />} />
+					<Route exact path="/invite/이따/4" element={<Invitation4T2 />} />
+					<Route exact path="/invite/VIBE MAKERS/4" element={<Invitation4T3 />} />
+					<Route exact path="/invite/도파민중독자들/4" element={<Invitation4T4 />} />
+					<Route exact path="/invite/옥수수수염/4" element={<Invitation4T5 />} />
 
-					<Route exact path="/invite/public/1/2/3/4/5" element={<Invitation5 />} />
-					<Route exact path="/invite/태산/1/2/3/4/5" element={<Invitation5T1 />} />
-					<Route exact path="/invite/이따/1/2/3/4/5" element={<Invitation5T2 />} />
-					<Route exact path="/invite/VIBE MAKERS/1/2/3/4/5" element={<Invitation5T3 />} />
-					<Route exact path="/invite/도파민중독자들/1/2/3/4/5" element={<Invitation5T4 />} />
-					<Route exact path="/invite/옥수수수염/1/2/3/4/5" element={<Invitation5T5 />} />
+					<Route exact path="/invite/public/5" element={<Invitation5 />} />
+					<Route exact path="/invite/태산/5" element={<Invitation5T1 />} />
+					<Route exact path="/invite/이따/5" element={<Invitation5T2 />} />
+					<Route exact path="/invite/VIBE MAKERS/5" element={<Invitation5T3 />} />
+					<Route exact path="/invite/도파민중독자들/5" element={<Invitation5T4 />} />
+					<Route exact path="/invite/옥수수수염/5" element={<Invitation5T5 />} />
 
-					<Route exact path="/invite/public/1/2/3/4/5/6" element={<LastPage />} />
-					<Route exact path="/invite/태산/1/2/3/4/5/6" element={<LastPageT1 />} />
-					<Route exact path="/invite/이따/1/2/3/4/5/6" element={<LastPageT2 />} />
-					<Route exact path="/invite/VIBE MAKERS/1/2/3/4/5/6" element={<LastPageT3 />} />
-					<Route exact path="/invite/도파민중독자들/1/2/3/4/5/6" element={<LastPageT4 />} />
-					<Route exact path="/invite/옥수수수염/1/2/3/4/5/6" element={<LastPageT5 />} />
+					<Route exact path="/invite/public/6" element={<LastPage />} />
+					<Route exact path="/invite/태산/6" element={<LastPageT1 />} />
+					<Route exact path="/invite/이따/6" element={<LastPageT2 />} />
+					<Route exact path="/invite/VIBE MAKERS/6" element={<LastPageT3 />} />
+					<Route exact path="/invite/도파민중독자들/6" element={<LastPageT4 />} />
+					<Route exact path="/invite/옥수수수염/6" element={<LastPageT5 />} />
 				</Routes>
 			</Mobile>
 		</Suspense>

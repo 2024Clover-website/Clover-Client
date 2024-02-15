@@ -19,7 +19,7 @@ function AnimatedText({children, delay, className}) {
 
 function Ininvitation3() {
     function handleClick(e) {
-        window.location.href = '/invite/public/1/2/3/4'
+        window.location.href = '/invite/public/4'
     }
 
     return (
