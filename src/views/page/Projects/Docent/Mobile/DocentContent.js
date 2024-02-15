@@ -227,6 +227,7 @@ function DocentContent() {
 
 			{/** 내용 container */}
 			<div className={styles.container}>
+				<div className={styles.blurbox}></div>
 				<p>느슨해진 마음을 팽팽하게 만드려면 무언가 자극이 필요해요</p>
 				<br />
 				<p>마치 카세트 테이프에 연필을 꽂아 돌리는 것처럼요.</p>
