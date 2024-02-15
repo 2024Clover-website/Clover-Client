@@ -3,7 +3,7 @@ import React, { useCallback } from "react";
 
 import "../../../../styles/invitation/WebAnnouncement/Announcement.css";
 
-function Announcement() {
+function AnnouncementT5() {
 	const countDownTimer = useCallback((date) => {
 		let _vDate = moment(date);
 		let _second = 1000;
@@ -72,4 +72,4 @@ function Announcement() {
 	);
 }
 
-export default Announcement;
+export default AnnouncementT5;
