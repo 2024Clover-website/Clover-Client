@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import '../../../style/Invitation/Ininvitation1/Ininvitation1.css';
-import video2 from '../../../../video/publicPageVideo.mp4';
+import video2 from '../../../../video/InvitePageVideo.mp4';
 
 function AnimatedText({children, delay, className}) {
     const [show, setShow] = useState(false);

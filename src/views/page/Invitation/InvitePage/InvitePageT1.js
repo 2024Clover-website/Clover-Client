@@ -1,6 +1,6 @@
 import React from "react";
 import '../../../style/Invitation/InvitePage/InvitePage.css';
-import video1 from '../../../../video/invitePageVideo.mp4';
+import video1 from '../../../../video/InvitePageVideo.mp4';
 
 function InvitePageT1() {
     function handleClick(e) {

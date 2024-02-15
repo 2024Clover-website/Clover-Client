@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 
@@ -71,18 +71,130 @@ function App() {
 		});
 		return <>{isPc && children}</>;
 	};
-
+  const currentSubdomain = window.location.host.split(".")[0];
+  useEffect(()=>{
+    if(currentSubdomain==="m"&&window.innerWidth>450){
+      //공용
+      window.location.replace("https://www.clover-inarow.site/invite/public");
+    }else if(currentSubdomain==="ts"&&window.innerWidth>450){
+      //태산
+      window.location.replace("https://www.clover-inarow.site/invite/태산");
+    }else if(currentSubdomain==="it"&&window.innerWidth>450){
+      //이따
+      window.location.replace("https://www.clover-inarow.site/invite/이따");
+    }else if(currentSubdomain==="vm"&&window.innerWidth>450){
+      //VIBE MAKERS
+      window.location.replace("https://www.clover-inarow.site/invite/ViBE%20MAKES");
+    }else if(currentSubdomain==="dj"&&window.innerWidth>450){
+      //도파민 중독자들
+      window.location.replace("https://www.clover-inarow.site/invite/도파민중독자들");
+    }else if(currentSubdomain==="os"&&window.innerWidth>450){
+      //옥수수수염
+      window.location.replace("https://www.clover-inarow.site/invite/옥수수수염");
+    }
+  })
+ 
 	return (
 		<Suspense fallback={<div>Loading...</div>}>
-			<Pc>
-				<Routes>
-					<Route exact path="/invite/public" element={<Announcement />} />
-					<Route exact path="/invite/태산" element={<AnnouncementT1 />} />
-					<Route exact path="/invite/이따" element={<AnnouncementT2 />} />
-					<Route exact path="/invite/VIBE MAKERS" element={<AnnouncementT3 />} />
-					<Route exact path="/invite/도파민중독자들" element={<AnnouncementT4 />} />
-					<Route exact path="/invite/옥수수수염" element={<AnnouncementT5 />} />
-				</Routes>
+      {currentSubdomain ==="www" &&(
+        <Pc>
+          <Routes>
+            <Route exact path="/invite/public" element={<Announcement />} />
+            <Route exact path="/invite/태산" element={<AnnouncementT1 />} />
+            <Route exact path="/invite/이따" element={<AnnouncementT2 />} />
+            <Route exact path="/invite/VIBE MAKERS" element={<AnnouncementT3 />} />
+            <Route exact path="/invite/도파민중독자들" element={<AnnouncementT4 />} />
+            <Route exact path="/invite/옥수수수염" element={<AnnouncementT5 />} />
+          </Routes>
+			</Pc>
+      )}
+      {currentSubdomain==="m"&&(
+        <Mobile>
+				  <Routes>
+            <Route exact path="/invite/public" element={<InvitePage />} />
+            <Route exact path="/invite/public/1" element={<Invitation1 />} />
+            <Route exact path="/invite/public/2" element={<Invitation2 />} />
+            <Route exact path="/invite/public/3" element={<Invitation3 />} />
+            <Route exact path="/invite/public/4" element={<Invitation4 />} />
+            <Route exact path="/invite/public/5" element={<Invitation5 />} />
+            <Route exact path="/invite/public/6" element={<LastPage />} />
+          </Routes>
+        </Mobile>
+      )}
+      {currentSubdomain==="ts"&&(
+        <Mobile>
+				  <Routes>
+            <Route exact path="/invite/태산" element={<InvitePageT1 />} />
+            <Route exact path="/invite/태산/1" element={<InvitationT1 />} />
+            <Route exact path="/invite/태산/2" element={<Invitation2T1 />} />
+            <Route exact path="/invite/태산/3" element={<Invitation3T1 />} />
+            <Route exact path="/invite/태산/4" element={<Invitation4T1 />} />
+            <Route exact path="/invite/태산/5" element={<Invitation5T1 />} />
+            <Route exact path="/invite/태산/6" element={<LastPageT1 />} />
+          </Routes>
+        </Mobile>
+      )}
+      {currentSubdomain==="it"&&(
+        <Mobile>
+				  <Routes>
+            <Route exact path="/invite/이따" element={<InvitePageT2 />} />
+            <Route exact path="/invite/이따/1" element={<InvitationT2 />} />
+            <Route exact path="/invite/이따/3" element={<Invitation3T2 />} />
+            <Route exact path="/invite/이따/4" element={<Invitation4T2 />} />
+            <Route exact path="/invite/이따/5" element={<Invitation5T2 />} />
+            <Route exact path="/invite/이따/6" element={<LastPageT2 />} />
+          </Routes>
+        </Mobile>
+      )}
+      {currentSubdomain==="vm"&&(
+        <Mobile>
+				  <Routes>
+            <Route exact path="/invite/VIBE MAKERS" element={<InvitePageT3 />} />
+            <Route exact path="/invite/VIBE MAKERS/1" element={<InvitationT3 />} />
+            <Route exact path="/invite/VIBE MAKERS/2" element={<Invitation2T3 />} />
+            <Route exact path="/invite/VIBE MAKERS/3" element={<Invitation3T3 />} />
+            <Route exact path="/invite/VIBE MAKERS/4" element={<Invitation4T3 />} />
+            <Route exact path="/invite/VIBE MAKERS/5" element={<Invitation5T3 />} />
+            <Route exact path="/invite/VIBE MAKERS/6" element={<LastPageT3 />} />
+          </Routes>
+        </Mobile>
+      )}
+      {currentSubdomain==="dj"&&(
+        <Mobile>
+				  <Routes>
+            <Route exact path="/invite/도파민중독자들" element={<InvitePageT4 />} />
+            <Route exact path="/invite/도파민중독자들/1" element={<InvitationT4 />} />
+            <Route exact path="/invite/도파민중독자들/2" element={<Invitation2T4 />} />
+            <Route exact path="/invite/도파민중독자들/3" element={<Invitation3T4 />} />
+            <Route exact path="/invite/도파민중독자들/4" element={<Invitation4T4 />} />
+            <Route exact path="/invite/도파민중독자들/5" element={<Invitation5T4 />} />
+            <Route exact path="/invite/도파민중독자들/6" element={<LastPageT4 />} />
+          </Routes>
+        </Mobile>
+      )}
+      {currentSubdomain==="os"&&(
+        <Mobile>
+				  <Routes>
+            <Route exact path="/invite/옥수수수염" element={<InvitePageT5 />} />
+            <Route exact path="/invite/옥수수수염/1" element={<InvitationT5 />} />
+            <Route exact path="/invite/옥수수수염/2" element={<Invitation2T5 />} />
+            <Route exact path="/invite/옥수수수염/3" element={<Invitation3T5 />} />
+            <Route exact path="/invite/옥수수수염/4" element={<Invitation4T5 />} />
+            <Route exact path="/invite/옥수수수염/5" element={<Invitation5T5 />} />
+            <Route exact path="/invite/옥수수수염/6" element={<LastPageT5 />} />
+          </Routes>
+        </Mobile>
+      )}
+
+      <Pc>
+          <Routes>
+            <Route exact path="/invite/public" element={<Announcement />} />
+            <Route exact path="/invite/태산" element={<AnnouncementT1 />} />
+            <Route exact path="/invite/이따" element={<AnnouncementT2 />} />
+            <Route exact path="/invite/VIBE MAKERS" element={<AnnouncementT3 />} />
+            <Route exact path="/invite/도파민중독자들" element={<AnnouncementT4 />} />
+            <Route exact path="/invite/옥수수수염" element={<AnnouncementT5 />} />
+          </Routes>
 			</Pc>
 			<Mobile>
 				<Routes>
