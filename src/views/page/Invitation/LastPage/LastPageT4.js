@@ -5,9 +5,9 @@ import { CSSTransition } from 'react-transition-group';
 import '../../../style/Invitation/LastPage/LastPage.css';
 import Backdrop from './components/Backdrop/Backdrop';
 import Modal from './components/Modal/Modal';
-import video2 from '../../../../video/publicPageVideo.mp4';
+import video6 from '../../../../video/dopaminTeamVideo.mp4';
 
-function LastPage() {
+function LastPageT4() {
     const [value, setValue] = useState('인사동 마루아트 센터 신관');
     const [copied, setCopied] = useState(false);
     const [showModal, setShowModal] = useState(false);
@@ -66,7 +66,7 @@ function LastPage() {
     return (
         <div className='Container'>
             <video style={{height: window.screen.height}} autoPlay loop muted>
-                <source src={video2} type='video/mp4'/>
+                <source src={video6} type='video/mp4'/>
             </video>
             <CSSTransition in={showContainer1} timeout={300} classNames="motion-slide" unmountOnExit>
                 <div className='Container1'>
@@ -140,4 +140,4 @@ function LastPage() {
         </div>
     )
 }
-export default LastPage;
+export default LastPageT4;

@@ -7,7 +7,7 @@ import Backdrop from './components/Backdrop/Backdrop';
 import Modal from './components/Modal/Modal';
 import video2 from '../../../../video/publicPageVideo.mp4';
 
-function LastPage() {
+function LastPageT3() {
     const [value, setValue] = useState('인사동 마루아트 센터 신관');
     const [copied, setCopied] = useState(false);
     const [showModal, setShowModal] = useState(false);
@@ -140,4 +140,4 @@ function LastPage() {
         </div>
     )
 }
-export default LastPage;
+export default LastPageT3;

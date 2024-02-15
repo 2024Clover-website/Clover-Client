@@ -4,8 +4,9 @@
   min-height: 120vh;
   mix-blend-mode: normal;
 }
-.blankContainer1{
-  height: 89px;
+video{
+  object-fit: cover;
+  width: 100%;
 }
 .Container1{
   height: 94px;
