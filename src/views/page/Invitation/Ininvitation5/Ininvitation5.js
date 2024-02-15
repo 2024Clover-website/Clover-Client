@@ -33,7 +33,7 @@ function AnimatedImage({src, delay, className}) {
 
 function Ininvitation5() {
     function handleClick(e) {
-        window.location.href = '/invite/1/2/3/4/5'
+        window.location.href = '/invite/public/1/2/3/4/5/6'
     }
 
     return (
@@ -69,7 +69,7 @@ function Ininvitation5() {
             </div>
             <CSSTransition in={true} timeout={300} classNames="motion-slide" unmountOnExit>
             <div className='picture'>
-                <AnimatedImage delay={1200} className='invitation5Image' src='./image-3 1.png' />
+                <AnimatedImage delay={1200} className='invitation5Image' src='/src/img/image-3 1.png'/>
             </div>
             </CSSTransition>
             <div className='openContainer'>

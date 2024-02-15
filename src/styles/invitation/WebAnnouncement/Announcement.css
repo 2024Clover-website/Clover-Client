@@ -4,7 +4,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background-image: url("../../../../img/WebAnncouncementImg.png");
+	background-image: url("../../../../src/img/WebAnncouncementImg.png");
 	background-size: cover;
 	margin: 0;
 }

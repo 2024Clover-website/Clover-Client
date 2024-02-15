@@ -131,13 +131,6 @@ video{
     background: #F1F1F1;
     border-radius: 20px;
 }
-
-.blankContainer2{
-    position: absolute;
-    width: 335px;
-    height: 200px;
-    top: 650px;
-}
   @keyframes text1 {
     0% {
         transform: translateY(80px);

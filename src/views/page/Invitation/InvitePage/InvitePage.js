@@ -4,7 +4,7 @@ import video1 from '../../../../video/invitePageVideo.mp4';
 
 function InvitePage() {
     function handleClick(e) {
-        window.location.href = '/invite'
+        window.location.href = '/invite/public/1'
     }
     return (
         <div className='PIG1'>

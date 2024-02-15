@@ -37,12 +37,12 @@ function App() {
 			<Mobile>
 				<Routes>
 					<Route exact path="/" element={<InvitePage />} />
-					<Route exact path="/invite" element={<Invitation1 />} />
-					<Route exact path="/invite/1" element={<Invitation2 />} />
-					<Route exact path="/invite/1/2" element={<Invitation3 />} />
-					<Route exact path="/invite/1/2/3" element={<Invitation4 />} />
-					<Route exact path="/invite/1/2/3/4" element={<Invitation5 />} />
-					<Route exact path="/invite/1/2/3/4/5" element={<LastPage />} />
+					<Route exact path="/invite/public/1" element={<Invitation1 />} />
+					<Route exact path="/invite/public/1/2" element={<Invitation2 />} />
+					<Route exact path="/invite/public/1/2/3" element={<Invitation3 />} />
+					<Route exact path="/invite/public/1/2/3/4" element={<Invitation4 />} />
+					<Route exact path="/invite/public/1/2/3/4/5" element={<Invitation5 />} />
+					<Route exact path="/invite/public/1/2/3/4/5/6" element={<LastPage />} />
 				</Routes>
 			</Mobile>
 		</Suspense>
