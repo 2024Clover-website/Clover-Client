@@ -123,7 +123,7 @@ function LastPage() {
                     <Link to="/">처음으로</Link>
                 </div>
                 <div className='Container6Name'>
-                    <img src="./Clover.svg" alt="Icon" className="iconStyle" />
+                    <img src='/Clover.png' alt="Icon" className="iconStyle" />
                 </div>
             </div>
             </CSSTransition>

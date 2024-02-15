@@ -3,6 +3,9 @@ import { CSSTransition } from 'react-transition-group';
 import '../../../style/Invitation/Ininvitation1/Ininvitation1.css';
 import video2 from '../../../../video/publicPageVideo.mp4';
 
+// 시도중
+import loadingImg from '../../../image5.js';
+
 function AnimatedText({children, delay, className}) {
     const [show, setShow] = useState(false);
 
@@ -69,7 +72,7 @@ function Ininvitation5() {
             </div>
             <CSSTransition in={true} timeout={300} classNames="motion-slide" unmountOnExit>
             <div className='picture'>
-                <AnimatedImage delay={1200} className='invitation5Image' src='/src/img/image-3 1.png'/>
+                <AnimatedImage delay={1200} className='invitation5Image'src='/image5.png'/>
             </div>
             </CSSTransition>
             <div className='openContainer'>
