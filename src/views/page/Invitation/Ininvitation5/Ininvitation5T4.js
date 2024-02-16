@@ -74,7 +74,7 @@ function Ininvitation5T4() {
             </div>
             <CSSTransition in={true} timeout={300} classNames="motion-slide" unmountOnExit>
             <div className='picture'>
-                <AnimatedImage delay={1200} className='invitation5Image'src='/dopamin.png'/>
+                <AnimatedImage delay={1200} className='invitation5Image'src='/dopamin.png'alt='도파민중독자들작업물'/>
             </div>
             </CSSTransition>
             <div className='openContainer'>
