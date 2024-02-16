@@ -100,6 +100,8 @@ function LastPageT1() {
             </CSSTransition>
             <CSSTransition in={showContainer4} timeout={30000} classNames="motion-slide" unmountOnExit>
             <div className='Container2'>
+                <div className='blankContainer'>
+                </div>
                 <div className='Container2Name'>
                     {"4일은 17:00시까지 운영합니다"}
                 </div>
