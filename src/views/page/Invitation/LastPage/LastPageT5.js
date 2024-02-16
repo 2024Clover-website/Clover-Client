@@ -122,7 +122,7 @@ function LastPageT5() {
             <CSSTransition in={showContainer6} timeout={3000} classNames="motion-slide" unmountOnExit>
             <div className='Container6'>
                 <div className='goBackButton'>
-                    <Link to="/">처음으로</Link>
+                    <Link to="/invite/옥수수수염">처음으로</Link>
                 </div>
                 <div className='Container6Name'>
                     <img src='/Clover.png' alt="Icon" className="iconStyle" />
