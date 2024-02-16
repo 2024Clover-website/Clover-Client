@@ -3,6 +3,7 @@
     margin: 0;
 }
 .container{
+    position: fixed;
     width: 100%;
     min-height: 120vh;
     mix-blend-mode: normal;
