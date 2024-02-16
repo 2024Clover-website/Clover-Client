@@ -91,7 +91,7 @@ function LastPage() {
                     일정
                 </div>
                 <div className='Container3Name'>
-                    2.29(목)-3.4(월)
+                    2.29(목)ㅡ3.4(월)
                 </div>
             </div>
             </CSSTransition>

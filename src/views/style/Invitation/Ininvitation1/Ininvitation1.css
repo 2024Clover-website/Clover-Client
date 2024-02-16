@@ -6,6 +6,7 @@
     width: 100%;
     min-height: 120vh;
     mix-blend-mode: normal;
+    background-color: #FFF;
 }
 video{
     position:fixed;
