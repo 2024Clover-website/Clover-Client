@@ -44,10 +44,12 @@ function Ininvitation5() {
             <video style={{height: window.screen.height}} autoPlay loop muted>
                 <source src={video2} type='video/mp4'/>
             </video>
+            <div className='topContainer'>
+            </div>
             <div className='textContainer'>
                 <CSSTransition in={true} timeout={300} classNames="motion-slide" unmountOnExit>
                     <div className='textContainer1'>
-                        <AnimatedText delay={400} className='text1'>제가 만든 걸 살짝</AnimatedText>
+                        <AnimatedText delay={400} className='text1'>우리가 만든 걸 살짝</AnimatedText>
                         <AnimatedText delay={500} className='text2'>보여드릴게요.</AnimatedText>
                     </div>
                 </CSSTransition>
@@ -70,11 +72,11 @@ function Ininvitation5() {
                     </div>
                 </CSSTransition>
             </div>
-            <CSSTransition in={true} timeout={300} classNames="motion-slide" unmountOnExit>
             <div className='picture'>
-                <AnimatedImage delay={1200} className='invitation5Image'src='/image5.png'/>
+                <CSSTransition in={true} timeout={300} classNames="motion-slide" unmountOnExit>
+                    <AnimatedImage delay={1200} className='invitation5Image'src='/image5.png'/>
+                </CSSTransition>
             </div>
-            </CSSTransition>
             <div className='openContainer'>
                 <button onClick={handleClick} className='openButton'>
                     다음

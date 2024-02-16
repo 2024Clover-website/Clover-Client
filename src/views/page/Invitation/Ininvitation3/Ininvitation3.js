@@ -27,6 +27,8 @@ function Ininvitation3() {
             <video style={{height: window.screen.height}} autoPlay loop muted>
                 <source src={video2} type='video/mp4'/>
             </video>
+            <div className='topContainer'>
+            </div>
             <div className='textContainer'>
                 <CSSTransition in={true} timeout={300} classNames="motion-slide" unmountOnExit>
                     <div className='textContainer3'>

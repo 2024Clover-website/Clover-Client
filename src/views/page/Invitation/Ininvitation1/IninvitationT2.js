@@ -27,6 +27,8 @@ function IninvitationT2() {
             <video style={{height: window.screen.height}} autoPlay loop muted>
                 <source src={video4} type='video/mp4'/>
             </video>
+            <div className='topContainer'>
+            </div>
             <div className='textContainer'>
                 <AnimatedText delay={100} className='text1'>학교<br/></AnimatedText>
                 <AnimatedText delay={200} className='text2'>알바<br/></AnimatedText>

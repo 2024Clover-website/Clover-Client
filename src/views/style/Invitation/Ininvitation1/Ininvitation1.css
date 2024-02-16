@@ -3,7 +3,6 @@
     margin: 0;
 }
 .container{
-    position: absolute;
     width: 100%;
     min-height: 120vh;
     mix-blend-mode: normal;
@@ -13,12 +12,15 @@ video{
     object-fit: cover;
     width: 100%;
 }
+.topContainer{
+    height:28px;
+}
 .textContainer{
-    position: absolute;
+    position: static;
     width: 350px;
     height: 351px;
-    left: 28px;
     top: 28px;
+    left: 28px;
     color: #F1F1F1;
     text-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
     font-family: YDIYGO340;
@@ -117,20 +119,16 @@ video{
 
 
 .picture{
-    position: absolute;
     width: 335px;
     height: 200px;
     left: calc(50% - 335px/2);
-    top: 235px;
     filter: drop-shadow(0px 3px 18px rgba(0, 0, 0, 0.2));
 }
 
 .invitation5Image{
-    position: absolute;
-    width: 335px;
+    width:  auto;
     height: 200px;
     left: calc(50% - 335px/2);
-    top: 235px;
     background: #F1F1F1;
     border-radius: 20px;
 }
