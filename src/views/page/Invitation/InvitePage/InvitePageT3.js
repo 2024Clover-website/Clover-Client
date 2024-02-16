@@ -3,7 +3,7 @@ import '../../../style/Invitation/InvitePage/InvitePage.css';
 import video1 from '../../../../video/invitePageVideo.mp4';
 function InvitePageT3() {
     function handleClick(e) {
-        window.location.href = '/invite/VIBE MAKERS/1'
+        window.location.href = '/invite/VIBEMAKERS/1'
     }
     return (
         <div className='PIG1'>

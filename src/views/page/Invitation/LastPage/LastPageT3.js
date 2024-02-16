@@ -5,7 +5,7 @@ import { CSSTransition } from 'react-transition-group';
 import '../../../style/Invitation/LastPage/LastPage.css';
 import Backdrop from './components/Backdrop/Backdrop';
 import Modal from './components/Modal/Modal';
-import video2 from '../../../../video/publicPageVideo.mp4';
+import video5 from '../../../../video/vibemakerTeamVideo.mp4';
 
 function LastPageT3() {
     const [value, setValue] = useState('인사동 마루아트 센터 신관');
@@ -66,7 +66,7 @@ function LastPageT3() {
     return (
         <div className='Container'>
             <video style={{height: window.screen.height}} autoPlay loop muted>
-                <source src={video2} type='video/mp4'/>
+                <source src={video5} type='video/mp4'/>
             </video>
             <CSSTransition in={showContainer1} timeout={300} classNames="motion-slide" unmountOnExit>
                 <div className='Container1'>
