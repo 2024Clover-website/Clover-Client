@@ -53,7 +53,7 @@ function AnnouncementT1() {
 			<div className="blankLine"></div>
 			<div className="CT2">
 				<div className="qr-container">
-					<img src="/mobileInvitationQRcode.jpeg" alt />
+					<img src="/taishanQR.png" alt />
 				</div>
 				<div className="text-content">
 					<div className="text-content1">
