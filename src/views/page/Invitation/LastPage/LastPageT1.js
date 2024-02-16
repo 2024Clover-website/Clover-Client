@@ -84,7 +84,7 @@ function LastPageT1() {
                     일정
                 </div>
                 <div className='Container3Name'>
-                    2.29(목)-3.4(월)
+                    2.29(목)ㅡ3.4(월)
                 </div>
             </div>
             </CSSTransition>
@@ -94,7 +94,7 @@ function LastPageT1() {
                     관람시간
                 </div>
                 <div className='Container4Name'>
-                    10:30-18:30
+                    10:30ㅡ18:30
                 </div>
             </div>
             </CSSTransition>

@@ -79,29 +79,31 @@ function LastPageT2() {
                 </div>
             </CSSTransition>
             <CSSTransition in={showContainer2} timeout={300} classNames="motion-slide" unmountOnExit>
-            <div className='Container2'>
-                <div className='Container2Name'>
-                    {"4일은 17:00시까지 운영합니다"}
-                </div>
-            </div>
-            </CSSTransition>
-            <CSSTransition in={showContainer3} timeout={30000} classNames="motion-slide" unmountOnExit>
             <div className='Container3'>
                 <div className='Container3Frame'>
                     일정
                 </div>
                 <div className='Container3Name'>
-                    2.29(목)-3.4(월)
+                    2.29(목)ㅡ3.4(월)
                 </div>
             </div>
             </CSSTransition>
-            <CSSTransition in={showContainer4} timeout={30000} classNames="motion-slide" unmountOnExit>
+            <CSSTransition in={showContainer3} timeout={30000} classNames="motion-slide" unmountOnExit>
             <div className='Container4'>
                 <div className='Container4Frame'>
                     관람시간
                 </div>
                 <div className='Container4Name'>
-                    10:30-18:30
+                    10:30ㅡ18:30
+                </div>
+            </div>
+            </CSSTransition>
+            <CSSTransition in={showContainer4} timeout={30000} classNames="motion-slide" unmountOnExit>
+            <div className='Container2'>
+                <div className='blankContainer'>
+                </div>
+                <div className='Container2Name'>
+                    {"4일은 17:00시까지 운영합니다"}
                 </div>
             </div>
             </CSSTransition>
