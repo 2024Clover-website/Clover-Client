@@ -52,7 +52,18 @@
       opacity: 0;
       transform: translateY(-100%);
     }
-
+    25% {
+      opacity: 0.25;
+      transform: translateY(-75%)
+    }
+    50% {
+      opacity: 0.5;
+      transform: translateY(-50%)
+    }
+    75% {
+      opacity: 0.75;
+      transform: translateY(-25%)
+    }
     100% {
       opacity: 1;
       transform: translateY(0%);
@@ -64,7 +75,18 @@
       opacity: 1;
       transform: translateY(0%);
     }
-
+    25% {
+      opacity: 0.5;
+      transform: translateY(-25%)
+    }
+    50% {
+      opacity: 0.5;
+      transform: translateY(-50%)
+    }
+    75% {
+      opacity: 0.5;
+      transform: translateY(-75%)
+    }
     100% {
       opacity: 0;
       transform: translateY(-100%);
