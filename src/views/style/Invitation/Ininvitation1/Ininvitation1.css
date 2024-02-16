@@ -127,13 +127,13 @@ video{
 }
 
 .invitation5Image{
-    width:  auto;
+    width: auto;
     height: 200px;
     left: calc(50% - 335px/2);
     background: #F1F1F1;
     border-radius: 20px;
 }
-  @keyframes text1 {
+@keyframes text1 {
     0% {
         transform: translateY(80px);
         opacity: 0;
@@ -227,12 +227,12 @@ video{
 
 @keyframes commit {
     0% {
-      transform: translateY(80px);
-      opacity: 0;
+    transform: translateY(80px);
+    opacity: 0;
     }
     100% {
-      transform: translateY(0);
-      opacity: 1;
+    transform: translateY(0);
+    opacity: 1;
     }
 }
 @keyframes invitation5Image {
