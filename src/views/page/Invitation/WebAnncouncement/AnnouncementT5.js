@@ -35,7 +35,7 @@ useEffect(() => {
 }, []);
 
 	return (
-    	<div className="container">
+    	<div className="webContainer">
     		<div className="CT1">
         		<div className="Textbox">
         			<p>전시까지 남은 시간</p>
