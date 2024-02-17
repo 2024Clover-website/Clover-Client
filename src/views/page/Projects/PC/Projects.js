@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-
 import Modal from 'react-modal';
 import styles from '../../../../styles/Projects/PC/Projects.module.css';
 
@@ -11,22 +10,74 @@ const customStyles = {
         bottom                : '0%',
         marginRight           : '0%',
         transform             : 'translate(0%, 0%)',
-		backgroundColor: 'rgba(0, 0, 0, 0.05)',
+        backgroundColor: 'rgba(0, 0, 0, 0.05)',
         border                : 'none', // 테두리 제거
         padding               : '0', // 패딩 제거
         overflow              : 'hidden' // 스크롤 제거
     },
-	overlay: {
-		backgroundColor: 'rgba(0, 0, 0, 0.15)', // 알파값을 0.75로 높임
+    overlay: {
+        backgroundColor: 'rgba(0, 0, 0, 0.15)', // 알파값을 0.75로 높임
         backdropFilter: 'blur(40px)' // 블러 효과 추가
     }
 };
 
-
-
 function Projects() {
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [timeRemaining, setTimeRemaining] = useState(10 * 60);  // 타이머의 남은 시간 (초)
+    const [description, setDescription] = useState({});  // descriptionContainer의 내용
+	const [isDescriptionVisible, setIsDescriptionVisible] = useState(false);
+
+    const descriptions = {
+        'CTA': {
+            title: 'Dopamine Addiction: Visualization of symptoms',
+            section: 'A',
+            category: '3D Motion Graphic',
+            designer: '유민기',
+            docentTime: '2:00',
+            podcastTime: '10:00'
+        },
+		'CTB': {
+            title: 'Dopamine Addiction: Visualization of symptoms',
+            section: 'B',
+            category: '3D Motion Graphic',
+            designer: '장준용',
+            docentTime: '2:00',
+            podcastTime: '10:00'
+        },
+		'CTC': {
+            title: 'Dopamine Addiction: Visualization of symptoms',
+            section: 'C',
+            category: '3D Motion Graphic',
+            designer: '권상훈',
+            docentTime: '2:00',
+            podcastTime: '10:00'
+        },
+		'CTD': {
+            title: 'Dopamine Addiction: Visualization of symptoms',
+            section: 'D',
+            category: '3D Motion Graphic',
+            designer: '남병준',
+            docentTime: '2:00',
+            podcastTime: '10:00'
+        },
+		'CTE': {
+            title: 'Dopamine Addiction: Visualization of symptoms',
+            section: 'E',
+            category: '3D Motion Graphic',
+            designer: '김성진',
+            docentTime: '2:00',
+            podcastTime: '10:00'
+        },
+		'CTF': {
+            title: 'Dopamine Addiction: Visualization of symptoms',
+            section: 'F',
+            category: '3D Motion Graphic',
+            designer: '디자이너',
+            docentTime: '2:00',
+            podcastTime: '10:00'
+        },
+        // 다른 이미지에 대한 설명을 여기에 추가하세요
+    };
 
     function handlePodcastButton() {
         setModalIsOpen(true);
@@ -35,6 +86,12 @@ function Projects() {
 
     function handleDocentButton() {
         window.location.href = "/projects/docentAnnounce";
+    }
+
+    function handleImageClick(image) {
+        // 이미지에 따라 descriptionContainer의 내용을 변경
+        setDescription(descriptions[image]);
+		setIsDescriptionVisible(true);
     }
 
     // 타이머 설정
@@ -49,99 +106,90 @@ function Projects() {
         }
     }, [timeRemaining]);
 
-	return (
-		<div className={styles.container}>
-			<div className={styles.CTMain}>
-				<img alt src="/img/CTMain.png" />
-				<div className={styles.CTA}>
-					<img alt src="/img/CTA.png" />
-					<div className={styles.alphabetA}>
-						<img alt src="/img/alphabetA.png" />
-					</div>
-				</div>
+    return (
+        <div className={styles.container}>
+            <div className={styles.CTMain}>
+                <img alt src="/img/CTMain.png" onClick={() => handleImageClick('CTMain')} />
+                <div className={styles.CTA}>
+                    <img alt src="/img/CTA.png" onClick={() => handleImageClick('CTA')} />
+                    <img alt src="/img/alphabetA.png" />
+                </div>
 				<div className={styles.CTB}>
-					<img alt src="/img/CTB.png" />
-					<div className={styles.alphabetB}>
-						<img alt src="/img/alphabetB.png" />
-					</div>
-				</div>
+                    <img alt src="/img/CTB.png" onClick={() => handleImageClick('CTB')} />
+                    <img alt src="/img/alphabetB.png" />
+                </div>
 				<div className={styles.CTC}>
-					<img alt src="/img/CTC.png" />
-					<div className={styles.alphabetC}>
-						<img alt src="/img/alphabetC.png" />
-					</div>
-				</div>
+                    <img alt src="/img/CTC.png" onClick={() => handleImageClick('CTC')} />
+                    <img alt src="/img/alphabetC.png" />
+                </div>
 				<div className={styles.CTD}>
-					<img alt src="/img/CTD.png" />
-					<div className={styles.alphabetD}>
-						<img alt src="/img/alphabetD.png" />
-					</div>
-				</div>
+                    <img alt src="/img/CTD.png" onClick={() => handleImageClick('CTD')} />
+                    <img alt src="/img/alphabetD.png" />
+                </div>
 				<div className={styles.CTE}>
-					<img alt src="/img/CTE.png" />
-					<div className={styles.alphabetE}>
-						<img alt src="/img/alphabetE.png" />
-					</div>
-				</div>
+                    <img alt src="/img/CTE.png" onClick={() => handleImageClick('CTE')} />
+                    <img alt src="/img/alphabetE.png" />
+                </div>
 				<div className={styles.CTF}>
-					<img alt src="/img/CTF.png" />
-					<div className={styles.alphabetF}>
-						<img alt src="/img/alphabetF.png" />
-					</div>
-				</div>
+                    <img alt src="/img/CTF.png" onClick={() => handleImageClick('CTF')} />
+                    <img alt src="/img/alphabetF.png" />
+                </div>
 				<div className={styles.CT01}>
-					<img alt src="/img/CT01.png" />
-				</div>
+                    <img alt src="/img/CT01.png"/>
+                </div>
 				<div className={styles.CT02}>
-					<img alt src="/img/CT02.png" />
-				</div>
+                    <img alt src="/img/CT02.png"/>
+                </div>
 				<div className={styles.CT03}>
-					<img alt src="/img/CT03.png" />
-				</div>
-			</div>
-			<div className={styles.descriptionContainer}>
-				<div className={styles.titleBox}>
-					<div className={styles.titleBoxHead}>
-						<p className={styles.title}>
-							Dopamine Addiction: Visualization of symptoms
+                    <img alt src="/img/CT03.png"/>
+                </div>
+            </div>
+			{isDescriptionVisible && (
+				<div className={styles.descriptionContainer}>
+					<div className={styles.titleBox}>
+						<div className={styles.titleBoxHead}>
+							<p className={styles.title}>
+								{description.title}
+							</p>
+							<p className={styles.section}>{description.section}</p>
+						</div>
+						<p className={styles.category}>{description.category}</p>
+					</div>
+					<div className={styles.innerBox}>
+						<div className={styles.tag}>
+							<p>디자이너</p>
+						</div>
+						<p className={styles.tagContents}>{description.designer}</p>
+					</div>
+					<div className={styles.innerBox}>
+						<div className={styles.tag}>
+							<p>도슨트</p>
+						</div>
+						<p className={styles.tagContents}>
+							{description.docentTime}
+							<img
+								src="../../../img/Button01.png"
+								className={styles.playButton}
+								onClick={handleDocentButton}
+							/>
 						</p>
-						<p className={styles.section}>D</p>
 					</div>
-					<p className={styles.category}>3D Motion Graphic</p>
-				</div>
-				<div className={styles.innerBox}>
-					<div className={styles.tag}>
-						<p>디자이너</p>
+					<div className={styles.innerBox}>
+						<div className={styles.tag}>
+							<p>팟캐스트</p>
+						</div>
+						<p className={styles.tagContents}>
+							{description.podcastTime}
+							<img
+								src="../../../img/Button01.png"
+								className={styles.playButton}
+								onClick={handlePodcastButton}
+							/>
+						</p>
 					</div>
-					<p className={styles.tagContents}>강지수·박규리</p>
-				</div>
-				<div className={styles.innerBox}>
-					<div className={styles.tag}>
-						<p>도슨트</p>
-					</div>
-					<p className={styles.tagContents}>
-						2:00
-						<img
-							src="../../../img/Button01.png"
-							className={styles.playButton}
-							onClick={handleDocentButton}
-						/>
-					</p>
-				</div>
-				<div className={styles.innerBox}>
-					<div className={styles.tag}>
-						<p>팟캐스트</p>
-					</div>
-					<p className={styles.tagContents}>
-						10:00
-						<img
-							src="../../../img/Button01.png"
-							className={styles.playButton}
-							onClick={handlePodcastButton}
-						/>
-					</p>
-				</div>
-				<Modal
+            </div>
+			)}
+                <Modal
                 isOpen={modalIsOpen}
                 onRequestClose={() => setModalIsOpen(false)}
                 style={customStyles}
@@ -157,7 +205,7 @@ function Projects() {
                     />
                     <div className={styles.docentContainer}>
                         <div className={styles.podcastbox}>
-						<p>팟캐스트 : 러닝타임 {Math.floor(timeRemaining / 60)}분 {timeRemaining % 60}초</p>
+                        <p>팟캐스트 : 러닝타임 {Math.floor(timeRemaining / 60)}분 {timeRemaining % 60}초</p>
                         </div>
                             <p>Dopamine Addiction: Visualization of symptoms</p>
                     </div>
@@ -176,9 +224,10 @@ function Projects() {
                     </div>
                 </div>
             </Modal>
-			</div>
-		</div>
-	);
+
+        </div>
+    );
 }
 
 export default Projects;
+
