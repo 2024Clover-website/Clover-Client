@@ -1,14 +1,53 @@
-import React from "react";
-import styles from "../../../../styles/Projects/PC/Projects.module.css";
+import React, { useEffect, useState } from 'react';
+
+import Modal from 'react-modal';
+import styles from '../../../../styles/Projects/PC/Projects.module.css';
+
+const customStyles = {
+    content : {
+        top                   : '0%',
+        left                  : '0%',
+        right                 : '0%',
+        bottom                : '0%',
+        marginRight           : '0%',
+        transform             : 'translate(0%, 0%)',
+		backgroundColor: 'rgba(0, 0, 0, 0.05)',
+        border                : 'none', // 테두리 제거
+        padding               : '0', // 패딩 제거
+        overflow              : 'hidden' // 스크롤 제거
+    },
+	overlay: {
+		backgroundColor: 'rgba(0, 0, 0, 0.15)', // 알파값을 0.75로 높임
+        backdropFilter: 'blur(40px)' // 블러 효과 추가
+    }
+};
+
+
 
 function Projects() {
-	function handleDocentButton() {
-		window.location.href = "/projects/docentAnnounce";
-	}
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+    const [timeRemaining, setTimeRemaining] = useState(10 * 60);  // 타이머의 남은 시간 (초)
 
-	function handlePodcastButton() {
-		window.location.href = "/projects/podcastAnnounce";
-	}
+    function handlePodcastButton() {
+        setModalIsOpen(true);
+        setTimeRemaining(10 * 60);  // 타이머를 10분으로 설정
+    }
+
+    function handleDocentButton() {
+        window.location.href = "/projects/docentAnnounce";
+    }
+
+    // 타이머 설정
+    useEffect(() => {
+        if (timeRemaining > 0) {
+            const timerId = setTimeout(() => {
+                setTimeRemaining(timeRemaining - 1);
+            }, 1000);
+            return () => clearTimeout(timerId);  // 컴포넌트가 언마운트되면 타이머를 제거
+        } else {
+            setModalIsOpen(false);  // 타이머가 끝나면 모달을 닫음
+        }
+    }, [timeRemaining]);
 
 	return (
 		<div className={styles.container}>
@@ -102,6 +141,41 @@ function Projects() {
 						/>
 					</p>
 				</div>
+				<Modal
+                isOpen={modalIsOpen}
+                onRequestClose={() => setModalIsOpen(false)}
+                style={customStyles}
+                contentLabel="Example Modal"
+            >
+                <div className={styles.Modalcontainer}>
+                    <img
+                        src="../../../img/뒤로가기.png"
+                        className={styles.backButton}
+                        onClick={() => {
+                            setModalIsOpen(false);
+                        }}
+                    />
+                    <div className={styles.docentContainer}>
+                        <div className={styles.podcastbox}>
+						<p>팟캐스트 : 러닝타임 {Math.floor(timeRemaining / 60)}분 {timeRemaining % 60}초</p>
+                        </div>
+                            <p>Dopamine Addiction: Visualization of symptoms</p>
+                    </div>
+                    <div className={styles.LineContainer}></div>
+                    <div className={styles.qrContainer}>
+                        <div className={styles.imgContainer}>
+                            <img src="../img/podcast qr_Image.png" alt />
+                        </div>
+                        <div className={styles.textContainer}>
+                            <p1>모바일로 봐주세요!</p1> <br />
+                            <p2>
+                                해당 콘텐츠는 스마트폰으로 감상할 수 있어요 <br />
+                                카메라로 좌측의 QR코드를 찍어주세요
+                            </p2>
+                        </div>
+                    </div>
+                </div>
+            </Modal>
 			</div>
 		</div>
 	);

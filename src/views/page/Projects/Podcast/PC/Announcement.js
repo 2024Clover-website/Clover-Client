@@ -1,7 +1,6 @@
 import React from "react";
 
 import styles from "../../../../../styles/Projects/Docent/PC/Announcement.module.css";
-import { IoChevronBackCircle } from "react-icons/io5";
 
 import { useNavigate } from "react-router-dom";
 
@@ -10,33 +9,31 @@ function Announcement() {
 
 	return (
 		<div className={styles.container}>
-			<IoChevronBackCircle
+			<img
+                src="../../../img/뒤로가기.png"
 				className={styles.backButton}
 				onClick={() => {
 					navigate(-1);
 				}}
 			/>
 			<div className={styles.docentContainer}>
-				<p>팟캐스트</p>
+				<div className={styles.podcastbox}>
+					<p>팟캐스트 : 러닝타임 9분 42초</p>
+				</div>
+					<p>Dopamine Addiction: Visualization of symptoms</p>
 			</div>
-			<div className={styles.titleContainer}>
-				<p>Dopamine Addiction: Visualization of symptoms</p>
-			</div>
-			<div className={styles.designerContainer}>
-				<p>강지수·박규리</p>
-			</div>
+			<div className={styles.LineContainer}></div>
 			<div className={styles.qrContainer}>
-				<img src="../../../../../../public/mobileInvitationQRcode.jpeg" alt />
-			</div>
-			<div className={styles.textContainer}>
-				<p>
-					해당 콘텐츠는 스마트폰으로 감상할 수 있어요
-					<br />
-					카메라로 상단의 QR코드를 찍어주세요
-				</p>
-			</div>
-			<div className={styles.timeContainer}>
-				<p>러닝타임 10:00</p>
+				<div className={styles.imgContainer}>
+					<img src="../img/podcast qr_Image.png" alt />
+				</div>
+				<div className={styles.textContainer}>
+					<p1>모바일로 봐주세요!</p1> <br />
+					<p2>
+						해당 콘텐츠는 스마트폰으로 감상할 수 있어요 <br />
+						카메라로 좌측의 QR코드를 찍어주세요
+					</p2>
+				</div>
 			</div>
 		</div>
 	);
