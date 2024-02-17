@@ -9,6 +9,10 @@
 }
 
 .container {
+	z-index: -1;
+	background-image: url('../../../../public/img/background color.png');
+	background-size: cover;
+	background-repeat: no-repeat;
 	display: flex;
 	flex-direction: row;
 	width: 100%;
@@ -17,7 +21,8 @@
 	padding-bottom: 100px;
 	justify-content: center;
 	cursor: default;
-}
+	gap: 100px;
+	}
 
 .CTMain {
 	width: 780px;
@@ -27,10 +32,9 @@
 	right: 0%;
 	top: 0%;
 	bottom: 0%;
+
 	
-	background: rgba(255, 255, 255, 0.25);
-	border: 2px solid rgba(255, 255, 255, 0.75);
-	/* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1); */
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
 	backdrop-filter: blur(37.5px);
 	/* Note: backdrop-filter has minimal browser support */
 	
@@ -39,9 +43,9 @@
 
 	position: absolute;
 	box-sizing: border-box;
-	left: -0.62%;
-	right: -30.11%;
-	top: 68.46%;
+	left: -0.75%;
+	right: -30.75%;
+	top: 69.46%;
 	bottom: 1.57%;
 	
 
@@ -53,10 +57,10 @@
 	box-sizing: border-box;
 
 	position: absolute;
-	left: 32.33%;
-	right: 49.8%;
-	top: 41.53%;
-	bottom: 15.09%;
+	left: 32.75%;
+	right: 49.75%;
+	top: 41.75%;
+	bottom: 15.75%;
 
 
 }
@@ -66,9 +70,9 @@
 	
 	box-sizing: border-box;
 
-	left: 41.98%;
-	right: 25.83%;
-	top: 27.6%;
+	left: 41.75%;
+	right: 25.75%;
+	top: 28.25%;
 	bottom: 60.23%;
 	
 
@@ -80,9 +84,9 @@
 	box-sizing: border-box;
 
 	
-	left: 85.41%;
+	left: 85.25%;
 	right: 5.37%;
-	top: 9.05%;
+	top: 9.25%;
 	bottom: 60.24%;
 	
 
@@ -92,9 +96,9 @@
 	box-sizing: border-box;
 
 	position: absolute;
-	left: 63.27%;
+	left: 63.25%;
 	right: 22.7%;
-	top: -0.95%;
+	top: -1.25%;
 	bottom: 79.97%;
 
 
@@ -105,9 +109,9 @@
 
 	box-sizing: border-box;
 
-	left: 29.17%;
+	left: 28.25%;
 	right: 34.3%;
-	top: -0.95%;
+	top: -1.25%;
 	bottom: 79.96%;
 	
 	
@@ -116,7 +120,7 @@
 	position: absolute;
 	left: 9.26%;
 	right: 85.01%;
-	top: 56.3%;
+	top: 53.75%;
 	bottom: 30.67%;
 	
 }
@@ -125,7 +129,7 @@
 	position: absolute;
 	left: 11.3%;
 	right: 71.25%;
-	top: 12.41%;
+	top: 11.75%;
 	bottom: 57.85%;
 
 
@@ -135,7 +139,7 @@
 	position: absolute;
 	left: 3.78%;
 	right: 86.16%;
-	top: 32.02%;
+	top: 31.25%;
 	bottom: 48.84%;
 
 
@@ -204,7 +208,7 @@
 
 	border-width: 2px 0px;
 	border-style: solid;
-	border-color: #000000;
+	border-color: #ffffff;
 }
 
 .titleBoxHead {
@@ -229,7 +233,7 @@
 	line-height: 120%;
 	/* or 36px */
 
-	color: #000000;
+	color: #ffffff;
 }
 
 .section {
@@ -246,7 +250,7 @@
 	/* identical to box height, or 45px */
 	text-align: right;
 
-	color: #000000;
+	color: #ffffff;
 }
 
 .category {
@@ -264,7 +268,7 @@
 	line-height: 150%;
 	/* identical to box height, or 30px */
 
-	color: #000000;
+	color: #ffffff;
 }
 
 .innerBox {
@@ -276,7 +280,7 @@
 	justify-content: space-between;
 	align-items: center;
 
-	border-bottom: 2px solid #000000;
+	border-bottom: 2px solid #ffffff;
 }
 
 .tag {
@@ -287,7 +291,7 @@
 	align-items: center;
 	padding: 10px 18px;
 
-	background: #000000;
+	background: rgba(255, 255, 255, 0.25);
 	border: 1px solid rgba(241, 241, 241, 0.5);
 	box-shadow: 0px 3px 18px rgba(0, 0, 0, 0.1);
 	backdrop-filter: blur(2.5px);
@@ -312,23 +316,22 @@
 }
 
 .tagContents {
-	display: flex;
-	flex-direction: r;
-	margin: 0;
-	padding-right: 20px;
-
-	font-family: "YDIYGO350";
+	font-family: 'YDIYGO350';
 	font-style: normal;
 	font-weight: 400;
 	font-size: 30px;
 	line-height: 150%;
+	/* or 45px */
+	display: flex;
+	align-items: center;
 	text-align: right;
-
-	color: #000000;
+	
+	color: #FFFFFF;
+	
+	text-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
 }
 
 .playButton {
-	margin-left: 20px;
-	width: 40px;
-	height: 40px;
+	margin-top: 5px;
+
 }

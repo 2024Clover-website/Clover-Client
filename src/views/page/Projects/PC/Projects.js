@@ -1,5 +1,4 @@
 import React from "react";
-import { IoPlayCircle } from "react-icons/io5";
 import styles from "../../../../styles/Projects/PC/Projects.module.css";
 
 function Projects() {
@@ -83,7 +82,8 @@ function Projects() {
 					</div>
 					<p className={styles.tagContents}>
 						2:00
-						<IoPlayCircle
+						<img
+							src="../../../img/Button01.png"
 							className={styles.playButton}
 							onClick={handleDocentButton}
 						/>
@@ -95,7 +95,8 @@ function Projects() {
 					</div>
 					<p className={styles.tagContents}>
 						10:00
-						<IoPlayCircle
+						<img
+							src="../../../img/Button01.png"
 							className={styles.playButton}
 							onClick={handlePodcastButton}
 						/>
