@@ -92,10 +92,10 @@ video{
 .text-content1 > p {
 	color: #FFF;
 	text-shadow: 0px 3px 18px rgba(0, 0, 0, 0.20);
-	font-family: "NanumGothic";
+	font-family: "YDIYGO350";
 	font-size: 50px;
 	font-style: normal;
-	font-weight: bold;
+	font-weight: 400;
 	line-height: 150%; /* 90px */
 	/* identical to box height, or 90px */
 }
@@ -187,42 +187,44 @@ video{
 	font-family: "YDIYGO310";
 	font-style: normal;
 	font-weight: 100;
-	src: local("YDIYGO310")
-	url("../../../fonts/YDIYGO310.woff") format('woff');
+	src: 
+	url("../../../fonts/YDIYGO310.woff") format('woff'),
+	url("../../../fonts/YDIYGO310.ttf") format('truetype');
 }
 @font-face {
 	font-family: "YDIYGO320";
 	font-style: normal;
 	font-weight: 100;
-	src: local("YDIYGO320")
-	url("../../../fonts/YDIYGO320.woff") format('woff');
+	src: 
+	url("../../../fonts/YDIYGO320.woff") format('woff'),
+	url("../../../fonts/YDIYGO320.ttf") format('truetype');
 }
 @font-face {
 	font-family: "YDIYGO330";
 	font-style: normal;
 	font-weight: 100;
-	src: local("YDIYGO330")
-	url("../../../fonts/YDIYGO330.woff") format('woff');
+	src: 
+	url("../../../fonts/YDIYGO330.woff") format('woff'),
+	url("../../../fonts/YDIYGO330.ttf") format('truetype');
 }
 @font-face {
 	font-family: "YDIYGO340";
 	font-style: normal;
 	font-weight: 100;
-	src: local("YDIYGO340")
-	url("../../../fonts/YDIYGO340.woff") format('woff');
+	src:
+	url("../../../fonts/YDIYGO340.woff") format('woff'),
+	url("../../../fonts/YDIYGO340.ttf") format('truetype');
 }
 @font-face {
 	font-family: "YDIYGO350";
 	font-style: normal;
 	font-weight: 100;
-	src: local("YDIYGO350")
-	url("../../../fonts/YDIYGO350.woff") format('woff');
+	src :url("../../../fonts/YDIYGO350.woff") format('woff'),
+	url("../../../fonts/YDIYGO350.ttf") format('truetype');
 }
 @font-face {
-	font-family: "NanumGothic";
+	font-family: "Avenir";
 	font-style: normal;
-	font-weight: normal;
-	src: url("../../../fonts/NanumGothic.woff2") format('woff2'),
-	url("../../../fonts/NanumGothic.woff") format('woff'),
-	url("../../../fonts/NanumGothic.otf") format('truetype');
+	font-weight: 100;
+	src: url("../../../fonts/Avenir.ttc") format('truetype');
 }
