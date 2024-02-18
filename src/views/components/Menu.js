@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { BsFillRecordFill } from "react-icons/bs";
 
 import styles from "../../styles/components/Menu.module.css";
@@ -22,6 +22,9 @@ function Menu() {
 				paddingTop: 100,
 				width: window.screen.width,
 				height: window.screen.height,
+				backgroundImage: "url('../../../../img/Mobilebg.png')",
+				backgroundSize: 'cover',
+				backgroundRepeat: 'no-repeat'
 			}}
 		>
 			<div className={styles.menuBox}>
@@ -38,6 +41,16 @@ function Menu() {
 			</div>
 			<div className={styles.menuBox}>
 				<a>Instagram</a>
+			</div>
+			<div className={styles.MobilecoloverLogo} 
+				style={{
+					position: 'absolute',
+					width: '84px',
+					height: '12px',
+					left: 'calc(50% - 84px/2 + 0.5px)',
+					top: '680px'
+				}}>
+				<img src="../img/Mobile cloverLogo.png" alt="Clover Logo"></img>
 			</div>
 		</div>
 	);
