@@ -22,6 +22,7 @@ const customStyles = {
 };
 
 function Projects() {
+    const [isDescriptionContainer2Visible, setIsDescriptionContainer2Visible] = useState(true);
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [timeRemaining, setTimeRemaining] = useState(10 * 60);
     const [description, setDescription] = useState({});
@@ -125,7 +126,7 @@ function Projects() {
 
     return (
         <div className={styles.container}>
-            <div className={styles.CTMain}>
+            <div className={styles.CTMain} onClick={() => setIsDescriptionContainer2Visible(false)}>
                 <img alt src="/img/CTMain.png"  />
                 <div>
                     <img className={`${styles.CTA} ${styles.hoverImage}`} alt src="/img/CTA.png" onClick={() => handleImageClick('CTA')} />
@@ -136,9 +137,41 @@ function Projects() {
                     <img className={`${styles.CTF} ${styles.hoverImage}`} alt src="/img/CTF.png" onClick={() => handleImageClick('CTF')} />
                 </div>
             </div>
-        
+            {isDescriptionContainer2Visible && (
+                <div className={styles.descriptionContainer2}>
+					<div className={styles.titleBox2}>
+						<div className={styles.titleBoxHead2}>
+                            <p className={styles.title2}>
+								자세히 보고 싶은 프로젝트가 있나요?
+							</p>
+							<p className={styles.subtitle1}>
+                                도슨트와 팟캐스트가 준비되어 있어요.
+                                재생 버튼을 클릭하여 감상해보세요.
+                            </p>
+						</div>
+						<p className={styles.category}>{description.category}</p>
+					</div>
+					<div className={styles.innerBox}>
+						<div className={styles.tag}>
+							<p>도슨트</p>
+						</div>
+                        <p className={styles.subtitle2}>
+                            작품에 대한 자세한 설명을 들을 수 있어요
+                        </p>
+					</div>
+					<div className={styles.innerBox}>
+						<div className={styles.tag}>
+							<p>팟캐스트</p>
+						</div>
+                        <p className={styles.subtitle3}>
+                            번아웃과 슬럼프, 그리고 새로운 자극에 대한
+                            각자만의 스토리를 들을 수 있어요
+                        </p>
+					</div>
+                </div>
+            )}
 
-			{isDescriptionVisible && (
+            {!isDescriptionContainer2Visible && isDescriptionVisible && (
 				<div className={styles.descriptionContainer}>
 					<div className={styles.titleBox}>
 						<div className={styles.titleBoxHead}>
