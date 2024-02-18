@@ -65,7 +65,7 @@ function LastPageT5() {
 
     return (
         <div className='ContainerF6'>
-            <video style={{height: window.screen.height}} autoPlay loop muted>
+            <video style={{height: window.screen.height}} loop muted autoPlay playsInline>
                 <source src={video7} type='video/mp4'/>
             </video>
             <CSSTransition in={showContainer1} timeout={300} classNames="motion-slide" unmountOnExit>

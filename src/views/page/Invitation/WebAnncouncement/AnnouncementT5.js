@@ -62,7 +62,7 @@ return (
 		</div>
 		<div className="webmainContainer2">
 			<div className="qr-container">
-				  <img src="/publicQR.png" alt="공용QR코드" /> {/* alt 속성 추가 */}
+				  <img src="/cornQR.png" alt="옥수수수염QR코드" /> {/* alt 속성 추가 */}
 			</div>
 			<div className="blankLine3">
 			</div>

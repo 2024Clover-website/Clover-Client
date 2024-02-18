@@ -62,7 +62,7 @@ return (
 		</div>
 		<div className="webmainContainer2">
 			<div className="qr-container">
-				  <img src="/publicQR.png" alt="공용QR코드" /> {/* alt 속성 추가 */}
+				  <img src="/laterQR.png" alt="이따QR코드" /> {/* alt 속성 추가 */}
 			</div>
 			<div className="blankLine3">
 			</div>
@@ -74,8 +74,8 @@ return (
 					<p>
 					초대장은 모바일로 확인할 수 있어요
 						<br />
-					   카메라로 아래 QR 코드를 찍어 접속해주세요
-				 </p>
+					카메라로 아래 QR 코드를 찍어 접속해주세요
+					</p>
 				</div>
 			</div>
 		 </div>
