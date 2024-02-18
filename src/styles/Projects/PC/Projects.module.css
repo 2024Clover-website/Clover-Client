@@ -51,9 +51,9 @@
 
 	position: absolute;
 	box-sizing: border-box;
-	left: -0.75%;
-	right: -30.75%;
-	top: 69.46%;
+	left: 0%;
+	right: 0%;
+	top: 68.40%;
 	bottom: 1.57%;
 	
 
@@ -65,9 +65,9 @@
 	box-sizing: border-box;
 
 	position: absolute;
-	left: 32.75%;
+	left: 32.55%;
 	right: 49.75%;
-	top: 41.75%;
+	top: 41.35%;
 	bottom: 15.75%;
 
 
@@ -92,9 +92,9 @@
 	box-sizing: border-box;
 
 	
-	left: 85.25%;
+	left: 84.45%;
 	right: 5.37%;
-	top: 9.25%;
+	top: 9.99%;
 	bottom: 60.24%;
 	
 
@@ -106,7 +106,7 @@
 	position: absolute;
 	left: 63.25%;
 	right: 22.7%;
-	top: -1.25%;
+	top: -0.25%;
 	bottom: 79.97%;
 
 
@@ -119,39 +119,12 @@
 
 	left: 28.25%;
 	right: 34.3%;
-	top: -1.25%;
+	top: -0.25%;
 	bottom: 79.96%;
 	
 	
 }
-.CT01{
-	position: absolute;
-	left: 9.26%;
-	right: 85.01%;
-	top: 53.75%;
-	bottom: 30.67%;
-	
-}
-.CT02{
-	
-	position: absolute;
-	left: 11.3%;
-	right: 71.25%;
-	top: 11.75%;
-	bottom: 57.85%;
 
-
-
-}
-.CT03{
-	position: absolute;
-	left: 3.78%;
-	right: 6.16%;
-	top: 31.25%;
-	bottom: 48.84%;
-	width: 30px;
-
-}
 
 .descriptionContainer {
 	display: flex;

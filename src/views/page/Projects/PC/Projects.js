@@ -115,15 +115,6 @@ function Projects() {
 					<img className={styles.CTE} alt src="/img/CTE.png" onClick={() => handleImageClick('CTE')} />
 					<img className={styles.CTF} alt src="/img/CTF.png" onClick={() => handleImageClick('CTF')} />
 				</div>
-				<div className={styles.CT01}>
-					<img alt src="/img/CT01.png"/>
-				</div>
-				<div className={styles.CT02}>
-					<img alt src="/img/CT02.png"/>
-				</div>
-				<div className={styles.CT03}>
-					<img alt src="/img/CT03.png"/>
-				</div>
 			</div>
 
 			{isDescriptionVisible && (
