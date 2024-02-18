@@ -330,7 +330,7 @@ video{
 	font-family: "Avenir";
 	font-style: normal;
 	font-weight: 100;
-	src: url("../../../../fonts/Avenir.ttc") format('truetype');
+	src: url("../../../../fonts/Avenir.ttf") format('truetype');
 }
 .text1 {
     animation: text1 0.75s cubic-bezier(0.15,1,0.5,1) 0.1s forwards;

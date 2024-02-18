@@ -226,5 +226,5 @@ video{
 	font-family: "Avenir";
 	font-style: normal;
 	font-weight: 100;
-	src: url("../../../fonts/Avenir.ttc") format('truetype');
+	src: url("../../../fonts/Avenir.ttf") format('truetype');
 }
