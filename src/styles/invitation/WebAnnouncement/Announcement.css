@@ -160,7 +160,7 @@ video{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding: 13px 25px 15px 25px;
+	padding: 14px 25px 14px 25px;
 	width: 240px;
 	height: 54px;
 	/* Note: backdrop-filter has minimal browser support */
