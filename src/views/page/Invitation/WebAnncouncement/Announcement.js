@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import moment from "moment";
 import "../../../../styles/invitation/WebAnnouncement/Announcement.css";
+import video2 from '../../../../video/publicPageVideo.mp4';
 
 function Announcement() {
 const [timeRemaining, setTimeRemaining] = useState("");
@@ -36,34 +37,51 @@ useEffect(() => {
 
 	return (
     	<div className="webContainer">
-    		<div className="CT1">
-        		<div className="Textbox">
-        			<p>전시까지 남은 시간</p>
-        		</div>
-        		<div className="timer-container">
-        			<p id="timer">{timeRemaining}</p>
-        		</div>
+			<video style={{height: window.screen.height}} loop muted autoPlay playsInline>
+                <source src={video2} type='video/mp4'/>
+            </video>
+			<div className="CT1">
     		</div>
-    		<div className="blankLine">
+			<div className="webmainContainer1">
+				<div className="webtimerContainer">
+					<div className="Textbox">
+        				<p>전시까지 남은 시간</p>
+        			</div>
+					<div className="blankLine1">
+					</div>
+        			<div className="timer-container">
+        				<p id="timer">{timeRemaining}</p>
+        			</div>
+				</div>
+				<div className="blankLine2">
+				</div>
+				<div className="blankLine">
+				</div>
+				<div className="blankLine2">
+				</div>
 			</div>
-    		<div className="CT2">
+			<div className="webmainContainer2">
         		<div className="qr-container">
-          		<img src="/publicQR.png" alt="공용QR코드" /> {/* alt 속성 추가 */}
+          			<img src="/publicQR.png" alt="공용QR코드" /> {/* alt 속성 추가 */}
         		</div>
+				<div className="blankLine3">
+				</div>
         		<div className="text-content">
         			<div className="text-content1">
             			<p>모바일로 봐주세요!</p>
         			</div>
         			<div className="text-content2">
-            			<p>
-    					초대장은 모바일로 확인할 수 있어요
-              			<br />
-              			카메라로 아래 QR 코드를 찍어 접속해주세요
-            			</p>
-        			</div>
-        		</div>
+        				<p>
+						초대장은 모바일로 확인할 수 있어요
+            				<br />
+           				카메라로 아래 QR 코드를 찍어 접속해주세요
+     				</p>
+    				</div>
+    			</div>
+ 			</div>
+			 <div className="CT2">
     		</div>
-    	</div>
+		</div>
 	);
 }
 

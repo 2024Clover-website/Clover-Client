@@ -7,7 +7,7 @@ function InvitePageT3() {
     }
     return (
         <div className='PIG1'>
-            <video style={{height: window.screen.height}} autoPlay loop muted>
+            <video style={{height: window.screen.height}} loop muted autoPlay playsInline>
                 <source src={video1} type='video/mp4'/>
             </video>
             <div className='startContainer'>
