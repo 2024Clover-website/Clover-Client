@@ -30,6 +30,7 @@ video{
     font-style: normal;
     font-weight: 400;
     line-height: 130%; /* 39px */
+    padding-left: 28px;
 }
 .textContainer1{
     height: 78px;
@@ -120,6 +121,7 @@ video{
 .picture{
     width: 335px;
     height: 200px;
+    padding-left: 20px;
     left: calc(50% - 335px/2);
     filter: drop-shadow(0px 3px 18px rgba(0, 0, 0, 0.2));
 }
