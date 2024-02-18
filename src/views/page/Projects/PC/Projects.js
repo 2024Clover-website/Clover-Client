@@ -112,27 +112,21 @@ function Projects() {
                 <img alt src="/img/CTMain.png" onClick={() => handleImageClick('CTMain')} />
                 <div className={styles.CTA}>
                     <img alt src="/img/CTA.png" onClick={() => handleImageClick('CTA')} />
-                    <img alt src="/img/alphabetA.png" />
                 </div>
 				<div className={styles.CTB}>
                     <img alt src="/img/CTB.png" onClick={() => handleImageClick('CTB')} />
-                    <img alt src="/img/alphabetB.png" />
                 </div>
 				<div className={styles.CTC}>
                     <img alt src="/img/CTC.png" onClick={() => handleImageClick('CTC')} />
-                    <img alt src="/img/alphabetC.png" />
                 </div>
 				<div className={styles.CTD}>
                     <img alt src="/img/CTD.png" onClick={() => handleImageClick('CTD')} />
-                    <img alt src="/img/alphabetD.png" />
                 </div>
 				<div className={styles.CTE}>
                     <img alt src="/img/CTE.png" onClick={() => handleImageClick('CTE')} />
-                    <img alt src="/img/alphabetE.png" />
                 </div>
 				<div className={styles.CTF}>
                     <img alt src="/img/CTF.png" onClick={() => handleImageClick('CTF')} />
-                    <img alt src="/img/alphabetF.png" />
                 </div>
 				<div className={styles.CT01}>
                     <img alt src="/img/CT01.png"/>
