@@ -26,7 +26,14 @@ function Projects() {
     const [timeRemaining, setTimeRemaining] = useState(10 * 60);
     const [description, setDescription] = useState({});
 	const [isDescriptionVisible, setIsDescriptionVisible] = useState(false);
-
+    const [imageSrc, setImageSrc] = useState({
+        CTA: "/img/CTA.png",
+        CTB: "/img/CTB.png",
+        CTC: "/img/CTC.png",
+        CTD: "/img/CTD.png",
+        CTE: "/img/CTE.png",
+        CTF: "/img/CTF.png"
+    });
     const descriptions = {
         'CTA': {
             title: 'Dopamine Addiction: Visualization of symptoms',
@@ -78,6 +85,7 @@ function Projects() {
         },
     };
 
+
     function handlePodcastButton() {
         setModalIsOpen(true);
         setTimeRemaining(10 * 60);
@@ -89,9 +97,21 @@ function Projects() {
 
     function handleImageClick(image) {
         setDescription(descriptions[image]);
-		setIsDescriptionVisible(true);
+        setIsDescriptionVisible(true);
+        setImageSrc(prevState => ({ ...prevState, [image]: `/img/${image}.gif` })); // 클릭한 이미지를 GIF 이미지로 변경
     }
 
+    function handleMouseEnter(image) {
+        if (!isDescriptionVisible) { // 이미지 설명이 보이지 않을 때만 호버 효과 적용
+            setImageSrc(prevState => ({ ...prevState, [image]: `/img/${image}.gif` }));
+        }
+    }
+
+    function handleMouseLeave(image) {
+        if (!isDescriptionVisible) { // 이미지 설명이 보이지 않을 때만 호버 효과 적용
+            setImageSrc(prevState => ({ ...prevState, [image]: `/img/${image}.png` }));
+        }
+    }
     useEffect(() => {
         if (timeRemaining > 0) {
             const timerId = setTimeout(() => {
@@ -105,17 +125,18 @@ function Projects() {
 
     return (
         <div className={styles.container}>
-			<div className={styles.CTMain}>
-				<img alt src="/img/CTMain.png"  />
-				<div>
-					<img className={styles.CTA} alt src="/img/CTA.png" onClick={() => handleImageClick('CTA')} />
-					<img className={styles.CTB} alt src="/img/CTB.png" onClick={() => handleImageClick('CTB')} />
-					<img className={styles.CTC} alt src="/img/CTC.png" onClick={() => handleImageClick('CTC')} />
-					<img className={styles.CTD} alt src="/img/CTD.png" onClick={() => handleImageClick('CTD')} />
-					<img className={styles.CTE} alt src="/img/CTE.png" onClick={() => handleImageClick('CTE')} />
-					<img className={styles.CTF} alt src="/img/CTF.png" onClick={() => handleImageClick('CTF')} />
-				</div>
-			</div>
+            <div className={styles.CTMain}>
+                <img alt src="/img/CTMain.png"  />
+                <div>
+                    <img className={`${styles.CTA} ${styles.hoverImage}`} alt src="/img/CTA.png" onClick={() => handleImageClick('CTA')} />
+                    <img className={`${styles.CTB} ${styles.hoverImage}`} alt src="/img/CTB.png" onClick={() => handleImageClick('CTB')} />
+                    <img className={`${styles.CTC} ${styles.hoverImage}`} alt src="/img/CTC.png" onClick={() => handleImageClick('CTC')} />
+                    <img className={`${styles.CTD} ${styles.hoverImage}`} alt src="/img/CTD.png" onClick={() => handleImageClick('CTD')} />
+                    <img className={`${styles.CTE} ${styles.hoverImage}`} alt src="/img/CTE.gif" onClick={() => handleImageClick('CTE')} />
+                    <img className={`${styles.CTF} ${styles.hoverImage}`} alt src="/img/CTF.png" onClick={() => handleImageClick('CTF')} />
+                </div>
+            </div>
+        
 
 			{isDescriptionVisible && (
 				<div className={styles.descriptionContainer}>

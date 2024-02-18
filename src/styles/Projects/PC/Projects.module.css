@@ -7,12 +7,14 @@
 	font-family: "YDIYGO350";
 	src: url(../../../../font/yoon350.ttf);
 }
-
-
-.CTA:hover, .CTB:hover, .CTC:hover, .CTD:hover, .CTE:hover, .CTF:hover {
-    /* content: url('../../../../public/img/HoverEffect.png'); */
-    filter: brightness(150%) sepia(1) hue-rotate(500deg);
+.hoverImage {
+    opacity: 0;
 }
+
+.hoverImage:hover {
+    opacity: 1;
+}
+
 
 
 
@@ -53,7 +55,7 @@
 	box-sizing: border-box;
 	left: 0%;
 	right: 0%;
-	top: 68.40%;
+	top: 70.00%;
 	bottom: 1.57%;
 	
 
@@ -65,9 +67,9 @@
 	box-sizing: border-box;
 
 	position: absolute;
-	left: 32.55%;
+	left: 32.95%;
 	right: 49.75%;
-	top: 41.35%;
+	top: 42.85%;
 	bottom: 15.75%;
 
 
@@ -78,9 +80,9 @@
 	
 	box-sizing: border-box;
 
-	left: 41.75%;
+	left: 42.40%;
 	right: 25.75%;
-	top: 28.25%;
+	top: 29.05%;
 	bottom: 60.23%;
 	
 
@@ -92,9 +94,9 @@
 	box-sizing: border-box;
 
 	
-	left: 84.45%;
+	left: 85.45%;
 	right: 5.37%;
-	top: 9.99%;
+	top: 10.35%;
 	bottom: 60.24%;
 	
 
@@ -104,12 +106,11 @@
 	box-sizing: border-box;
 
 	position: absolute;
-	left: 63.25%;
+	left: 66.25%;
 	right: 22.7%;
-	top: -0.25%;
+	top: 2.65%;
 	bottom: 79.97%;
-
-
+	
 
 }
 .CTF{
@@ -117,9 +118,9 @@
 
 	box-sizing: border-box;
 
-	left: 28.25%;
+	left: 28.85%;
 	right: 34.3%;
-	top: -0.25%;
+	top: 0%;
 	bottom: 79.96%;
 	
 	
