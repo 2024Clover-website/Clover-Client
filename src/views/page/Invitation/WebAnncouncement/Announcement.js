@@ -8,7 +8,7 @@ const [timeRemaining, setTimeRemaining] = useState("");
 
 useEffect(() => {
     const countDownTimer = () => {
-    let vDate = moment("2024-03-02");
+    let vDate = moment("2024-02-29");
     let interval = setInterval(() => {
         let now = moment();
         let distDt = vDate - now;

@@ -6,6 +6,7 @@ import '../../../style/Invitation/LastPage/LastPage.css';
 import Backdrop from './components/Backdrop/Backdrop';
 import Modal from './components/Modal/Modal';
 import video7 from '../../../../video/cornTeamVideo.mp4';
+import moment from "moment";
 
 function LastPageT5() {
     const [value, setValue] = useState('인사동 마루아트 센터 신관');
@@ -17,7 +18,7 @@ function LastPageT5() {
     const [showContainer4, setShowContainer4] = useState(false);
     const [showContainer5, setShowContainer5] = useState(false);
     const [showContainer6, setShowContainer6] = useState(false);
-    setTimeout(() => setShowModal(false), 5000);
+    const [timeRemaining, setTimeRemaining] = useState("");
 
     const handleCopy = () => {
         setCopied(true);
@@ -32,27 +33,34 @@ function LastPageT5() {
         setShowModal(false);
     };
     
-    const countDownDate = new Date('2024-03-02T00:00:00').getTime();
-    const now = new Date().getTime();
-    const distance = countDownDate - now;
-    const timeLeftInitial = Math.floor(distance / 1000);
-
-    const [timeLeft, setTimeLeft] = useState(timeLeftInitial);
-
     useEffect(() => {
-        const timer = setInterval(() => {
-            setTimeLeft(timeLeft => timeLeft - 1);
+        const countDownTimer = () => {
+        let vDate = moment("2024-02-29");
+        let interval = setInterval(() => {
+            let now = moment();
+            let distDt = vDate - now;
+            if (distDt < 0) {
+            clearInterval(interval);
+            setTimeRemaining("00:00:00:00");
+            return;
+            }
+            let days = Math.floor(distDt / (1000 * 60 * 60 * 24));
+            let hours = Math.floor((distDt % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutes = Math.floor((distDt % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((distDt % (1000 * 60)) / 1000);
+            setTimeRemaining(
+            `${days.toString().padStart(2, "0")}:${hours.toString().padStart(
+                2,
+                "0"
+            )}:${minutes.toString().padStart(2, "0")}:${seconds
+                .toString()
+                .padStart(2, "0")}`
+            );
         }, 1000);
-        return () => clearInterval(timer);
+          return () => clearInterval(interval); // clearInterval을 반환 함수로 이동
+        };
+        countDownTimer();
     }, []);
-
-    const formatTime = (time) => {
-        const days = Math.floor(time / 86400)
-        const hours = Math.floor((time % 600) / 24);
-        const minutes = Math.floor((time % 3600) / 60);
-        const seconds = time % 60;
-        return `${days}:${hours < 10 ? '0' : ''}${hours}:${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-    };
     useEffect(() => {
         setTimeout(() => setShowContainer1(true), 400);
         setTimeout(() => setShowContainer2(true), 800);
@@ -62,7 +70,6 @@ function LastPageT5() {
         setTimeout(() => setShowContainer6(true), 2400);
         
     }, []);
-
     return (
         <div className='ContainerF6'>
             <video style={{height: window.screen.height}} loop muted autoPlay playsInline>
@@ -74,7 +81,7 @@ function LastPageT5() {
                         전시까지
                     </div>
                     <div className='Container1Name'>
-                        {formatTime(timeLeft)}
+                        {timeRemaining}
                     </div>
                 </div>
             </CSSTransition>
