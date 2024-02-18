@@ -108,36 +108,27 @@ function Projects() {
 
     return (
         <div className={styles.container}>
-            <div className={styles.CTMain}>
-                <img alt src="/img/CTMain.png" onClick={() => handleImageClick('CTMain')} />
-                <div className={styles.CTA}>
-                    <img alt src="/img/CTA.png" onClick={() => handleImageClick('CTA')} />
-                </div>
-				<div className={styles.CTB}>
-                    <img alt src="/img/CTB.png" onClick={() => handleImageClick('CTB')} />
-                </div>
-				<div className={styles.CTC}>
-                    <img alt src="/img/CTC.png" onClick={() => handleImageClick('CTC')} />
-                </div>
-				<div className={styles.CTD}>
-                    <img alt src="/img/CTD.png" onClick={() => handleImageClick('CTD')} />
-                </div>
-				<div className={styles.CTE}>
-                    <img alt src="/img/CTE.png" onClick={() => handleImageClick('CTE')} />
-                </div>
-				<div className={styles.CTF}>
-                    <img alt src="/img/CTF.png" onClick={() => handleImageClick('CTF')} />
-                </div>
+			<div className={styles.CTMain}>
+				<img alt src="/img/CTMain.png"  />
+				<div>
+					<img className={styles.CTA} alt src="/img/CTA.png" onClick={() => handleImageClick('CTA')} />
+					<img className={styles.CTB} alt src="/img/CTB.png" onClick={() => handleImageClick('CTB')} />
+					<img className={styles.CTC} alt src="/img/CTC.png" onClick={() => handleImageClick('CTC')} />
+					<img className={styles.CTD} alt src="/img/CTD.png" onClick={() => handleImageClick('CTD')} />
+					<img className={styles.CTE} alt src="/img/CTE.png" onClick={() => handleImageClick('CTE')} />
+					<img className={styles.CTF} alt src="/img/CTF.png" onClick={() => handleImageClick('CTF')} />
+				</div>
 				<div className={styles.CT01}>
-                    <img alt src="/img/CT01.png"/>
-                </div>
+					<img alt src="/img/CT01.png"/>
+				</div>
 				<div className={styles.CT02}>
-                    <img alt src="/img/CT02.png"/>
-                </div>
+					<img alt src="/img/CT02.png"/>
+				</div>
 				<div className={styles.CT03}>
-                    <img alt src="/img/CT03.png"/>
-                </div>
-            </div>
+					<img alt src="/img/CT03.png"/>
+				</div>
+			</div>
+
 			{isDescriptionVisible && (
 				<div className={styles.descriptionContainer}>
 					<div className={styles.titleBox}>

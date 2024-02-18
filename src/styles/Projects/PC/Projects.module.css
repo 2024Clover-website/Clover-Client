@@ -9,6 +9,13 @@
 }
 
 
+.CTA:hover, .CTB:hover, .CTC:hover, .CTD:hover, .CTE:hover, .CTF:hover {
+    /* content: url('../../../../public/img/HoverEffect.png'); */
+    filter: brightness(150%) sepia(1) hue-rotate(500deg);
+}
+
+
+
 .container {
 	background-image: url('../../../../public/img/background color.png');
 	background-size: cover;
@@ -22,7 +29,7 @@
 
 	justify-content: center;
 	cursor: default;
-	gap: 100px;
+	
 	}
 
 .CTMain {
@@ -146,53 +153,6 @@
 
 }
 
-.alphabetA{
-	position: absolute;
-	left: 11.26%;
-	right: 84.99%;
-	top: 73.53%;
-	bottom: 3.9%;
-	
-	
-}
-.alphabetB{
-	position: absolute;
-	left: 42.06%;
-	right: 54.19%;
-	top: 48.33%;
-	bottom: 86.7%;
-}
-.alphabetC{
-	position: absolute;
-	left: 56.71%;
-	right: 39.54%;
-	top: 39.32%;
-	bottom: 61.71%;
-	
-}
-.alphabetD{
-	position: absolute;
-	left: 90.06%;
-	right: 6.19%;
-	top: 45.6%;
-	bottom: 71.43%;
-	
-}
-.alphabetE{
-	position: absolute;
-	left: 70.71%;
-	right: 25.54%;
-	top: 42.33%;
-	bottom: 86.7%;
-}
-.alphabetF{
-	position: absolute;
-	left: 42.06%;
-	right: 54.19%;
-	top: 40.33%;
-	bottom: 86.7%;
-	
-}
 .descriptionContainer {
 	display: flex;
 	flex-direction: column;
