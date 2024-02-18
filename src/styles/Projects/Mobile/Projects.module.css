@@ -9,39 +9,50 @@
 }
 
 .container {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	height: 100%;
+	background-image: url('../../../../public/img/Mobilebg.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	padding: 0px;
+	gap: 22px;
+
 	padding-top: 88px;
-	padding-bottom: 100px;
-	justify-content: center;
-	cursor: default;
+	padding-bottom: 150px;
+
 }
 
 .descriptionContainer {
 	display: flex;
 	flex-direction: column;
+	align-items: flex-start;
 	width: 100%;
+	
 }
 
 .titleBox {
+
 	box-sizing: border-box;
+
+	/* Auto layout */
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 30px 20px;
+
 	width: 100%;
 	height: 229px;
 
-	padding-top: 30px;
-	padding-left: 20px;
-
 	border-width: 2px 0px;
 	border-style: solid;
-	border-color: #000000;
+	border-color: #FFFFFF;
+	filter: drop-shadow(0px 3px 18px rgba(0, 0, 0, 0.2));
 
 	/* Inside auto layout */
 	flex: none;
 	order: 0;
 	align-self: stretch;
 	flex-grow: 0;
+
 }
 
 .title {
@@ -49,34 +60,38 @@
 
 	margin: 0;
 	margin-bottom: 20px;
+	width: 335px;
+	height: 62px;
 
-	font-family: "Avenir";
+	font-family: 'Avenir';
 	font-style: normal;
 	font-weight: 900;
-	font-size: 30px;
+	font-size: 26px;
 	line-height: 120%;
-	/* or 36px */
+	/* or 31px */
 
-	color: #000000;
+	color: #FFFFFF;
+
+	text-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
 }
 
 .section {
 	margin: 0;
 	margin-bottom: 20px;
 
-	font-family: "Avenir";
+	width: 335px;
+	height: 47px;
+
+	font-family: 'Avenir';
 	font-style: normal;
 	font-weight: 900;
 	font-size: 39px;
 	line-height: 120%;
-	/* identical to box height, or 47px */
 
-	color: #000000;
+	color: #FFFFFF;
 
-	/* Inside auto layout */
-	flex: none;
-	order: 0;
-	flex-grow: 1;
+	text-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
+
 }
 
 .category {
@@ -89,7 +104,7 @@
 	line-height: 150%;
 	/* identical to box height, or 30px */
 
-	color: #000000;
+	color: #FFFFFF;
 
 	/* Inside auto layout */
 	flex: none;
@@ -108,13 +123,13 @@
 	justify-content: space-between;
 	align-items: center;
 
-	border-bottom: 2px solid #000000;
+	border-bottom: 2px solid #FFFFFF;
 
 	padding: 0px 14px;
 	gap: 20px;
 	height: 100px;
 
-	border-bottom: 2px solid #000000;
+	border-bottom: 2px solid #FFFFFF;
 
 	/* Inside auto layout */
 	flex: none;
@@ -124,23 +139,24 @@
 }
 
 .tag {
+	box-sizing: border-box;
+
+	/* Auto layout */
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	padding: 10px 18px;
-
-	background: #000000;
-	border: 1px solid rgba(241, 241, 241, 0.5);
+	
+	height: 39px;
+	
+	background: rgba(255, 255, 255, 0.25);
+	border: 1px solid rgba(255, 255, 255, 0.75);
 	box-shadow: 0px 3px 18px rgba(0, 0, 0, 0.1);
 	backdrop-filter: blur(2.5px);
 	/* Note: backdrop-filter has minimal browser support */
 	border-radius: 30px;
-
-	/* Inside auto layout */
-	flex: none;
-	order: 0;
-	flex-grow: 0;
+	
 }
 
 .tag > p {
@@ -155,7 +171,7 @@
 	line-height: 130%;
 	text-align: center;
 	/* or 19px */
-	color: #f1f1f1;
+	color: #FFFFFF;
 
 	/* Inside auto layout */
 	flex: none;
@@ -170,17 +186,20 @@
 	flex-direction: row;
 	margin: 0;
 
-	font-family: "Avenir";
+	font-family: 'YDIYGO350';
 	font-style: normal;
 	font-weight: 400;
 	font-size: 26px;
 	line-height: 150%;
-	/* identical to box height, or 39px */
+	/* or 39px */
 	display: flex;
 	align-items: center;
 	text-align: right;
-
-	color: #000000;
+	
+	color: #FFFFFF;
+	
+	text-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
+	
 
 	/* Inside auto layout */
 	flex: none;
@@ -190,26 +209,21 @@
 
 .playButton {
 	margin-left: 20px;
-	width: 55px;
-	height: 55px;
 
-	/* Inside auto layout */
-	flex: none;
-	order: 1;
-	flex-grow: 0;
+	width: 50px;
+	height: 50px;
 }
 
 .ps {
+	margin-top: 100px;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
 	align-items: flex-start;
 	padding: 22px 14px;
 
-	/* Inside auto layout */
-	flex: none;
-	order: 1;
-	flex-grow: 0;
+	width: 303px;
+	height: 190px;
 }
 
 .ps > p {

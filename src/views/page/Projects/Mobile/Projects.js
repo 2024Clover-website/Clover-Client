@@ -1,7 +1,6 @@
 import React from "react";
 
 import styles from "../../../../styles/Projects/Mobile/Projects.module.css";
-import { IoPlayCircle } from "react-icons/io5";
 
 function Projects() {
 	function handleDocentButton() {
@@ -20,7 +19,6 @@ function Projects() {
 					<p className={styles.title}>
 						Dopamine Addiction: Visualization of symptoms
 					</p>
-
 					<p className={styles.category}>3D Motion Graphic</p>
 				</div>
 
@@ -36,8 +34,8 @@ function Projects() {
 					</div>
 					<p className={styles.tagContents}>
 						2:00
-						<IoPlayCircle
-							className={styles.playButton}
+						<img
+							src="../../../img/Button01.png"
 							onClick={handleDocentButton}
 						/>
 					</p>
@@ -48,15 +46,15 @@ function Projects() {
 					</div>
 					<p className={styles.tagContents}>
 						10:00
-						<IoPlayCircle
-							className={styles.playButton}
+						<img
+							src="../../../img/Button01.png"
 							onClick={handlePodcastButton}
 						/>
 					</p>
 				</div>
 			</div>
 			<div className={styles.ps}>
-				<p>D팀과 E팀은 팟캐스트를 공유합니다.</p>
+				<img src="../../../img/Mobilemap.png"/>
 			</div>
 		</div>
 	);
