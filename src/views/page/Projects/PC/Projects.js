@@ -11,20 +11,20 @@ const customStyles = {
         marginRight           : '0%',
         transform             : 'translate(0%, 0%)',
         backgroundColor: 'rgba(0, 0, 0, 0.05)',
-        border                : 'none', // 테두리 제거
-        padding               : '0', // 패딩 제거
-        overflow              : 'hidden' // 스크롤 제거
+        border                : 'none',
+        padding               : '0',
+        overflow              : 'hidden'
     },
     overlay: {
-        backgroundColor: 'rgba(0, 0, 0, 0.15)', // 알파값을 0.75로 높임
-        backdropFilter: 'blur(40px)' // 블러 효과 추가
+        backgroundColor: 'rgba(0, 0, 0, 0.15)',
+        backdropFilter: 'blur(40px)'
     }
 };
 
 function Projects() {
     const [modalIsOpen, setModalIsOpen] = useState(false);
-    const [timeRemaining, setTimeRemaining] = useState(10 * 60);  // 타이머의 남은 시간 (초)
-    const [description, setDescription] = useState({});  // descriptionContainer의 내용
+    const [timeRemaining, setTimeRemaining] = useState(10 * 60);
+    const [description, setDescription] = useState({});
 	const [isDescriptionVisible, setIsDescriptionVisible] = useState(false);
 
     const descriptions = {
@@ -76,12 +76,11 @@ function Projects() {
             docentTime: '2:00',
             podcastTime: '10:00'
         },
-        // 다른 이미지에 대한 설명을 여기에 추가하세요
     };
 
     function handlePodcastButton() {
         setModalIsOpen(true);
-        setTimeRemaining(10 * 60);  // 타이머를 10분으로 설정
+        setTimeRemaining(10 * 60);
     }
 
     function handleDocentButton() {
@@ -89,20 +88,18 @@ function Projects() {
     }
 
     function handleImageClick(image) {
-        // 이미지에 따라 descriptionContainer의 내용을 변경
         setDescription(descriptions[image]);
 		setIsDescriptionVisible(true);
     }
 
-    // 타이머 설정
     useEffect(() => {
         if (timeRemaining > 0) {
             const timerId = setTimeout(() => {
                 setTimeRemaining(timeRemaining - 1);
             }, 1000);
-            return () => clearTimeout(timerId);  // 컴포넌트가 언마운트되면 타이머를 제거
+            return () => clearTimeout(timerId);
         } else {
-            setModalIsOpen(false);  // 타이머가 끝나면 모달을 닫음
+            setModalIsOpen(false);
         }
     }, [timeRemaining]);
 
