@@ -1,8 +1,50 @@
-.Container{
+.ContainerF1{
   position: fixed;
   width: 100%;
   min-height: 120vh;
   mix-blend-mode: normal;
+  background-image: url("../../../../img/publicFake.png");
+  background-size: cover;
+}
+.ContainerF2{
+  position: fixed;
+  width: 100%;
+  min-height: 120vh;
+  mix-blend-mode: normal;
+  background-image: url("../../../../img/taishanFake.png");
+  background-size: cover;
+}
+.ContainerF3{
+  position: fixed;
+  width: 100%;
+  min-height: 120vh;
+  mix-blend-mode: normal;
+  background-image: url("../../../../img/laterFake.png");
+  background-size: cover;
+}
+.ContainerF4{
+  position: fixed;
+  width: 100%;
+  min-height: 120vh;
+  mix-blend-mode: normal;
+  background-image: url("../../../../img/vibemakerFake.png");
+  background-size: cover;
+}
+.ContainerF5{
+  position: fixed;
+  width: 100%;
+  min-height: 120vh;
+  mix-blend-mode: normal;
+  background-image: url("../../../../img/dopaminFake.png");
+  background-size: cover;
+}
+.ContainerF6{
+  position: fixed;
+  width: 100%;
+  min-height: 120vh;
+  mix-blend-mode: normal;
+  background-image: url("../../../../img/cornFake.png");
+  background-size: cover;
 }
 video{
   object-fit: cover;

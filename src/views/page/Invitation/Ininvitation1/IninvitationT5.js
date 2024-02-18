@@ -23,7 +23,7 @@ function IninvitationT5() {
     }
 
     return (
-        <div className='container'>
+        <div className='container6'>
             <video style={{height: window.screen.height}} loop muted autoPlay playsInline>
                 <source src={video7} type='video/mp4'/>
             </video>

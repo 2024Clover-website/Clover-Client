@@ -64,7 +64,7 @@ function LastPageT1() {
     }, []);
 
     return (
-        <div className='Container'>
+        <div className='ContainerF2'>
             <video style={{height: window.screen.height}} autoPlay loop muted>
                 <source src={video3} type='video/mp4'/>
             </video>

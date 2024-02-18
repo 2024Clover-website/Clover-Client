@@ -3,9 +3,6 @@ import { CSSTransition } from 'react-transition-group';
 import '../../../style/Invitation/Ininvitation1/Ininvitation1.css';
 import video4 from '../../../../video/laterTeamVideo.mp4';
 
-// 시도중
-import loadingImg from '../../../image5.js';
-
 function AnimatedText({children, delay, className}) {
     const [show, setShow] = useState(false);
 
@@ -40,7 +37,7 @@ function Ininvitation5T2() {
     }
 
     return (
-        <div className='container'>
+        <div className='container3'>
             <video style={{height: window.screen.height}} loop muted autoPlay playsInline>
                 <source src={video4} type='video/mp4'/>
             </video>
