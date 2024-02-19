@@ -1,4 +1,14 @@
+.backcolor{
+    position: flex;
+    width: 1920px;
+    height: 1925.94px;
+    left: calc(50% - 1920px/2 + 1920px);
+    top: -475px;
 
+    background: url(../../backcolor1.png);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+
+}
 .Start{
     margin-top: 205px;
     color: #000;
