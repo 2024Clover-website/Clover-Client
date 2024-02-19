@@ -13,6 +13,10 @@ function PodcastComment() {
 		setText(e.target.value);
 	};
 
+	const onSubmit = () => {
+		console.log("submit");
+	};
+
 	return (
 		<div
 			style={{ width: window.screen.width, height: window.screen.height }}
@@ -179,6 +183,7 @@ function PodcastComment() {
 					fill="none"
 					xmlns="http://www.w3.org/2000/svg"
 					className={styles.sendButton}
+					onClick={onSubmit}
 				>
 					<g filter="url(#filter0_d_875_3615)">
 						<path
