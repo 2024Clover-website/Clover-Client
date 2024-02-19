@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import { useNavigate } from "react-router-dom";
 
@@ -7,12 +7,23 @@ import styles from "../../../../../styles/Projects/Docent/Mobile/DocentContent.m
 function DocentContent() {
 	const navigate = useNavigate();
 
+	const [progress, setProgress] = useState(0);
+
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setProgress((progress) => progress + 0.01);
+		}, 10);
+	}, []);
+
 	return (
-		<>
-			<div
+		<div
+			style={{ width: window.screen.width, height: window.screen.height }}
+			className={styles.background}
+		>
+			{/* <div
 				style={{ width: window.screen.width, height: window.screen.height }}
 				className={styles.background}
-			></div>
+			></div> */}
 			{/** 헤더 */}
 			<div className={styles.header}>
 				{/** 음소거 버튼 */}
@@ -227,24 +238,41 @@ function DocentContent() {
 
 			{/** 내용 container */}
 			<div className={styles.container}>
-				<div className={styles.blurbox}></div>
 				<p>느슨해진 마음을 팽팽하게 만드려면 무언가 자극이 필요해요</p>
 				<br />
 				<p>마치 카세트 테이프에 연필을 꽂아 돌리는 것처럼요.</p>
 				<br />
-				<div className={styles.image}></div>
-				<br />
-				<p>느슨해진 마음을 팽팽하게 만드려면 무언가 자극이 필요해요</p>
-				<br />
-				<p>마치 카세트 테이프에 연필을 꽂아 돌리는 것처럼요.</p>
-				<br />
-				<div className={styles.image}></div>
+				<img alt src="../../../../../../public/logo512.png" />
 				<br />
 				<p>느슨해진 마음을 팽팽하게 만드려면 무언가 자극이 필요해요</p>
 				<br />
 				<p>마치 카세트 테이프에 연필을 꽂아 돌리는 것처럼요.</p>
 				<br />
-				<div className={styles.image}></div>
+				<img alt src="../../../../../../public/logo512.png" />
+				<br />
+				<p>느슨해진 마음을 팽팽하게 만드려면 무언가 자극이 필요해요</p>
+				<br />
+				<p>마치 카세트 테이프에 연필을 꽂아 돌리는 것처럼요.</p>
+				<br />
+				<img alt src="../../../../../../public/logo512.png" />
+				<br />
+				<p>느슨해진 마음을 팽팽하게 만드려면 무언가 자극이 필요해요</p>
+				<br />
+				<p>마치 카세트 테이프에 연필을 꽂아 돌리는 것처럼요.</p>
+				<br />
+				<img alt src="../../../../../../public/logo512.png" />
+				<br />
+				<p>느슨해진 마음을 팽팽하게 만드려면 무언가 자극이 필요해요</p>
+				<br />
+				<p>마치 카세트 테이프에 연필을 꽂아 돌리는 것처럼요.</p>
+				<br />
+				<img alt src="../../../../../../public/logo512.png" />
+				<br />
+				<p>느슨해진 마음을 팽팽하게 만드려면 무언가 자극이 필요해요</p>
+				<br />
+				<p>마치 카세트 테이프에 연필을 꽂아 돌리는 것처럼요.</p>
+				<br />
+				<img alt src="../../../../../../public/logo512.png" />
 				<br />
 			</div>
 
@@ -261,13 +289,240 @@ function DocentContent() {
 						window.location.href = "/projects/docent/comment";
 					}}
 				>
-					<div></div>
 					<p>100</p>
 				</div>
 
-				<div></div>
+				<div id="play" className={styles.playBar}>
+					<div
+						style={{
+							position: "absolute",
+							width: `${progress}%`,
+							maxWidth: "100%",
+							height: "100%",
+							backgroundColor: "rgb(113, 111, 111, 0.25)",
+						}}
+					></div>
+					<svg
+						width="276"
+						height="34"
+						viewBox="0 0 276 34"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M10 2L10 32"
+							stroke="white"
+							stroke-width="4"
+							stroke-linecap="round"
+						/>
+						<path
+							d="M18 7L18 27"
+							stroke="white"
+							stroke-width="4"
+							stroke-linecap="round"
+						/>
+						<path
+							d="M26 14L26 19"
+							stroke="white"
+							stroke-width="4"
+							stroke-linecap="round"
+						/>
+						<path
+							d="M34 12L34 22"
+							stroke="white"
+							stroke-width="4"
+							stroke-linecap="round"
+						/>
+						<path
+							d="M42 7L42 27"
+							stroke="white"
+							stroke-width="4"
+							stroke-linecap="round"
+						/>
+						<path
+							d="M50 12L50 22"
+							stroke="white"
+							stroke-width="4"
+							stroke-linecap="round"
+						/>
+						<path
+							d="M58 7L58 27"
+							stroke="white"
+							stroke-width="4"
+							stroke-linecap="round"
+						/>
+						<path
+							d="M66 12L66 22"
+							stroke="white"
+							stroke-width="4"
+							stroke-linecap="round"
+						/>
+						<path
+							d="M74 2L74 32"
+							stroke="white"
+							stroke-width="4"
+							stroke-linecap="round"
+						/>
+						<path
+							d="M82 12L82 22"
+							stroke="white"
+							stroke-width="4"
+							stroke-linecap="round"
+						/>
+						<path
+							d="M90 7L90 27"
+							stroke="white"
+							stroke-width="4"
+							stroke-linecap="round"
+						/>
+						<path
+							d="M98 7L98 27"
+							stroke="white"
+							stroke-width="4"
+							stroke-linecap="round"
+						/>
+						<path
+							d="M106 2L106 32"
+							stroke="white"
+							stroke-width="4"
+							stroke-linecap="round"
+						/>
+						<path
+							d="M114 7L114 27"
+							stroke="white"
+							stroke-width="4"
+							stroke-linecap="round"
+						/>
+						<path
+							d="M122 2L122 32"
+							stroke="white"
+							stroke-width="4"
+							stroke-linecap="round"
+						/>
+						<path
+							d="M130 12L130 22"
+							stroke="white"
+							stroke-width="4"
+							stroke-linecap="round"
+						/>
+						<path
+							d="M138 2L138 32"
+							stroke="white"
+							stroke-width="4"
+							stroke-linecap="round"
+						/>
+						<path
+							d="M146 9L146 24"
+							stroke="white"
+							stroke-width="4"
+							stroke-linecap="round"
+						/>
+						<path
+							d="M154 2L154 32"
+							stroke="white"
+							stroke-width="4"
+							stroke-linecap="round"
+						/>
+						<path
+							d="M162 7L162 27"
+							stroke="white"
+							stroke-width="4"
+							stroke-linecap="round"
+						/>
+						<path
+							d="M170 4L170 29"
+							stroke="white"
+							stroke-width="4"
+							stroke-linecap="round"
+						/>
+						<path
+							d="M178 2L178 32"
+							stroke="white"
+							stroke-width="4"
+							stroke-linecap="round"
+						/>
+						<path
+							d="M186 4L186 29"
+							stroke="white"
+							stroke-width="4"
+							stroke-linecap="round"
+						/>
+						<path
+							d="M194 14L194 19"
+							stroke="white"
+							stroke-width="4"
+							stroke-linecap="round"
+						/>
+						<path
+							d="M202 2L202 32"
+							stroke="white"
+							stroke-width="4"
+							stroke-linecap="round"
+						/>
+						<path
+							d="M210 12L210 22"
+							stroke="white"
+							stroke-width="4"
+							stroke-linecap="round"
+						/>
+						<path
+							d="M218 2L218 32"
+							stroke="white"
+							stroke-width="4"
+							stroke-linecap="round"
+						/>
+						<path
+							d="M226 7L226 27"
+							stroke="white"
+							stroke-width="4"
+							stroke-linecap="round"
+						/>
+						<path
+							d="M234 12L234 22"
+							stroke="white"
+							stroke-width="4"
+							stroke-linecap="round"
+						/>
+						<path
+							d="M242 2L242 32"
+							stroke="white"
+							stroke-width="4"
+							stroke-linecap="round"
+						/>
+						<path
+							d="M250 12L250 22"
+							stroke="white"
+							stroke-width="4"
+							stroke-linecap="round"
+						/>
+						<path
+							d="M258 9L258 24"
+							stroke="white"
+							stroke-width="4"
+							stroke-linecap="round"
+						/>
+						<path
+							d="M266 12L266 22"
+							stroke="white"
+							stroke-width="4"
+							stroke-linecap="round"
+						/>
+						<path
+							d="M274 14L274 19"
+							stroke="white"
+							stroke-width="4"
+							stroke-linecap="round"
+						/>
+						<path
+							d="M2 14L2 19"
+							stroke="white"
+							stroke-width="4"
+							stroke-linecap="round"
+						/>
+					</svg>
+				</div>
 			</div>
-		</>
+		</div>
 	);
 }
 
