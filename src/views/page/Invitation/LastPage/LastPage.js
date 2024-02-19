@@ -9,7 +9,7 @@ import video2 from '../../../../video/publicPageVideo.mp4';
 import moment from "moment";
 
 function LastPage() {
-    const [value, setValue] = useState('인사동 마루아트 센터 신관');
+    const [value, setValue] = useState('서울특별시 종로구 관훈동 196-10');
     const [copied, setCopied] = useState(false);
     const [showModal, setShowModal] = useState(false);
     const [showContainer1, setShowContainer1] = useState(false);
@@ -18,8 +18,8 @@ function LastPage() {
     const [showContainer4, setShowContainer4] = useState(false);
     const [showContainer5, setShowContainer5] = useState(false);
     const [showContainer6, setShowContainer6] = useState(false);
-    setTimeout(() => setShowModal(false), 5000);
     const [timeRemaining, setTimeRemaining] = useState("");
+    setTimeout(() => setShowModal(false), 5000);
 
     const handleCopy = () => {
         setCopied(true);
@@ -33,7 +33,6 @@ function LastPage() {
     const closeModalHandler = () => {
         setShowModal(false);
     };
-    
 
     useEffect(() => {
         const countDownTimer = () => {
@@ -70,7 +69,7 @@ function LastPage() {
         setTimeout(() => setShowContainer4(true), 1600);
         setTimeout(() => setShowContainer5(true), 2000);
         setTimeout(() => setShowContainer6(true), 2400);
-        
+        setTimeout(() => setShowModal(false), 5000);
     }, []);
 
     return (
