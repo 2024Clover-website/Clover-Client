@@ -37,9 +37,6 @@ useEffect(() => {
 
 return (
 	<div className="webContainer">
-		<video style={{height: window.screen.height}} loop muted autoPlay playsInline>
-			<source src={video6} type='video/mp4'/>
-		</video>
 		<div className="CT1">
 		</div>
 		<div className="webmainContainer1">

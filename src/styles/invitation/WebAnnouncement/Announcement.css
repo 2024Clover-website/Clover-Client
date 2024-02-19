@@ -2,7 +2,7 @@
 	width: 100%;
 	height: 100%;
 	display: flex;
-	min-height: 100vh;
+	min-height: 120vh;
     mix-blend-mode: normal;
 	flex-direction: column;
 	align-items: center;
