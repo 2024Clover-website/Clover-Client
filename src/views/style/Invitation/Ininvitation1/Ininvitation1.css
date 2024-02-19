@@ -5,7 +5,7 @@
 .container1{
     position: fixed;
     width: 100%;
-    min-height: 120vh;
+    min-height: 120svh;
     mix-blend-mode: normal;
     background-image: url("../../../../img/publicFake.png");
     background-size: cover;
@@ -13,7 +13,7 @@
 .container2{
     position: fixed;
     width: 100%;
-    min-height: 120vh;
+    min-height: 120svh;
     mix-blend-mode: normal;
     background-image: url("../../../../img/taishanFake.png");
     background-size: cover;
@@ -21,7 +21,7 @@
 .container3{
     position: fixed;
     width: 100%;
-    min-height: 120vh;
+    min-height: 120svh;
     mix-blend-mode: normal;
     background-image: url("../../../../img/laterFake.png");
     background-size: cover;
@@ -29,7 +29,7 @@
 .container4{
     position: fixed;
     width: 100%;
-    min-height: 120vh;
+    min-height: 120svh;
     mix-blend-mode: normal;
     background-image: url("../../../../img/vibemakerFake.png");
     background-size: cover;
@@ -37,7 +37,7 @@
 .container5{
     position: fixed;
     width: 100%;
-    min-height: 120vh;
+    min-height: 120svh;
     mix-blend-mode: normal;
     background-image: url("../../../../img/dopaminFake.png");
     background-size: cover;
@@ -45,7 +45,7 @@
 .container6{
     position: fixed;
     width: 100%;
-    min-height: 120vh;
+    min-height: 120svh;
     mix-blend-mode: normal;
     background-image: url("../../../../img/cornFake.png");
     background-size: cover;
