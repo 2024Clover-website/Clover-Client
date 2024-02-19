@@ -1,0 +1,57 @@
+.title{
+    padding-top: 250px;
+    color: #000;
+    text-align: center;
+    font-family: YDIYGO350;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 45px */
+}
+
+.TextFieldContainer{
+    padding-top: 120px;
+    justify-content: center;
+    display: flex;
+}
+
+.Namefield{
+    width: 1500px;
+    height: 167px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-width: 4px;
+    border-color: #000;
+
+    color: #000;
+    text-align: center;
+    font-family: YDIYGO350;
+    font-size: 90px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 117px */
+}
+.Namefield:focus{
+    outline: none;
+}
+.Spannumber{
+    margin-top: 20px;
+    color: #000;
+    text-align: center;
+    font-family: Avenir;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 150%; /* 45px */
+}
+
+.IconContainer{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    margin-top: 108px;
+}
+.NextIcon{
+    cursor: pointer;
+}

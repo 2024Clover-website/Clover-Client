@@ -1,0 +1,64 @@
+.title{
+    padding-top: 250px;
+    color: #000;
+    text-align: center;
+    font-family: YDIYGO350;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 45px */
+}
+
+.WishContainer{
+    padding-top: 100px;
+    display: flex;
+    width: 100%;
+    height: 300px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    flex-shrink: 0;
+}
+.Wish{
+    cursor: pointer;
+    border-radius: 35px;
+    background: #D9D9D9;
+    width: 300px;
+    height: 300px;
+    flex-shrink: 0;
+
+    color: #000;;
+    font-family: YDIYGO350;
+    padding: 30px;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 39px */
+}
+.WishText{
+    padding-top: 20px;
+    color: #000;
+    font-family: YDIYGO330;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+.IconContainer{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    margin-top: 108px;
+}
+.SelfWish{
+    color: #000;
+    text-align: right;
+    font-family: YDIYGO330;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+.NextIcon{
+    cursor: pointer;
+}

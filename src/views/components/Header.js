@@ -14,7 +14,7 @@ function Header() {
 	}
 
 	function handleRecordTapeClick() {
-		window.location.href = "/REC";
+		window.location.href = "/REC/start";
 	}
 
 	return (

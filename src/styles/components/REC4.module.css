@@ -1,0 +1,29 @@
+.title{
+    margin-top: 250px;
+    color: #000;
+    text-align: center;
+    font-family: YDIYGO350;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.PNGContainer{
+    margin-top: 85px;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    height: 260px;
+    flex-shrink: 0;
+}
+
+.IconContainer{
+    justify-content: center;
+    display: flex;
+    margin-top: 115px;
+}
+
+.NextIcon{
+    cursor: pointer;
+}
