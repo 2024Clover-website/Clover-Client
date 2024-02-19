@@ -218,7 +218,7 @@ function App() {
       
 
       
-      <Pc>
+      {/* <Pc>
           <Routes>
             <Route exact path="/invite/public" element={<Announcement />} />
             <Route exact path="/invite/태산" element={<AnnouncementT1 />} />
@@ -279,7 +279,7 @@ function App() {
 					<Route exact path="/invite/도파민중독자들/6" element={<LastPageT4 />} />
 					<Route exact path="/invite/옥수수수염/6" element={<LastPageT5 />} />
 				</Routes>
-			</Mobile>
+			</Mobile> */}
 		</Suspense>
 	);
 }
