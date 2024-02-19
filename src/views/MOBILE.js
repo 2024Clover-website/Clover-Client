@@ -8,6 +8,7 @@ import DocentContent from "./page/Projects/Docent/Mobile/DocentContent";
 import DocentComment from "./page/Projects/Docent/Mobile/DocentComment";
 import PodcastTitle from "./page/Projects/Podcast/Mobile/PodcastTitle";
 import PodcastContent from "./page/Projects/Podcast/Mobile/PodcastContent";
+import PodcastComment from "./page/Projects/Podcast/Mobile/PodcastComment";
 
 function MOBILE() {
 	const isDocent =
@@ -45,6 +46,11 @@ function MOBILE() {
 					exact
 					path="/projects/docent/comment"
 					element={<DocentComment />}
+				/>
+				<Route
+					exact
+					path="/projects/podcast/comment"
+					element={<PodcastComment />}
 				/>
 			</Routes>
 		</div>

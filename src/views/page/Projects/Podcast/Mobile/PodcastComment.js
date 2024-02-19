@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import styles from "../../../../../styles/Projects/Docent/Mobile/DocentComment.module.css";
 import contentStyles from "../../../../../styles/Projects/Docent/Mobile/DocentContent.module.css";
 
-function DocentComment() {
+function PodcastComment() {
 	const navigate = useNavigate();
 	const [text, setText] = useState("");
 
@@ -233,4 +233,4 @@ function DocentComment() {
 	);
 }
 
-export default DocentComment;
+export default PodcastComment;

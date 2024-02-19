@@ -1,15 +1,157 @@
+@font-face {
+	font-family: "YDIYGO340";
+	src: url(../../../../../font/윤고딕340.ttf);
+}
+
+@font-face {
+	font-family: "YDIYGO330";
+	src: url(../../../../../font/-330-smha1177.ttf);
+}
+
+@font-face {
+	font-family: "Avenir-Black";
+	src: url(../../../../../font/AvenirLTStd-Black.ttf);
+}
+
 .background {
 	position: fixed;
 	overflow-y: scroll;
 	background-image: url(../../../../../public/docent.png);
-	background-size: contain;
+	background-size: cover;
 	background-repeat: no-repeat;
 	z-index: -2;
 }
 
 .backdrop {
 	position: fixed;
-	z-index: 0;
+	z-index: -1;
 	background: rgba(113, 111, 111, 0.2);
-	backdrop-filter: blur(50px);
+	/* backdrop-filter: blur(50px); */
+}
+
+.container {
+	display: flex;
+	height: 67%;
+	flex-direction: column;
+	margin-top: 24.241%;
+	margin-bottom: 14.778%;
+	padding-top: 50px;
+	padding-left: 7.467%;
+	padding-right: 7.467%;
+	align-items: center;
+	overflow-x: hidden;
+	overflow-y: scroll;
+
+	mask-image: linear-gradient(
+		180deg,
+		rgba(217, 217, 217, 0) 0%,
+		#d9d9d9 12.62%,
+		#d9d9d9 86.77%,
+		rgba(217, 217, 217, 0) 100%
+	);
+}
+
+.commentBox {
+	width: 100%;
+	padding-top: 20px;
+	border-top: 2px solid #ffffff;
+	margin-bottom: 20px;
+}
+
+.comment {
+	margin: 0px 14px;
+	margin-bottom: 20px;
+
+	font-family: "YDIYGO340";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 26px;
+	line-height: 130%;
+	/* or 34px */
+
+	color: #f1f1f1;
+
+	text-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
+}
+
+.commentInfo {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	padding: 0px 14px;
+}
+
+.commentInfo > p {
+	margin: 0;
+
+	font-family: "YDIYGO340";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 13px;
+	line-height: 130%;
+	/* identical to box height, or 17px */
+	text-align: right;
+
+	color: #f1f1f1;
+
+	text-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
+}
+
+.commentInput {
+	display: flex;
+	flex-direction: row;
+	box-sizing: border-box;
+	align-items: center;
+	justify-content: space-between;
+
+	position: absolute;
+	width: 92%;
+	height: 60px;
+	left: 4%;
+	/* bottom: 60px; */
+
+	background: rgba(255, 255, 255, 0.25);
+	border: 2px solid rgba(255, 255, 255, 0.75);
+	box-shadow: 0px 3px 18px rgba(0, 0, 0, 0.1);
+	border-radius: 100px;
+}
+
+.textinput {
+	position: absolute;
+	width: 76.522%;
+	left: 7.246%;
+
+	background-color: transparent;
+	border: 0;
+
+	font-family: "YDIYGO330";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 130%;
+	/* identical to box height, or 21px */
+
+	color: #ffffff;
+
+	text-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
+}
+
+.textinput::placeholder {
+	font-family: "YDIYGO330";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 130%;
+	/* identical to box height, or 21px */
+
+	color: #ffffff;
+
+	text-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
+}
+
+.sendButton {
+	position: absolute;
+	right: 0;
+	top: 2px;
 }
