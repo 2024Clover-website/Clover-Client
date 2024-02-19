@@ -19,6 +19,7 @@ function LastPageT5() {
     const [showContainer5, setShowContainer5] = useState(false);
     const [showContainer6, setShowContainer6] = useState(false);
     const [timeRemaining, setTimeRemaining] = useState("");
+    setTimeout(() => setShowModal(false), 5000);
 
     const handleCopy = () => {
         setCopied(true);
@@ -68,7 +69,7 @@ function LastPageT5() {
         setTimeout(() => setShowContainer4(true), 1600);
         setTimeout(() => setShowContainer5(true), 2000);
         setTimeout(() => setShowContainer6(true), 2400);
-        
+        setTimeout(() => setShowModal(false), 5000);
     }, []);
     return (
         <div className='ContainerF6'>

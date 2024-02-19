@@ -18,8 +18,8 @@ function LastPageT1() {
     const [showContainer4, setShowContainer4] = useState(false);
     const [showContainer5, setShowContainer5] = useState(false);
     const [showContainer6, setShowContainer6] = useState(false);
-    setTimeout(() => setShowModal(false), 5000);
     const [timeRemaining, setTimeRemaining] = useState("");
+    setTimeout(() => setShowModal(false), 5000);
 
     const handleCopy = () => {
         setCopied(true);
@@ -69,7 +69,7 @@ function LastPageT1() {
         setTimeout(() => setShowContainer4(true), 1600);
         setTimeout(() => setShowContainer5(true), 2000);
         setTimeout(() => setShowContainer6(true), 2400);
-        
+        setTimeout(() => setShowModal(false), 5000);
     }, []);
 
     return (

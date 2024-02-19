@@ -31,15 +31,8 @@
 .ModalClosed {
     animation: toastOut 0.5s cubic-bezier(0.75,0,0.25,1) forwards;
 }
-  .fade-slide-enter {
-    
-  }
-  
   .fade-slide-enter-active {
     animation: openModal 0.5s ease-out forwards;
-  }
-  
-  .fade-slide-exit {
   }
   
   .fade-slide-exit-active {
