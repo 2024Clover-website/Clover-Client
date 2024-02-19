@@ -1,41 +1,31 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
-import styles from "../../../../../styles/Projects/Docent/Mobile/DocentTitle.module.css";
 import { useNavigate } from "react-router-dom";
 
-function DocentTitle() {
+import styles from "../../../../../styles/Projects/Docent/Mobile/DocentComment.module.css";
+import contentStyles from "../../../../../styles/Projects/Docent/Mobile/DocentContent.module.css";
+
+function DocentComment() {
 	const navigate = useNavigate();
-
-	const [progress, setProgress] = useState(0);
-
-	useEffect(() => {
-		const interval = setInterval(() => {
-			setProgress((progress) => progress + 0.1);
-		}, 10);
-
-		setTimeout(() => {
-			window.location.href = "/projects/docent/content";
-		}, 5000);
-	}, []);
-
 	return (
-		<>
+		<div
+			style={{ width: window.screen.width, height: window.screen.height }}
+			className={styles.background}
+		>
 			<div
 				style={{ width: window.screen.width, height: window.screen.height }}
-				className={styles.background}
+				className={styles.backdrop}
 			></div>
-
-			<div
-				style={{ width: window.screen.width, height: window.screen.height }}
-				className={styles.container}
-			>
+			{/** 헤더 */}
+			<div className={contentStyles.header}>
+				{/** 뒤로가기 버튼 */}
 				<svg
 					width="40"
 					height="40"
 					viewBox="0 0 40 40"
 					fill="none"
 					xmlns="http://www.w3.org/2000/svg"
-					className={styles.backButton}
+					className={contentStyles.backButton}
 					onClick={() => {
 						navigate(-1);
 					}}
@@ -100,37 +90,9 @@ function DocentTitle() {
 						</filter>
 					</defs>
 				</svg>
-				<div className={styles.demoLoadingBar}>
-					<div
-						style={{
-							width: `${progress}%`,
-							height: "100%",
-							backgroundColor: "#ffffff",
-							borderRadius: 2,
-						}}
-					></div>
-				</div>
-				<div className={styles.category}>
-					<p>DOCENT</p>
-				</div>
-				<div className={styles.title}>
-					<p>Dopamine Addiction: Visualization of symptoms</p>
-				</div>
-				<div className={styles.designer}>
-					<div
-						style={{
-							width: 30,
-							height: 30,
-							marginRight: 10,
-							borderRadius: "50%",
-							backgroundColor: "blue",
-						}}
-					></div>
-					<p>강지수·시각디자인 3D</p>
-				</div>
 			</div>
-		</>
+		</div>
 	);
 }
 
-export default DocentTitle;
+export default DocentComment;

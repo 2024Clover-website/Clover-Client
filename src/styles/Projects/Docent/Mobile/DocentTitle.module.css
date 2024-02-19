@@ -22,8 +22,16 @@
 	background-image: url(../../../../../public/docent.png);
 	background-size: contain;
 	background-repeat: no-repeat;
+	backdrop-filter: blur(50px);
 	z-index: -1;
 	margin: 0 auto;
+}
+
+.backdrop {
+	position: fixed;
+	z-index: 0;
+	background: rgba(113, 111, 111, 0.2);
+	backdrop-filter: blur(50px);
 }
 
 .backButton {

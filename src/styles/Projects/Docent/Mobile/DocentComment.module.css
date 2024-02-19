@@ -1,0 +1,15 @@
+.background {
+	position: fixed;
+	overflow-y: scroll;
+	background-image: url(../../../../../public/docent.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	z-index: -2;
+}
+
+.backdrop {
+	position: fixed;
+	z-index: 0;
+	background: rgba(113, 111, 111, 0.2);
+	backdrop-filter: blur(50px);
+}

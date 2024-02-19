@@ -7,11 +7,11 @@ import styles from "../../../../../styles/Projects/Docent/Mobile/DocentContent.m
 function DocentContent() {
 	const navigate = useNavigate();
 
-	const [progress, setProgress] = useState(0);
+	const [progress, setProgress] = useState(100);
 
 	useEffect(() => {
 		const interval = setInterval(() => {
-			setProgress((progress) => progress + 0.01);
+			setProgress((progress) => progress - 0.01);
 		}, 10);
 	}, []);
 

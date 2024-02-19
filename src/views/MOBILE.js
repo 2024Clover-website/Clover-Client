@@ -5,6 +5,7 @@ import MobileHeader from "./components/MobileHeader";
 import Projects from "./page/Projects/Mobile/Projects";
 import DocentTitle from "./page/Projects/Docent/Mobile/DocentTitle";
 import DocentContent from "./page/Projects/Docent/Mobile/DocentContent";
+import DocentComment from "./page/Projects/Docent/Mobile/DocentComment";
 import PodcastTitle from "./page/Projects/Podcast/Mobile/PodcastTitle";
 import PodcastContent from "./page/Projects/Podcast/Mobile/PodcastContent";
 
@@ -39,6 +40,11 @@ function MOBILE() {
 					exact
 					path="/projects/podcast/content"
 					element={<PodcastContent />}
+				/>
+				<Route
+					exact
+					path="/projects/docent/comment"
+					element={<DocentComment />}
 				/>
 			</Routes>
 		</div>
