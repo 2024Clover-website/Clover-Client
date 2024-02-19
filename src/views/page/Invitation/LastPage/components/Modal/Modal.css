@@ -14,7 +14,7 @@
     backdrop-filter: blur(5px);
     justify-content: space-between;
     color: #FFF;
-    font-family: YDIYGO340;
+    font-family: "YDIYGO340";
     font-size: 15px;
     font-style: normal;
     font-weight: 400;
@@ -29,39 +29,27 @@
 }
 
 .ModalClosed {
-    animation: toastOut 0.5s cubic-bezier(0.75,0,0.25,1) 1s forwards;
+    animation: toastOut 0.5s cubic-bezier(0.75,0,0.25,1) forwards;
 }
   .fade-slide-enter {
     
   }
   
   .fade-slide-enter-active {
-    animation: openModal 1s ease-out forwards;
+    animation: openModal 0.5s ease-out forwards;
   }
   
   .fade-slide-exit {
   }
   
   .fade-slide-exit-active {
-    animation: closeModal 1s ease-out forwards;
+    animation: closeModal 0.5s ease-out forwards;
   }
   
   @keyframes openModal {
     0% {
       opacity: 0;
       transform: translateY(-100%);
-    }
-    25% {
-      opacity: 0.25;
-      transform: translateY(-75%)
-    }
-    50% {
-      opacity: 0.5;
-      transform: translateY(-50%)
-    }
-    75% {
-      opacity: 0.75;
-      transform: translateY(-25%)
     }
     100% {
       opacity: 1;
@@ -74,21 +62,16 @@
       opacity: 1;
       transform: translateY(0%);
     }
-    25% {
-      opacity: 0.5;
-      transform: translateY(-25%)
-    }
-    50% {
-      opacity: 0.5;
-      transform: translateY(-50%)
-    }
-    75% {
-      opacity: 0.5;
-      transform: translateY(-75%)
-    }
     100% {
       opacity: 0;
       transform: translateY(-100%);
     }
   }
-  
+  @font-face {
+    font-family: "YDIYGO340";
+    font-style: normal;
+    font-weight: 100;
+    src:
+    url("../../../../../../fonts/YDIYGO340.woff") format('woff'),
+    url("../../../../../../fonts/YDIYGO340.ttf") format('truetype');
+  }
