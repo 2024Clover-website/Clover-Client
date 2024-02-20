@@ -169,6 +169,7 @@ function App() {
 				  <Routes>
             <Route exact path="/invite/이따" element={<InvitePageT2 />} />
             <Route exact path="/invite/이따/1" element={<InvitationT2 />} />
+            <Route exact path="/invite/이따/2" element={<Invitation2T2 />} />
             <Route exact path="/invite/이따/3" element={<Invitation3T2 />} />
             <Route exact path="/invite/이따/4" element={<Invitation4T2 />} />
             <Route exact path="/invite/이따/5" element={<Invitation5T2 />} />
