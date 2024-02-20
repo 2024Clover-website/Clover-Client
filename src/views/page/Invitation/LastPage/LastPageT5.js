@@ -9,7 +9,7 @@ import video7 from '../../../../video/cornTeamVideo.mp4';
 import moment from "moment";
 
 function LastPageT5() {
-    const [value, setValue] = useState('인사동 마루아트 센터 신관');
+    const [value, setValue] = useState('서울특별시 종로구 관훈동 196-10');
     const [copied, setCopied] = useState(false);
     const [showModal, setShowModal] = useState(false);
     const [showContainer1, setShowContainer1] = useState(false);
@@ -122,7 +122,7 @@ function LastPageT5() {
                 </div>
                 <div className='Container5Name' onClick={() => setValue('인사동 마루아트 센터 신관')}>
                     인사동<br/>
-                    마루아트 센터<br/>
+                    마루아트센터<br/>
                     신관 3F, 2관<br/>
                 </div>
             </div>
