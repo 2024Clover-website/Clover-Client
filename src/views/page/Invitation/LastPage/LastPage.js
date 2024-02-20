@@ -121,9 +121,9 @@ function LastPage() {
                 <div className='Container5Frame'>
                     장소
                 </div>
-                <div className='Container5Name' onClick={() => setValue('인사동 마루아트 센터 신관')}>
+                <div className='Container5Name' onClick={() => setValue('인사동 마루아트센터 신관')}>
                     인사동<br/>
-                    마루아트 센터<br/>
+                    마루아트센터<br/>
                     신관 3F, 2관<br/>
                 </div>
             </div>
@@ -133,8 +133,9 @@ function LastPage() {
                 <div className='goBackButton'>
                     <Link to="/invite/public">처음으로</Link>
                 </div>
+                <div className='blankBox1'></div>
                 <div className='Container6Name'>
-                    <img src='/Clover.png' alt="Icon" className="iconStyle" />
+                    <img className="iconStyle" src='/Clover.png' alt="Icon" />
                 </div>
             </div>
             </CSSTransition>
