@@ -105,6 +105,7 @@ function PodcastTitle() {
 					<div
 						style={{
 							width: `${progress}%`,
+							maxWidth: "100%",
 							height: "100%",
 							backgroundColor: "#ffffff",
 							borderRadius: 2,

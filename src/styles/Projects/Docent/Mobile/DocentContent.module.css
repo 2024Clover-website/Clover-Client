@@ -41,19 +41,61 @@
 }
 
 .speedButton {
+	display: flex;
 	position: fixed;
-	/* width: 40px;
-	height: 40px; */
+	width: 40px;
+	height: 40px;
 	right: 18.4%;
 	top: 6.158%;
+
+	border-radius: 50%;
+
+	justify-content: center;
+	align-items: center;
+
+	background: rgba(255, 255, 255, 0.25);
+	box-shadow: 0px 3px 18px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(5px);
+}
+
+.speedButton > p {
+	margin: 0;
+
+	font-family: "Avenir-Black";
+	font-style: normal;
+	font-weight: 900;
+	font-size: 16px;
+	line-height: 130%;
+	/* identical to box height, or 21px */
+	display: flex;
+
+	color: #f1f1f1;
 }
 
 .soundButton {
+	display: flex;
 	position: fixed;
-	/* width: 40px;
-	height: 40px; */
+	width: 40px;
+	height: 40px;
 	right: 3.733%;
 	top: 6.158%;
+
+	border-radius: 50%;
+
+	justify-content: center;
+	align-items: center;
+
+	background: rgba(255, 255, 255, 0.25);
+	box-shadow: 0px 3px 18px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(5px);
+
+	overflow: hidden;
+}
+
+.soundButton > img {
+	width: 18.94px;
+	height: 16px;
+	background-size: contain;
 }
 
 .container {
@@ -173,8 +215,6 @@
 	display: flex;
 	flex-direction: row;
 
-	width: 46px;
-	height: 19px;
 	right: 7.2%;
 	bottom: 14.286%;
 }
