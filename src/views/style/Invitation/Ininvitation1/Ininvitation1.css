@@ -92,6 +92,7 @@ video{
     line-height: 130%; /* 39px */
 }
 .commitContainer{
+    position: static;
     height: 89px;
     left: 28px;
     color: rgba(241, 241, 241, 0.75);
@@ -104,6 +105,7 @@ video{
     margin-top: 20px;
 }
 .commitContainer1{
+    position: static;
     height: 66px;
     left: 28px;
     color: rgba(241, 241, 241, 0.75);
