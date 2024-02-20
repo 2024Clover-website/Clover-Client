@@ -196,8 +196,8 @@ video{
   justify-content: center;
   align-items: center;
   border-radius: 30px;
-  border: 1px solid rgba(241, 241, 241, 0.50);
-  background: rgba(241, 241, 241, 0.25);
+  border: 1px solid #FFF, 75%;
+  background: #FFF, 25%;
   box-shadow: 0px 3px 18px 0px rgba(0, 0, 0, 0.10);
   backdrop-filter: blur(2.5px);
   color: #F1F1F1;
