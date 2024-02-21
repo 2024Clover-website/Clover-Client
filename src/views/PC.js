@@ -1,9 +1,9 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 
-import About from "./page/About/PC/About";
-import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Header from "./components/Header";
+import About from "./page/About/PC/About";
 
 function PC() {
 	return (
