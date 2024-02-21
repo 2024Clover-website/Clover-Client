@@ -1,8 +1,8 @@
 import React, { Suspense } from "react";
 import { useMediaQuery } from "react-responsive";
 
-import PC from "./views/PC";
 import MOBILE from "./views/MOBILE";
+import PC from "./views/PC";
 
 function App() {
 	const Mobile = ({ children }) => {
