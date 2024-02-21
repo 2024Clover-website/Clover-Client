@@ -9,7 +9,9 @@ function About() {
             
             <div className={styles.page2}>
                 <div className={styles.Linecontainer}>s</div>
-                
+				{/* <div className={styles.page1}>
+					<img src="./img/dog.png"></img>
+				</div> */}
             </div>
         </div>
     );
