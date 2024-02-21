@@ -1,0 +1,142 @@
+.container{
+    margin-top: 100px;
+}
+.img{
+    width: 1920px;
+    height: 1080px;
+}
+.page{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 150px 190px 130px;
+    gap: 80px;
+
+    /* width: 100%;
+    height: 500px; */
+
+    background: #FFFFFF;
+}
+.Linecontainer{
+    margin-top: -30px;
+    width: 1540px;
+    height: 0px;
+    
+    border: 2px solid #000000;
+    
+}
+.text{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    
+    width: 1540px;
+    height: 140px;
+}
+.textarea1{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 20px;
+    
+    width: 230px;
+    height: 122px;
+}
+.textarea2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0px;
+    gap: 20px;
+    
+    width: 1310px;
+    height: 140px;
+    
+}
+.textarea3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 190px;
+
+    
+    background: #FFFFFF;
+        
+}
+.textarea1 > p{
+    width: 100%;
+    height: 30px;
+    
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 150%;
+    /* identical to box height, or 30px */
+    color: #000000;
+    
+
+}
+.textarea1 > p1{
+    width: 530px;
+    height: 72px;
+    
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 120%;
+    /* identical to box height, or 72px */
+    
+    color: #000000;
+    
+    
+}
+
+.textarea2 > p{
+    width: 1310px;
+    height: 30px;
+    
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 150%;
+    /* identical to box height, or 30px */
+    text-align: right;
+    
+    color: #000000;
+}
+
+.textarea2 > p1{
+    width: 534px;
+    height: 90px;
+    
+    font-family: 'YDIYGO330';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    /* or 30px */
+    
+    color: #000000;
+    
+}
+
+.textarea3 > p{
+    width: 900px;
+    height: 60.74px;
+    
+    font-family: 'YDIYGO330';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    /* or 30px */
+    text-align: center;
+    
+    color: #000000;
+}
