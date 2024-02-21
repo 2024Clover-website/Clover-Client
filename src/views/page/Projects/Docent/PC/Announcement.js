@@ -1,7 +1,7 @@
 import React from "react";
 
-import styles from "../../../../../styles/Projects/Docent/PC/Announcement.module.css";
 import { IoChevronBackCircle } from "react-icons/io5";
+import styles from "../../../../../styles/Projects/Docent/PC/Announcement.module.css";
 
 import { useNavigate } from "react-router-dom";
 

@@ -19,20 +19,25 @@
 	position: fixed;
 	height: 100px;
 	width: 100%;
-	background-color: #ffffff;
+	background-image: url('../../../public/img/headerbackgorund color.png');
+	background-size: cover;
+	background-repeat: no-repeat;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	cursor: default;
-	border-bottom: 2px solid black;
+	border-bottom: 2px solid white;
 }
 
 .logo-left {
-	width: 140.8px;
-	height: 25.27px;
+	width: 141px;
+	height: 24px;
+	left: 20px;
+	top: 35px;
 	flex-shrink: 0;
 	margin-left: 20px;
-	margin-top: 30px;
+	margin-top: 20px;
+	
 }
 
 .nav-element {
@@ -53,13 +58,22 @@
 }
 
 .nav-element > div > p {
-	color: #000;
-	font-family: "Avenir";
-	font-size: 24px;
+	width: 47px;
+	height: 36px;
+	left: calc(50% - 47px/2 + 273.5px);
+	top: 32px;
+	
+	font-family: 'Avenir';
 	font-style: normal;
 	font-weight: 800;
+	font-size: 24px;
 	line-height: 150%;
-	margin: 0;
+	/* identical to box height, or 36px */
+	text-align: right;
+	
+	color: #F1F1F1;
+	
+	text-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
 }
 
 .record-icon {
@@ -75,7 +89,7 @@
 .logo-right {
 	width: 142.23px;
 	height: 20.46px;
-	flex-shrink: 0;
-	margin-right: 19.8px;
-	margin-top: 35px;
+	margin-right: 49.77px;
+	margin-top: 23px;
+	color: #FFFFFF;
 }

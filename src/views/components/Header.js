@@ -18,7 +18,9 @@ function Header() {
 
 	return (
 		<div className="header-container">
-			<div className="logo-left">in a row</div>
+			<div className="logo-left">
+				<img src="../../../../img/Inarow logo.png" alt="Clover Logo" />
+			</div>
 			<div className="nav-element">
 				<div onClick={handleAboutClick}>
 					<p>About</p>
@@ -31,7 +33,9 @@ function Header() {
 					<BsFillRecordFill className="record-icon" />
 				</div>
 			</div>
-			<div className="logo-right">CLOVER</div>
+			<div className="logo-right">
+				<img src="../../../../img/Clover logo.png" alt="Clover Logo" />
+			</div>
 		</div>
 	);
 }

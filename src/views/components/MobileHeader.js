@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { IoMenu, IoClose } from "react-icons/io5";
+import { IoClose, IoMenu } from "react-icons/io5";
 
-import Menu from "./Menu";
 import "../../styles/components/MobileHeader.css";
+import Menu from "./Menu";
 
 function MobileHeader() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
