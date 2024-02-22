@@ -9,8 +9,11 @@
 }
 
 @font-face {
-	font-family: "yoon";
-	src: url(../../../font/-330-smha1177.ttf);
+	font-family: "YDIYGO330";
+	font-style: normal;
+	font-weight: 100;
+	src: url(../../../font/YDIYGO330.woff) format("woff"),
+		url(../../../font/YDIYGO330.ttf) format("truetype");
 }
 
 .header-container {
@@ -19,7 +22,7 @@
 	position: fixed;
 	height: 100px;
 	width: 100%;
-	background-image: url('../../../public/img/headerbackgorund color.png');
+	background-image: url("../../../public/img/headerbackgorund color.png");
 	background-size: cover;
 	background-repeat: no-repeat;
 	display: flex;
@@ -37,7 +40,6 @@
 	flex-shrink: 0;
 	margin-left: 20px;
 	margin-top: 20px;
-	
 }
 
 .nav-element {
@@ -60,19 +62,19 @@
 .nav-element > div > p {
 	width: 47px;
 	height: 36px;
-	left: calc(50% - 47px/2 + 273.5px);
+	left: calc(50% - 47px / 2 + 273.5px);
 	top: 32px;
-	
-	font-family: 'Avenir';
+
+	font-family: "Avenir";
 	font-style: normal;
 	font-weight: 800;
 	font-size: 24px;
 	line-height: 150%;
 	/* identical to box height, or 36px */
 	text-align: right;
-	
-	color: #F1F1F1;
-	
+
+	color: #f1f1f1;
+
 	text-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
 }
 
@@ -91,5 +93,5 @@
 	height: 20.46px;
 	margin-right: 49.77px;
 	margin-top: 23px;
-	color: #FFFFFF;
+	color: #ffffff;
 }

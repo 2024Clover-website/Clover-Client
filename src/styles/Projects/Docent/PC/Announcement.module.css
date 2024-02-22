@@ -5,12 +5,18 @@
 
 @font-face {
 	font-family: "YDIYGO350";
-	src: url(../../../../../font/yoon350.ttf);
+	font-style: normal;
+	font-weight: 100;
+	src: url(../../../../../font/YDIYGO350.woff) format("woff"),
+		url(../../../../../font/YDIYGO350.ttf) format("truetype");
 }
 
 @font-face {
 	font-family: "YDIYGO320";
-	src: url(../../../../../font/윤고딕320.ttf);
+	font-style: normal;
+	font-weight: 100;
+	src: url(../../../../../font/YDIYGO320.woff) format("woff"),
+		url(../../../../../font/YDIYGO320.ttf) format("truetype");
 }
 
 .container {

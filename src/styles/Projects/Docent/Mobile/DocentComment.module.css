@@ -1,11 +1,17 @@
 @font-face {
 	font-family: "YDIYGO340";
-	src: url(../../../../../font/윤고딕340.ttf);
+	font-style: normal;
+	font-weight: 100;
+	src: url(../../../../../font/YDIYGO340.woff) format("woff"),
+		url(../../../../../font/YDIYGO340.ttf) format("truetype");
 }
 
 @font-face {
 	font-family: "YDIYGO330";
-	src: url(../../../../../font/-330-smha1177.ttf);
+	font-style: normal;
+	font-weight: 100;
+	src: url(../../../../../font/YDIYGO330.woff) format("woff"),
+		url(../../../../../font/YDIYGO330.ttf) format("truetype");
 }
 
 @font-face {
