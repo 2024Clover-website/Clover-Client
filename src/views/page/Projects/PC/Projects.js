@@ -129,12 +129,12 @@ function Projects() {
             <div className={styles.CTMain} onClick={() => setIsDescriptionContainer2Visible(false)}>
                 <img alt src="/img/CTMain.png"  />
                 <div>
-                    <img className={`${styles.CTA} ${styles.hoverImage}`} alt src="/img/CTA.png" onClick={() => handleImageClick('CTA')} />
-                    <img className={`${styles.CTB} ${styles.hoverImage}`} alt src="/img/CTB.png" onClick={() => handleImageClick('CTB')} />
-                    <img className={`${styles.CTC} ${styles.hoverImage}`} alt src="/img/CTC.png" onClick={() => handleImageClick('CTC')} />
-                    <img className={`${styles.CTD} ${styles.hoverImage}`} alt src="/img/CTD.png" onClick={() => handleImageClick('CTD')} />
+                    <img className={`${styles.CTA} ${styles.hoverImage}`} alt src="/img/CTA.gif" onClick={() => handleImageClick('CTA')} />
+                    <img className={`${styles.CTB} ${styles.hoverImage}`} alt src="/img/CTB.gif" onClick={() => handleImageClick('CTB')} />
+                    <img className={`${styles.CTC} ${styles.hoverImage}`} alt src="/img/CTC.gif" onClick={() => handleImageClick('CTC')} />
+                    <img className={`${styles.CTD} ${styles.hoverImage}`} alt src="/img/CTD.gif" onClick={() => handleImageClick('CTD')} />
                     <img className={`${styles.CTE} ${styles.hoverImage}`} alt src="/img/CTE.gif" onClick={() => handleImageClick('CTE')} />
-                    <img className={`${styles.CTF} ${styles.hoverImage}`} alt src="/img/CTF.png" onClick={() => handleImageClick('CTF')} />
+                    <img className={`${styles.CTF} ${styles.hoverImage}`} alt src="/img/CTF.gif" onClick={() => handleImageClick('CTF')} />
                 </div>
             </div>
             {isDescriptionContainer2Visible && (
