@@ -1,19 +1,19 @@
 @font-face {
 	font-family: "Avenir";
-	src: url(../../../font/AvenirLTStd-Black.ttf);
+	src: url(../../fonts/AvenirLTStd-Black.ttf);
 }
 
 @font-face {
 	font-family: "neulis";
-	src: url(../../../font/neulis.rar);
+	src: url(../../fonts/neulis.rar);
 }
 
 @font-face {
 	font-family: "YDIYGO330";
 	font-style: normal;
 	font-weight: 100;
-	src: url(../../../font/YDIYGO330.woff) format("woff"),
-		url(../../../font/YDIYGO330.ttf) format("truetype");
+	src: url(../../fonts/YDIYGO330.woff) format("woff"),
+		url(../../fonts/YDIYGO330.ttf) format("truetype");
 }
 
 .header-container {
