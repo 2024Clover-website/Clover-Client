@@ -2,13 +2,13 @@
 	font-family: "YDIYGO340";
 	font-style: normal;
 	font-weight: 100;
-	src: url(../../../../../font/YDIYGO340.woff) format("woff"),
-		url(../../../../../font/YDIYGO340.ttf) format("truetype");
+	src: url(../../../../fonts/YDIYGO340.woff) format("woff"),
+		url(../../../../fonts/YDIYGO340.ttf) format("truetype");
 }
 
 @font-face {
 	font-family: "Avenir-Black";
-	src: url(../../../../../font/AvenirLTStd-Black.ttf);
+	src: url(../../../../fonts/AvenirLTStd-Black.ttf);
 }
 
 .background {
