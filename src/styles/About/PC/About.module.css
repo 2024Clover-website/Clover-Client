@@ -1,25 +1,21 @@
 .container{
-    margin-top: 100px;
+
 }
-.img{
-    width: 1920px;
-    height: 1080px;
-}
+
 .page{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 150px 190px 130px;
     gap: 80px;
-
+    width: 100%;
     /* width: 100%;
     height: 500px; */
 
     background: #FFFFFF;
 }
 .Linecontainer{
-    margin-top: -30px;
-    width: 1540px;
+    width: 100%;
     height: 0px;
     
     border: 2px solid #000000;
@@ -31,7 +27,7 @@
     align-items: flex-start;
     padding: 0px;
     
-    width: 1540px;
+    width: 100%;
     height: 140px;
 }
 .textarea1{
@@ -41,7 +37,7 @@
     padding: 0px;
     gap: 20px;
     
-    width: 230px;
+    width: 100%;
     height: 122px;
 }
 .textarea2{
@@ -51,11 +47,12 @@
     padding: 0px;
     gap: 20px;
     
-    width: 1310px;
+    width: 100%;
     height: 140px;
     
 }
 .textarea3{
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -65,6 +62,182 @@
     
     background: #FFFFFF;
         
+}
+.textarea4{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 190px;
+
+    background: #FFFFFF;
+}
+.Membertext{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 100px;
+    
+    width: 100%;
+    height: 692px;
+    
+    background: #FFFFFF;
+}
+.Membercontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 50px;
+    
+    width: 100%;
+    height: 542px;
+    
+}
+.CT1{
+/* Frame 67 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+
+width: 720px;
+height: 72px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+    
+}
+.CT2{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    
+    width: 720px;
+    height: 30px;
+    
+}
+
+.CT1 > p0{
+    width: 100%;
+    font-family: 'YDIYGO350';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 120%;
+    color: #000000;
+}
+.CT1 > p1{
+    width: 423px;
+    height: 30px;
+    
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 150%;
+    /* identical to box height, or 30px */
+    text-align: right;
+    
+    color: #000000;
+}
+
+.CT2 > p0{
+    width: 347px;
+    height: 60px;
+    
+    font-family: 'YDIYGO340';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    /* or 30px */
+    
+    color: #000000;
+}
+.CT2 > p1{
+    width: 567px;
+    height: 30px;
+    
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 150%;
+    /* identical to box height, or 30px */
+    text-align: right;
+    
+    color: #000000;
+    
+}
+.CT3{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 20px;
+    
+    width: 720px;
+    height: 370px;   
+}
+.Member{
+/* Frame 61 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 50px;
+
+width: 720px;
+height: 45px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+}
+.Member > p0{
+    width: 83px;
+    height: 45px;
+    
+    font-family: 'YDIYGO330';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 150%;
+    /* identical to box height, or 45px */
+    
+    color: #000000;
+    
+    
+}
+.Member > p1{
+
+    width: 587px;
+    height: 45px;
+    
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 150%;
+    /* identical to box height, or 45px */
+    
+    color: #000000;
+    
 }
 .textarea1 > p{
     width: 100%;
@@ -136,6 +309,21 @@
     font-size: 20px;
     line-height: 150%;
     /* or 30px */
+    text-align: center;
+    
+    color: #000000;
+}
+
+.textarea4 > p{
+    width: 100%;
+    height: 90px;
+    
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 150%;
+    /* identical to box height, or 90px */
     text-align: center;
     
     color: #000000;
