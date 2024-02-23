@@ -177,6 +177,7 @@ function DocentContent() {
 						window.location.href = "/projects/docent/comment";
 					}}
 				>
+					<img alt src={process.env.PUBLIC_URL + "/comment(1x).png"} />
 					<p>100</p>
 				</div>
 
