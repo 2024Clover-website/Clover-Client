@@ -46,6 +46,15 @@
     font-weight: 400;
     line-height: 130%; /* 39px */
 }
+.Wish:active{
+    scale: 0.97;
+    animation-duration: 0.2s;
+}
+/* .Wish:checked{
+    scale: 1.05;
+    animation-duration: 0.5s;
+    background-color: #FFF(0.25);
+} */
 .WishText{
     padding-top: 20px;
     color: #FFF;

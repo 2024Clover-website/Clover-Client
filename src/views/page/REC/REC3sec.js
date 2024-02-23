@@ -33,7 +33,7 @@ function REC3sec(){
 
     return(
         <div className={styles.backcolor}>
-            <div className={styles.title}>슬럼프가 온 {'{'}{name}{'}'}님을 자극하는 건 무엇인가요?</div>
+            <div className={styles.title}>슬럼프가 온 {name}님을 자극하는 건 무엇인가요?</div>
             <div className={styles.TextContainer}>
                 <div className={styles.TextFieldContainer}>
                     <input onChange={onInputHandler} minLength={1} className={styles.Namefield} />

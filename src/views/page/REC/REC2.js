@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styles from "../../../styles/components/REC2.module.css"
 import { useNavigate } from "react-router-dom";
 
-
 function REC2(){
     let [inputCount, setInputCount] = useState(0);
     const [nameValue, setName] = useState('');
@@ -19,7 +18,9 @@ function REC2(){
         e.target.value.replace(/[\0-\x7f]|([0-\u07ff]|(.))/g, "$&$1$2").length
         );
       };
-
+      function handlefalse(){
+        
+      }
       function handleREC3click(){
         navigate("/REC/stimulation", {state: {value : nameValue}});
         window.location.href = "/REC/stimulation";
@@ -37,7 +38,7 @@ function REC2(){
                     <span>/8</span>
                 </p>
                 <div className={styles.IconContainer}>
-                <svg className={styles.NextIcon} onClick={handleREC3click} width="136" height="136" viewBox="0 0 136 136" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg type = "Button" className={styles.NextIcon} onClick={inputCount===0 ? handlefalse : handleREC3click} width="136" height="136" viewBox="0 0 136 136" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g filter="url(#filter0_bd_890_5617)">
                     <circle cx="68" cy="65" r="50" fill="white" fill-opacity="0.25" shape-rendering="crispEdges"/>
                     <circle cx="68" cy="65" r="48.5" stroke="white" stroke-opacity="0.75" stroke-width="3" shape-rendering="crispEdges"/>
