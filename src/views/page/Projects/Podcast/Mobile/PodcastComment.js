@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 
+import axios from "axios";
+
 import { useNavigate } from "react-router-dom";
 
 import styles from "../../../../../styles/Projects/Docent/Mobile/DocentComment.module.css";
@@ -8,6 +10,48 @@ import contentStyles from "../../../../../styles/Projects/Docent/Mobile/DocentCo
 function PodcastComment() {
 	const navigate = useNavigate();
 	const [text, setText] = useState("");
+	const [comment, setComment] = useState([]);
+
+	const teamId = 1;
+	const type = "podcast";
+
+	useEffect(() => {
+		axios
+			.get(`https://api.clover-inarow.site/teams/${teamId}/comment/${type}`)
+			.then((res) => {
+				if (res.data.isSuccess) {
+					setComment(res.data.result);
+					console.log("comment get success!");
+				}
+			});
+	}, []);
+
+	const commentCard = comment.map((comment, index) => {
+		const now = new Date();
+		const then = new Date(comment.created_at);
+
+		const diff = Math.floor((now - then) / (1000 * 60));
+
+		let when;
+
+		if (diff < 60) {
+			when = `${diff}분 전`;
+		} else if (diff < 1440) {
+			when = `${Math.floor(diff / 60)}시간 전`;
+		} else {
+			when = `${Math.floor(diff / 1440)}일 전`;
+		}
+
+		return (
+			<div className={styles.commentBox}>
+				<p className={styles.comment}>{comment.comment}</p>
+				<div className={styles.commentInfo}>
+					<p>No.{index + 1}</p>
+					<p>{when}</p>
+				</div>
+			</div>
+		);
+	});
 
 	const onChangeText = (e) => {
 		setText(e.target.value);
@@ -102,71 +146,7 @@ function PodcastComment() {
 				</svg>
 			</div>
 			{/** 내용 */}
-			<div className={styles.container}>
-				<div className={styles.commentBox}>
-					<p className={styles.comment}>
-						용욱아 덕분에 좋은 구경하고 가! 항상 화이팅하렴
-					</p>
-					<div className={styles.commentInfo}>
-						<p>No.1</p>
-						<p>10시간 전</p>
-					</div>
-				</div>
-				<div className={styles.commentBox}>
-					<p className={styles.comment}>
-						용욱아 덕분에 좋은 구경하고 가! 항상 화이팅하렴
-					</p>
-					<div className={styles.commentInfo}>
-						<p>No.1</p>
-						<p>10시간 전</p>
-					</div>
-				</div>
-				<div className={styles.commentBox}>
-					<p className={styles.comment}>
-						용욱아 덕분에 좋은 구경하고 가! 항상 화이팅하렴
-					</p>
-					<div className={styles.commentInfo}>
-						<p>No.1</p>
-						<p>10시간 전</p>
-					</div>
-				</div>
-				<div className={styles.commentBox}>
-					<p className={styles.comment}>
-						용욱아 덕분에 좋은 구경하고 가! 항상 화이팅하렴
-					</p>
-					<div className={styles.commentInfo}>
-						<p>No.1</p>
-						<p>10시간 전</p>
-					</div>
-				</div>
-				<div className={styles.commentBox}>
-					<p className={styles.comment}>
-						용욱아 덕분에 좋은 구경하고 가! 항상 화이팅하렴
-					</p>
-					<div className={styles.commentInfo}>
-						<p>No.1</p>
-						<p>10시간 전</p>
-					</div>
-				</div>
-				<div className={styles.commentBox}>
-					<p className={styles.comment}>
-						용욱아 덕분에 좋은 구경하고 가! 항상 화이팅하렴
-					</p>
-					<div className={styles.commentInfo}>
-						<p>No.1</p>
-						<p>10시간 전</p>
-					</div>
-				</div>
-				<div className={styles.commentBox}>
-					<p className={styles.comment}>
-						용욱아 덕분에 좋은 구경하고 가! 항상 화이팅하렴
-					</p>
-					<div className={styles.commentInfo}>
-						<p>No.1</p>
-						<p>10시간 전</p>
-					</div>
-				</div>
-			</div>
+			<div className={styles.container}>{commentCard}</div>
 			{/** 푸터 */}
 			<div className={styles.commentInput}>
 				<input
