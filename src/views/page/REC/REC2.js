@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "../../../styles/components/REC2.module.css"
 import { useNavigate } from "react-router-dom";
+import videoREC from "../../../video/recBG.mp4";
 
 function REC2(){
     let [inputCount, setInputCount] = useState(0);
@@ -17,7 +18,7 @@ function REC2(){
         setInputCount(
         e.target.value.replace(/[\0-\x7f]|([0-\u07ff]|(.))/g, "$&$1$2").length
         );
-      };
+        };
       function handlefalse(){
         
       }
@@ -27,6 +28,9 @@ function REC2(){
     }
     return(
         <div className={styles.backcolor}>
+            <video loop muted autoPlay playsInline>
+                <source src={videoREC} type='video/mp4'/>
+            </video>
             <div className={styles.Whatname}>이름이 무엇인가요?</div>
             <div className={styles.TextContainer}>
                 <div className={styles.TextFieldContainer}>

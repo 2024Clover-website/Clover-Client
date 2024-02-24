@@ -6,12 +6,16 @@
     url("/font/YDIYGO350.woff") format('woff'),
     url("/font/YGO350.ttf") format('truetype');
 }
+video{
+    position:fixed;
+    object-fit: cover;
+    width: 100%;
+    z-index: -1;
+}
 .backcolor{
+    position:fixed;
     width: 100%;
     height: 100%;
-    position: absolute;
-    background-size: cover;
-    background: url(../../backgroundREC.png)
 }
 .Start{
     margin-top: 205px;

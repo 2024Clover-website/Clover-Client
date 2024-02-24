@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import styles from "../../../styles/components/REC3sec.module.css"
+import videoREC from "../../../video/recBG.mp4";
 
 function REC3sec(){
     const navigate = useNavigate();
@@ -33,6 +34,9 @@ function REC3sec(){
 
     return(
         <div className={styles.backcolor}>
+            <video loop muted autoPlay playsInline>
+                <source src={videoREC} type='video/mp4'/>
+            </video>
             <div className={styles.title}>슬럼프가 온 {name}님을 자극하는 건 무엇인가요?</div>
             <div className={styles.TextContainer}>
                 <div className={styles.TextFieldContainer}>
