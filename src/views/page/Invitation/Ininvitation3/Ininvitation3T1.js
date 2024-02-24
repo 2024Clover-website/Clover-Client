@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
-import '../../../style/Invitation/Ininvitation1/Ininvitation1.css';
+import ininvitationStyles from '../../../style/Invitation/Ininvitation1/Ininvitation1.module.css';
 import video3 from '../../../../video/taishanTeamVideo.mp4';
 
 function AnimatedText({children, delay, className}) {
@@ -23,43 +23,43 @@ function Ininvitation3T1() {
     }
 
     return (
-        <div className='container2'>
+        <div className={ininvitationStyles.container2}>
             <video style={{height: window.screen.height}} loop muted autoPlay playsInline>
                 <source src={video3} type='video/mp4'/>
             </video>
-            <div className='topContainer'>
+            <div className={ininvitationStyles.topContainer}>
             </div>
-            <div className='textContainer'>
+            <div className={ininvitationStyles.textContainer}>
                 <CSSTransition in={true} timeout={300} classNames="motion-slide" unmountOnExit>
-                    <div className='textContainer3'>
-                        <AnimatedText delay={400} className='text1'>느슨해진 마음을</AnimatedText>
-                        <AnimatedText delay={500} className='text2'>팽팽하게 만드려면,</AnimatedText>
-                        <AnimatedText delay={600} className='text3'>무언가 자극이 필요해요.</AnimatedText>
+                    <div className={ininvitationStyles.textContainer3}>
+                        <AnimatedText delay={400} className={ininvitationStyles.text1}>느슨해진 마음을</AnimatedText>
+                        <AnimatedText delay={500} className={ininvitationStyles.text2}>팽팽하게 만드려면,</AnimatedText>
+                        <AnimatedText delay={600} className={ininvitationStyles.text3}>무언가 자극이 필요해요.</AnimatedText>
                     </div>
                 </CSSTransition>
                 <CSSTransition in={true} timeout={300} classNames="motion-slide" unmountOnExit>
-                    <div className='commitContainer'>
-                        <AnimatedText delay={700} className='commit'>{'<4.Needs>'}</AnimatedText>
-                        <AnimatedText delay={800} className='commit'>To tighten your loose mind, you have to seek</AnimatedText>
-                        <AnimatedText delay={900} className='commit'>new stimulation.</AnimatedText>
+                    <div className={ininvitationStyles.commitContainer}>
+                        <AnimatedText delay={700} className={ininvitationStyles.commit}>{'<4.Needs>'}</AnimatedText>
+                        <AnimatedText delay={800} className={ininvitationStyles.commit}>To tighten your loose mind, you have to seek</AnimatedText>
+                        <AnimatedText delay={900} className={ininvitationStyles.commit}>new stimulation.</AnimatedText>
                     </div>
                 </CSSTransition>
                 <CSSTransition in={true} timeout={300} classNames="motion-slide" unmountOnExit>
-                    <div className='textContainer3'>
-                        <AnimatedText delay={1000} className='text4'>마치 카세트 테이프에</AnimatedText>
-                        <AnimatedText delay={1100} className='text5'>연필을 꽂아 돌리는</AnimatedText>
-                        <AnimatedText delay={1200} className='text6'>것처럼요.</AnimatedText>
+                    <div className={ininvitationStyles.textContainer3}>
+                        <AnimatedText delay={1000} className={ininvitationStyles.text4}>마치 카세트 테이프에</AnimatedText>
+                        <AnimatedText delay={1100} className={ininvitationStyles.text5}>연필을 꽂아 돌리는</AnimatedText>
+                        <AnimatedText delay={1200} className={ininvitationStyles.text6}>것처럼요.</AnimatedText>
                     </div>
                 </CSSTransition>
                 <CSSTransition in={true} timeout={1300} classNames="motion-slide" unmountOnExit>
-                    <div className='commitContainer1'>
-                        <AnimatedText delay={1400} className='commit'>{'<5.Pencil>'}</AnimatedText>
-                        <AnimatedText delay={1500} className='commit'>Seems like putting a pencil on a cassette tape.</AnimatedText>
+                    <div className={ininvitationStyles.commitContainer1}>
+                        <AnimatedText delay={1400} className={ininvitationStyles.commit}>{'<5.Pencil>'}</AnimatedText>
+                        <AnimatedText delay={1500} className={ininvitationStyles.commit}>Seems like putting a pencil on a cassette tape.</AnimatedText>
                     </div>
                 </CSSTransition>
                 </div>
-            <div className='openContainer'>
-                <button onClick={handleClick} className='openButton'>다음</button>
+                <div className={ininvitationStyles.openContainer}>
+                <button onClick={handleClick} className={ininvitationStyles.openButton}>다음</button>
             </div>
         </div>
     )

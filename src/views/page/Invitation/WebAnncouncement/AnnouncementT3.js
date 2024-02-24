@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import moment from "moment";
-import "../../../../styles/invitation/WebAnnouncement/Announcement.css";
-import video5 from '../../../../video/vibemakerTeamVideo.mp4';
+import webanncouncementStyles from "../../../../views/style/Invitation/WebAnnouncement/Announcement.module.css";
 
 function AnnouncementT3() {
 const [timeRemaining, setTimeRemaining] = useState("");
@@ -36,47 +35,45 @@ useEffect(() => {
 }, []);
 
 return (
-	<div className="webContainer">
-		<div className="CT1">
-		</div>
-		<div className="webmainContainer1">
-			<div className="webtimerContainer">
-				<div className="Textbox">
-					<p>전시까지 남은 시간</p>
+	<div className={webanncouncementStyles.webContainer}>
+		<div className={webanncouncementStyles.CT1}>
+			<div className={webanncouncementStyles.webmainContainer1}>
+				<div className={webanncouncementStyles.webtimerContainer}>
+					<div className={webanncouncementStyles.Textbox}>
+						<p>전시까지 남은 시간</p>
+					</div>
+					<div className={webanncouncementStyles.blankLine1}>
+					</div>
+					<div className={webanncouncementStyles.timerContainer}>
+						<p id="timer">{timeRemaining}</p>
+					</div>
 				</div>
-				<div className="blankLine1">
+				<div className={webanncouncementStyles.blankLine2}>
 				</div>
-				<div className="timer-container">
-					<p id="timer">{timeRemaining}</p>
+				<div className={webanncouncementStyles.blankLine}>
 				</div>
-			</div>
-			<div className="blankLine2">
-			</div>
-			<div className="blankLine">
-			</div>
-			<div className="blankLine2">
-			</div>
-		</div>
-		<div className="webmainContainer2">
-			<div className="qr-container">
-				  <img src="/vibemakerQR.png" alt="VIBEMAKERQR코드" /> {/* alt 속성 추가 */}
-			</div>
-			<div className="blankLine3">
-			</div>
-			<div className="text-content">
-				<div className="text-content1">
-					<p>모바일로 봐주세요!</p>
-				</div>
-				<div className="text-content2">
-					<p>
-					초대장은 모바일로 확인할 수 있어요
-						<br />
-					   카메라로 아래 QR 코드를 찍어 접속해주세요
-				 </p>
+				<div className={webanncouncementStyles.blankLine2}>
 				</div>
 			</div>
-		 </div>
-		 <div className="CT2">
+			<div className={webanncouncementStyles.webmainContainer2}>
+				<div className={webanncouncementStyles.qrContainer}>
+					<img src="/vibemakerQR.png" alt="VIBEMAKERQR코드" /> {/* alt 속성 추가 */}
+				</div>
+				<div className={webanncouncementStyles.blankLine3}>
+				</div>
+				<div className={webanncouncementStyles.textContent}>
+					<div className={webanncouncementStyles.textContent1}>
+						<p>모바일로 봐주세요!</p>
+					</div>
+					<div className={webanncouncementStyles.textContent2}>
+						<p>
+						초대장은 모바일로 확인할 수 있어요
+							<br />
+						카메라로 아래 QR 코드를 찍어 접속해주세요
+						</p>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 );

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
-import '../../../style/Invitation/Ininvitation1/Ininvitation1.css';
+import ininvitationStyles from '../../../style/Invitation/Ininvitation1/Ininvitation1.module.css';
 import video2 from '../../../../video/publicPageVideo.mp4';
 
 function AnimatedText({children, delay, className}) {
@@ -37,47 +37,45 @@ function Ininvitation5() {
     }
 
     return (
-        <div className='container1'>
+        <div className={ininvitationStyles.container1}>
             <video style={{height: window.screen.height}} loop muted autoPlay playsInline>
                 <source src={video2} type='video/mp4'/>
             </video>
-            <div className='topContainer'>
+            <div className={ininvitationStyles.topContainer}>
             </div>
-            <div className='textContainer'>
+            <div className={ininvitationStyles.textContainer}>
                 <CSSTransition in={true} timeout={300} classNames="motion-slide" unmountOnExit>
-                    <div className='textContainer1'>
-                        <AnimatedText delay={400} className='text1'>우리가 만든 걸 살짝</AnimatedText>
-                        <AnimatedText delay={500} className='text2'>보여드릴게요.</AnimatedText>
+                    <div className={ininvitationStyles.textContainer1}>
+                        <AnimatedText delay={400} className={ininvitationStyles.text1}>우리가 만든 걸 살짝</AnimatedText>
+                        <AnimatedText delay={500} className={ininvitationStyles.text2}>보여드릴게요.</AnimatedText>
                     </div>
                 </CSSTransition>
                 <CSSTransition in={true} timeout={300} classNames="motion-slide" unmountOnExit>
-                    <div className='commitContainer'>
-                        <AnimatedText delay={600} className='commit'>{'<8.Spoiler>'}</AnimatedText>
-                        <AnimatedText delay={700} className='commit'>I wanna show you a little bit of what I made.</AnimatedText>
+                    <div className={ininvitationStyles.commitContainer}>
+                        <AnimatedText delay={600} className={ininvitationStyles.commit}>{'<8.Spoiler>'}</AnimatedText>
+                        <AnimatedText delay={700} className={ininvitationStyles.commit}>I wanna show you a little bit of what I made.</AnimatedText>
                     </div>
                 </CSSTransition>
                 <CSSTransition in={true} timeout={300} classNames="motion-slide" unmountOnExit>
-                    <div className='textContainer1'>
-                        <AnimatedText delay={800} className='text3'>꼭 와서 눈으로도</AnimatedText>
-                        <AnimatedText delay={900} className='text4'>즐겼으면 좋겠어요.</AnimatedText>
+                    <div className={ininvitationStyles.textContainer1}>
+                        <AnimatedText delay={800} className={ininvitationStyles.text3}>꼭 와서 눈으로도</AnimatedText>
+                        <AnimatedText delay={900} className={ininvitationStyles.text4}>즐겼으면 좋겠어요.</AnimatedText>
                     </div>
                 </CSSTransition>
                 <CSSTransition in={true} timeout={300} classNames="motion-slide" unmountOnExit>
-                    <div className='commitContainer'>
-                        <AnimatedText delay={1000} className='commit'>{'<9.Wish>'}</AnimatedText>
-                        <AnimatedText delay={1100} className='commit'>But I really hope you come and enjoy it.</AnimatedText>
+                    <div className={ininvitationStyles.commitContainer}>
+                        <AnimatedText delay={1000} className={ininvitationStyles.commit}>{'<9.Wish>'}</AnimatedText>
+                        <AnimatedText delay={1100} className={ininvitationStyles.commit}>But I really hope you come and enjoy it.</AnimatedText>
                     </div>
-                </CSSTransition>
-            </div>
-            <div className='picture'>
-                <CSSTransition in={true} timeout={300} classNames="motion-slide" unmountOnExit>
-                    <AnimatedImage delay={1200} className='invitation5Image'src='/public5.gif' alt='공용작업물'/>
                 </CSSTransition>
             </div>
-            <div className='openContainer'>
-                <button onClick={handleClick} className='openButton'>
-                    다음
-                </button>
+            <div className={ininvitationStyles.picture}>
+                <CSSTransition in={true} timeout={300} classNames="motion-slide" unmountOnExit>
+                    <AnimatedImage delay={1200} className={ininvitationStyles.invitation5Image}src='/public5.gif' alt='공용작업물'/>
+                </CSSTransition>
+            </div>
+                <div className={ininvitationStyles.openContainer}>
+                <button onClick={handleClick} className={ininvitationStyles.openButton}>다음</button>
             </div>
         </div>
     )

@@ -7,7 +7,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-image: url("../../../img/webBackground.png");
+	background-image: url("../../../../img/webBackground.png");
 	background-size: cover;
 	margin-top: -10px;
 	backdrop-filter: blur(50px);
@@ -65,13 +65,13 @@ video{
 	height: 200px;
 }
 
-.text-content1 {
+.textContent1 {
 	width: 483px;
 	height: 90px;
 	align-items: center;
 }
 
-.text-content1 > p {
+.textContent1 > p {
 	color: #FFF;
 	text-shadow: 0px 3px 18px rgba(0, 0, 0, 0.20);
 	font-family: "YDIYGO350";
@@ -82,13 +82,13 @@ video{
 	/* identical to box height, or 90px */
 }
 
-.text-content2{
+.textContent2{
 	width: 468px;
 	height: 96px;
 	align-items: center;
 }
 
-.text-content2 > p {
+.textContent2 > p {
 	font-family: "YDIYGO320";
 	font-style: normal;
 	font-weight: 400;
@@ -100,17 +100,17 @@ video{
 }
 
 
-.qr-container {
+.qrContainer {
 	border-radius: 10px;
 }
 
-.qr-container > img {
+.qrContainer > img {
 	width: 200px;
 	height: 200px;
 	border-radius: 10px;
 }
 
-.timer-container {
+.timerContainer {
 	height: 91px;
 	display: flex;
 	align-items: center;
@@ -118,7 +118,7 @@ video{
 	
 }
 
-.timer-container > p {
+.timerContainer > p {
 	width: 394px;
 	color: #FFF;
 	text-align: center;
@@ -166,43 +166,43 @@ video{
 	font-style: normal;
 	font-weight: 100;
 	src: 
-	url("../../../fonts/YDIYGO310.woff") format('woff'),
-	url("../../../fonts/YDIYGO310.ttf") format('truetype');
+	url("../../../../fonts/YDIYGO310.woff") format('woff'),
+	url("../../../../fonts/YDIYGO310.ttf") format('truetype');
 }
 @font-face {
 	font-family: "YDIYGO320";
 	font-style: normal;
 	font-weight: 100;
 	src: 
-	url("../../../fonts/YDIYGO320.woff") format('woff'),
-	url("../../../fonts/YDIYGO320.ttf") format('truetype');
+	url("../../../../fonts/YDIYGO320.woff") format('woff'),
+	url("../../../../fonts/YDIYGO320.ttf") format('truetype');
 }
 @font-face {
 	font-family: "YDIYGO330";
 	font-style: normal;
 	font-weight: 100;
 	src: 
-	url("../../../fonts/YDIYGO330.woff") format('woff'),
-	url("../../../fonts/YDIYGO330.ttf") format('truetype');
+	url("../../../../fonts/YDIYGO330.woff") format('woff'),
+	url("../../../../fonts/YDIYGO330.ttf") format('truetype');
 }
 @font-face {
 	font-family: "YDIYGO340";
 	font-style: normal;
 	font-weight: 100;
 	src:
-	url("../../../fonts/YDIYGO340.woff") format('woff'),
-	url("../../../fonts/YDIYGO340.ttf") format('truetype');
+	url("../../../../fonts/YDIYGO340.woff") format('woff'),
+	url("../../../../fonts/YDIYGO340.ttf") format('truetype');
 }
 @font-face {
 	font-family: "YDIYGO350";
 	font-style: normal;
 	font-weight: 100;
-	src :url("../../../fonts/YDIYGO350.woff") format('woff'),
-	url("../../../fonts/YDIYGO350.ttf") format('truetype');
+	src :url("../../../../fonts/YDIYGO350.woff") format('woff'),
+	url("../../../../fonts/YDIYGO350.ttf") format('truetype');
 }
 @font-face {
 	font-family: "Avenir";
 	font-style: normal;
 	font-weight: 100;
-	src: url("../../../fonts/Avenir.ttf") format('truetype');
+	src: url("../../../../fonts/Avenir.ttf") format('truetype');
 }

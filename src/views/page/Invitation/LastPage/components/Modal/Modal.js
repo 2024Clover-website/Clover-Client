@@ -1,6 +1,6 @@
 import React from 'react';
 import { CSSTransition } from 'react-transition-group';
-import './Modal.css';
+import modalStyles from '../../../../../style/Invitation/LastPage/components/Modal/Modal.module.css';
 
 const animationTiming = {
   enter: 500,
@@ -16,7 +16,7 @@ const modal = (props) => {
       unmountOnExit
       classNames="fade-slide"
     >
-      <div className="Modal">
+      <div className={modalStyles.Modal}>
           <img src="/Exclude.svg" alt="Icon" />
           주소를 복사했어요
       </div>

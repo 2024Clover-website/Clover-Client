@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './Backdrop.css';
+import backdropStyles from '../../../../../style/Invitation/LastPage/components/Backdrop/Backdrop.module.css';
 
 const backdrop = (props) => {
   const cssClass = [
