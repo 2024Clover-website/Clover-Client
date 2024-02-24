@@ -58,7 +58,17 @@ function PodcastComment() {
 	};
 
 	const onSubmit = () => {
-		console.log("submit");
+		axios
+			.post(`https://api.clover-inarow.site/teams/${teamId}/comment/podcast`, {
+				comment: `${text}`,
+			})
+			.then((res) => {
+				if (res.data.isSuccess) {
+					console.log("comment post success");
+				}
+			});
+
+		setText("");
 	};
 
 	return (

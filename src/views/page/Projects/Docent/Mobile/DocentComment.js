@@ -58,7 +58,15 @@ function DocentComment() {
 	};
 
 	const onSubmit = () => {
-		console.log("submit");
+		axios
+			.post(`https://api.clover-inarow.site/teams/${teamId}/comment/docent`, {
+				comment: `${text}`,
+			})
+			.then((res) => {
+				if (res.data.isSuccess) {
+					console.log("comment post success");
+				}
+			});
 	};
 
 	return (
