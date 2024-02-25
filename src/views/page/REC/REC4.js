@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../../../styles/components/REC4.module.css"
 import { useLocation, useNavigate } from "react-router-dom";
 
 function REC4(){
+    const [shapevalue, setshape] = useState(0);
+    const [shape1, boolshape1] = useState(true);
+    const [shape2, boolshape2] = useState(true);
+    const [shape3, boolshape3] = useState(true);
+    const [shape4, boolshape4] = useState(true);
+    const [shape5, boolshape5] = useState(true);
     const navigate = useNavigate();
+    function handlefalse(){
+        alert('도형을 선택하세요.');
+    }
     function handleREC5click(){
         navigate("/REC/color", {state: {namevalue : name}});
         window.location.href = "/REC/color";
@@ -15,15 +24,15 @@ function REC4(){
             <div className={styles.title}>그 자극은 어떤 모습으로 {name}님께 다가오나요?</div>
             <div className={styles.PNGContainer}>
                 <div className={styles.PNGct2}>
-                    <img className = {styles.Vector1} alt = "Vector1" src = "/Vector1.png"></img>
-                    <img className = {styles.Vector2} alt = "Vector2" src = "/Vector2.png"></img>
-                    <img className = {styles.Vector3} alt = "Vector3" src = "/Vector3.png"></img>
-                    <img className = {styles.Vector4} alt = "Vector4" src = "/Vector4.png"></img>
-                    <img className = {styles.Vector5}alt = "Vector5" src = "/Vector5.png"></img>
+                    <img className = {styles.Vector} alt = "Vector1" src = "/Vector1.png"></img>
+                    <img className = {styles.Vector} alt = "Vector2" src = "/Vector2.png"></img>
+                    <img className = {styles.Vector} alt = "Vector3" src = "/Vector3.png"></img>
+                    <img className = {styles.Vector} alt = "Vector4" src = "/Vector4.png"></img>
+                    <img className = {styles.Vector}alt = "Vector5" src = "/Vector5.png"></img>
                 </div>
             </div>
             <div className={styles.IconContainer}>
-                <svg className={styles.NextIcon} onClick={handleREC5click} width="136" height="136" viewBox="0 0 136 136" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className={styles.NextIcon} onClick={shapevalue===0 ? handlefalse : handleREC5click} width="136" height="136" viewBox="0 0 136 136" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g filter="url(#filter0_bd_890_5617)">
                     <circle cx="68" cy="65" r="50" fill="white" fill-opacity="0.25" shape-rendering="crispEdges"/>
                     <circle cx="68" cy="65" r="48.5" stroke="white" stroke-opacity="0.75" stroke-width="3" shape-rendering="crispEdges"/>

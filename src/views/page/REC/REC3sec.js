@@ -8,6 +8,9 @@ function REC3sec(){
     function handleREC3click(){
         navigate(-1);
     }
+    function handlefalse(){
+        alert('내용을 입력해주세요.');
+    }
     function handleREC4click(){
         navigate("/REC/graphic", {state: {nameval : name}});
         window.location.href = "/REC/graphic";
@@ -44,7 +47,7 @@ function REC3sec(){
                 </p>
                 <div className={styles.IconContainer}>
                     <div className={styles.space}>이전으으로</div>
-                    <svg className={styles.NextIcon} onClick={handleREC4click} width="136" height="136" viewBox="0 0 136 136" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg className={styles.NextIcon} onClick={inputCount===0 ? handlefalse : handleREC4click} width="136" height="136" viewBox="0 0 136 136" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter="url(#filter0_bd_890_5617)">
                         <circle cx="68" cy="65" r="50" fill="white" fill-opacity="0.25" shape-rendering="crispEdges"/>
                         <circle cx="68" cy="65" r="48.5" stroke="white" stroke-opacity="0.75" stroke-width="3" shape-rendering="crispEdges"/>

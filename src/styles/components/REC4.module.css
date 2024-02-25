@@ -34,12 +34,14 @@
     gap: 100px;
     display: flex;
 }
-.Vector1,
-.Vector2,
-.Vector3,
-.Vector4,
-.Vector5{
+
+.Vector{
     cursor: pointer;
+}
+.Vector:active{
+    /* transition-timing-function:cubic-bezier(0.77, 0, 0.175, 1); */
+    scale: 0.95;
+    animation-duration: 0.2s;
 }
 
 .IconContainer{

@@ -19,7 +19,7 @@ function REC2(){
         );
       };
       function handlefalse(){
-        
+        alert('이름을 입력해주세요.');
       }
       function handleREC3click(){
         navigate("/REC/stimulation", {state: {value : nameValue}});
