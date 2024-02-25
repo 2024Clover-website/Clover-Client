@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from "react";
 
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 import styles from "../../../../../styles/Projects/Docent/Mobile/DocentContent.module.css";
 
 function PodcastContent() {
 	const navigate = useNavigate();
+	const location = useLocation();
+
+	const record = location.state.record;
+	const teamId = location.state.teamId;
+	const member = location.state.member;
 
 	const [progress, setProgress] = useState(100);
 	const [speed, setSpeed] = useState(1);
@@ -135,7 +140,7 @@ function PodcastContent() {
 				<div className={styles.image}>
 					<img
 						alt
-						src="https://img.freepik.com/free-vector/fresh-mango-with-slices-and-leaves-illustration_249011-164.jpg?size=626&ext=jpg"
+						src="https://elasticbeanstalk-ap-northeast-2-905418212933.s3.ap-northeast-2.amazonaws.com/resource/contributer/VIBE+MAKERS/%EB%B0%95%EB%8F%84%EC%9D%80.jpg"
 					/>
 				</div>
 

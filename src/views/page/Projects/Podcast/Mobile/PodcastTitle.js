@@ -58,6 +58,9 @@ function PodcastTitle() {
 
 		// setTimeout(() => {
 		// 	clearInterval(interval);
+		// 	navigate("/projects/podcast/content", {
+		// 		state: { record: record, teamId: teamId, member: member },
+		// 	});
 		// 	window.location.href = "/projects/podcast/content";
 		// }, 5000);
 	}, []);
@@ -65,16 +68,7 @@ function PodcastTitle() {
 	const memberCard = member.map((member, index) => {
 		return (
 			<div className={styles.designer}>
-				<div
-					style={{
-						width: 30,
-						height: 30,
-						marginRight: 10,
-						borderRadius: "50%",
-						backgroundSize: "contain",
-						overflow: "hidden",
-					}}
-				>
+				<div className={styles.profile}>
 					<img alt src={member.profile} />
 				</div>
 				<p>
