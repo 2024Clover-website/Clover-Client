@@ -34,7 +34,7 @@ video{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 30%;
+    margin-top: 375px;
     z-index: 2;
  }
 /*.Nexttext{
