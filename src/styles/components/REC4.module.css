@@ -2,6 +2,8 @@
     width: 100%;
     height: 100vh;
     position: absolute;
+    background-size: cover;
+    background: url(../../backgroundREC.png)
 }
 .title{
     margin-top: 205px;
@@ -39,7 +41,26 @@
 .Vector:active{
     /* transition-timing-function:cubic-bezier(0.77, 0, 0.175, 1); */
     scale: 0.95;
-    animation-duration: 0.2s;
+    transition: ease;
+    transition-duration: 0.2s;
+}
+.Vectordown{
+    cursor:pointer;
+    scale: 0.98;
+    opacity: 0.4;
+    transition:ease-out;
+    transition-duration: 0.3s;
+}
+.Vectordown:active{
+    scale: 0.95;
+    transition: ease;
+    transition-duration: 0.2s;
+}
+.Vectorup{
+    cursor:pointer;
+    scale: 1.08;
+    transition: ease;
+    transition-duration: 0.5s;
 }
 
 .IconContainer{

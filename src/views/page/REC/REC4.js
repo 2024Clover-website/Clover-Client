@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styles from "../../../styles/components/REC4.module.css"
 import { useLocation, useNavigate } from "react-router-dom";
-import videoREC from "../../../video/recBG.mp4";
 
 function REC4(){
     const [shapevalue, setshape] = useState(0);
@@ -10,6 +9,46 @@ function REC4(){
     const [shape3, boolshape3] = useState(true);
     const [shape4, boolshape4] = useState(true);
     const [shape5, boolshape5] = useState(true);
+    function ClickShape1(){
+        setshape(1);
+        boolshape1(true);
+        boolshape2(false);
+        boolshape3(false);
+        boolshape4(false);
+        boolshape5(false);
+    }
+    function ClickShape2(){
+        setshape(2);
+        boolshape2(true);
+        boolshape1(false);
+        boolshape3(false);
+        boolshape4(false);
+        boolshape5(false);
+    }
+    function ClickShape3(){
+        setshape(3);
+        boolshape3(true);
+        boolshape2(false);
+        boolshape1(false);
+        boolshape4(false);
+        boolshape5(false);
+    }
+    function ClickShape4(){
+        setshape(4);
+        boolshape4(true);
+        boolshape2(false);
+        boolshape3(false);
+        boolshape1(false);
+        boolshape5(false);
+    }
+    function ClickShape5(){
+        setshape(5);
+        boolshape5(true);
+        boolshape2(false);
+        boolshape3(false);
+        boolshape4(false);
+        boolshape1(false);
+    }
     const navigate = useNavigate();
     function handlefalse(){
         alert('도형을 선택하세요.');
@@ -22,17 +61,14 @@ function REC4(){
     const name = location.state.nameval;
     return(
         <div className={styles.backcolor}>
-            <video loop muted autoPlay playsInline>
-                <source src={videoREC} type='video/mp4'/>
-            </video>
             <div className={styles.title}>그 자극은 어떤 모습으로 {name}님께 다가오나요?</div>
             <div className={styles.PNGContainer}>
                 <div className={styles.PNGct2}>
-                    <img className = {styles.Vector} alt = "Vector1" src = "/Vector1.png"></img>
-                    <img className = {styles.Vector} alt = "Vector2" src = "/Vector2.png"></img>
-                    <img className = {styles.Vector} alt = "Vector3" src = "/Vector3.png"></img>
-                    <img className = {styles.Vector} alt = "Vector4" src = "/Vector4.png"></img>
-                    <img className = {styles.Vector}alt = "Vector5" src = "/Vector5.png"></img>
+                    <img onClick={ClickShape1} className = {!shape1 ? styles.Vectordown : shape1 && shapevalue === 0 ? styles.Vector : styles.Vectorup} alt = "Vector1" src = "/Vector1.png"></img>
+                    <img onClick={ClickShape2} className = {!shape2 ? styles.Vectordown : shape2 && shapevalue === 0 ? styles.Vector : styles.Vectorup} alt = "Vector2" src = "/Vector2.png"></img>
+                    <img onClick={ClickShape3} className = {!shape3 ? styles.Vectordown : shape3 && shapevalue === 0 ? styles.Vector : styles.Vectorup} alt = "Vector3" src = "/Vector3.png"></img>
+                    <img onClick={ClickShape4} className = {!shape4 ? styles.Vectordown : shape4 && shapevalue === 0 ? styles.Vector : styles.Vectorup} alt = "Vector4" src = "/Vector4.png"></img>
+                    <img onClick={ClickShape5} className = {!shape5 ? styles.Vectordown : shape5 && shapevalue === 0 ? styles.Vector : styles.Vectorup}alt = "Vector5" src = "/Vector5.png"></img>
                 </div>
             </div>
             <div className={styles.IconContainer}>

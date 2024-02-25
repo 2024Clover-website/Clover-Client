@@ -72,12 +72,13 @@
 .Wish:active{
     /* transition-timing-function:cubic-bezier(0.77, 0, 0.175, 1); */
     scale: 0.97;
+    transition: ease;
     transition-duration: 0.2s;
     opacity: 0.4;
 }
 .wishdown:active{
-    transition-timing-function:cubic-bezier(0.77, 0, 0.175, 1);
     scale: 0.97;
+    transition: ease;
     transition-duration: 0.2s;
     opacity: 0.4;
 }
@@ -103,7 +104,7 @@
 
     scale: 1.05;
     opacity: 1;
-    transition: ease-in-out;
+    transition: ease;
     transition-duration: 0.5s;
 }
 .WishText{

@@ -1,9 +1,57 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../../../styles/components/REC5.module.css";
 import { useLocation } from "react-router-dom";
 import videoREC from "../../../video/recBG.mp4";
 
 function REC5(){
+    const [colorvalue, setcolor] = useState(0);
+    const [color1, boolcolor1] = useState(true);
+    const [color2, boolcolor2] = useState(true);
+    const [color3, boolcolor3] = useState(true);
+    const [color4, boolcolor4] = useState(true);
+    const [color5, boolcolor5] = useState(true);
+
+    function ClickColor1(){
+        setcolor(1);
+        boolcolor1(true);
+        boolcolor2(false);
+        boolcolor3(false);
+        boolcolor4(false);
+        boolcolor5(false);
+    }
+    function ClickColor2(){
+        setcolor(2);
+        boolcolor2(true);
+        boolcolor1(false);
+        boolcolor3(false);
+        boolcolor4(false);
+        boolcolor5(false);
+    }
+    function ClickColor3(){
+        setcolor(3);
+        boolcolor3(true);
+        boolcolor2(false);
+        boolcolor1(false);
+        boolcolor4(false);
+        boolcolor5(false);
+    }
+    function ClickColor4(){
+        setcolor(4);
+        boolcolor4(true);
+        boolcolor2(false);
+        boolcolor3(false);
+        boolcolor1(false);
+        boolcolor5(false);
+    }
+    function ClickColor5(){
+        setcolor(5);
+        boolcolor5(true);
+        boolcolor2(false);
+        boolcolor3(false);
+        boolcolor4(false);
+        boolcolor1(false);
+    }
+
     function handleREC6click(){
         window.location.href = "/REC/tape";
     }
@@ -16,11 +64,11 @@ function REC5(){
             </video>
             <div className={styles.title}>자극을 받은 {name}님의 기분은 어떤 색인가요?</div>
             <div className={styles.colorContainer}>
-            <div className={styles.circle1}></div>
-            <div className={styles.circle2}></div>
-            <div className={styles.circle3}></div>
-            <div className={styles.circle4}></div>
-            <div className={styles.circle5}></div>
+            <div onClick={ClickColor1} className={!color1 ? styles.circle1down : color1 && colorvalue === 0 ? styles.circle1 : styles.circle1up}></div>
+            <div onClick={ClickColor2} className={!color2 ? styles.circle2down : color2 && colorvalue === 0 ? styles.circle2 : styles.circle2up}></div>
+            <div onClick={ClickColor3} className={!color3 ? styles.circle3down : color3 && colorvalue === 0 ? styles.circle3 : styles.circle3up}></div>
+            <div onClick={ClickColor4} className={!color4 ? styles.circle4down : color4 && colorvalue === 0 ? styles.circle4 : styles.circle4up}></div>
+            <div onClick={ClickColor5} className={!color5 ? styles.circle5down : color5 && colorvalue === 0 ? styles.circle5 : styles.circle5up}></div>
             
             </div>
             <div className={styles.IconContainer}>

@@ -33,6 +33,34 @@
     box-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
+.circle1up{
+    border-radius: 50%;
+    background-color: #FF3F3F;
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255, 255, 255, 0.75);
+    box-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+
+    scale: 1.15;
+    transition: ease;
+    transition-duration: 0.5s;
+}
+.circle1down{
+    border-radius: 50%;
+    background-color: #FF3F3F;
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255, 255, 255, 0.75);
+    box-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+
+    scale: 0.98;
+    opacity: 0.4;
+    transition: ease-out;
+    transition-duration: 0.3s;
+}
+
 .circle2{
     background-color: #FF8934;
     border-radius: 50%;
@@ -42,6 +70,34 @@
     box-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
+.circle2up{
+    background-color: #FF8934;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255, 255, 255, 0.75);
+    box-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+
+    scale: 1.15;
+    transition: ease;
+    transition-duration: 0.5s;
+}
+.circle2down{
+    background-color: #FF8934;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255, 255, 255, 0.75);
+    box-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+
+    scale: 0.98;
+    opacity: 0.4;
+    transition: ease-out;
+    transition-duration: 0.3s;
+}
+
 .circle3{
     background-color: #40BF00;
     border-radius: 50%;
@@ -51,6 +107,34 @@
     box-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
+.circle3up{
+    background-color: #40BF00;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255, 255, 255, 0.75);
+    box-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+
+    scale: 1.15;
+    transition: ease;
+    transition-duration: 0.5s;
+}
+.circle3down{
+    background-color: #40BF00;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255, 255, 255, 0.75);
+    box-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+
+    scale: 0.98;
+    opacity: 0.4;
+    transition: ease-out;
+    transition-duration: 0.3s;
+}
+
 .circle4{
     background-color:  #32BBFF;
     border-radius: 50%;
@@ -60,6 +144,34 @@
     box-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
+.circle4up{
+    background-color:  #32BBFF;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255, 255, 255, 0.75);
+    box-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+
+    scale: 1.15;
+    transition: ease;
+    transition-duration: 0.5s;
+}
+.circle4down{
+    background-color:  #32BBFF;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255, 255, 255, 0.75);
+    box-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+
+    scale: 0.98;
+    opacity: 0.4;
+    transition: ease-out;
+    transition-duration: 0.3s;
+}
+
 .circle5{
     background-color: #DD31FF;
     border-radius: 50%;
@@ -68,6 +180,33 @@
     border: 3px solid rgba(255, 255, 255, 0.75);
     box-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+}
+.circle5up{
+    background-color: #DD31FF;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255, 255, 255, 0.75);
+    box-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+
+    scale: 1.15;
+    transition: ease;
+    transition-duration: 0.5s;
+}
+.circle5down{
+    background-color: #DD31FF;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255, 255, 255, 0.75);
+    box-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+
+    scale: 0.98;
+    opacity: 0.4;
+    transition: ease-out;
+    transition-duration: 0.3s;
 }
 .IconContainer{
     justify-content: center;
