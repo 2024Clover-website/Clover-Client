@@ -44,7 +44,7 @@ useEffect(() => {
 					</div>
 					<div className={webanncouncementStyles.blankLine1}>
 					</div>
-					<div className={webanncouncementStyles.timer-container}>
+					<div className={webanncouncementStyles.timerContainer}>
 						<p id="timer">{timeRemaining}</p>
 					</div>
 				</div>
@@ -55,17 +55,17 @@ useEffect(() => {
 				<div className={webanncouncementStyles.blankLine2}>
 				</div>
 			</div>
-			<div className={webanncouncementStyleswebmainContainer2}>
-				<div className={webanncouncementStyles.qr-container}>
+			<div className={webanncouncementStyles.webmainContainer2}>
+				<div className={webanncouncementStyles.qrContainer}>
 					  <img src="/taishanQR.png" alt="태산QR코드" /> {/* alt 속성 추가 */}
 				</div>
 				<div className={webanncouncementStyles.blankLine3}>
 				</div>
-				<div className={webanncouncementStyles.text-content}>
-					<div className={webanncouncementStyles.text-content1}>
+				<div className={webanncouncementStyles.textContent}>
+					<div className={webanncouncementStyles.textContent1}>
 						<p>모바일로 봐주세요!</p>
 					</div>
-					<div className={webanncouncementStyles.text-content2}>
+					<div className={webanncouncementStyles.textContent2}>
 						<p>
 						초대장은 모바일로 확인할 수 있어요
 							<br />
