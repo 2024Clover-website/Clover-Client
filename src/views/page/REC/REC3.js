@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import {motion, Variants} from 'framer-motion';
 import { useLocation, useNavigate } from "react-router-dom";
 import styles from "../../../styles/components/REC3.module.css"
+import videoREC from "../../../video/recBG.mp4";
 
 function REC3(){
     const [box1, setbox1] = useState(true);
@@ -71,6 +72,9 @@ function REC3(){
 
     return(
         <div className={styles.backcolor}>
+            <video loop muted autoPlay playsInline>
+                <source src={videoREC} type='video/mp4'/>
+            </video>
             <div className={styles.title}>슬럼프가 온 {name}님을 자극하는 건 무엇인가요?</div>
             <div className={styles.WishContainer}>
                 <div className={!box1 ? styles.wishdown : box1 && boxvalue === 0 ? styles.Wish : styles.Wishup} onClick={Clickbox1}>타인이 갖는 기대

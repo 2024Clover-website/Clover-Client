@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../../../styles/components/REC5.module.css";
 import { useLocation } from "react-router-dom";
+import videoREC from "../../../video/recBG.mp4";
 
 function REC5(){
     function handleREC6click(){
@@ -10,6 +11,9 @@ function REC5(){
     const name = location.state.namevalue;
     return(
         <div className={styles.backcolor}>
+            <video loop muted autoPlay playsInline>
+                <source src={videoREC} type='video/mp4'/>
+            </video>
             <div className={styles.title}>자극을 받은 {name}님의 기분은 어떤 색인가요?</div>
             <div className={styles.colorContainer}>
             <div className={styles.circle1}></div>

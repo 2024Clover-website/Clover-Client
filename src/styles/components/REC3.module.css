@@ -2,8 +2,6 @@
     width: 1920px;
     height: 100vh;
     position: absolute;
-    background-size: cover;
-    background: url(../../backgroundREC.png)
 }
 .title{
     margin-top: 205px;
