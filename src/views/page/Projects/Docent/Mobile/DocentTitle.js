@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 
+import axios from "axios";
+
 import styles from "../../../../../styles/Projects/Docent/Mobile/DocentTitle.module.css";
 import { useNavigate } from "react-router-dom";
 
@@ -14,6 +16,7 @@ function DocentTitle() {
 		}, 10);
 
 		setTimeout(() => {
+			clearInterval(interval);
 			window.location.href = "/projects/docent/content";
 		}, 5000);
 	}, []);

@@ -23,7 +23,8 @@ function PodcastComment() {
 					setComment(res.data.result);
 					console.log("comment get success!");
 				}
-			});
+			})
+			.catch((err) => console.log(err));
 	}, []);
 
 	const commentCard = comment.map((comment, index) => {

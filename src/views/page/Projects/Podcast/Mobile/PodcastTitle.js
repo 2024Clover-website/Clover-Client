@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 
+import axios from "axios";
+
 import styles from "../../../../../styles/Projects/Docent/Mobile/DocentTitle.module.css";
 import podStyle from "../../../../../styles/Projects/Podcast/Mobile/PodcastTitle.module.css";
 import { useNavigate } from "react-router-dom";
@@ -9,16 +11,78 @@ function PodcastTitle() {
 
 	const [progress, setProgress] = useState(0);
 
+	const [title, setTitle] = useState("");
+	const [record, setRecord] = useState("");
+	const [teamName, setTeamName] = useState("");
+	const [member, setMember] = useState([]);
+
+	let teamId = 4;
+
 	useEffect(() => {
+		axios
+			.get(`https://api.clover-inarow.site/teams/${teamId}/podcast`)
+			.then((res) => {
+				if (res.data.isSuccess) {
+					setTitle(res.data.result.title);
+					setRecord(res.data.result.record);
+					setMember(res.data.result.member);
+					console.log("successed!");
+				}
+			})
+			.catch((err) => console.log(err));
+
+		switch (teamId) {
+			case 1:
+				setTeamName("전시 브랜딩");
+				break;
+			case 2:
+				setTeamName("태산");
+				break;
+			case 3:
+				setTeamName("이따");
+				break;
+			case 4:
+				setTeamName("VIBE MAKERS");
+				break;
+			case 5:
+				setTeamName("도파민 중독자들");
+				break;
+			case 6:
+				setTeamName("옥수수수염");
+				break;
+		}
+
 		const interval = setInterval(() => {
 			setProgress((progress) => progress + 0.1);
 		}, 10);
 
-		setTimeout(() => {
-			clearInterval(interval);
-			window.location.href = "/projects/podcast/content";
-		}, 5000);
+		// setTimeout(() => {
+		// 	clearInterval(interval);
+		// 	window.location.href = "/projects/podcast/content";
+		// }, 5000);
 	}, []);
+
+	const memberCard = member.map((member, index) => {
+		return (
+			<div className={styles.designer}>
+				<div
+					style={{
+						width: 30,
+						height: 30,
+						marginRight: 10,
+						borderRadius: "50%",
+						backgroundSize: "contain",
+						overflow: "hidden",
+					}}
+				>
+					<img alt src={member.profile} />
+				</div>
+				<p>
+					{member.name}·{member.role}
+				</p>
+			</div>
+		);
+	});
 
 	return (
 		<>
@@ -116,59 +180,12 @@ function PodcastTitle() {
 					<p>PODCAST</p>
 				</div>
 				<div className={podStyle.title}>
-					<p>자고 일어났더니 과제가 증발했다</p>
+					<p>{title}</p>
 				</div>
 				<div className={styles.designer}>
-					<p>옥수수수염</p>
+					<p>{teamName}</p>
 				</div>
-				<div className={styles.designer}>
-					<div
-						style={{
-							width: 30,
-							height: 30,
-							marginRight: 10,
-							borderRadius: "50%",
-							backgroundColor: "blue",
-						}}
-					></div>
-					<p>강지수·시각디자인 3D</p>
-				</div>
-				<div className={styles.designer}>
-					<div
-						style={{
-							width: 30,
-							height: 30,
-							marginRight: 10,
-							borderRadius: "50%",
-							backgroundColor: "blue",
-						}}
-					></div>
-					<p>강지수·시각디자인 3D</p>
-				</div>
-				<div className={styles.designer}>
-					<div
-						style={{
-							width: 30,
-							height: 30,
-							marginRight: 10,
-							borderRadius: "50%",
-							backgroundColor: "blue",
-						}}
-					></div>
-					<p>강지수·시각디자인 3D</p>
-				</div>
-				<div className={styles.designer}>
-					<div
-						style={{
-							width: 30,
-							height: 30,
-							marginRight: 10,
-							borderRadius: "50%",
-							backgroundColor: "blue",
-						}}
-					></div>
-					<p>강지수·시각디자인 3D</p>
-				</div>
+				{memberCard}
 			</div>
 		</>
 	);

@@ -66,7 +66,8 @@ function DocentComment() {
 				if (res.data.isSuccess) {
 					console.log("comment post success");
 				}
-			});
+			})
+			.catch((err) => console.log(err));
 	};
 
 	return (
