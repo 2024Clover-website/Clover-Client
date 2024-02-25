@@ -173,7 +173,9 @@ video{
   font-weight: 400;
   line-height: 130%;
 }
-
+.Container6Name{
+  text-align: right;
+}
 .Container2Name{
   text-align: right;
   color: #F1F1F1;
