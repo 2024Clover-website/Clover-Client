@@ -10,7 +10,7 @@ video{
     position:fixed;
     object-fit: cover;
     width: 100%;
-    z-index: -1;
+    z-index: -2;
 }
 .backcolor{
     position:fixed;
@@ -30,9 +30,12 @@ video{
 
 }
 .ButtonContainer{
+    position: fixed;
     display: flex;
     justify-content: center;
-    margin-top: 60px;
+    align-items: center;
+    margin-top: 30%;
+    z-index: 2;
  }
 /*.Nexttext{
     width: 111px;
@@ -83,11 +86,12 @@ video{
 }
 
 .pencil{
-    width: 387px;
-    height: 387px;
+    width: 2500px;
+    height: 1920px;
+    flex-shrink: 0;
     left: calc(50% - 387px/2 - 0.01px);
     top: -50px;
-
+    z-index: -1;
     /* z-index: 0; */
     /* width: 339.351px;
     height: 337.269px;
