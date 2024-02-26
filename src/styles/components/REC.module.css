@@ -10,12 +10,12 @@ video{
     position:fixed;
     object-fit: cover;
     width: 100%;
+    min-height: 110svh;
     z-index: -2;
 }
 .backcolor{
     position:fixed;
     width: 100%;
-    height: 100%;
 }
 .Start{
     margin-top: 205px;
