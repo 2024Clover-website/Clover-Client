@@ -1,5 +1,5 @@
-.container{
-
+body {
+    overflow-x: hidden;
 }
 
 .page{
@@ -8,7 +8,7 @@
     align-items: flex-start;
     padding: 150px 190px 130px;
     gap: 80px;
-    
+    /* width: 100%; */
     /* width: 1520px; */
     
     
@@ -114,24 +114,13 @@
     
 }
 .CT1{
-/* Frame 67 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-
-width: 720px;
-height: 72px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    
+    width: 720px;
+    height: 72px;
     
 }
 .CT2{
