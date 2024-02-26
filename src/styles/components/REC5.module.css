@@ -208,6 +208,22 @@
     transition: ease-out;
     transition-duration: 0.3s;
 }
+
+.circle1:active,
+.circle2:active,
+.circle3:active,
+.circle4:active,
+.circle5:active,
+.circle1down:active,
+.circle2down:active,
+.circle3down:active,
+.circle4down:active,
+.circle5down:active{
+    scale: 0.95;
+    opacity: 1;
+    transition: ease;
+    transition-duration: 0.2s;
+}
 .IconContainer{
     justify-content: center;
     display: flex;
