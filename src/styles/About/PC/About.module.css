@@ -1,5 +1,5 @@
-.container{
-
+body {
+    overflow-x: hidden;
 }
 
 .page{
@@ -8,10 +8,10 @@
     align-items: flex-start;
     padding: 150px 190px 130px;
     gap: 80px;
-    width: 100%;
-    /* width: 100%;
-    height: 500px; */
-
+    /* width: 100%; */
+    /* width: 1520px; */
+    
+    
     background: #FFFFFF;
 }
 .Linecontainer{
@@ -25,8 +25,6 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    padding: 0px;
-    
     width: 100%;
     height: 140px;
 }
@@ -37,7 +35,6 @@
     padding: 0px;
     gap: 20px;
     
-    width: 100%;
     height: 122px;
 }
 .textarea2{
@@ -49,7 +46,6 @@
     
     width: 100%;
     height: 140px;
-    
 }
 .textarea3{
     
@@ -72,6 +68,31 @@
 
     background: #FFFFFF;
 }
+.textarea5{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 190px;
+    
+    
+    background: #FFFFFF;
+}
+.textarea5 > p{
+    
+    height: 90px;
+    
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 150%;
+    /* identical to box height, or 90px */
+    text-align: center;
+    
+    color: #000000;
+    
+}
 .Membertext{
     display: flex;
     flex-direction: row;
@@ -79,7 +100,6 @@
     gap: 100px;
     
     width: 100%;
-    height: 692px;
     
     background: #FFFFFF;
 }
@@ -90,29 +110,17 @@
     padding: 0px;
     gap: 50px;
     
-    width: 100%;
     height: 542px;
     
 }
 .CT1{
-/* Frame 67 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-
-width: 720px;
-height: 72px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    
+    width: 720px;
+    height: 72px;
     
 }
 .CT2{
@@ -189,24 +197,17 @@ flex-grow: 0;
     height: 370px;   
 }
 .Member{
-/* Frame 61 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 50px;
-
-width: 720px;
-height: 45px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 50px;
+    
+    width: 720px;
+    height: 45px;
 
 
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
+
 
 }
 .Member > p0{
@@ -239,8 +240,9 @@ flex-grow: 0;
     color: #000000;
     
 }
+
 .textarea1 > p{
-    width: 100%;
+    width: 530px;
     height: 30px;
     
     font-family: 'Avenir';
@@ -250,11 +252,10 @@ flex-grow: 0;
     line-height: 150%;
     /* identical to box height, or 30px */
     color: #000000;
-    
-
 }
+
 .textarea1 > p1{
-    width: 530px;
+    width: 100%;
     height: 72px;
     
     font-family: 'Avenir';
@@ -270,7 +271,7 @@ flex-grow: 0;
 }
 
 .textarea2 > p{
-    width: 1310px;
+    
     height: 30px;
     
     font-family: 'Avenir';
@@ -328,3 +329,58 @@ flex-grow: 0;
     
     color: #000000;
 }
+
+.Thankspage1{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 190px;
+    gap: 50px;
+    
+    
+    height: 692px;
+    
+    background: #FFFFFF;
+}
+.Thankspage2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 190px;
+    gap: 50px;
+    
+    
+    height: 692px;
+    
+    background: #FFFFFF;
+}
+.Thankspage3{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 190px;
+    gap: 50px;
+    
+    
+    height: 592px;
+    
+    background: #FFFFFF;
+}
+.Thankspage4{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 190px;
+    gap: 50px;
+    
+    
+    height: 692px;
+    
+    background: #FFFFFF;
+}
+
+.responsiveImage {
+    width: 100%;
+    height: auto;
+  }
+  

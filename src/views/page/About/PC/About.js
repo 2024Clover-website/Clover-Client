@@ -4,7 +4,7 @@ import styles from '../../../../styles/About/PC/About.module.css';
 function About() {
     return (
         <div className={styles.container}>
-                <img src="./img/casetteTape.png"></img>
+                <img className={styles.responsiveImage} src="./img/aboutimg12.png" alt="description" />
             <div className={styles.page}>
                 <div className={styles.Linecontainer}></div>
                 <div className={styles.text}>
@@ -20,7 +20,7 @@ function About() {
                         </div>
                 </div>
             </div>
-            <img src="./img/dog.png"></img>
+            <img className={styles.responsiveImage} src="./img/aboutimg6.png" alt="description" />
             <div className={styles.page}>
                 <div className={styles.Linecontainer}></div>
                 <div className={styles.text}>
@@ -36,7 +36,7 @@ function About() {
                         </div>
                 </div>
             </div>
-            <img src="./img/dog.png"></img>
+            <img className={styles.responsiveImage} src="./img/aboutimg7.png" alt="description" />
             <div className={styles.page}>
                 <div className={styles.Linecontainer}></div>
                 <div className={styles.text}>
@@ -52,7 +52,7 @@ function About() {
                         </div>
                 </div>
             </div>
-            <img src="./img/dog.png"></img>
+            <img className={styles.responsiveImage} src="./img/aboutimg8.png" alt="description" />
             <div className={styles.page}>
                 <div className={styles.Linecontainer}></div>
                 <div className={styles.text}>
@@ -68,18 +68,18 @@ function About() {
                         </div>
                 </div>
             </div>
-            <img src="./img/dog.png"></img>
+            <img className={styles.responsiveImage} src="./img/aboutimg9.png" alt="description" />
             <div className={styles.textarea3}>
                 <p>알파벳 순서대로 보면 보다 쾌적하게 전시를 관람할수 있습니다. 또한 기프트존을 따로 마련해두었습니다.
                     다른 관람객들을 위해, 방문자님의 소중한 마음은 꼭 기프트존에만 놓아주세요.</p>
             </div>
-            <img src="./img/dog.png"></img>
+            <img className={styles.responsiveImage} src="./img/aboutimg10.png" alt="description" />
             <div className={styles.textarea3}>
                 <p>온라인으로도 전시를 관람하실 수 있습니다. About 페이지에서 이번 전시에 대한 전문을 읽어보실 수 있으
                     며, Projects 페이지에서 각 팀 별 도슨트와 슬럼프에 대한 이야기를 팟캐스트 형식으로 들어볼 수 있습니다.
                     마지막으로 REC 페이지에서는 나만의 자극 카드를 만드는 인터랙티브한 경험을 즐기실 수 있습니다.</p>
             </div>
-            <img src="./img/dog.png"></img>
+            <img className={styles.responsiveImage} src="./img/aboutimg11.png" alt="description" />
             <div className={styles.textarea4}>
                 <p>Graphic Detail</p>
                 <img src="./img/aboutimg1.png"></img>
@@ -88,10 +88,10 @@ function About() {
                 <img src="./img/aboutimg4.png"></img>
                 <img src="./img/aboutimg5.png"></img>
             </div>
-            <div className={styles.textarea4}>
+            <div className={styles.textarea5}>
                 <p>Thanks to</p>
             </div>
-            <div className={styles.page}>
+            <div className={styles.Thankspage1}>
                 <div className={styles.Linecontainer}></div>
                     <div className={styles.Membertext}>
                         <div className={styles.Membercontainer}>
@@ -160,7 +160,7 @@ function About() {
                         </div>
                     </div>
             </div>
-            <div className={styles.page}>
+            <div className={styles.Thankspage2}>
                 <div className={styles.Linecontainer}></div>
                     <div className={styles.Membertext}>
                         <div className={styles.Membercontainer}>
@@ -218,14 +218,14 @@ function About() {
                                     <p1>Visual design</p1>
                                 </div>
                                 <div className={styles.Member}>
-                                    <p0>dhtlgjs</p0>
+                                    <p0>오시현</p0>
                                     <p1>Product design</p1>
                                 </div>
                             </div>
                         </div>
                     </div>
             </div>
-            <div className={styles.page}>
+            <div className={styles.Thankspage3}>
                 <div className={styles.Linecontainer}></div>
                     <div className={styles.Membertext}>
                         <div className={styles.Membercontainer}>
@@ -279,7 +279,7 @@ function About() {
                         </div>
                     </div>
                 </div>
-                <div className={styles.page}>
+                <div className={styles.Thankspage4}>
                 <div className={styles.Linecontainer}></div>
                     <div className={styles.Membertext}>
                         <div className={styles.Membercontainer}>
