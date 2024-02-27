@@ -8,8 +8,8 @@ function About() {
 	return (
         <div className={styles.container}>
                 <img className={styles.responsiveImage} src="./img/aboutMimg1.png" alt="description" />
-            <div className={styles.Mpage}>
-                <div className={styles.MLinecontainer}></div>
+            <div className={styles.page}>
+                <div className={styles.Linecontainer}></div>
                 	<div className={styles.text}>
                         <div className={styles.textarea1}>
                             <p>Overview</p>
@@ -89,7 +89,7 @@ function About() {
                 <img src="./img/aboutMimg9.png"></img>
                 <img src="./img/aboutMimg10.png"></img>
                 <img src="./img/aboutMimg11.png"></img>
-                <img src="./img/aboutMimg12.png"></img>
+                <img src="./img/AboutMimg12.png"></img>
             </div>
             <div className={styles.textarea5}>
                 <p>Thanks to</p>
