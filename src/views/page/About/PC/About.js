@@ -284,7 +284,7 @@ function About() {
                     <div className={styles.Membertext}>
                         <div className={styles.Membercontainer}>
                             <div className={styles.CT1}>
-                                <p0>개발</p0>
+                                <p0>닥사모</p0>
                                 <p1>07</p1>
                             </div>
                             <div className={styles.CT2}>
@@ -294,7 +294,7 @@ function About() {
                             <div className={styles.CT3}>
                                 <div className={styles.Member}>
                                     <p0>장준용</p0>
-                                    <p1>Dev/BE</p1>
+                                    <p1>Dev/Server</p1>
                                 </div>
                                 <div className={styles.Member}>
                                     <p0>김성진</p0>
