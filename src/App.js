@@ -8,6 +8,7 @@ import REC3 from "./views/page/REC/REC3";
 import REC3sec from "./views/page/REC/REC3sec";
 import REC4 from "./views/page/REC/REC4";
 import REC5 from "./views/page/REC/REC5";
+import REC6 from "./views/page/REC/REC6";
 
 import About from "./views/page/About/About";
 import Header from "./views/components/Header";
@@ -39,6 +40,7 @@ function App() {
 					<Route exact path="/REC/stimulation/self" element={<REC3sec/>}/>
 					<Route exact path="/REC/graphic" element={<REC4/>}/>
 					<Route exact path="/REC/color" element={<REC5/>}/>
+					<Route exact path="/REC/tape" element = {<REC6/>}/>
 				</Routes>
 				<Footer />
 			</div>
