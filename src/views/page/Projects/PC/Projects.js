@@ -44,7 +44,9 @@ function Projects() {
             category: 'ART DIRECT',
             designer: '권예지·조용욱·김혜신',
             designer2: '기한나·안서경·허민영',
-            podcastTime: '15:28'
+            podcastTime: '15:28',
+            docentqrImage : "../img/podcast qr_Image.png",
+            podcastqrImage : "../img/podcast qr_Image.png"
         },
         'CTB': {
             title: 'KEYCLE',
@@ -52,7 +54,9 @@ function Projects() {
             category: 'SERVICE DESIGN',
             designer: '최재정·김경은·김동재·노유정',
             docentTime: '2:19',
-            podcastTime: '10:30'
+            podcastTime: '10:30',
+            docentqrImage : "../img/podcast qr_Image.png",
+            podcastqrImage : "../img/podcast qr_Image.png"
         },
         'CTC': {
             title: '악의 불변',
@@ -60,7 +64,9 @@ function Projects() {
             category: 'GRAPHIC DESIGN',
             designer: '임로빈·김성연·박금주·박지현',
             docentTime: '2:48',
-            podcastTime: '9:45'
+            podcastTime: '9:45',
+            docentqrImage : "../img/podcast qr_Image.png",
+            podcastqrImage : "../img/podcast qr_Image.png"
         },
         'CTD': {
             title: 'VIBE MAKERS',
@@ -69,7 +75,9 @@ function Projects() {
             designer: '정지윤·김나연·박도은',
             designer2: '송지윤·오시헌',
             docentTime: '2:54',
-            podcastTime: '6:06'
+            podcastTime: '6:06',
+            docentqrImage : "../img/podcast qr_Image.png",
+            podcastqrImage : "../img/podcast qr_Image.png"
         },
         'CTE': {
             title: 'Dopamine Addiction: Visualization of symptoms',
@@ -77,7 +85,9 @@ function Projects() {
             category: 'SIDE PROJECT',
             designer: '정지윤·김나연',
             docentTime: '3:01',
-            podcastTime: '16:27'
+            podcastTime: '16:27',
+            docentqrImage : "../img/podcast qr_Image.png",
+            podcastqrImage : "../img/podcast qr_Image.png"
         },
         'CTF': {
             title: 'Perfect doll factory',
@@ -85,7 +95,9 @@ function Projects() {
             category: 'EXPERIENTIAL MEDIA ART',
             designer: '한승우·강지수·박규리·임재윤',
             docentTime: '1:58',
-            podcastTime: '16:27'
+            podcastTime: '16:27',
+            docentqrImage : "../img/podcast qr_Image.png",
+            podcastqrImage : "../img/podcast qr_Image.png"
         },
     };
 
@@ -244,7 +256,7 @@ function Projects() {
                     <div className={styles.LineContainer}></div>
                     <div className={styles.qrContainer}>
                         <div className={styles.imgContainer}>
-                            <img src="../img/podcast qr_Image.png" alt />
+                        <img src={description.docentqrImage} alt="" />
                         </div>
                         <div className={styles.textContainer}>
                             <p1>모바일로 봐주세요!</p1> <br />
@@ -281,7 +293,7 @@ function Projects() {
                     <div className={styles.LineContainer}></div>
                     <div className={styles.qrContainer}>
                         <div className={styles.imgContainer}>
-                            <img src="../img/podcast qr_Image.png" alt />
+                        <img src={description.podcastqrImage} alt="" />
                         </div>
                         <div className={styles.textContainer}>
                             <p1>모바일로 봐주세요!</p1> <br />
