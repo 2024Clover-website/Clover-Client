@@ -3,17 +3,17 @@ import Modal from 'react-modal';
 import styles from '../../../../styles/Projects/PC/Projects.module.css';
 
 const customStyles = {
-    content : {
-        top                   : '0%',
-        left                  : '0%',
-        right                 : '0%',
-        bottom                : '0%',
-        marginRight           : '0%',
-        transform             : 'translate(0%, 0%)',
+    content: {
+        top: '0%',
+        left: '0%',
+        right: '0%',
+        bottom: '0%',
+        marginRight: '0%',
+        transform: 'translate(0%, 0%)',
         backgroundColor: 'rgba(0, 0, 0, 0.05)',
-        border                : 'none',
-        padding               : '0',
-        overflow              : 'hidden'
+        border: 'none',
+        padding: '0',
+        overflow: 'hidden'
     },
     overlay: {
         backgroundColor: 'rgba(0, 0, 0, 0.15)',
@@ -26,7 +26,7 @@ function Projects() {
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [timeRemaining, setTimeRemaining] = useState(10 * 60);
     const [description, setDescription] = useState({});
-	const [isDescriptionVisible, setIsDescriptionVisible] = useState(false);
+    const [isDescriptionVisible, setIsDescriptionVisible] = useState(false);
     const [imageSrc, setImageSrc] = useState({
         CTA: "/img/CTA.png",
         CTB: "/img/CTB.png",
@@ -44,7 +44,7 @@ function Projects() {
             docentTime: '2:00',
             podcastTime: '10:00'
         },
-		'CTB': {
+        'CTB': {
             title: 'Dopamine Addiction: Visualization of symptoms',
             section: 'B',
             category: '3D Motion Graphic',
@@ -52,7 +52,7 @@ function Projects() {
             docentTime: '2:00',
             podcastTime: '10:00'
         },
-		'CTC': {
+        'CTC': {
             title: 'Dopamine Addiction: Visualization of symptoms',
             section: 'C',
             category: '3D Motion Graphic',
@@ -60,7 +60,7 @@ function Projects() {
             docentTime: '2:00',
             podcastTime: '10:00'
         },
-		'CTD': {
+        'CTD': {
             title: 'Dopamine Addiction: Visualization of symptoms',
             section: 'D',
             category: '3D Motion Graphic',
@@ -68,7 +68,7 @@ function Projects() {
             docentTime: '2:00',
             podcastTime: '10:00'
         },
-		'CTE': {
+        'CTE': {
             title: 'Dopamine Addiction: Visualization of symptoms',
             section: 'E',
             category: '3D Motion Graphic',
@@ -76,7 +76,7 @@ function Projects() {
             docentTime: '2:00',
             podcastTime: '10:00'
         },
-		'CTF': {
+        'CTF': {
             title: 'Dopamine Addiction: Visualization of symptoms',
             section: 'F',
             category: '3D Motion Graphic',
@@ -127,7 +127,7 @@ function Projects() {
     return (
         <div className={styles.container}>
             <div className={styles.CTMain} onClick={() => setIsDescriptionContainer2Visible(false)}>
-                <img alt src="/img/CTMain.png"  />
+                <img alt src="/img/CTMain.png" />
                 <div>
                     <img className={`${styles.CTA} ${styles.hoverImage}`} alt src="/img/CTA.gif" onClick={() => handleImageClick('CTA')} />
                     <img className={`${styles.CTB} ${styles.hoverImage}`} alt src="/img/CTB.gif" onClick={() => handleImageClick('CTB')} />
@@ -139,84 +139,84 @@ function Projects() {
             </div>
             {isDescriptionContainer2Visible && (
                 <div className={styles.descriptionContainer2}>
-					<div className={styles.titleBox2}>
-						<div className={styles.titleBoxHead2}>
+                    <div className={styles.titleBox2}>
+                        <div className={styles.titleBoxHead2}>
                             <p className={styles.title2}>
-								자세히 보고 싶은 프로젝트가 있나요?
-							</p>
-							<p className={styles.subtitle1}>
+                                자세히 보고 싶은 프로젝트가 있나요?
+                            </p>
+                            <p className={styles.subtitle1}>
                                 도슨트와 팟캐스트가 준비되어 있어요.
                                 재생 버튼을 클릭하여 감상해보세요.
                             </p>
-						</div>
-						<p className={styles.category}>{description.category}</p>
-					</div>
-					<div className={styles.innerBox}>
-						<div className={styles.tag}>
-							<p>도슨트</p>
-						</div>
+                        </div>
+                        <p className={styles.category}>{description.category}</p>
+                    </div>
+                    <div className={styles.innerBox}>
+                        <div className={styles.tag}>
+                            <p>도슨트</p>
+                        </div>
                         <p className={styles.subtitle2}>
                             작품에 대한 자세한 설명을 들을 수 있어요
                         </p>
-					</div>
-					<div className={styles.innerBox}>
-						<div className={styles.tag}>
-							<p>팟캐스트</p>
-						</div>
+                    </div>
+                    <div className={styles.innerBox}>
+                        <div className={styles.tag}>
+                            <p>팟캐스트</p>
+                        </div>
                         <p className={styles.subtitle3}>
                             번아웃과 슬럼프, 그리고 새로운 자극에 대한
                             각자만의 스토리를 들을 수 있어요
                         </p>
-					</div>
+                    </div>
                 </div>
             )}
 
             {!isDescriptionContainer2Visible && isDescriptionVisible && (
-				<div className={styles.descriptionContainer}>
-					<div className={styles.titleBox}>
-						<div className={styles.titleBoxHead}>
-							<p className={styles.title}>
-								{description.title}
-							</p>
-							<p className={styles.section}>{description.section}</p>
-						</div>
-						<p className={styles.category}>{description.category}</p>
-					</div>
-					<div className={styles.innerBox}>
-						<div className={styles.tag}>
-							<p>디자이너</p>
-						</div>
-						<p className={styles.tagContents}>{description.designer}</p>
-					</div>
-					<div className={styles.innerBox}>
-						<div className={styles.tag}>
-							<p>도슨트</p>
-						</div>
-						<p className={styles.tagContents}>
-							{description.docentTime}
-							<img
-								src="../../../img/Button01.png"
-								className={styles.playButton}
-								onClick={handleDocentButton}
-							/>
-						</p>
-					</div>
-					<div className={styles.innerBox}>
-						<div className={styles.tag}>
-							<p>팟캐스트</p>
-						</div>
-						<p className={styles.tagContents}>
-							{description.podcastTime}
-							<img
-								src="../../../img/Button01.png"
-								className={styles.playButton}
-								onClick={handlePodcastButton}
-							/>
-						</p>
-					</div>
-            </div>
-			)}
-                <Modal
+                <div className={styles.descriptionContainer}>
+                    <div className={styles.titleBox}>
+                        <div className={styles.titleBoxHead}>
+                            <p className={styles.title}>
+                                {description.title}
+                            </p>
+                            <p className={styles.section}>{description.section}</p>
+                        </div>
+                        <p className={styles.category}>{description.category}</p>
+                    </div>
+                    <div className={styles.innerBox}>
+                        <div className={styles.tag}>
+                            <p>디자이너</p>
+                        </div>
+                        <p className={styles.tagContents}>{description.designer}</p>
+                    </div>
+                    <div className={styles.innerBox}>
+                        <div className={styles.tag}>
+                            <p>도슨트</p>
+                        </div>
+                        <p className={styles.tagContents}>
+                            {description.docentTime}
+                            <img
+                                src="../../../img/Button01.png"
+                                className={styles.playButton}
+                                onClick={handleDocentButton}
+                            />
+                        </p>
+                    </div>
+                    <div className={styles.innerBox}>
+                        <div className={styles.tag}>
+                            <p>팟캐스트</p>
+                        </div>
+                        <p className={styles.tagContents}>
+                            {description.podcastTime}
+                            <img
+                                src="../../../img/Button01.png"
+                                className={styles.playButton}
+                                onClick={handlePodcastButton}
+                            />
+                        </p>
+                    </div>
+                </div>
+            )}
+            <Modal
                 isOpen={modalIsOpen}
                 onRequestClose={() => setModalIsOpen(false)}
                 style={customStyles}
@@ -232,9 +232,9 @@ function Projects() {
                     />
                     <div className={styles.docentContainer}>
                         <div className={styles.podcastbox}>
-                        <p>팟캐스트 : 러닝타임 {Math.floor(timeRemaining / 60)}분 {timeRemaining % 60}초</p>
+                            <p>팟캐스트 : 러닝타임 {Math.floor(timeRemaining / 60)}분 {timeRemaining % 60}초</p>
                         </div>
-                            <p>Dopamine Addiction: Visualization of symptoms</p>
+                        <p>Dopamine Addiction: Visualization of symptoms</p>
                     </div>
                     <div className={styles.LineContainer}></div>
                     <div className={styles.qrContainer}>
