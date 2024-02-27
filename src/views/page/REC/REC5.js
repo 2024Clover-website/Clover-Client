@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "../../../styles/components/REC5.module.css";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import videoREC from "../../../video/recBG.mp4";
 
 function REC5(){
@@ -51,12 +51,15 @@ function REC5(){
         boolcolor4(false);
         boolcolor1(false);
     }
-
+    const location = useLocation();
+    const name = location.state.name;
+    const pattern = location.state.pattern;
+    const navigate = useNavigate();
     function handleREC6click(){
+        navigate("/REC/tape", {state : {name : name, color : colorvalue, pattern : pattern}});
         window.location.href = "/REC/tape";
     }
-    const location = useLocation();
-    const name = location.state.namevalue;
+    
     return(
         <div className={styles.backcolor}>
             <video loop muted autoPlay playsInline>

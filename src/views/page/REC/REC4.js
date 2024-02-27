@@ -54,7 +54,7 @@ function REC4(){
         alert('도형을 선택하세요.');
     }
     function handleREC5click(){
-        navigate("/REC/color", {state: {namevalue : name}});
+        navigate("/REC/color", {state: {name : name, pattern : shapevalue}});
         window.location.href = "/REC/color";
     }
     const location = useLocation();

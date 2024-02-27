@@ -4,10 +4,13 @@ import axios from "axios";
 
 import styles from "../../../styles/components/REC6.module.css";
 import videoREC from "../../../video/recBG.mp4";
+import { useLocation } from "react-router-dom";
 
 function REC6(){
-    const patternId = 1;
-    const colorId = 1;
+    const location = useLocation();
+    const patternId = location.state.pattern;
+    const colorId = location.state.color;
+    const name = location.state.name;
 
     const [hero, setHero] = useState("");
 
