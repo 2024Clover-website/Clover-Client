@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 import axios from "axios";
-import ReactAudioPlayer from "react-audio-player";
 
 import { useNavigate, useLocation } from "react-router-dom";
 
@@ -11,19 +10,29 @@ function PodcastContent() {
 	const navigate = useNavigate();
 	const location = useLocation();
 
+	const audioRef = useRef();
+
 	const record = location.state.record;
 	const teamId = location.state.teamId;
 
 	const [progress, setProgress] = useState(100);
-	const [speed, setSpeed] = useState(1);
+	const [playbackRate, setPlaybackRate] = useState(1);
 	const [isMuted, setIsMuted] = useState(false);
 	const [script, setScript] = useState([]);
-	const [audioDuration, setAudioDuration] = useState(0);
 	const [runningTime, setRunningTime] = useState(0);
 
 	const handleSpeedClick = () => {
-		if (speed !== 2) setSpeed(speed * 2);
-		else setSpeed(0.5);
+		if (audioRef.current) {
+			if (!audioRef.current.paused) {
+				if (playbackRate !== 2) {
+					setPlaybackRate(playbackRate * 2);
+					audioRef.current.playbackRate *= 2;
+				} else {
+					setPlaybackRate(0.5);
+					audioRef.current.playbackRate = 0.5;
+				}
+			}
+		}
 	};
 
 	useEffect(() => {
@@ -50,14 +59,19 @@ function PodcastContent() {
 
 		const interval = setInterval(() => {
 			setProgress((progress) => {
-				const newProgress = progress - 1 / runningTime;
+				const newProgress = progress - (1 / runningTime) * playbackRate;
 				return parseFloat(newProgress.toFixed(5));
 			});
 		}, 10);
+
 		setTimeout(() => {
 			clearInterval(interval);
 		}, runningTime * 1000);
-	}, [runningTime]);
+
+		return () => {
+			clearTimeout(interval);
+		};
+	}, [runningTime, playbackRate]);
 
 	const scriptCard = script.map((script, index) => {
 		return (
@@ -65,7 +79,17 @@ function PodcastContent() {
 				<div className={styles.avatar}>
 					<img alt src={script.profile} />
 				</div>
-				<p>{script.script}</p>
+				<p
+					onClick={() => {
+						if (audioRef.current) {
+							audioRef.current.play();
+							audioRef.current.currentTime = script.start_time;
+							setProgress(100 - (script.start_time * 100) / runningTime);
+						}
+					}}
+				>
+					{script.script}
+				</p>
 				<br />
 			</>
 		);
@@ -76,7 +100,9 @@ function PodcastContent() {
 			style={{ width: window.screen.width, height: window.screen.height }}
 			className={styles.background}
 		>
-			<ReactAudioPlayer src={record} autoPlay={true} />
+			<audio ref={audioRef} autoPlay={true} muted={isMuted}>
+				<source src={record} type="audio/mp3" />
+			</audio>
 			{/** 헤더 */}
 			<div className={styles.header}>
 				{/** 음소거 버튼 */}
@@ -166,7 +192,7 @@ function PodcastContent() {
 				</svg>
 				{/** 배속 버튼 */}
 				<div className={styles.speedButton} onClick={handleSpeedClick}>
-					<p>{speed}x</p>
+					<p>{playbackRate}x</p>
 				</div>
 			</div>
 
