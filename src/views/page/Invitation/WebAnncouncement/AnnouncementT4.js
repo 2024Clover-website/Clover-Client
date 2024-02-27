@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import moment from "moment";
 import webanncouncementStyles from "../../../../views/style/Invitation/WebAnnouncement/Announcement.module.css";
-import video6 from '../../../../video/dopaminTeamVideo.mp4';
 
 function AnnouncementT4() {
 const [timeRemaining, setTimeRemaining] = useState("");
