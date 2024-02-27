@@ -68,6 +68,7 @@ function PodcastTitle() {
 					record: res.data.result.record,
 					background: res.data.result.background,
 					teamId: teamId,
+					commentCount: res.data.result.comment_count,
 				},
 			});
 			window.location.href = "/projects/podcast/content";

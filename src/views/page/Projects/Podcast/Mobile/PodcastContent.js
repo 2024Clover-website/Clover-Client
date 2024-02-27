@@ -15,6 +15,7 @@ function PodcastContent() {
 	const record = location.state.record;
 	const teamId = location.state.teamId;
 	const background = location.state.background;
+	const commentCount = location.state.commentCount;
 
 	const [progress, setProgress] = useState(100);
 	const [playbackRate, setPlaybackRate] = useState(1);
@@ -218,7 +219,9 @@ function PodcastContent() {
 			<div className={styles.footer}>
 				{/** 총 재생시간 */}
 				<div className={styles.playTime}>
-					<p>2:00</p>
+					<p>
+						{Math.floor(runningTime / 60)}:{Math.floor(runningTime % 60)}
+					</p>
 				</div>
 
 				<div
@@ -234,7 +237,7 @@ function PodcastContent() {
 					}}
 				>
 					<img alt src={process.env.PUBLIC_URL + "/comment(1x).png"} />
-					<p>100</p>
+					<p>{commentCount}</p>
 				</div>
 
 				<div className={styles.playBar}>
