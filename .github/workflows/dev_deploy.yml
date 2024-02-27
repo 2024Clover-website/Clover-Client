@@ -54,7 +54,7 @@ jobs:
       
       # 생성한 deploy.zip 파일 내부 확인용!
       - name: Get Zip Inside
-        run: zipinfo -1 build/deploy.zip
+        run: zipinfo -1 builds/deploy.zip
 
       # 현재 시간 얻기 (Build 시점의 시간 얻기)
       - name: Get current time
