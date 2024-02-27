@@ -10,7 +10,7 @@ function About() {
                 <img className={styles.responsiveImage} src="./img/aboutMimg1.png" alt="description" />
             <div className={styles.Mpage}>
                 <div className={styles.MLinecontainer}></div>
-                <div className={styles.text}>
+                	<div className={styles.text}>
                         <div className={styles.textarea1}>
                             <p>Overview</p>
                             <p1>In a row</p1>
