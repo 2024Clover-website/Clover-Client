@@ -44,7 +44,6 @@ jobs:
       - name: Generate deployment package
         run: |
           cp -R .platform builds
-          cp -R .ebextensions builds
           cp -R build builds
           cp server.js builds/server.js
           cp package.json builds/package.json
