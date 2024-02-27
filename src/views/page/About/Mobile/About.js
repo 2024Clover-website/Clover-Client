@@ -1,13 +1,16 @@
 import React from "react";
-import styles from '../../../../styles/About/PC/About.module.css';
+
+import styles from "../../../../styles/About/Mobile/About.modul.css";
 
 function About() {
-    return (
+
+
+	return (
         <div className={styles.container}>
-                <img className={styles.responsiveImage} src="./img/aboutimg12.png" alt="description" />
+                <img className={styles.responsiveImage} src="./img/aboutMimg1.png" alt="description" />
             <div className={styles.page}>
                 <div className={styles.Linecontainer}></div>
-                <div className={styles.text}>
+                	<div className={styles.text}>
                         <div className={styles.textarea1}>
                             <p>Overview</p>
                             <p1>In a row</p1>
@@ -20,7 +23,7 @@ function About() {
                         </div>
                 </div>
             </div>
-            <img className={styles.responsiveImage} src="./img/aboutimg6.png" alt="description" />
+            <img className={styles.responsiveImage} src="./img/aboutMimg2.png" alt="description" />
             <div className={styles.page}>
                 <div className={styles.Linecontainer}></div>
                 <div className={styles.text}>
@@ -36,7 +39,7 @@ function About() {
                         </div>
                 </div>
             </div>
-            <img className={styles.responsiveImage} src="./img/aboutimg7.png" alt="description" />
+            <img className={styles.responsiveImage} src="./img/aboutMimg3.png" alt="description" />
             <div className={styles.page}>
                 <div className={styles.Linecontainer}></div>
                 <div className={styles.text}>
@@ -52,7 +55,7 @@ function About() {
                         </div>
                 </div>
             </div>
-            <img className={styles.responsiveImage} src="./img/aboutimg8.png" alt="description" />
+            <img className={styles.responsiveImage} src="./img/aboutMimg4.png" alt="description" />
             <div className={styles.page}>
                 <div className={styles.Linecontainer}></div>
                 <div className={styles.text}>
@@ -68,25 +71,25 @@ function About() {
                         </div>
                 </div>
             </div>
-            <img className={styles.responsiveImage} src="./img/aboutimg9.png" alt="description" />
+            <img className={styles.responsiveImage} src="./img/aboutMimg5.png" alt="description" />
             <div className={styles.textarea3}>
                 <p>알파벳 순서대로 보면 보다 쾌적하게 전시를 관람할수 있습니다. 또한 기프트존을 따로 마련해두었습니다.
                     다른 관람객들을 위해, 방문자님의 소중한 마음은 꼭 기프트존에만 놓아주세요.</p>
             </div>
-            <img className={styles.responsiveImage} src="./img/aboutimg10.png" alt="description" />
+            <img className={styles.responsiveImage} src="./img/aboutMimg6.png" alt="description" />
             <div className={styles.textarea3}>
                 <p>온라인으로도 전시를 관람하실 수 있습니다. About 페이지에서 이번 전시에 대한 전문을 읽어보실 수 있으
                     며, Projects 페이지에서 각 팀 별 도슨트와 슬럼프에 대한 이야기를 팟캐스트 형식으로 들어볼 수 있습니다.
                     마지막으로 REC 페이지에서는 나만의 자극 카드를 만드는 인터랙티브한 경험을 즐기실 수 있습니다.</p>
             </div>
-            <img className={styles.responsiveImage} src="./img/aboutimg11.png" alt="description" />
+            <img className={styles.responsiveImage} src="./img/aboutMimg7.png" alt="description" />
             <div className={styles.textarea4}>
                 <p>Graphic Detail</p>
-                <img src="./img/aboutimg1.png"></img>
-                <img src="./img/aboutimg2.png"></img>
-                <img src="./img/aboutimg3.png"></img>
-                <img src="./img/aboutimg4.png"></img>
-                <img src="./img/aboutimg5.png"></img>
+                <img src="./img/aboutMimg8.png"></img>
+                <img src="./img/aboutMimg9.png"></img>
+                <img src="./img/aboutMimg10.png"></img>
+                <img src="./img/aboutMimg11.png"></img>
+                <img src="./img/AboutMimg12.png"></img>
             </div>
             <div className={styles.textarea5}>
                 <p>Thanks to</p>
@@ -317,10 +320,7 @@ function About() {
                     </div>
                 </div>
         </div>
-    );
+	);
 }
 
 export default About;
-
-
-

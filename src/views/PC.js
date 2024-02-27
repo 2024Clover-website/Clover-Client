@@ -1,12 +1,12 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 
-import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Header from "./components/Header";
 
 import About from "./page/About/PC/About";
-import Projects from "./page/Projects/PC/Projects";
 import AnnouncementDocent from "./page/Projects/Docent/PC/Announcement";
+import Projects from "./page/Projects/PC/Projects";
 import AnnouncementPodcast from "./page/Projects/Podcast/PC/Announcement";
 
 function PC() {

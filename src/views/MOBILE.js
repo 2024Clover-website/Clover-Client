@@ -1,14 +1,14 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-
 import MobileHeader from "./components/MobileHeader";
-import Projects from "./page/Projects/Mobile/Projects";
-import DocentTitle from "./page/Projects/Docent/Mobile/DocentTitle";
-import DocentContent from "./page/Projects/Docent/Mobile/DocentContent";
+import About from "./page/About/Mobile/About";
 import DocentComment from "./page/Projects/Docent/Mobile/DocentComment";
-import PodcastTitle from "./page/Projects/Podcast/Mobile/PodcastTitle";
-import PodcastContent from "./page/Projects/Podcast/Mobile/PodcastContent";
+import DocentContent from "./page/Projects/Docent/Mobile/DocentContent";
+import DocentTitle from "./page/Projects/Docent/Mobile/DocentTitle";
+import Projects from "./page/Projects/Mobile/Projects";
 import PodcastComment from "./page/Projects/Podcast/Mobile/PodcastComment";
+import PodcastContent from "./page/Projects/Podcast/Mobile/PodcastContent";
+import PodcastTitle from "./page/Projects/Podcast/Mobile/PodcastTitle";
 
 function MOBILE() {
 	const isDocent =
@@ -25,6 +25,7 @@ function MOBILE() {
 		<div>
 			{!(isDocent || isPodcast) && <MobileHeader />}
 			<Routes>
+				<Route exact path="/" element={<About />} />
 				<Route exact path="/projects" element={<Projects />} />
 				<Route exact path="/projects/docent/title" element={<DocentTitle />} />
 				<Route

@@ -1,0 +1,384 @@
+body {
+    overflow-x: hidden;
+}
+
+.page{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 150px 190px 130px;
+    gap: 80px;
+    /* width: 100%; */
+    /* width: 1520px; */
+    background: #FFFFFF;
+}
+.Linecontainer{
+    width: 100%;
+    height: 0px;
+    
+    border: 2px solid #000000;
+    
+}
+.text{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    height: 140px;
+}
+.textarea1{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 20px;
+    
+    height: 122px;
+}
+.textarea2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0px;
+    gap: 20px;
+    
+    width: 100%;
+    height: 140px;
+}
+.textarea3{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 190px;
+
+    
+    background: #FFFFFF;
+        
+}
+.textarea4{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 190px;
+
+    background: #FFFFFF;
+}
+.textarea5{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 190px;
+    
+    
+    background: #FFFFFF;
+}
+.textarea5 > p{
+    
+    height: 90px;
+    
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 150%;
+    /* identical to box height, or 90px */
+    text-align: center;
+    
+    color: #000000;
+    
+}
+.Membertext{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 100px;
+    
+    width: 100%;
+    
+    background: #FFFFFF;
+}
+.Membercontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 50px;
+    
+    height: 542px;
+    
+}
+.CT1{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    
+    width: 720px;
+    height: 72px;
+    
+}
+.CT2{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    
+    width: 720px;
+    height: 30px;
+    
+}
+
+.CT1 > p0{
+    width: 100%;
+    font-family: 'YDIYGO350';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 120%;
+    color: #000000;
+}
+.CT1 > p1{
+    width: 423px;
+    height: 30px;
+    
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 150%;
+    /* identical to box height, or 30px */
+    text-align: right;
+    
+    color: #000000;
+}
+
+.CT2 > p0{
+    width: 347px;
+    height: 60px;
+    
+    font-family: 'YDIYGO340';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    /* or 30px */
+    
+    color: #000000;
+}
+.CT2 > p1{
+    width: 567px;
+    height: 30px;
+    
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 150%;
+    /* identical to box height, or 30px */
+    text-align: right;
+    
+    color: #000000;
+    
+}
+.CT3{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 20px;
+    
+    width: 720px;
+    height: 370px;   
+}
+.Member{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 50px;
+    
+    width: 720px;
+    height: 45px;
+
+
+
+
+}
+.Member > p0{
+    width: 83px;
+    height: 45px;
+    
+    font-family: 'YDIYGO330';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 150%;
+    /* identical to box height, or 45px */
+    
+    color: #000000;
+    
+    
+}
+.Member > p1{
+
+    width: 587px;
+    height: 45px;
+    
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 150%;
+    /* identical to box height, or 45px */
+    
+    color: #000000;
+    
+}
+
+.textarea1 > p{
+    width: 530px;
+    height: 30px;
+    
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 150%;
+    /* identical to box height, or 30px */
+    color: #000000;
+}
+
+.textarea1 > p1{
+    width: 100%;
+    height: 72px;
+    
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 120%;
+    /* identical to box height, or 72px */
+    
+    color: #000000;
+    
+    
+}
+
+.textarea2 > p{
+    
+    height: 30px;
+    
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 150%;
+    /* identical to box height, or 30px */
+    text-align: right;
+    
+    color: #000000;
+}
+
+.textarea2 > p1{
+    width: 534px;
+    height: 90px;
+    
+    font-family: 'YDIYGO330';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    /* or 30px */
+    
+    color: #000000;
+    
+}
+
+.textarea3 > p{
+    width: 900px;
+    height: 60.74px;
+    
+    font-family: 'YDIYGO330';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    /* or 30px */
+    text-align: center;
+    
+    color: #000000;
+}
+
+.textarea4 > p{
+    width: 100%;
+    height: 90px;
+    
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 150%;
+    /* identical to box height, or 90px */
+    text-align: center;
+    
+    color: #000000;
+}
+
+.Thankspage1{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 190px;
+    gap: 50px;
+    
+    
+    height: 692px;
+    
+    background: #FFFFFF;
+}
+.Thankspage2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 190px;
+    gap: 50px;
+    
+    
+    height: 692px;
+    
+    background: #FFFFFF;
+}
+.Thankspage3{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 190px;
+    gap: 50px;
+    
+    
+    height: 592px;
+    
+    background: #FFFFFF;
+}
+.Thankspage4{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px 190px;
+    gap: 50px;
+    
+    
+    height: 692px;
+    
+    background: #FFFFFF;
+}
+
+.responsiveImage {
+    width: 100%;
+    height: auto;
+  }
+  
