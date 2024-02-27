@@ -12,57 +12,59 @@ function PodcastTitle() {
 	const [progress, setProgress] = useState(0);
 
 	const [title, setTitle] = useState("");
-	const [record, setRecord] = useState("");
 	const [teamName, setTeamName] = useState("");
 	const [member, setMember] = useState([]);
 
-	let teamId = 4;
+	let teamId = 5;
 
 	useEffect(() => {
-		axios
-			.get(`https://api.clover-inarow.site/teams/${teamId}/podcast`)
-			.then((res) => {
-				if (res.data.isSuccess) {
-					setTitle(res.data.result.title);
-					setRecord(res.data.result.record);
-					setMember(res.data.result.member);
-					console.log("successed!");
-				}
-			})
-			.catch((err) => console.log(err));
-
-		switch (teamId) {
-			case 1:
-				setTeamName("전시 브랜딩");
-				break;
-			case 2:
-				setTeamName("태산");
-				break;
-			case 3:
-				setTeamName("이따");
-				break;
-			case 4:
-				setTeamName("VIBE MAKERS");
-				break;
-			case 5:
-				setTeamName("도파민 중독자들");
-				break;
-			case 6:
-				setTeamName("옥수수수염");
-				break;
+		let res;
+		async function fetchData() {
+			res = await axios.get(
+				`https://api.clover-inarow.site/teams/${teamId}/podcast`
+			);
+			if (res.data.isSuccess) {
+				setTitle(res.data.result.title);
+				setMember(res.data.result.member);
+				console.log(res.data.result.record);
+			} else {
+				console.log("failed");
+			}
 		}
 
+		fetchData().then(() => {
+			switch (teamId) {
+				case 1:
+					setTeamName("전시 브랜딩");
+					break;
+				case 2:
+					setTeamName("태산");
+					break;
+				case 3:
+					setTeamName("이따");
+					break;
+				case 4:
+					setTeamName("VIBE Makers");
+					break;
+				case 5:
+					setTeamName("옥수수수염");
+					break;
+				case 6:
+					setTeamName("옥수수수염");
+					break;
+			}
+		});
 		const interval = setInterval(() => {
 			setProgress((progress) => progress + 0.1);
 		}, 10);
 
-		// setTimeout(() => {
-		// 	clearInterval(interval);
-		// 	navigate("/projects/podcast/content", {
-		// 		state: { record: record, teamId: teamId, member: member },
-		// 	});
-		// 	window.location.href = "/projects/podcast/content";
-		// }, 5000);
+		setTimeout(() => {
+			clearInterval(interval);
+			navigate("/projects/podcast/content", {
+				state: { record: res.data.result.record, teamId: teamId },
+			});
+			window.location.href = "/projects/podcast/content";
+		}, 5000);
 	}, []);
 
 	const memberCard = member.map((member, index) => {

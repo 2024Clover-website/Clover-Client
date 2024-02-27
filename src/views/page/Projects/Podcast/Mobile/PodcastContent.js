@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 
+import axios from "axios";
+import ReactAudioPlayer from "react-audio-player";
+
 import { useNavigate, useLocation } from "react-router-dom";
 
 import styles from "../../../../../styles/Projects/Docent/Mobile/DocentContent.module.css";
@@ -10,11 +13,13 @@ function PodcastContent() {
 
 	const record = location.state.record;
 	const teamId = location.state.teamId;
-	const member = location.state.member;
 
 	const [progress, setProgress] = useState(100);
 	const [speed, setSpeed] = useState(1);
 	const [isMuted, setIsMuted] = useState(false);
+	const [script, setScript] = useState([]);
+	const [audioDuration, setAudioDuration] = useState(0);
+	const [runningTime, setRunningTime] = useState(0);
 
 	const handleSpeedClick = () => {
 		if (speed !== 2) setSpeed(speed * 2);
@@ -22,16 +27,56 @@ function PodcastContent() {
 	};
 
 	useEffect(() => {
+		async function fetchData() {
+			const res = await axios.get(
+				`https://api.clover-inarow.site/teams/${teamId}/podcast/script`
+			);
+			if (res.data.isSuccess) {
+				console.log("successed!");
+				setScript(res.data.result);
+
+				const lastScript = res.data.result.slice(-1)[0];
+				if (lastScript) {
+					setRunningTime(lastScript.end_time);
+				}
+			} else {
+				console.log("failed");
+			}
+		}
+
+		if (progress === 100) fetchData();
+
+		console.log(runningTime);
+
 		const interval = setInterval(() => {
-			setProgress((progress) => progress - 0.01);
+			setProgress((progress) => {
+				const newProgress = progress - 1 / runningTime;
+				return parseFloat(newProgress.toFixed(5));
+			});
 		}, 10);
-	}, []);
+		setTimeout(() => {
+			clearInterval(interval);
+		}, runningTime * 1000);
+	}, [runningTime]);
+
+	const scriptCard = script.map((script, index) => {
+		return (
+			<>
+				<div className={styles.avatar}>
+					<img alt src={script.profile} />
+				</div>
+				<p>{script.script}</p>
+				<br />
+			</>
+		);
+	});
 
 	return (
 		<div
 			style={{ width: window.screen.width, height: window.screen.height }}
 			className={styles.background}
 		>
+			<ReactAudioPlayer src={record} autoPlay={true} />
 			{/** 헤더 */}
 			<div className={styles.header}>
 				{/** 음소거 버튼 */}
@@ -126,74 +171,7 @@ function PodcastContent() {
 			</div>
 
 			{/** 내용 container */}
-			<div className={styles.container}>
-				<div className={styles.avatar}>
-					<img
-						alt
-						src="https://images.unsplash.com/photo-1495615080073-6b89c9839ce0?q=80&w=906&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-					/>
-				</div>
-				<p>느슨해진 마음을 팽팽하게 만드려면 무언가 자극이 필요해요</p>
-				<br />
-				<p>마치 카세트 테이프에 연필을 꽂아 돌리는 것처럼요.</p>
-				<br />
-				<div className={styles.image}>
-					<img
-						alt
-						src="https://elasticbeanstalk-ap-northeast-2-905418212933.s3.ap-northeast-2.amazonaws.com/resource/contributer/VIBE+MAKERS/%EB%B0%95%EB%8F%84%EC%9D%80.jpg"
-					/>
-				</div>
-
-				<br />
-				<p>느슨해진 마음을 팽팽하게 만드려면 무언가 자극이 필요해요</p>
-				<br />
-				<p>마치 카세트 테이프에 연필을 꽂아 돌리는 것처럼요.</p>
-				<br />
-				<div className={styles.image}>
-					<img
-						alt
-						src="https://img.freepik.com/free-vector/fresh-mango-with-slices-and-leaves-illustration_249011-164.jpg?size=626&ext=jpg"
-					/>
-				</div>
-				<br />
-				<p>느슨해진 마음을 팽팽하게 만드려면 무언가 자극이 필요해요</p>
-				<br />
-				<p>마치 카세트 테이프에 연필을 꽂아 돌리는 것처럼요.</p>
-				<br />
-				<div className={styles.image}>
-					<img
-						alt
-						src="https://img.freepik.com/free-vector/fresh-mango-with-slices-and-leaves-illustration_249011-164.jpg?size=626&ext=jpg"
-					/>
-				</div>
-				<br />
-				<p>느슨해진 마음을 팽팽하게 만드려면 무언가 자극이 필요해요</p>
-				<br />
-				<p>마치 카세트 테이프에 연필을 꽂아 돌리는 것처럼요.</p>
-				<br />
-				<div className={styles.image}>
-					<img
-						alt
-						src="https://img.freepik.com/free-vector/fresh-mango-with-slices-and-leaves-illustration_249011-164.jpg?size=626&ext=jpg"
-					/>
-				</div>
-				<br />
-				<p>느슨해진 마음을 팽팽하게 만드려면 무언가 자극이 필요해요</p>
-				<br />
-				<p>마치 카세트 테이프에 연필을 꽂아 돌리는 것처럼요.</p>
-				<br />
-				<div className={styles.image}>
-					<img
-						alt
-						src="https://img.freepik.com/free-vector/fresh-mango-with-slices-and-leaves-illustration_249011-164.jpg?size=626&ext=jpg"
-					/>
-				</div>
-				<br />
-				<p>느슨해진 마음을 팽팽하게 만드려면 무언가 자극이 필요해요</p>
-				<br />
-				<p>마치 카세트 테이프에 연필을 꽂아 돌리는 것처럼요.</p>
-				<br />
-			</div>
+			<div className={styles.container}>{scriptCard}</div>
 
 			{/** 푸터 */}
 			<div className={styles.footer}>
