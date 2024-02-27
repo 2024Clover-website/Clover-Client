@@ -374,7 +374,7 @@
 	padding: 0px;
 	gap: 20px;
 
-	width: 305px;
+	width: 805px;
 	height: 255px;
 }
 .backButton {
@@ -386,7 +386,7 @@
 }
 
 .docentContainer > p {
-	width: 710px;
+	
 	height: 54px;
 
 	font-family: "Avenir";

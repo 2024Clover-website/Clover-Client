@@ -27,6 +27,8 @@ function Projects() {
     const [timeRemaining, setTimeRemaining] = useState(10 * 60);
     const [description, setDescription] = useState({});
     const [isDescriptionVisible, setIsDescriptionVisible] = useState(false);
+    const [podcastModalIsOpen, setPodcastModalIsOpen] = useState(false);
+    const [docentModalIsOpen, setDocentModalIsOpen] = useState(false);
     const [imageSrc, setImageSrc] = useState({
         CTA: "/img/CTA.png",
         CTB: "/img/CTB.png",
@@ -100,20 +102,19 @@ function Projects() {
     function handleImageClick(image) {
         setDescription(descriptions[image]);
         setIsDescriptionVisible(true);
-        setImageSrc(prevState => ({ ...prevState, [image]: `/img/${image}.gif` })); // 클릭한 이미지를 GIF 이미지로 변경
+        setImageSrc(prevState => ({ ...prevState, [image]: `/img/${image}.gif` }))
+    }
+    function handlePodcastButton() {
+        setPodcastModalIsOpen(true);
+        setTimeRemaining(10 * 60);
     }
 
-    function handleMouseEnter(image) {
-        if (!isDescriptionVisible) { // 이미지 설명이 보이지 않을 때만 호버 효과 적용
-            setImageSrc(prevState => ({ ...prevState, [image]: `/img/${image}.gif` }));
-        }
+    function handleDocentButton() {
+        setDocentModalIsOpen(true);
+        setTimeRemaining(10 * 60);
     }
 
-    function handleMouseLeave(image) {
-        if (!isDescriptionVisible) { // 이미지 설명이 보이지 않을 때만 호버 효과 적용
-            setImageSrc(prevState => ({ ...prevState, [image]: `/img/${image}.png` }));
-        }
-    }
+
     useEffect(() => {
         if (timeRemaining > 0) {
             const timerId = setTimeout(() => {
@@ -219,25 +220,64 @@ function Projects() {
                 </div>
             )}
             <Modal
-                isOpen={modalIsOpen}
-                onRequestClose={() => setModalIsOpen(false)}
+                isOpen={docentModalIsOpen}
+                onRequestClose={() => setDocentModalIsOpen(false)}
                 style={customStyles}
-                contentLabel="Example Modal"
+                contentLabel="Docent Modal"
             >
                 <div className={styles.Modalcontainer}>
                     <img
                         src="../../../img/뒤로가기.png"
                         className={styles.backButton}
                         onClick={() => {
-                            setModalIsOpen(false);
+                            setPodcastModalIsOpen(false);
+                            setDocentModalIsOpen(false);
                         }}
                     />
-                    <div className={styles.docentContainer}>
-                        <div className={styles.podcastbox}>
-                            <p>팟캐스트 : 러닝타임 10분 11초</p>
+<div className={styles.docentContainer}>
+    <div className={styles.podcastbox}>
+        <p>도슨트 : 러닝타임 {description.docentTime}</p>
+    </div>
+    <p>{description.title}</p>
+</div>
+
+                    <div className={styles.LineContainer}></div>
+                    <div className={styles.qrContainer}>
+                        <div className={styles.imgContainer}>
+                            <img src="../img/podcast qr_Image.png" alt />
                         </div>
-                        <p>Dopamine Addiction: Visualization of symptoms</p>
+                        <div className={styles.textContainer}>
+                            <p1>모바일로 봐주세요!</p1> <br />
+                            <p2>
+                                해당 콘텐츠는 스마트폰으로 감상할 수 있어요 <br />
+                                카메라로 좌측의 QR코드를 찍어주세요
+                            </p2>
+                        </div>
                     </div>
+                </div>
+            </Modal>
+            <Modal
+                isOpen={podcastModalIsOpen}
+                onRequestClose={() => setPodcastModalIsOpen(false)}
+                style={customStyles}
+                contentLabel="Podcast Modal"
+            >
+                <div className={styles.Modalcontainer}>
+                    <img
+                        src="../../../img/뒤로가기.png"
+                        className={styles.backButton}
+                        onClick={() => {
+                            setPodcastModalIsOpen(false);
+                            setDocentModalIsOpen(false);
+                        }}
+                    />
+<div className={styles.docentContainer}>
+    <div className={styles.podcastbox}>
+        <p>팟캐스트 : 러닝타임 {description.podcastTime}</p>
+    </div>
+    <p>{description.title}</p>
+</div>
+
                     <div className={styles.LineContainer}></div>
                     <div className={styles.qrContainer}>
                         <div className={styles.imgContainer}>
