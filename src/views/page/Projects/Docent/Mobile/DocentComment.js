@@ -2,17 +2,20 @@ import React, { useState, useEffect } from "react";
 
 import axios from "axios";
 
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 import styles from "../../../../../styles/Projects/Docent/Mobile/DocentComment.module.css";
 import contentStyles from "../../../../../styles/Projects/Docent/Mobile/DocentContent.module.css";
 
 function DocentComment() {
 	const navigate = useNavigate();
+	const location = useLocation();
+
+	const teamId = location.state.teamId;
+	const background = location.state.background;
+
 	const [text, setText] = useState("");
 	const [comment, setComment] = useState([]);
-
-	const teamId = 1;
 	const type = "docent";
 
 	useEffect(() => {
@@ -75,6 +78,20 @@ function DocentComment() {
 			style={{ width: window.screen.width, height: window.screen.height }}
 			className={styles.background}
 		>
+			{background === "" ? (
+				<div></div>
+			) : (
+				<video
+					loop
+					muted
+					playsInline
+					autoPlay={true}
+					style={{ height: "100%" }}
+					className={styles.background}
+				>
+					<source src={background} type="video/mp4" />
+				</video>
+			)}
 			<div
 				style={{ width: window.screen.width, height: window.screen.height }}
 				className={styles.backdrop}

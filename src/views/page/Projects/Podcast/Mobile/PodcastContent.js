@@ -14,6 +14,8 @@ function PodcastContent() {
 
 	const record = location.state.record;
 	const teamId = location.state.teamId;
+	const background = location.state.background;
+	const commentCount = location.state.commentCount;
 
 	const [progress, setProgress] = useState(100);
 	const [playbackRate, setPlaybackRate] = useState(1);
@@ -100,6 +102,20 @@ function PodcastContent() {
 			style={{ width: window.screen.width, height: window.screen.height }}
 			className={styles.background}
 		>
+			{background === "" ? (
+				<div></div>
+			) : (
+				<video
+					loop
+					muted
+					playsInline
+					autoPlay={true}
+					style={{ height: "100%" }}
+					className={styles.background}
+				>
+					<source src={background} type="video/mp4" />
+				</video>
+			)}
 			<audio ref={audioRef} autoPlay={true} muted={isMuted}>
 				<source src={record} type="audio/mp3" />
 			</audio>
@@ -203,17 +219,25 @@ function PodcastContent() {
 			<div className={styles.footer}>
 				{/** 총 재생시간 */}
 				<div className={styles.playTime}>
-					<p>2:00</p>
+					<p>
+						{Math.floor(runningTime / 60)}:{Math.floor(runningTime % 60)}
+					</p>
 				</div>
 
 				<div
 					className={styles.comment}
 					onClick={() => {
+						navigate("/projects/podcast/comment", {
+							state: {
+								background: background,
+								teamId: teamId,
+							},
+						});
 						window.location.href = "/projects/podcast/comment";
 					}}
 				>
 					<img alt src={process.env.PUBLIC_URL + "/comment(1x).png"} />
-					<p>100</p>
+					<p>{commentCount}</p>
 				</div>
 
 				<div className={styles.playBar}>

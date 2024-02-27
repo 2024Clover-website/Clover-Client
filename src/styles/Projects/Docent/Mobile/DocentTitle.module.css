@@ -22,11 +22,10 @@
 
 .background {
 	position: fixed;
-	background-image: url(../../../../../public/docent.png);
 	background-size: contain;
-	background-repeat: no-repeat;
 	backdrop-filter: blur(50px);
 	z-index: -1;
+	justify-self: center;
 	margin: 0 auto;
 }
 

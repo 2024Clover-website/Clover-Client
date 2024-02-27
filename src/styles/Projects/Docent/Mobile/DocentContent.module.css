@@ -14,7 +14,6 @@
 .background {
 	position: fixed;
 	overflow-y: scroll;
-	background-image: url(../../../../../public/docent.png);
 	background-size: contain;
 	background-repeat: no-repeat;
 	z-index: -2;
