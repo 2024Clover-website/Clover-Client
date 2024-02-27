@@ -41,25 +41,25 @@
 .Vector:active{
     /* transition-timing-function:cubic-bezier(0.77, 0, 0.175, 1); */
     scale: 0.95;
-    transition: ease;
+    transition: cubic-bezier(0.15,1,0.5,1);
     transition-duration: 0.2s;
 }
 .Vectordown{
     cursor:pointer;
     scale: 0.98;
     opacity: 0.4;
-    transition:ease-out;
+    transition:cubic-bezier(0.25,1,0.25,1);
     transition-duration: 0.3s;
 }
 .Vectordown:active{
     scale: 0.95;
-    transition: ease;
+    transition: cubic-bezier(0.15,1,0.5,1);
     transition-duration: 0.2s;
 }
 .Vectorup{
     cursor:pointer;
     scale: 1.08;
-    transition: ease;
+    transition: cubic-bezier(0.15,1,0.5,1);
     transition-duration: 0.5s;
 }
 
@@ -71,4 +71,12 @@
 
 .NextIcon{
     cursor: pointer;
+    transition: cubic-bezier(0.15,1.25,0.25,1);
+    transition-duration: 0.3s;
+}
+.NextIcon:active{
+    cursor: pointer;
+    scale: 0.97;
+    transition: cubic-bezier(0.15,1,0.5,1);
+    transition-duration: 0.2s;
 }

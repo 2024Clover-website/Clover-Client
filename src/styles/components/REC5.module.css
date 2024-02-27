@@ -43,7 +43,7 @@
     cursor: pointer;
 
     scale: 1.15;
-    transition: ease;
+    transition: cubic-bezier(0.15,1,0.5,1);
     transition-duration: 0.5s;
 }
 .circle1down{
@@ -57,7 +57,7 @@
 
     scale: 0.98;
     opacity: 0.4;
-    transition: ease-out;
+    transition: cubic-bezier(0.25,1,0.25,1);
     transition-duration: 0.3s;
 }
 
@@ -80,7 +80,7 @@
     cursor: pointer;
 
     scale: 1.15;
-    transition: ease;
+    transition: cubic-bezier(0.15,1,0.5,1);
     transition-duration: 0.5s;
 }
 .circle2down{
@@ -94,7 +94,7 @@
 
     scale: 0.98;
     opacity: 0.4;
-    transition: ease-out;
+    transition: cubic-bezier(0.25,1,0.25,1);
     transition-duration: 0.3s;
 }
 
@@ -117,7 +117,7 @@
     cursor: pointer;
 
     scale: 1.15;
-    transition: ease;
+    transition: cubic-bezier(0.15,1,0.5,1);
     transition-duration: 0.5s;
 }
 .circle3down{
@@ -131,7 +131,7 @@
 
     scale: 0.98;
     opacity: 0.4;
-    transition: ease-out;
+    transition: cubic-bezier(0.25,1,0.25,1);
     transition-duration: 0.3s;
 }
 
@@ -154,7 +154,7 @@
     cursor: pointer;
 
     scale: 1.15;
-    transition: ease;
+    transition: cubic-bezier(0.15,1,0.5,1);
     transition-duration: 0.5s;
 }
 .circle4down{
@@ -168,7 +168,7 @@
 
     scale: 0.98;
     opacity: 0.4;
-    transition: ease-out;
+    transition: cubic-bezier(0.25,1,0.25,1);
     transition-duration: 0.3s;
 }
 
@@ -191,7 +191,7 @@
     cursor: pointer;
 
     scale: 1.15;
-    transition: ease;
+    transition: cubic-bezier(0.15,1,0.5,1);
     transition-duration: 0.5s;
 }
 .circle5down{
@@ -205,7 +205,7 @@
 
     scale: 0.98;
     opacity: 0.4;
-    transition: ease-out;
+    transition: cubic-bezier(0.25,1,0.25,1);
     transition-duration: 0.3s;
 }
 
@@ -221,7 +221,7 @@
 .circle5down:active{
     scale: 0.95;
     opacity: 1;
-    transition: ease;
+    transition: cubic-bezier(0.15,1,0.5,1);
     transition-duration: 0.2s;
 }
 .IconContainer{
@@ -231,4 +231,12 @@
 }
 .NextIcon{
     cursor: pointer;
+    transition: cubic-bezier(0.15,1.25,0.25,1);
+    transition-duration: 0.3s;
+}
+.NextIcon:active{
+    cursor: pointer;
+    scale: 0.97;
+    transition: cubic-bezier(0.15,1,0.5,1);
+    transition-duration: 0.2s;
 }
