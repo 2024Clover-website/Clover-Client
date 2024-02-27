@@ -10,16 +10,53 @@ function DocentTitle() {
 
 	const [progress, setProgress] = useState(0);
 
+	const [title, setTitle] = useState("");
+	const [member, setMember] = useState([]);
+
+	let teamId = 5;
+
 	useEffect(() => {
+		let res;
+		async function fetchData() {
+			res = await axios.get(
+				`https://api.clover-inarow.site/teams/${teamId}/docent`
+			);
+			if (res.data.isSuccess) {
+				setTitle(res.data.result.title);
+				setMember(res.data.result.member);
+				console.log(res.data.result.record);
+			} else {
+				console.log("failed");
+			}
+		}
+
+		fetchData();
+
 		const interval = setInterval(() => {
 			setProgress((progress) => progress + 0.1);
 		}, 10);
 
 		setTimeout(() => {
 			clearInterval(interval);
+			navigate("/projects/docent/content", {
+				state: { record: res.data.result.record, teamId: teamId },
+			});
 			window.location.href = "/projects/docent/content";
 		}, 5000);
 	}, []);
+
+	const memberCard = member.map((member, index) => {
+		return (
+			<div className={styles.designer}>
+				<div className={styles.profile}>
+					<img alt src={member.profile} />
+				</div>
+				<p>
+					{member.name}·{member.role}
+				</p>
+			</div>
+		);
+	});
 
 	return (
 		<>
@@ -118,20 +155,9 @@ function DocentTitle() {
 					<p>DOCENT</p>
 				</div>
 				<div className={styles.title}>
-					<p>Dopamine Addiction: Visualization of symptoms</p>
+					<p>{title}</p>
 				</div>
-				<div className={styles.designer}>
-					<div
-						style={{
-							width: 30,
-							height: 30,
-							marginRight: 10,
-							borderRadius: "50%",
-							backgroundColor: "blue",
-						}}
-					></div>
-					<p>강지수·시각디자인 3D</p>
-				</div>
+				{memberCard}
 			</div>
 		</>
 	);
