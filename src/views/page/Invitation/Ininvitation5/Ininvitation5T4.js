@@ -27,7 +27,7 @@ function AnimatedImage({src, delay, className}) {
 
     return (
         <CSSTransition in={show} timeout={750} classNames="motion-slide" unmountOnExit>
-            <img className={className} src={src} />
+            <img className={className} src={src} alt =""/>
         </CSSTransition>
     );
 }
