@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 import axios from "axios";
 
@@ -7,6 +7,8 @@ import podStyle from "../../../../../styles/Projects/Podcast/Mobile/PodcastTitle
 import { useNavigate } from "react-router-dom";
 
 function PodcastTitle() {
+	const videoRef = useRef();
+
 	const navigate = useNavigate();
 
 	const [progress, setProgress] = useState(0);
@@ -14,6 +16,7 @@ function PodcastTitle() {
 	const [title, setTitle] = useState("");
 	const [teamName, setTeamName] = useState("");
 	const [member, setMember] = useState([]);
+	const [background, setBackground] = useState("");
 
 	let teamId = 5;
 
@@ -26,7 +29,7 @@ function PodcastTitle() {
 			if (res.data.isSuccess) {
 				setTitle(res.data.result.title);
 				setMember(res.data.result.member);
-				console.log(res.data.result.record);
+				setBackground(res.data.result.background);
 			} else {
 				console.log("failed");
 			}
@@ -61,7 +64,11 @@ function PodcastTitle() {
 		setTimeout(() => {
 			clearInterval(interval);
 			navigate("/projects/podcast/content", {
-				state: { record: res.data.result.record, teamId: teamId },
+				state: {
+					record: res.data.result.record,
+					background: res.data.result.background,
+					teamId: teamId,
+				},
 			});
 			window.location.href = "/projects/podcast/content";
 		}, 5000);
@@ -82,6 +89,20 @@ function PodcastTitle() {
 
 	return (
 		<>
+			{background === "" ? (
+				<div></div>
+			) : (
+				<video
+					loop
+					muted
+					playsInline
+					autoPlay={true}
+					style={{ height: "100%" }}
+					className={styles.background}
+				>
+					<source src={background} type="video/mp4" />
+				</video>
+			)}
 			<div
 				style={{ width: window.screen.width, height: window.screen.height }}
 				className={styles.background}

@@ -14,6 +14,7 @@ function DocentContent() {
 
 	const record = location.state.record;
 	const teamId = location.state.teamId;
+	const background = location.state.background;
 
 	const [progress, setProgress] = useState(100);
 	const [playbackRate, setPlaybackRate] = useState(1);
@@ -92,6 +93,20 @@ function DocentContent() {
 			style={{ width: window.screen.width, height: window.screen.height }}
 			className={styles.background}
 		>
+			{background === "" ? (
+				<div></div>
+			) : (
+				<video
+					loop
+					muted
+					playsInline
+					autoPlay={true}
+					style={{ height: "100%" }}
+					className={styles.background}
+				>
+					<source src={background} type="video/mp4" />
+				</video>
+			)}
 			<audio ref={audioRef} autoPlay={true} muted={isMuted}>
 				<source src={record} type="audio/mp3" />
 			</audio>
@@ -201,6 +216,12 @@ function DocentContent() {
 				<div
 					className={styles.comment}
 					onClick={() => {
+						navigate("/projects/docent/comment", {
+							state: {
+								background: background,
+								teamId: teamId,
+							},
+						});
 						window.location.href = "/projects/docent/comment";
 					}}
 				>

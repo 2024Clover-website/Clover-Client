@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 import axios from "axios";
 
@@ -6,14 +6,17 @@ import styles from "../../../../../styles/Projects/Docent/Mobile/DocentTitle.mod
 import { useNavigate } from "react-router-dom";
 
 function DocentTitle() {
+	const videoRef = useRef();
+
 	const navigate = useNavigate();
 
 	const [progress, setProgress] = useState(0);
 
 	const [title, setTitle] = useState("");
 	const [member, setMember] = useState([]);
+	const [background, setBackground] = useState("");
 
-	let teamId = 5;
+	let teamId = 2;
 
 	useEffect(() => {
 		let res;
@@ -24,7 +27,7 @@ function DocentTitle() {
 			if (res.data.isSuccess) {
 				setTitle(res.data.result.title);
 				setMember(res.data.result.member);
-				console.log(res.data.result.record);
+				setBackground(res.data.result.background);
 			} else {
 				console.log("failed");
 			}
@@ -39,7 +42,11 @@ function DocentTitle() {
 		setTimeout(() => {
 			clearInterval(interval);
 			navigate("/projects/docent/content", {
-				state: { record: res.data.result.record, teamId: teamId },
+				state: {
+					record: res.data.result.record,
+					background: res.data.result.background,
+					teamId: teamId,
+				},
 			});
 			window.location.href = "/projects/docent/content";
 		}, 5000);
@@ -60,10 +67,20 @@ function DocentTitle() {
 
 	return (
 		<>
-			<div
-				style={{ width: window.screen.width, height: window.screen.height }}
-				className={styles.background}
-			></div>
+			{background === "" ? (
+				<div></div>
+			) : (
+				<video
+					loop
+					muted
+					playsInline
+					autoPlay={true}
+					style={{ height: "100%" }}
+					className={styles.background}
+				>
+					<source src={background} type="video/mp4" />
+				</video>
+			)}
 
 			<div
 				style={{ width: window.screen.width, height: window.screen.height }}
