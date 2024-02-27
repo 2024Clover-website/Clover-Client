@@ -79,7 +79,17 @@ function PodcastContent() {
 				<div className={styles.avatar}>
 					<img alt src={script.profile} />
 				</div>
-				<p>{script.script}</p>
+				<p
+					onClick={() => {
+						if (audioRef.current) {
+							audioRef.current.play();
+							audioRef.current.currentTime = script.start_time;
+							setProgress(100 - (script.start_time * 100) / runningTime);
+						}
+					}}
+				>
+					{script.script}
+				</p>
 				<br />
 			</>
 		);
