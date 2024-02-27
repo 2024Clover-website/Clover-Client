@@ -37,55 +37,55 @@ function Projects() {
     });
     const descriptions = {
         'CTA': {
-            title: 'Dopamine Addiction: Visualization of symptoms',
+            title: 'About In a row',
             section: 'A',
-            category: '3D Motion Graphic',
-            designer: '유민기',
-            docentTime: '2:00',
-            podcastTime: '10:00'
+            category: 'ART DIRECT',
+            designer: '권예지·조용욱·김혜신',
+            designer2: '기한나·안서경·허민영',
+            podcastTime: '15:28'
         },
         'CTB': {
-            title: 'Dopamine Addiction: Visualization of symptoms',
+            title: 'KEYCLE',
             section: 'B',
-            category: '3D Motion Graphic',
-            designer: '장준용',
-            docentTime: '2:00',
-            podcastTime: '10:00'
+            category: 'SERVICE DESIGN',
+            designer: '최재정·김경은·김동재·노유정',
+            docentTime: '2:19',
+            podcastTime: '10:30'
         },
         'CTC': {
-            title: 'Dopamine Addiction: Visualization of symptoms',
+            title: '악의 불변',
             section: 'C',
-            category: '3D Motion Graphic',
-            designer: '권상훈',
-            docentTime: '2:00',
-            podcastTime: '10:00'
+            category: 'GRAPHIC DESIGN',
+            designer: '임로빈·김성연·박금주·박지현',
+            docentTime: '2:48',
+            podcastTime: '9:45'
         },
         'CTD': {
-            title: 'Dopamine Addiction: Visualization of symptoms',
+            title: 'VIBE MAKERS',
             section: 'D',
-            category: '3D Motion Graphic',
-            designer: '남병준',
-            docentTime: '2:00',
-            podcastTime: '10:00'
+            category: 'CHARATER POP-UP',
+            designer: '정지윤·김나연·박도은',
+            designer2: '송지윤·오시헌',
+            docentTime: '2:54',
+            podcastTime: '6:06'
         },
         'CTE': {
             title: 'Dopamine Addiction: Visualization of symptoms',
             section: 'E',
-            category: '3D Motion Graphic',
-            designer: '김성진',
-            docentTime: '2:00',
-            podcastTime: '10:00'
+            category: 'SIDE PROJECT',
+            designer: '정지윤·김나연',
+            docentTime: '3:01',
+            podcastTime: '16:27'
         },
         'CTF': {
-            title: 'Dopamine Addiction: Visualization of symptoms',
+            title: 'Perfect doll factory',
             section: 'F',
-            category: '3D Motion Graphic',
-            designer: '디자이너',
-            docentTime: '2:00',
-            podcastTime: '10:00'
+            category: 'EXPERIENTIAL MEDIA ART',
+            designer: '한승우·강지수·박규리·임재윤',
+            docentTime: '1:58',
+            podcastTime: '16:27'
         },
     };
-
 
     function handlePodcastButton() {
         setModalIsOpen(true);
@@ -93,7 +93,8 @@ function Projects() {
     }
 
     function handleDocentButton() {
-        window.location.href = "/projects/docentAnnounce";
+        setModalIsOpen(true);
+        setTimeRemaining(10 * 60);
     }
 
     function handleImageClick(image) {
@@ -186,7 +187,8 @@ function Projects() {
                         <div className={styles.tag}>
                             <p>디자이너</p>
                         </div>
-                        <p className={styles.tagContents}>{description.designer}</p>
+                        <p className={styles.tagContents}>{description.designer}<br />{description.designer2}</p>
+
                     </div>
                     <div className={styles.innerBox}>
                         <div className={styles.tag}>
@@ -232,7 +234,7 @@ function Projects() {
                     />
                     <div className={styles.docentContainer}>
                         <div className={styles.podcastbox}>
-                            <p>팟캐스트 : 러닝타임 {Math.floor(timeRemaining / 60)}분 {timeRemaining % 60}초</p>
+                            <p>팟캐스트 : 러닝타임 10분 11초</p>
                         </div>
                         <p>Dopamine Addiction: Visualization of symptoms</p>
                     </div>
