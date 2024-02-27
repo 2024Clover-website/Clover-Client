@@ -4,68 +4,68 @@ import styles from '../../../../styles/About/PC/About.module.css';
 function About() {
     return (
         <div className={styles.container}>
-                <img className={styles.responsiveImage} src="./img/aboutimg12.png" alt="description" />
+            <img className={styles.responsiveImage} src="./img/aboutimg12.png" alt="description" />
             <div className={styles.page}>
                 <div className={styles.Linecontainer}></div>
                 <div className={styles.text}>
-                        <div className={styles.textarea1}>
-                            <p>Overview</p>
-                            <p1>In a row</p1>
-                        </div>
-                        <div className={styles.textarea2}>
-                            <p>01</p>
-                            <p1>삶의 기나긴 선상에 놓인 우리는 마치 하나의 카세트처럼 움직
-                                이는 것 같아요. 같은 동작을 반복하며 느슨해졌다가, 무언가의
-                                힘을 빌려 본래의 선율을 되찾기 때문이죠.</p1>
-                        </div>
+                    <div className={styles.textarea1}>
+                        <p>Overview</p>
+                        <p1>In a row</p1>
+                    </div>
+                    <div className={styles.textarea2}>
+                        <p>01</p>
+                        <p1>삶의 기나긴 선상에 놓인 우리는 마치 하나의 카세트처럼 움직
+                            이는 것 같아요. 같은 동작을 반복하며 느슨해졌다가, 무언가의
+                            힘을 빌려 본래의 선율을 되찾기 때문이죠.</p1>
+                    </div>
                 </div>
             </div>
             <img className={styles.responsiveImage} src="./img/aboutimg6.png" alt="description" />
             <div className={styles.page}>
                 <div className={styles.Linecontainer}></div>
                 <div className={styles.text}>
-                        <div className={styles.textarea1}>
-                            <p>Design Concept1</p>
-                            <p1>릴을 돌려 팽팽하게</p1>
-                        </div>
-                        <div className={styles.textarea2}>
-                            <p>02</p>
-                            <p1>릴이 돌아가다 보면 느슨해졌던 테이프가 다시금 팽팽해집니다.
-                                그렇게 제자리로 돌아온 우리는 잡음을 줄이고, 또다시 하루하루
-                                를 살아갑니다.</p1>
-                        </div>
+                    <div className={styles.textarea1}>
+                        <p>Design Concept1</p>
+                        <p1>릴을 돌려 팽팽하게</p1>
+                    </div>
+                    <div className={styles.textarea2}>
+                        <p>02</p>
+                        <p1>릴이 돌아가다 보면 느슨해졌던 테이프가 다시금 팽팽해집니다.
+                            그렇게 제자리로 돌아온 우리는 잡음을 줄이고, 또다시 하루하루
+                            를 살아갑니다.</p1>
+                    </div>
                 </div>
             </div>
             <img className={styles.responsiveImage} src="./img/aboutimg7.png" alt="description" />
             <div className={styles.page}>
                 <div className={styles.Linecontainer}></div>
                 <div className={styles.text}>
-                        <div className={styles.textarea1}>
-                            <p>Design Concept2</p>
-                            <p1>나를 감싸던 것</p1>
-                        </div>
-                        <div className={styles.textarea2}>
-                            <p>03</p>
-                            <p1>테이프 커버에 곡에 대한 정보가 빼곡히 적혀있듯이, 내 주변에
-                                는 그동안 쌓아온 삶과 경험들로 가득해요. 이것들을 차근차근
-                                돌아보면, 내가 좋아하는 것들이 무엇인지 알 수 있어요.</p1>
-                        </div>
+                    <div className={styles.textarea1}>
+                        <p>Design Concept2</p>
+                        <p1>나를 감싸던 것</p1>
+                    </div>
+                    <div className={styles.textarea2}>
+                        <p>03</p>
+                        <p1>테이프 커버에 곡에 대한 정보가 빼곡히 적혀있듯이, 내 주변에
+                            는 그동안 쌓아온 삶과 경험들로 가득해요. 이것들을 차근차근
+                            돌아보면, 내가 좋아하는 것들이 무엇인지 알 수 있어요.</p1>
+                    </div>
                 </div>
             </div>
             <img className={styles.responsiveImage} src="./img/aboutimg8.png" alt="description" />
             <div className={styles.page}>
                 <div className={styles.Linecontainer}></div>
                 <div className={styles.text}>
-                        <div className={styles.textarea1}>
-                            <p>Design Concept3</p>
-                            <p1>일상으로의 회복</p1>
-                        </div>
-                        <div className={styles.textarea2}>
-                            <p>03</p>
-                            <p1>지루했던 일상이 다채로워 보이고, 무엇이든지 해낼 수 있을 거
-                                같은 자신감도 생겨요. 언제 다시 번아웃과 슬럼프가 찾아올 지
-                                모르지만, 지금의 감정은 이루 다 말할 수 없어요.</p1>
-                        </div>
+                    <div className={styles.textarea1}>
+                        <p>Design Concept3</p>
+                        <p1>일상으로의 회복</p1>
+                    </div>
+                    <div className={styles.textarea2}>
+                        <p>03</p>
+                        <p1>지루했던 일상이 다채로워 보이고, 무엇이든지 해낼 수 있을 거
+                            같은 자신감도 생겨요. 언제 다시 번아웃과 슬럼프가 찾아올 지
+                            모르지만, 지금의 감정은 이루 다 말할 수 없어요.</p1>
+                    </div>
                 </div>
             </div>
             <img className={styles.responsiveImage} src="./img/aboutimg9.png" alt="description" />
@@ -93,229 +93,229 @@ function About() {
             </div>
             <div className={styles.Thankspage1}>
                 <div className={styles.Linecontainer}></div>
-                    <div className={styles.Membertext}>
-                        <div className={styles.Membercontainer}>
-                            <div className={styles.CT1}>
-                                <p0>전시 브랜딩</p0>
-                                <p1>01</p1>
-                            </div>
-                            <div className={styles.CT2}>
-                                <p0>about In a row</p0>
-                                <p1>ART DIRECT</p1>
-                            </div>
-                            <div className={styles.CT3}>
-                                <div className={styles.Member}>
-                                    <p0>권예지</p0>
-                                    <p1>Director & generalize design</p1>
-                                </div>
-                                <div className={styles.Member}>
-                                    <p0>조용욱</p0>
-                                    <p1>Director & interective design</p1>
-                                </div>
-                                <div className={styles.Member}>
-                                    <p0>김혜신</p0>
-                                    <p1>Graphic design</p1>
-                                </div>
-                                <div className={styles.Member}>
-                                    <p0>기한나</p0>
-                                    <p1>Graphic design</p1>
-                                </div>
-                                <div className={styles.Member}>
-                                    <p0>안서경</p0>
-                                    <p1>Layout design</p1>
-                                </div>
-                                <div className={styles.Member}>
-                                    <p0>허민영</p0>
-                                    <p1>Space design</p1>
-                                </div>
-                            </div>
+                <div className={styles.Membertext}>
+                    <div className={styles.Membercontainer}>
+                        <div className={styles.CT1}>
+                            <p0>전시 브랜딩</p0>
+                            <p1>01</p1>
                         </div>
-                        <div className={styles.Membercontainer}>
-                            <div className={styles.CT1}>
-                                <p0>태산</p0>
-                                <p1>02</p1>
+                        <div className={styles.CT2}>
+                            <p0>about In a row</p0>
+                            <p1>ART DIRECT</p1>
+                        </div>
+                        <div className={styles.CT3}>
+                            <div className={styles.Member}>
+                                <p0>권예지</p0>
+                                <p1>Director & generalize design</p1>
                             </div>
-                            <div className={styles.CT2}>
-                                <p0>KEYCLE</p0>
-                                <p1>SERVICE DESIGN</p1>
+                            <div className={styles.Member}>
+                                <p0>조용욱</p0>
+                                <p1>Director & interective design</p1>
                             </div>
-                            <div className={styles.CT3}>
-                                <div className={styles.Member}>
-                                    <p0>최재정</p0>
-                                    <p1>BX design</p1>
-                                </div>
-                                <div className={styles.Member}>
-                                    <p0>김경은 </p0>
-                                    <p1>UIUX design</p1>
-                                </div>
-                                <div className={styles.Member}>
-                                    <p0>김동제</p0>
-                                    <p1>Product design</p1>
-                                </div>
-                                <div className={styles.Member}>
-                                    <p0>노유정</p0>
-                                    <p1>Product design</p1>
-                                </div>
+                            <div className={styles.Member}>
+                                <p0>김혜신</p0>
+                                <p1>Graphic design</p1>
+                            </div>
+                            <div className={styles.Member}>
+                                <p0>기한나</p0>
+                                <p1>Graphic design</p1>
+                            </div>
+                            <div className={styles.Member}>
+                                <p0>안서경</p0>
+                                <p1>Layout design</p1>
+                            </div>
+                            <div className={styles.Member}>
+                                <p0>허민영</p0>
+                                <p1>Space design</p1>
                             </div>
                         </div>
                     </div>
+                    <div className={styles.Membercontainer}>
+                        <div className={styles.CT1}>
+                            <p0>태산</p0>
+                            <p1>02</p1>
+                        </div>
+                        <div className={styles.CT2}>
+                            <p0>KEYCLE</p0>
+                            <p1>SERVICE DESIGN</p1>
+                        </div>
+                        <div className={styles.CT3}>
+                            <div className={styles.Member}>
+                                <p0>최재정</p0>
+                                <p1>BX design</p1>
+                            </div>
+                            <div className={styles.Member}>
+                                <p0>김경은 </p0>
+                                <p1>UIUX design</p1>
+                            </div>
+                            <div className={styles.Member}>
+                                <p0>김동제</p0>
+                                <p1>Product design</p1>
+                            </div>
+                            <div className={styles.Member}>
+                                <p0>노유정</p0>
+                                <p1>Product design</p1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div className={styles.Thankspage2}>
                 <div className={styles.Linecontainer}></div>
-                    <div className={styles.Membertext}>
-                        <div className={styles.Membercontainer}>
-                            <div className={styles.CT1}>
-                                <p0>이따</p0>
-                                <p1>03</p1>
-                            </div>
-                            <div className={styles.CT2}>
-                                <p0>악의 불변</p0>
-                                <p1>GRAPHIC DESIGN</p1>
-                            </div>
-                            <div className={styles.CT3}>
-                                <div className={styles.Member}>
-                                    <p0>임로빈</p0>
-                                    <p1>Space design</p1>
-                                </div>
-                                <div className={styles.Member}>
-                                    <p0>김성연</p0>
-                                    <p1>Graphic design</p1>
-                                </div>
-                                <div className={styles.Member}>
-                                    <p0>박금주</p0>
-                                    <p1>Graphic design</p1>
-                                </div>
-                                <div className={styles.Member}>
-                                    <p0>박지헌</p0>
-                                    <p1>Graphic design</p1>
-                                </div>
-                            </div>
+                <div className={styles.Membertext}>
+                    <div className={styles.Membercontainer}>
+                        <div className={styles.CT1}>
+                            <p0>이따</p0>
+                            <p1>03</p1>
                         </div>
-                        <div className={styles.Membercontainer}>
-                            <div className={styles.CT1}>
-                                <p0>VIBE MAKERS</p0>
-                                <p1>04</p1>
+                        <div className={styles.CT2}>
+                            <p0>악의 불변</p0>
+                            <p1>GRAPHIC DESIGN</p1>
+                        </div>
+                        <div className={styles.CT3}>
+                            <div className={styles.Member}>
+                                <p0>임로빈</p0>
+                                <p1>Space design</p1>
                             </div>
-                            <div className={styles.CT2}>
-                                <p0>VIBE WITH</p0>
-                                <p1>CHARATER POP-UP</p1>
+                            <div className={styles.Member}>
+                                <p0>김성연</p0>
+                                <p1>Graphic design</p1>
                             </div>
-                            <div className={styles.CT3}>
-                                <div className={styles.Member}>
-                                    <p0>정지윤</p0>
-                                    <p1>Visual design</p1>
-                                </div>
-                                <div className={styles.Member}>
-                                    <p0>김나연</p0>
-                                    <p1>Graphic design</p1>
-                                </div>
-                                <div className={styles.Member}>
-                                    <p0>박도은</p0>
-                                    <p1>Graphic design</p1>
-                                </div>
-                                <div className={styles.Member}>
-                                    <p0>송지윤</p0>
-                                    <p1>Visual design</p1>
-                                </div>
-                                <div className={styles.Member}>
-                                    <p0>오시현</p0>
-                                    <p1>Product design</p1>
-                                </div>
+                            <div className={styles.Member}>
+                                <p0>박금주</p0>
+                                <p1>Graphic design</p1>
+                            </div>
+                            <div className={styles.Member}>
+                                <p0>박지헌</p0>
+                                <p1>Graphic design</p1>
                             </div>
                         </div>
                     </div>
+                    <div className={styles.Membercontainer}>
+                        <div className={styles.CT1}>
+                            <p0>VIBE MAKERS</p0>
+                            <p1>04</p1>
+                        </div>
+                        <div className={styles.CT2}>
+                            <p0>VIBE WITH</p0>
+                            <p1>CHARATER POP-UP</p1>
+                        </div>
+                        <div className={styles.CT3}>
+                            <div className={styles.Member}>
+                                <p0>정지윤</p0>
+                                <p1>Visual design</p1>
+                            </div>
+                            <div className={styles.Member}>
+                                <p0>김나연</p0>
+                                <p1>Graphic design</p1>
+                            </div>
+                            <div className={styles.Member}>
+                                <p0>박도은</p0>
+                                <p1>Graphic design</p1>
+                            </div>
+                            <div className={styles.Member}>
+                                <p0>송지윤</p0>
+                                <p1>Visual design</p1>
+                            </div>
+                            <div className={styles.Member}>
+                                <p0>오시현</p0>
+                                <p1>Product design</p1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div className={styles.Thankspage3}>
                 <div className={styles.Linecontainer}></div>
-                    <div className={styles.Membertext}>
-                        <div className={styles.Membercontainer}>
-                            <div className={styles.CT1}>
-                                <p0>도파민 중독자들</p0>
-                                <p1>05</p1>
+                <div className={styles.Membertext}>
+                    <div className={styles.Membercontainer}>
+                        <div className={styles.CT1}>
+                            <p0>도파민 중독자들</p0>
+                            <p1>05</p1>
+                        </div>
+                        <div className={styles.CT2}>
+                            <p0>Dopamine Addiction:
+                                Visualization of symptoms</p0>
+                            <p1>SIDE PROJECT</p1>
+                        </div>
+                        <div className={styles.CT3}>
+                            <div className={styles.Member}>
+                                <p0>강지수</p0>
+                                <p1>3D graphic design</p1>
                             </div>
-                            <div className={styles.CT2}>
-                                <p0>Dopamine Addiction:
-                                    Visualization of symptoms</p0>
-                                <p1>SIDE PROJECT</p1>
-                            </div>
-                            <div className={styles.CT3}>
-                                <div className={styles.Member}>
-                                    <p0>강지수</p0>
-                                    <p1>3D graphic design</p1>
-                                </div>
-                                <div className={styles.Member}>
-                                    <p0>박규리</p0>
-                                    <p1>3D graphic design</p1>
-                                </div>
+                            <div className={styles.Member}>
+                                <p0>박규리</p0>
+                                <p1>3D graphic design</p1>
                             </div>
                         </div>
-                        <div className={styles.Membercontainer}>
-                            <div className={styles.CT1}>
-                                <p0>옥수수수염</p0>
-                                <p1>06</p1>
+                    </div>
+                    <div className={styles.Membercontainer}>
+                        <div className={styles.CT1}>
+                            <p0>옥수수수염</p0>
+                            <p1>06</p1>
+                        </div>
+                        <div className={styles.CT2}>
+                            <p0>Perfect doll factory</p0>
+                            <p1>EXPERIENTIAL MEDIA ART</p1>
+                        </div>
+                        <div className={styles.CT3}>
+                            <div className={styles.Member}>
+                                <p0>한승우</p0>
+                                <p1>3D motion graphic design</p1>
                             </div>
-                            <div className={styles.CT2}>
-                                <p0>Perfect doll factory</p0>
-                                <p1>EXPERIENTIAL MEDIA ART</p1>
+                            <div className={styles.Member}>
+                                <p0>강지수</p0>
+                                <p1>3D graphic design</p1>
                             </div>
-                            <div className={styles.CT3}>
-                                <div className={styles.Member}>
-                                    <p0>한승우</p0>
-                                    <p1>3D motion graphic design</p1>
-                                </div>
-                                <div className={styles.Member}>
-                                    <p0>강지수</p0>
-                                    <p1>3D graphic design</p1>
-                                </div>
-                                <div className={styles.Member}>
-                                    <p0>박규리</p0>
-                                    <p1>3D graphic design</p1>
-                                </div>
-                                <div className={styles.Member}>
-                                    <p0>임재윤</p0>
-                                    <p1>2D motion graphic design</p1>
-                                </div>
+                            <div className={styles.Member}>
+                                <p0>박규리</p0>
+                                <p1>3D graphic design</p1>
+                            </div>
+                            <div className={styles.Member}>
+                                <p0>임재윤</p0>
+                                <p1>2D motion graphic design</p1>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className={styles.Thankspage4}>
+            </div>
+            <div className={styles.Thankspage4}>
                 <div className={styles.Linecontainer}></div>
-                    <div className={styles.Membertext}>
-                        <div className={styles.Membercontainer}>
-                            <div className={styles.CT1}>
-                                <p0>닥사모</p0>
-                                <p1>07</p1>
+                <div className={styles.Membertext}>
+                    <div className={styles.Membercontainer}>
+                        <div className={styles.CT1}>
+                            <p0>닥사모</p0>
+                            <p1>07</p1>
+                        </div>
+                        <div className={styles.CT2}>
+                            <p0>초대장, 웹사이트</p0>
+                            <p1>SIDE DEVELOPER</p1>
+                        </div>
+                        <div className={styles.CT3}>
+                            <div className={styles.Member}>
+                                <p0>장준용</p0>
+                                <p1>Dev/Server</p1>
                             </div>
-                            <div className={styles.CT2}>
-                                <p0>초대장, 웹사이트</p0>
-                                <p1>SIDE DEVELOPER</p1>
+                            <div className={styles.Member}>
+                                <p0>김성진</p0>
+                                <p1>Web/FE</p1>
                             </div>
-                            <div className={styles.CT3}>
-                                <div className={styles.Member}>
-                                    <p0>장준용</p0>
-                                    <p1>Dev/Server</p1>
-                                </div>
-                                <div className={styles.Member}>
-                                    <p0>김성진</p0>
-                                    <p1>Web/FE</p1>
-                                </div>
-                                <div className={styles.Member}>
-                                    <p0>남병준</p0>
-                                    <p1>Web(mobile)/FE</p1>
-                                </div>
-                                <div className={styles.Member}>
-                                    <p0>권상훈</p0>
-                                    <p1>Web/FE</p1>
-                                </div>
-                                <div className={styles.Member}>
-                                    <p0>유민기</p0>
-                                    <p1>Web(mobile)/FE</p1>
-                                </div>
+                            <div className={styles.Member}>
+                                <p0>남병준</p0>
+                                <p1>Web(mobile)/FE</p1>
+                            </div>
+                            <div className={styles.Member}>
+                                <p0>권상훈</p0>
+                                <p1>Web/FE</p1>
+                            </div>
+                            <div className={styles.Member}>
+                                <p0>유민기</p0>
+                                <p1>Web(mobile)/FE</p1>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
         </div>
     );
 }
