@@ -4,7 +4,7 @@ import styles from '../../../../styles/About/PC/About.module.css';
 function About() {
     return (
         <div className={styles.container}>
-            <img className={styles.responsiveImage} src="./img/aboutimg12.png" alt="description" />
+            <video className={styles.responsiveImage} src="./img/WEB_main.mp4" alt="description" autoPlay loop muted />
             <div className={styles.page}>
                 <div className={styles.Linecontainer}></div>
                 <div className={styles.text}>
@@ -20,7 +20,7 @@ function About() {
                     </div>
                 </div>
             </div>
-            <img className={styles.responsiveImage} src="./img/aboutimg6.png" alt="description" />
+            <video className={styles.responsiveImage} src="./img/About_1.mp4" alt="description" autoPlay loop muted />
             <div className={styles.page}>
                 <div className={styles.Linecontainer}></div>
                 <div className={styles.text}>
@@ -36,7 +36,7 @@ function About() {
                     </div>
                 </div>
             </div>
-            <img className={styles.responsiveImage} src="./img/aboutimg7.png" alt="description" />
+            <video className={styles.responsiveImage} src="./img/About_2.mp4" alt="description" autoPlay loop muted />
             <div className={styles.page}>
                 <div className={styles.Linecontainer}></div>
                 <div className={styles.text}>
@@ -52,7 +52,7 @@ function About() {
                     </div>
                 </div>
             </div>
-            <img className={styles.responsiveImage} src="./img/aboutimg8.png" alt="description" />
+            <video className={styles.responsiveImage} src="./img/About_3.mp4" alt="description" autoPlay loop muted />
             <div className={styles.page}>
                 <div className={styles.Linecontainer}></div>
                 <div className={styles.text}>
@@ -68,7 +68,7 @@ function About() {
                     </div>
                 </div>
             </div>
-            <img className={styles.responsiveImage} src="./img/aboutimg9.png" alt="description" />
+            <video className={styles.responsiveImage} src="./img/About_4.mp4" alt="description" autoPlay loop muted />
             <div className={styles.textarea3}>
                 <p>알파벳 순서대로 보면 보다 쾌적하게 전시를 관람할수 있습니다. 또한 기프트존을 따로 마련해두었습니다.
                     다른 관람객들을 위해, 방문자님의 소중한 마음은 꼭 기프트존에만 놓아주세요.</p>
