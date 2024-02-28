@@ -1,15 +1,14 @@
 import axios from "axios";
+import QRCode from 'qrcode.react';
 import React, { useEffect, useRef, useState } from "react";
 import { CSSTransition } from "react-transition-group";
-import modalBG from '../../../img/ModalBG.png';
-import QRSImage from '../../../img/QRS.png';
-import BackButton from '../../../img/뒤로가기.png';
-import { useHorizontalScroll } from "./useSideScroll";
-
 import exclude from "../../../Exclude.png";
+import modalBG from '../../../img/ModalBG.png';
+import BackButton from '../../../img/뒤로가기.png';
 import styles from "../../../styles/components/REC6.module.css";
 import tape from "../../../tape.png";
 import videoREC from "../../../video/recBG.mp4";
+import { useHorizontalScroll } from "./useSideScroll";
 
 import Modal from 'react-modal';
 import { useLocation } from "react-router-dom";
@@ -21,6 +20,12 @@ function REC6() {
 		setIsModalOpen(true);
 	};
 
+
+
+	const LinkQRCodeGenerator = ({ link }) => {
+		return <QRCode value={link} size={200} />;
+	};
+	const link = 'https://www.naver.com'; // QR 코드로 변환하려는 링크로 변경하세요.
 
 	const location = useLocation();
 	const patternId = location.state.pattern;
@@ -270,32 +275,35 @@ function REC6() {
 										alt="뒤로가기"
 										onClick={() => setIsModalOpen(false)}
 										className={styles.BackButton}
-										
+
 									/>
-								<div className={styles.Ct01}>
-								<div className={styles.Ct05}>
-									<img src={QRSImage} alt="QRS" className={styles.qrs}/>
-									<div className={styles.Ct02}>
-										<div className={styles.Ct03}>
-											<p>이미지 저장하기</p>
+									<div className={styles.Ct01}>
+										<div className={styles.Ct05}>
+											{/* <img src={QRSImage} alt="QRS" className={styles.qrs}/> */}
+											<div>
+												<LinkQRCodeGenerator link={link} />
+											</div>
+											<div className={styles.Ct02}>
+												<div className={styles.Ct03}>
+													<p>이미지 저장하기</p>
+												</div>
+												<div className={styles.Ct04}>
+													<p>{name} 님의 연필을 소중히 간직할 수 있어요 카메라로 아래 QR코드를 찍어주세요</p>
+												</div>
+
+											</div>
+
 										</div>
-										<div className={styles.Ct04}>
-											<p>{name} 님의 연필을 소중히 간직할 수 있어요 카메라로 아래 QR코드를 찍어주세요</p>
+										<div className={styles.blankC}></div>
+										<div className={styles.Ct06}>
+											<button className={styles.back} onClick={handleBack}>
+												<p>처음으로</p>
+											</button>
+
 										</div>
-										
+
 									</div>
-									
-									</div>
-									<div className={styles.blankC}></div>
-									<div className={styles.Ct06}>
-										<button className={styles.back} onClick={handleBack}>
-											<p>처음으로</p>
-										</button>
-										
-									</div>
-									
-								</div>
-								
+
 								</Modal>
 
 
