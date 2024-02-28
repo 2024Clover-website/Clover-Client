@@ -23,6 +23,8 @@ function DocentContent() {
 	const [script, setScript] = useState([]);
 	const [runningTime, setRunningTime] = useState(0);
 
+	let relativePosition;
+
 	const handleSpeedClick = () => {
 		if (audioRef.current) {
 			if (!audioRef.current.paused) {
@@ -100,6 +102,32 @@ function DocentContent() {
 			</>
 		);
 	});
+
+	const handleProgressBar = (event) => {
+		// 클릭한 위치의 x 좌표 구하기
+		const clickX = event.clientX;
+
+		// div 요소 가져오기
+		const div = document.getElementById("play");
+
+		// div의 위치 및 너비 구하기
+		const divRect = div.getBoundingClientRect();
+		const divX = divRect.left;
+		const divWidth = divRect.width;
+
+		// 클릭한 위치의 div 내부에서의 상대적인 x 좌표 구하기
+		const relativeX = clickX - divX;
+
+		// 클릭한 위치의 div 내부에서의 상대적인 위치 (0 ~ 1) 구하기
+		relativePosition = (relativeX / divWidth).toFixed(3);
+
+		// 상대적인 위치 출력
+		console.log("Relative position:", relativePosition);
+
+		audioRef.current.play();
+		audioRef.current.currentTime = relativePosition * runningTime;
+		setProgress(100 - relativePosition * 100);
+	};
 
 	return (
 		<div
@@ -244,7 +272,7 @@ function DocentContent() {
 					<p>{commentCount}</p>
 				</div>
 
-				<div id="play" className={styles.playBar}>
+				<div id="play" className={styles.playBar} onClick={handleProgressBar}>
 					<div
 						style={{
 							position: "absolute",
