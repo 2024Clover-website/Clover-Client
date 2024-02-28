@@ -1,3 +1,9 @@
+
+
+
+import PC from "./views/PC.js";
+import MOBILE from "./views/MOBILE.js";
+
 import React, { Suspense, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
@@ -57,16 +63,34 @@ import InvitePageT5 from "./views/page/Invitation/InvitePage/InvitePageT5";
 import LastPageT5 from "./views/page/Invitation/LastPage/LastPageT5";
 import AnnouncementT5 from "./views/page/Invitation/WebAnncouncement/AnnouncementT5";
 
+
 function App() {
 	const Mobile = ({ children }) => {
 		const isMobile = useMediaQuery({
-			query: "(max-width:450px)",
+
+			query: "(max-width:768px)",
+
 		});
 		return <>{isMobile && children}</>;
 	};
 
 	const Pc = ({ children }) => {
 		const isPc = useMediaQuery({
+
+			query: "(min-width:769px)",
+		});
+		return <>{isPc && children}</>;
+	};
+
+	return (
+		<Suspense fallback={<div>Loading...</div>}>
+			<Pc>
+				<PC />
+			</Pc>
+			<Mobile>
+				<MOBILE />
+			</Mobile>
+
 			query: "(min-width:450px)",
 		});
 		return <>{isPc && children}</>;
@@ -281,6 +305,7 @@ function App() {
 					<Route exact path="/invite/옥수수수염/6" element={<LastPageT5 />} />
 				</Routes>
 			</Mobile> */}
+
 		</Suspense>
 	);
 }

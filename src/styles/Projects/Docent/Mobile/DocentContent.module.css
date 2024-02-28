@@ -1,0 +1,271 @@
+@font-face {
+	font-family: "YDIYGO340";
+	font-style: normal;
+	font-weight: 100;
+	src: url(../../../../fonts/YDIYGO340.woff) format("woff"),
+		url(../../../../fonts/YDIYGO340.ttf) format("truetype");
+}
+
+@font-face {
+	font-family: "Avenir-Black";
+	src: url(../../../../fonts/AvenirLTStd-Black.ttf);
+}
+
+.background {
+	position: fixed;
+	overflow-y: scroll;
+	background-size: contain;
+	background-repeat: no-repeat;
+	z-index: -2;
+}
+
+.header {
+	position: fixed;
+	width: 100%;
+	height: 6.158%;
+	/* width: 100%;
+	left: 0px;
+	top: 0px;
+	z-index: 1;
+	background-image: url(../../../../../public/docent.png);
+	background-size: cover;
+	background-repeat: no-repeat; */
+}
+
+.backButton {
+	position: fixed;
+	/* width: 40px;
+	height: 40px; */
+	left: 3.733%;
+	top: 6.158%;
+
+	box-shadow: 0px 3px 18px rgba(0, 0, 0, 0.1);
+}
+
+.speedButton {
+	display: flex;
+	position: fixed;
+	width: 40px;
+	height: 40px;
+	right: 18.4%;
+	top: 6.158%;
+
+	border-radius: 50%;
+
+	justify-content: center;
+	align-items: center;
+
+	background: rgba(255, 255, 255, 0.25);
+	box-shadow: 0px 3px 18px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(5px);
+}
+
+.speedButton > p {
+	margin: 0;
+
+	font-family: "Avenir-Black";
+	font-style: normal;
+	font-weight: 900;
+	font-size: 16px;
+	line-height: 130%;
+	/* identical to box height, or 21px */
+	display: flex;
+
+	color: #f1f1f1;
+}
+
+.soundButton {
+	display: flex;
+	position: fixed;
+	width: 40px;
+	height: 40px;
+	right: 3.733%;
+	top: 6.158%;
+
+	border-radius: 50%;
+
+	justify-content: center;
+	align-items: center;
+
+	background: rgba(255, 255, 255, 0.25);
+	box-shadow: 0px 3px 18px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(5px);
+
+	overflow: hidden;
+}
+
+.soundButton > img {
+	width: 18.94px;
+	height: 16px;
+	background-size: contain;
+}
+
+.container {
+	display: flex;
+	height: 71.429%;
+	flex-direction: column;
+	margin-top: 24.241%;
+	margin-bottom: 14.778%;
+	padding-top: 50px;
+	padding-left: 7.467%;
+	padding-right: 7.467%;
+	align-items: center;
+	overflow-x: hidden;
+	overflow-y: scroll;
+
+	mask-image: linear-gradient(
+		180deg,
+		rgba(217, 217, 217, 0) 0%,
+		#d9d9d9 12.62%,
+		#d9d9d9 86.77%,
+		rgba(217, 217, 217, 0) 100%
+	);
+}
+
+.container > p {
+	width: 100%;
+
+	margin: 0px 8px;
+
+	margin-bottom: 30px;
+
+	font-family: "YDIYGO340";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 26px;
+	line-height: 130%;
+	/* or 34px */
+
+	color: #ffffff;
+
+	text-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
+}
+
+.avatar {
+	width: 30px;
+	height: 30px;
+
+	margin-bottom: 10px;
+
+	border-radius: 50%;
+	align-self: flex-start;
+	background-size: cover;
+	filter: drop-shadow(0px 3px 18px rgba(0, 0, 0, 0.1));
+}
+
+.avatar > img {
+	width: 100%;
+	height: 100%;
+
+	border-radius: 50%;
+
+	filter: drop-shadow(0px 3px 18px rgba(0, 0, 0, 0.1));
+}
+
+.image > img {
+	width: 100%;
+	height: 100%;
+	border-radius: 20px;
+
+	filter: drop-shadow(0px 3px 18px rgba(0, 0, 0, 0.2));
+}
+
+.container > br {
+	height: 30px;
+}
+
+.footer {
+	position: fixed;
+	/* width: 100%;
+	height: 120px;
+	left: 0px;
+	bottom: 0px;
+	background-image: url(../../../../../public/docent.png);
+	background-size: cover;
+	background-position: bottom;
+	background-repeat: no-repeat; */
+}
+
+.playTime {
+	position: fixed;
+	width: 34px;
+	height: 21px;
+	left: 7.467%;
+	bottom: 14.286%;
+}
+
+.playTime > p {
+	margin: 0;
+
+	font-family: "Avenir";
+	font-style: normal;
+	font-weight: 800;
+	font-size: 16px;
+	line-height: 130%;
+	/* identical to box height, or 21px */
+	display: flex;
+	align-items: center;
+
+	color: #ffffff;
+
+	text-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
+}
+
+.comment {
+	position: fixed;
+	display: flex;
+	flex-direction: row;
+
+	height: 21px;
+
+	justify-content: center;
+	align-items: center;
+
+	right: 7.2%;
+	bottom: 14.286%;
+}
+
+.comment > img {
+	width: 16px;
+	height: 16px;
+
+	margin-right: 5px;
+}
+
+.comment > p {
+	margin: 0;
+
+	font-family: "Avenir";
+	font-style: normal;
+	font-weight: 800;
+	font-size: 16px;
+	line-height: 130%;
+	/* identical to box height, or 21px */
+	display: flex;
+	align-items: center;
+	text-align: right;
+
+	color: #ffffff;
+
+	text-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
+}
+
+.playBar {
+	position: fixed;
+	display: flex;
+	left: 4%;
+	bottom: 4.926%;
+	width: 92%;
+	height: 60px;
+	border-radius: 100px;
+	background-color: rgba(255, 255, 255, 0);
+	border: 2px solid rgba(255, 255, 255, 0.75);
+	box-shadow: 0 3 18 (#000, 0.1);
+	align-items: center;
+	justify-content: flex-end;
+	overflow: hidden;
+}
+
+.playBar > svg {
+	flex: 1;
+}

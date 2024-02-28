@@ -1,0 +1,97 @@
+@font-face {
+	font-family: "Avenir";
+	src: url(../../fonts/AvenirLTStd-Black.ttf);
+}
+
+@font-face {
+	font-family: "neulis";
+	src: url(../../fonts/neulis.rar);
+}
+
+@font-face {
+	font-family: "YDIYGO330";
+	font-style: normal;
+	font-weight: 100;
+	src: url(../../fonts/YDIYGO330.woff) format("woff"),
+		url(../../fonts/YDIYGO330.ttf) format("truetype");
+}
+
+.header-container {
+	left: 0px;
+	top: 0px;
+	position: fixed;
+	height: 100px;
+	width: 100%;
+	background-image: url("../../../public/img/headerbackgorund color.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	cursor: default;
+	border-bottom: 2px solid white;
+}
+
+.logo-left {
+	width: 141px;
+	height: 24px;
+	left: 20px;
+	top: 35px;
+	flex-shrink: 0;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+.nav-element {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 30px;
+	width: 675px;
+	height: 36px;
+}
+
+.nav-element > div {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.nav-element > div > p {
+	width: 47px;
+	height: 36px;
+	left: calc(50% - 47px / 2 + 273.5px);
+	top: 32px;
+
+	font-family: "Avenir";
+	font-style: normal;
+	font-weight: 800;
+	font-size: 24px;
+	line-height: 150%;
+	/* identical to box height, or 36px */
+	text-align: right;
+
+	color: #f1f1f1;
+
+	text-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
+}
+
+.record-icon {
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	margin-left: 5px;
+
+	background: #fd4d4d;
+	color: #fd4d4d;
+}
+
+.logo-right {
+	width: 142.23px;
+	height: 20.46px;
+	margin-right: 49.77px;
+	margin-top: 23px;
+	color: #ffffff;
+}

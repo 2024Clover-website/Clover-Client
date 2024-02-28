@@ -1,0 +1,139 @@
+@font-face {
+	font-family: "Avenir";
+	src: url(../../../../fonts/AvenirLTStd-Black.ttf);
+}
+
+@font-face {
+	font-family: "YDIYGO350";
+	font-style: normal;
+	font-weight: 100;
+	src: url(../../../../fonts/YDIYGO350.woff) format("woff"),
+		url(../../../../fonts/YDIYGO350.ttf) format("truetype");
+}
+
+@font-face {
+	font-family: "YDIYGO320";
+	font-style: normal;
+	font-weight: 100;
+	src: url(../../../../fonts/YDIYGO320.woff) format("woff"),
+		url(../../../../fonts/YDIYGO320.ttf) format("truetype");
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	cursor: default;
+}
+
+.docentContainer {
+	width: 406px;
+	height: 89px;
+	margin-top: 110px;
+}
+.backButton {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	left: 75px;
+	top: 95px;
+}
+
+.docentContainer > p {
+	margin: 0;
+	font-family: "YDIYGO350";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 60px;
+	line-height: 150%;
+	/* or 90px */
+	text-align: center;
+
+	color: #000000;
+}
+
+.titleContainer {
+	height: 30px;
+	margin-top: 10px;
+}
+
+.titleContainer > p {
+	margin: 0;
+	font-family: "Avenir";
+	font-style: normal;
+	font-weight: 800;
+	font-size: 20px;
+	line-height: 150%;
+	/* identical to box height, or 30px */
+	text-align: center;
+
+	color: #000000;
+}
+
+.designerContainer {
+	height: 30px;
+	margin-top: 5px;
+}
+
+.designerContainer > p {
+	margin: 0;
+	font-family: "YDIYGO350";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 150%;
+	/* identical to box height, or 30px */
+	text-align: center;
+
+	color: #000000;
+}
+
+.qrContainer {
+	width: 450px;
+	height: 450px;
+	margin-top: 50px;
+}
+
+.qrContainer > img {
+	width: 100%;
+	height: 100%;
+}
+
+.textContainer {
+	width: 406px;
+	height: 60px;
+	margin-top: 50px;
+}
+
+.textContainer > p {
+	margin: 0;
+	font-family: "YDIYGO320";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 150%;
+	/* or 30px */
+	text-align: center;
+
+	color: #000000;
+}
+
+.timeContainer {
+	height: 30px;
+	margin-top: 30px;
+}
+
+.timeContainer > p {
+	margin: 0;
+	font-family: "YDIYGO350";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 150%;
+	/* identical to box height, or 30px */
+	text-align: center;
+
+	color: #000000;
+}
