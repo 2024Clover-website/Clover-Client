@@ -25,13 +25,13 @@ function Projects() {
 
 	const [isDescriptionContainer2Visible, setIsDescriptionContainer2Visible] =
 		useState(true);
-	const [modalIsOpen, setModalIsOpen] = useState(false);
+	const [setModalIsOpen] = useState(false);
 	const [timeRemaining, setTimeRemaining] = useState(10 * 60);
 	const [description, setDescription] = useState({});
 	const [isDescriptionVisible, setIsDescriptionVisible] = useState(false);
 	const [podcastModalIsOpen, setPodcastModalIsOpen] = useState(false);
 	const [docentModalIsOpen, setDocentModalIsOpen] = useState(false);
-	const [imageSrc, setImageSrc] = useState({
+	const [ setImageSrc] = useState({
 		CTA: "/img/CTA.png",
 		CTB: "/img/CTB.png",
 		CTC: "/img/CTC.png",
@@ -125,16 +125,7 @@ function Projects() {
 			[image]: `/img/${image}.gif`,
 		}));
 	}
-	function handlePodcastButton() {
-		setPodcastModalIsOpen(true);
-		setTimeRemaining(10 * 60);
-	}
-
-
-	function handleDocentButton() {
-		setDocentModalIsOpen(true);
-		setTimeRemaining(10 * 60);
-	}
+	
 
 
 	useEffect(() => {
@@ -158,37 +149,37 @@ function Projects() {
 				<div>
 					<img
 						className={`${styles.CTA} ${styles.hoverImage}`}
-						alt
+						alt=""
 						src="/img/CTA.gif"
 						onClick={() => handleImageClick("CTA")}
 					/>
 					<img
 						className={`${styles.CTB} ${styles.hoverImage}`}
-						alt
+						alt=""
 						src="/img/CTB.gif"
 						onClick={() => handleImageClick("CTB")}
 					/>
 					<img
 						className={`${styles.CTC} ${styles.hoverImage}`}
-						alt
+						alt=""
 						src="/img/CTC.gif"
 						onClick={() => handleImageClick("CTC")}
 					/>
 					<img
 						className={`${styles.CTD} ${styles.hoverImage}`}
-						alt
+						alt=""
 						src="/img/CTD.gif"
 						onClick={() => handleImageClick("CTD")}
 					/>
 					<img
 						className={`${styles.CTE} ${styles.hoverImage}`}
-						alt
+						alt=""
 						src="/img/CTE.gif"
 						onClick={() => handleImageClick("CTE")}
 					/>
 					<img
 						className={`${styles.CTF} ${styles.hoverImage}`}
-						alt
+						alt=""
 						src="/img/CTF.gif"
 						onClick={() => handleImageClick("CTF")}
 					/>
@@ -258,6 +249,7 @@ function Projects() {
 							<p className={styles.tagContents}>
 								{description.docentTime}
 								<img
+									alt =""
 									src="../../../img/Button01.png"
 									className={styles.playButton}
 									onClick={handleDocentButton}
@@ -274,6 +266,7 @@ function Projects() {
 						<p className={styles.tagContents}>
 							{description.podcastTime}
 							<img
+								alt =""
 								src="../../../img/Button01.png"
 								className={styles.playButton}
 								onClick={handlePodcastButton}
@@ -295,6 +288,7 @@ function Projects() {
 			>
 				<div className={styles.Modalcontainer}>
 					<img
+						alt =""
 						src="../../../img/뒤로가기.png"
 						className={styles.backButton}
 						onClick={() => {
@@ -332,6 +326,7 @@ function Projects() {
 			>
 				<div className={styles.Modalcontainer}>
 					<img
+						alt =""
 						src="../../../img/뒤로가기.png"
 						className={styles.backButton}
 						onClick={() => {
