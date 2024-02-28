@@ -67,24 +67,22 @@ function REC6(){
         // setTimeout(() => setShowContainer5(true), 15500);
     }, [])
 
-
-
-    // const elRef = useRef();
-    // useEffect(() => {
-    //     const el = elRef.current;
-    //     if (el) {
-    //     const onWheel = e => {
-    //         if (e.deltaY == 0) return;
-    //         e.preventDefault();
-    //         el.scrollTo({
-    //         left: el.scrollLeft + e.deltaY,
-    //         behavior: "smooth"
-    //         });
-    //     };
-    //     el.addEventListener("wheel", onWheel);
-    //     return () => el.removeEventListener("wheel", onWheel);
-    //     }
-    // }, [elRef]);
+    const elRef = useRef();
+    useEffect(() => {
+        const el = elRef.current;
+        if (el) {
+        const onWheel = e => {
+            if (e.deltaY == 0) return;
+            e.preventDefault();
+            el.scrollTo({
+            left: el.scrollLeft + e.deltaY,
+            behavior: "smooth"
+            });
+        };
+        el.addEventListener("wheel", onWheel);
+        return () => el.removeEventListener("wheel", onWheel);
+        }
+    }, [elRef]);
 
 
     return(
@@ -115,11 +113,9 @@ function REC6(){
                     <div className={styles.justthat}>그건 바로..</div>
                     <div className={styles.scrollct}>
                         <img className={styles.exclude} alt src={exclude}/>
-                            <ScrollMenu onWheel={onWheel}>
-                                <div className={styles.lastmentct}>
-                                    <div  className={styles.lastment} >{name}님 늘어지는 순간은 누구에게나 찾아와요. 중요한 건 우리가 그저 그러한 과정에 놓여있음을 깨닫는 거예요. 잠재력을 갖고 있는 {name}님은 결국엔 회복하여 소중한 일상들을 기록하며 살테니까요.</div>   
-                                </div>
-                            </ScrollMenu>
+                            <div className={styles.lastmentct} ref={elRef}>
+                                <div  className={styles.lastment} >{name}님 늘어지는 순간은 누구에게나 찾아와요. 중요한 건 우리가 그저 그러한 과정에 놓여있음을 깨닫는 거예요. 잠재력을 갖고 있는 {name}님은 결국엔 회복하여 소중한 일상들을 기록하며 살테니까요.</div>   
+                            </div>
                     </div>
                     <div className={styles.mousement}>마우스 휠을 굴려 문구를 확인해보세요</div>
                 </div>
@@ -138,19 +134,19 @@ function REC6(){
     )
 }
 
-function onWheel(apiObj, ev) {
-    var isTouchpad = Math.abs(ev.deltaX) !== 0 || Math.abs(ev.deltaY) < 15;
+// function onWheel(apiObj, ev) {
+//     var isTouchpad = Math.abs(ev.deltaX) !== 0 || Math.abs(ev.deltaY) < 15;
 
-    if (isTouchpad) {
-        ev.stopPropagation();
-        return;
-    }
+//     if (isTouchpad) {
+//         ev.stopPropagation();
+//         return;
+//     }
 
-    if (ev.deltaY < 0) {
-        apiObj.scrollNext();
-    } else if (ev.deltaY > 0) {
-        apiObj.scrollPrev();
-    }
-}
+//     if (ev.deltaY < 0) {
+//         apiObj.scrollNext();
+//     } else if (ev.deltaY > 0) {
+//         apiObj.scrollPrev();
+//     }
+// }
 
 export default REC6;
