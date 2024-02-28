@@ -1,15 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
+
+import { useNavigate } from "react-router-dom";
 
 import styles from "../../../../styles/Projects/Mobile/Projects.module.css";
 
 function Projects() {
-	function handleDocentButton() {
-		window.location.href = "/projects/docent/title";
-	}
-
-	function handlePodcastButton() {
-		window.location.href = "/projects/podcast/title";
-	}
+	const navigate = useNavigate();
 
 	return (
 		<div className={styles.container}>
@@ -68,7 +64,14 @@ function Projects() {
 						15:28
 						<img
 							src="../../../img/Button01.png"
-							onClick={handlePodcastButton}
+							onClick={() => {
+								navigate("/projects/podcast/title", {
+									state: {
+										teamId: 1,
+									},
+								});
+								window.location.href = "/projects/podcast/title";
+							}}
 							alt=""
 						/>
 					</p>
@@ -102,7 +105,14 @@ function Projects() {
 						2:19
 						<img
 							src="../../../img/Button01.png"
-							onClick={handleDocentButton}
+							onClick={() => {
+								navigate("/projects/docent/title", {
+									state: {
+										teamId: 2,
+									},
+								});
+								window.location.href = "/projects/docent/title";
+							}}
 							alt=""
 						/>
 					</p>
@@ -115,7 +125,14 @@ function Projects() {
 						10:30
 						<img
 							src="../../../img/Button01.png"
-							onClick={handlePodcastButton}
+							onClick={() => {
+								navigate("/projects/podcast/title", {
+									state: {
+										teamId: 2,
+									},
+								});
+								window.location.href = "/projects/podcast/title";
+							}}
 							alt=""
 						/>
 					</p>
@@ -149,7 +166,14 @@ function Projects() {
 						2:48
 						<img
 							src="../../../img/Button01.png"
-							onClick={handleDocentButton}
+							onClick={() => {
+								navigate("/projects/docent/title", {
+									state: {
+										teamId: 3,
+									},
+								});
+								window.location.href = "/projects/docent/title";
+							}}
 							alt=""
 						/>
 					</p>
@@ -162,7 +186,14 @@ function Projects() {
 						9:45
 						<img
 							src="../../../img/Button01.png"
-							onClick={handlePodcastButton}
+							onClick={() => {
+								navigate("/projects/podcast/title", {
+									state: {
+										teamId: 3,
+									},
+								});
+								window.location.href = "/projects/podcast/title";
+							}}
 							alt=""
 						/>
 					</p>
@@ -196,7 +227,14 @@ function Projects() {
 						2:54
 						<img
 							src="../../../img/Button01.png"
-							onClick={handleDocentButton}
+							onClick={() => {
+								navigate("/projects/docent/title", {
+									state: {
+										teamId: 4,
+									},
+								});
+								window.location.href = "/projects/docent/title";
+							}}
 							alt=""
 						/>
 					</p>
@@ -209,7 +247,14 @@ function Projects() {
 						6:06
 						<img
 							src="../../../img/Button01.png"
-							onClick={handlePodcastButton}
+							onClick={() => {
+								navigate("/projects/podcast/title", {
+									state: {
+										teamId: 4,
+									},
+								});
+								window.location.href = "/projects/podcast/title";
+							}}
 							alt=""
 						/>
 					</p>
@@ -241,7 +286,14 @@ function Projects() {
 						3:01
 						<img
 							src="../../../img/Button01.png"
-							onClick={handleDocentButton}
+							onClick={() => {
+								navigate("/projects/docent/title", {
+									state: {
+										teamId: 5,
+									},
+								});
+								window.location.href = "/projects/docent/title";
+							}}
 							alt=""
 						/>
 					</p>
@@ -254,7 +306,14 @@ function Projects() {
 						16:27
 						<img
 							src="../../../img/Button01.png"
-							onClick={handlePodcastButton}
+							onClick={() => {
+								navigate("/projects/podcast/title", {
+									state: {
+										teamId: 5,
+									},
+								});
+								window.location.href = "/projects/podcast/title";
+							}}
 							alt=""
 						/>
 					</p>
@@ -288,7 +347,14 @@ function Projects() {
 						1:58
 						<img
 							src="../../../img/Button01.png"
-							onClick={handleDocentButton}
+							onClick={() => {
+								navigate("/projects/docent/title", {
+									state: {
+										teamId: 6,
+									},
+								});
+								window.location.href = "/projects/docent/title";
+							}}
 							alt=""
 						/>
 					</p>
@@ -301,7 +367,14 @@ function Projects() {
 						16:27
 						<img
 							src="../../../img/Button01.png"
-							onClick={handlePodcastButton}
+							onClick={() => {
+								navigate("/projects/podcast/title", {
+									state: {
+										teamId: 6,
+									},
+								});
+								window.location.href = "/projects/podcast/title";
+							}}
 							alt=""
 						/>
 					</p>
