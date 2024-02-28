@@ -11,9 +11,21 @@
     src: url("/font/YDIYGO330.woff") format('woff'),
     url("/font/YDIYGO330.woff") format('truetype');
 }
+@font-face {
+    font-family: "YDIYGO340";
+    src: url("/font/YDIYGO340.woff") format('woff'),
+    url("/font/YDIYGO330.woff") format('truetype');
+}
+@font-face {
+    font-family: "Avenir";
+    src: url("/font/Avenir.ttc") format('woff'),
+    url("/font/YDIYGO330.woff") format('truetype');
+}
 video{
+    /* bottom: 1px; */
     position:fixed;
     object-fit: cover;
+    /* transform: scaleX(-1); */
     width: 100%;
     min-height: 110svh;
     z-index: -2;

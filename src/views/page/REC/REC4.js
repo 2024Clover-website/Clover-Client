@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "../../../styles/components/REC4.module.css"
 import { useLocation, useNavigate } from "react-router-dom";
+import videoREC from "../../../video/recBG.mp4";
 
 function REC4(){
     const [shapevalue, setshape] = useState(0);
@@ -61,6 +62,9 @@ function REC4(){
     const name = location.state.nameval;
     return(
         <div className={styles.backcolor}>
+            <video loop muted autoPlay playsInline>
+                <source src={videoREC} type='video/mp4'/>
+            </video>
             <div className={styles.title}>그 자극은 어떤 모습으로 {name}님께 다가오나요?</div>
             <div className={styles.PNGContainer}>
                 <div className={styles.PNGct2}>
