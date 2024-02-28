@@ -14,18 +14,20 @@ function REC2(){
         setName(e.target.value);
     };
     const navigate = useNavigate();
+    
+    function handlefalse(){
+        alert('이름을 입력해주세요.');
+      }
+    function handleREC3click(){
+        navigate("/REC/stimulation", {state: {value : nameValue}});
+        window.location.href = "/REC/stimulation";
+    }
     const onTextareaHandler = (e) => {
         setInputCount(
         e.target.value.replace(/[\0-\x7f]|([0-\u07ff]|(.))/g, "$&$1$2").length
         );
-        };
-      function handlefalse(){
-        alert('이름을 입력해주세요.');
-      }
-      function handleREC3click(){
-        navigate("/REC/stimulation", {state: {value : nameValue}});
-        window.location.href = "/REC/stimulation";
-    }
+    };
+    
     return(
         <div className={styles.backcolor}>
             <video loop muted autoPlay playsInline>

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import {motion, Variants} from 'framer-motion';
 import { useLocation, useNavigate } from "react-router-dom";
 import styles from "../../../styles/components/REC3.module.css"
 import videoREC from "../../../video/recBG.mp4";
@@ -19,7 +18,7 @@ function REC3(){
         alert('카드를 선택해주세요.');
     }
     function handleREC4click(){
-        navigate("/REC/graphic", {state: {nameval : name, wish : boxvalue}});
+        navigate("/REC/graphic", {state: {nameval : name, wish : boxvalue, wishtitle : ""}});
         window.location.href = "/REC/graphic";
         
     }
