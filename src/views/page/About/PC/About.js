@@ -68,7 +68,7 @@ function About() {
                     </div>
                 </div>
             </div>
-            <video className={styles.responsiveImage} src="./img/About_4.mp4" alt="description" autoPlay loop muted />
+            <video className={styles.responsiveImage} src="./img/About_4.mp4" alt="description" autoPlay loop muted playsInline/>
             <div className={styles.textarea3}>
                 <p>알파벳 순서대로 보면 보다 쾌적하게 전시를 관람할수 있습니다. 또한 기프트존을 따로 마련해두었습니다.
                     다른 관람객들을 위해, 방문자님의 소중한 마음은 꼭 기프트존에만 놓아주세요.</p>
