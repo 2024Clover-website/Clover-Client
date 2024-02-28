@@ -52,8 +52,8 @@ function App() {
 
     var currentHost = window.location.host;
     var currentPath = window.location.pathname;
-	let today = new Date();
-	const isDay= new Date(today.getFullYear,1,28);
+	// let today = new Date();
+	// const isDay= new Date(today.getFullYear,1,28);
 
     console.log(currentHost);
     console.log(currentPath);
