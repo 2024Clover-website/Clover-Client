@@ -84,6 +84,7 @@ function Menu() {
 				>
 					<img src="../img/Mobile cloverLogo.png" alt="Clover Logo"></img>
 				</div>
+
 			</div>
 		</>
 	);

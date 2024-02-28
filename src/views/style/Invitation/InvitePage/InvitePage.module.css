@@ -1,0 +1,85 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.PIG1{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+	min-height: 120svh;
+}
+video{
+    object-fit: cover;
+    width: 100%;
+}
+.startContainer{
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+}
+.startButton{ 
+    display: flex;
+    width: 100%;
+    height: 65px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    background-color: #716F6F, 20%;
+    text-align: center;
+    font-family: "YDIYGO350";
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #FFF;
+    background:  rgba(241, 241, 241, 0.25) linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.05) 0.01%, rgba(0, 0, 0, 0.15) 100%);
+    border-top: 2px solid #FFF;
+    box-shadow: 0px 3px 18px 0px rgba(0, 0, 0, 0.20);
+    backdrop-filter: blur(2.5px);
+}
+@font-face {
+	font-family: "YDIYGO310";
+	font-style: normal;
+	font-weight: 100;
+	src: 
+	url("../../../../fonts/YDIYGO310.woff") format('woff'),
+	url("../../../../fonts/YDIYGO310.ttf") format('truetype');
+}
+@font-face {
+	font-family: "YDIYGO320";
+	font-style: normal;
+	font-weight: 100;
+	src: 
+	url("../../../../fonts/YDIYGO320.woff") format('woff'),
+	url("../../../../fonts/YDIYGO320.ttf") format('truetype');
+}
+@font-face {
+	font-family: "YDIYGO330";
+	font-style: normal;
+	font-weight: 100;
+	src: 
+	url("../../../../fonts/YDIYGO330.woff") format('woff'),
+	url("../../../../fonts/YDIYGO330.ttf") format('truetype');
+}
+@font-face {
+	font-family: "YDIYGO340";
+	font-style: normal;
+	font-weight: 100;
+	src:
+	url("../../../../fonts/YDIYGO340.woff") format('woff'),
+	url("../../../../fonts/YDIYGO340.ttf") format('truetype');
+}
+@font-face {
+	font-family: "YDIYGO350";
+	font-style: normal;
+	font-weight: 100;
+	src :url("../../../../fonts/YDIYGO350.woff") format('woff'),
+	url("../../../../fonts/YDIYGO350.ttf") format('truetype');
+}
+@font-face {
+	font-family: "Avenir";
+	font-style: normal;
+	font-weight: 100;
+	src: url("../../../../fonts/Avenir.ttf") format('truetype');
+}

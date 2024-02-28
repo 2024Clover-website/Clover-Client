@@ -66,12 +66,14 @@ function Projects() {
 						<img
 							src="../../../img/Button01.png"
 							onClick={handlePodcastButton}
+							alt=""
 						/>
 					</p>
 				</div>
 			</div>
 			<div className={styles.ps}>
 			<img src="../../../img/MBMap.png"/>
+
 			</div>
 			<div className={styles.descriptionContainer}>
 				<div className={styles.titleBox}>
@@ -97,6 +99,7 @@ function Projects() {
 						<img
 							src="../../../img/Button01.png"
 							onClick={handleDocentButton}
+							alt=""
 						/>
 					</p>
 				</div>
@@ -109,12 +112,14 @@ function Projects() {
 						<img
 							src="../../../img/Button01.png"
 							onClick={handlePodcastButton}
+							alt=""
 						/>
 					</p>
 				</div>
 			</div>
 			<div className={styles.ps}>
 				<img src="../../../img/MCMap.png"/>
+
 			</div>
 			<div className={styles.descriptionContainer}>
 				<div className={styles.titleBox}>
@@ -140,6 +145,7 @@ function Projects() {
 						<img
 							src="../../../img/Button01.png"
 							onClick={handleDocentButton}
+							alt=""
 						/>
 					</p>
 				</div>
@@ -152,12 +158,14 @@ function Projects() {
 						<img
 							src="../../../img/Button01.png"
 							onClick={handlePodcastButton}
+							alt=""
 						/>
 					</p>
 				</div>
 			</div>
 			<div className={styles.ps}>
 				<img src="../../../img/MDMap.png"/>
+
 			</div>
 			<div className={styles.descriptionContainer}>
 				<div className={styles.titleBox}>
@@ -183,6 +191,7 @@ function Projects() {
 						<img
 							src="../../../img/Button01.png"
 							onClick={handleDocentButton}
+							alt=""
 						/>
 					</p>
 				</div>
@@ -195,6 +204,7 @@ function Projects() {
 						<img
 							src="../../../img/Button01.png"
 							onClick={handlePodcastButton}
+							alt=""
 						/>
 					</p>
 				</div>
@@ -226,6 +236,7 @@ function Projects() {
 						<img
 							src="../../../img/Button01.png"
 							onClick={handleDocentButton}
+							alt=""
 						/>
 					</p>
 				</div>
@@ -238,6 +249,7 @@ function Projects() {
 						<img
 							src="../../../img/Button01.png"
 							onClick={handlePodcastButton}
+							alt=""
 						/>
 					</p>
 				</div>
@@ -269,6 +281,7 @@ function Projects() {
 						<img
 							src="../../../img/Button01.png"
 							onClick={handleDocentButton}
+							alt=""
 						/>
 					</p>
 				</div>
@@ -281,6 +294,7 @@ function Projects() {
 						<img
 							src="../../../img/Button01.png"
 							onClick={handlePodcastButton}
+							alt=""
 						/>
 					</p>
 				</div>

@@ -82,11 +82,11 @@ function About() {
             <img className={styles.responsiveImage} src="./img/aboutimg11.png" alt="description" />
             <div className={styles.textarea4}>
                 <p>Graphic Detail</p>
-                <img src="./img/aboutimg1.png"></img>
-                <img src="./img/aboutimg2.png"></img>
-                <img src="./img/aboutimg3.png"></img>
-                <img src="./img/aboutimg4.png"></img>
-                <img src="./img/aboutimg5.png"></img>
+                <img src="./img/aboutimg1.png" alt =""></img>
+                <img src="./img/aboutimg2.png" alt =""></img>
+                <img src="./img/aboutimg3.png" alt =""></img>
+                <img src="./img/aboutimg4.png" alt =""></img>
+                <img src="./img/aboutimg5.png" alt =""></img>
             </div>
             <div className={styles.textarea5}>
                 <p>Thanks to</p>
