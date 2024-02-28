@@ -7,8 +7,6 @@ import { useNavigate } from "react-router-dom";
 
 
 function DocentTitle() {
-	
-
 	const navigate = useNavigate();
 
 	const [progress, setProgress] = useState(0);
