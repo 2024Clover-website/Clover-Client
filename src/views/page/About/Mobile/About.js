@@ -5,7 +5,7 @@ import styles from "../../../../styles/About/Mobile/About.module.css";
 function About() {
 	return (
 		<div className={styles.Mcontainer}>
-			<img className={styles.responsiveImage} src="./img/aboutMimg1.png" alt="description" playsInline/>
+			<img className={styles.responsiveImage} src="./img/aboutMimg1.png" alt="description" autoPlay loop muted playsInline/>
 			
 			<div className={styles.Mpage}>
 				<div className={styles.MLinecontainer}></div>
@@ -78,7 +78,7 @@ function About() {
 						다른 관람객들을 위해, 방문자님의 소중한 마음은 꼭 기프트존에만 놓아주세요.</p>
 				</div>
 			</div>
-			<img className={styles.responsiveImage} src="./img/aboutMimg6.png" alt="description" playsInline/>
+			<img className={styles.responsiveImage} src="./img/aboutMimg6.png" alt="description" autoPlay loop muted playsInline/>
 			<div className={styles.Mpage}>
 				<div className={styles.MC3}>
 					<p>온라인으로도 전시를 관람하실 수 있습니다. About 페이지에서 이번 전시에 대한 전문을 읽어보실 수 있으
@@ -86,15 +86,15 @@ function About() {
 						마지막으로 REC 페이지에서는 나만의 자극 카드를 만드는 인터랙티브한 경험을 즐기실 수 있습니다.</p>
 				</div>
 			</div>
-			<img className={styles.responsiveImage} src="./img/aboutMimg7.png" alt="description" playsInline/>
+			<img className={styles.responsiveImage} src="./img/aboutMimg7.png" alt="description" autoPlay loop muted playsInline/>
 			<div className={styles.MC4}>
 				<p>Graphic Detail</p>
 			</div>
-			<img className={styles.responsiveImage} src="./img/aboutMimg8.png" alt="description" playsInline/>
-			<img className={styles.responsiveImage} src="./img/aboutMimg9.png" alt="description" playsInline/>
-			<img className={styles.responsiveImage} src="./img/aboutMimg10.png" alt="description" playsInline/>
-			<img className={styles.responsiveImage} src="./img/aboutMimg11.png" alt="description" playsInline/>
-			<img className={styles.responsiveImage} src="./img/aboutMimg12.png" alt="description" playsInline/>
+			<img className={styles.responsiveImage} src="./img/aboutMimg8.png" alt="description" autoPlay loop muted playsInline/>
+			<img className={styles.responsiveImage} src="./img/aboutMimg9.png" alt="description" autoPlay loop muted playsInline/>
+			<img className={styles.responsiveImage} src="./img/aboutMimg10.png" alt="description" autoPlay loop muted playsInline/>
+			<img className={styles.responsiveImage} src="./img/aboutMimg11.png" alt="description" autoPlay loop muted playsInline/>
+			<img className={styles.responsiveImage} src="./img/aboutMimg12.png" alt="description" autoPlay loop muted playsInline/>
 			<div className={styles.MC5}>
 				<p>Thanks to</p>
 			</div>
