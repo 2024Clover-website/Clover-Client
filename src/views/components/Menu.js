@@ -31,6 +31,7 @@ function Menu() {
 					height: window.screen.height,
 					background: "rgb(113, 111, 111, 0.2)",
 					backdropFilter: "blur(50)",
+					pointerEvents: "none"
 				}}
 			></div>
 			<div
