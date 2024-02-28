@@ -95,7 +95,7 @@ function REC6(){
         // setTimeout(() => setShowContainer4(true), 11500);
         // setTimeout(() => setShowContainer5(true), 15500);
         // setTimeout(() => setShowContainer4(true), 41000);일상 작업 카드
-        // setTimeout(() => setShowContainer5(true), 15500);
+        setTimeout(() => setShowContainer5(true), 15500);
     }, [])
 
     const elRef = useRef();
