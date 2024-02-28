@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 
 import axios from "axios";
 
@@ -7,8 +7,6 @@ import podStyle from "../../../../../styles/Projects/Podcast/Mobile/PodcastTitle
 import { useNavigate } from "react-router-dom";
 
 function PodcastTitle() {
-	
-
 	const navigate = useNavigate();
 
 	const [progress, setProgress] = useState(0);
@@ -60,7 +58,7 @@ function PodcastTitle() {
 			}
 		});
 		const interval = setInterval(() => {
-			setProgress((progress) => progress + 0.1);
+			setProgress((progress) => progress + 0.2);
 		}, 10);
 
 		setTimeout(() => {
@@ -75,7 +73,7 @@ function PodcastTitle() {
 			});
 			window.location.href = "/projects/podcast/content";
 		}, 5000);
-	}, [navigate,teamId]);
+	}, [navigate, teamId]);
 
 	const memberCard = member.map((member, index) => {
 		return (

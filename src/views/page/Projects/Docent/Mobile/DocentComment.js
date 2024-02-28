@@ -96,6 +96,7 @@ function DocentComment() {
 				}
 			})
 			.catch((err) => console.log(err));
+		setText("");
 	};
 
 	return (
