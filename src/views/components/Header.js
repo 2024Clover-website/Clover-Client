@@ -47,7 +47,7 @@ function Header() {
 						alt="Clover Logo"
 					/>
 				) : (
-					<img src="../../../../img/Inarow logo.png" alt="Clover Logo" />
+					<img src="../../../../img/In a row_logo(1x).png" alt="Clover Logo" />
 				)}
 			</div>
 			<div
@@ -77,7 +77,7 @@ function Header() {
 						alt="Clover Logo"
 					/>
 				) : (
-					<img src="../../../../img/Clover logo.png" alt="Clover Logo" />
+					<img src="../../../../img/clove_logo(1x).png" alt="Clover Logo" />
 				)}
 			</div>
 		</div>
