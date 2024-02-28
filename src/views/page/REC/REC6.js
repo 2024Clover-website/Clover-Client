@@ -16,6 +16,7 @@ import { ScrollMenu, VisibilityContext }from "react-horizontal-scrolling-menu";
 // type scrollVisibilityApiType = React.ContextType<typeof VisibilityContext>;
 import usePreventBodyScroll from "./enableBodyScroll";
 import 'react-horizontal-scrolling-menu/dist/styles.css';
+import { url } from "inspector";
 
 function REC6(){
     const { disableScroll, enableScroll } = usePreventBodyScroll();
@@ -131,7 +132,7 @@ function REC6(){
                 <div className={styles.firstani}>
                     <div className={styles.starttitle}>{name}님만의 연필이 완성됐어요</div>
                     <div className={styles.fstpencilct}>
-                        <img className={styles.fstpencil} alt src={hero}/>
+                        <img className={styles.fstpencil} alt src='./img/{patternId}{colorId}.png'/>
                     </div>
                 </div>
             </CSSTransition>
