@@ -45,8 +45,8 @@ function Projects() {
             designer: '권예지·조용욱·김혜신',
             designer2: '기한나·안서경·허민영',
             podcastTime: '15:28',
-            
-            podcastqrImage : "../img/전시브랜딩팀_팟캐스트.png"
+
+            podcastqrImage: "../img/전시브랜딩팀_팟캐스트.png"
         },
         'CTB': {
             title: 'KEYCLE',
@@ -55,8 +55,8 @@ function Projects() {
             designer: '최재정·김경은·김동재·노유정',
             docentTime: '2:19',
             podcastTime: '10:30',
-            docentqrImage : "../img/태산_도슨트.png",
-            podcastqrImage : "../img/태산_팟캐스트.png",
+            docentqrImage: "../img/태산_도슨트.png",
+            podcastqrImage: "../img/태산_팟캐스트.png",
         },
         'CTC': {
             title: '악의 불변',
@@ -65,8 +65,8 @@ function Projects() {
             designer: '임로빈·김성연·박금주·박지현',
             docentTime: '2:48',
             podcastTime: '9:45',
-            docentqrImage : "../img/이따팀_도슨트.png",
-            podcastqrImage : "../img/이따팀 _팟캐스트.png",
+            docentqrImage: "../img/이따팀_도슨트.png",
+            podcastqrImage: "../img/이따팀 _팟캐스트.png",
         },
         'CTD': {
             title: 'VIBE MAKERS',
@@ -76,8 +76,8 @@ function Projects() {
             designer2: '송지윤·오시헌',
             docentTime: '2:54',
             podcastTime: '6:06',
-            docentqrImage : "../img/바이브 메이커스_도슨트.png",
-            podcastqrImage : "../img/바이브 메이커스_도슨트.png",
+            docentqrImage: "../img/바이브 메이커스_도슨트.png",
+            podcastqrImage: "../img/바이브 메이커스_도슨트.png",
         },
         'CTE': {
             title: 'Dopamine Addiction: Visualization of symptoms',
@@ -86,8 +86,8 @@ function Projects() {
             designer: '정지윤·김나연',
             docentTime: '3:01',
             podcastTime: '16:27',
-            docentqrImage : "../img/도파민중독자들_도슨트.png",
-            podcastqrImage : "../img/도파민중독자들_도슨트.png"
+            docentqrImage: "../img/도파민중독자들_도슨트.png",
+            podcastqrImage: "../img/도파민중독자들_도슨트.png"
         },
         'CTF': {
             title: 'Perfect doll factory',
@@ -96,8 +96,8 @@ function Projects() {
             designer: '한승우·강지수·박규리·임재윤',
             docentTime: '1:58',
             podcastTime: '16:27',
-            docentqrImage : "../img/옥수수수염_도슨트.png",
-            podcastqrImage : "../img/옥수수수염_팟케스트.png"
+            docentqrImage: "../img/옥수수수염_도슨트.png",
+            podcastqrImage: "../img/옥수수수염_팟케스트.png"
         },
     };
 
@@ -246,17 +246,17 @@ function Projects() {
                             setDocentModalIsOpen(false);
                         }}
                     />
-<div className={styles.docentContainer}>
-    <div className={styles.podcastbox}>
-        <p>도슨트 : 러닝타임 {description.docentTime}</p>
-    </div>
-    <p>{description.title}</p>
-</div>
+                    <div className={styles.docentContainer}>
+                        <div className={styles.podcastbox}>
+                            <p>도슨트 : 러닝타임 {description.docentTime}</p>
+                        </div>
+                        <p>{description.title}</p>
+                    </div>
 
                     <div className={styles.LineContainer}></div>
                     <div className={styles.qrContainer}>
                         <div className={styles.imgContainer}>
-                        <img src={description.docentqrImage} alt="" />
+                            <img src={description.docentqrImage} alt="" />
                         </div>
                         <div className={styles.textContainer}>
                             <p1>모바일로 봐주세요!</p1> <br />
@@ -283,17 +283,17 @@ function Projects() {
                             setDocentModalIsOpen(false);
                         }}
                     />
-<div className={styles.docentContainer}>
-    <div className={styles.podcastbox}>
-        <p>팟캐스트 : 러닝타임 {description.podcastTime}</p>
-    </div>
-    <p>{description.title}</p>
-</div>
+                    <div className={styles.docentContainer}>
+                        <div className={styles.podcastbox}>
+                            <p>팟캐스트 : 러닝타임 {description.podcastTime}</p>
+                        </div>
+                        <p>{description.title}</p>
+                    </div>
 
                     <div className={styles.LineContainer}></div>
                     <div className={styles.qrContainer}>
                         <div className={styles.imgContainer}>
-                        <img src={description.podcastqrImage} alt="" />
+                            <img src={description.podcastqrImage} alt="" />
                         </div>
                         <div className={styles.textContainer}>
                             <p1>모바일로 봐주세요!</p1> <br />
