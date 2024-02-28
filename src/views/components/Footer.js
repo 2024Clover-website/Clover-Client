@@ -10,7 +10,14 @@ function Footer() {
 	}
 
 	return (
-		<div className="container">
+		<div
+			className="container"
+			style={
+				window.location.pathname === "/"
+					? { color: "black" }
+					: { color: "#ffffff" }
+			}
+		>
 			<div className="team">
 				MJU Division of Design
 				<br />

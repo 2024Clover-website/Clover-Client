@@ -1,20 +1,23 @@
 @font-face {
 	font-family: "Avenir";
-	src: url(../../fonts/AvenirLTStd-Black.ttf);
+	src: url(../../fonts/AvenirLTStd-Roman.ttf);
 }
 
 .container {
 	position: fixed;
 	display: flex;
 	flex-direction: row;
-	background-image: url('../../../public/img/footerbackgorund color.png');
-	background-size: cover;
-	background-repeat: no-repeat;
+	background: rgba(255, 255, 255, 0.2);
+	border-top: 2px solid rgba(255, 255, 255, 0.75);
+	box-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
+	backdrop-filter: blur(40px);
 	left: 0px;
 	bottom: 0px;
 	height: 100px;
 	width: 100%;
 	cursor: default;
+
+	align-items: center;
 }
 
 .team {
@@ -22,15 +25,12 @@
 	width: 300px;
 	height: 60px;
 	margin-left: 20px;
-	margin-top: 30px;
 
 	font-family: "Avenir";
 	font-style: normal;
 	font-weight: 400;
 	font-size: 20px;
 	line-height: 150%;
-
-	color: #FFFFFF;
 }
 
 .location {
@@ -39,16 +39,11 @@
 	height: 60px;
 	margin-left: 18.177%;
 
-	margin-top: 30px;
-
 	font-family: "Avenir";
 	font-style: normal;
 	font-weight: 400;
 	font-size: 20px;
 	line-height: 150%;
-	/* or 30px */
-
-	color: #FFFFFF;
 }
 
 .instagram {
@@ -58,7 +53,6 @@
 	width: 89px;
 	height: 30px;
 	right: 20px;
-	bottom: 35px;
 
 	font-family: "Avenir";
 	font-style: normal;
@@ -67,6 +61,4 @@
 	line-height: 150%;
 	/* identical to box height, or 30px */
 	text-decoration-line: underline;
-
-	color: #FFFFFF;
 }
