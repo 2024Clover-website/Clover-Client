@@ -241,3 +241,9 @@ body {
 
     
 }
+
+.responsiveImage {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
