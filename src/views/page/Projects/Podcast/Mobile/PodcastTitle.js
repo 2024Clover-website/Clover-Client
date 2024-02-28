@@ -7,8 +7,6 @@ import podStyle from "../../../../../styles/Projects/Podcast/Mobile/PodcastTitle
 import { useNavigate } from "react-router-dom";
 
 function PodcastTitle() {
-	const videoRef = useRef();
-
 	const navigate = useNavigate();
 
 	const [progress, setProgress] = useState(0);

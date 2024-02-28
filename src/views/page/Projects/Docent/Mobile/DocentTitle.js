@@ -6,8 +6,6 @@ import styles from "../../../../../styles/Projects/Docent/Mobile/DocentTitle.mod
 import { useNavigate } from "react-router-dom";
 
 function DocentTitle() {
-	const videoRef = useRef();
-
 	const navigate = useNavigate();
 
 	const [progress, setProgress] = useState(0);
