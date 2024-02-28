@@ -37,6 +37,8 @@
 
 .container {
 	display: flex;
+	position: fixed;
+	width: 85.066%;
 	height: 67%;
 	flex-direction: column;
 	margin-top: 24.241%;

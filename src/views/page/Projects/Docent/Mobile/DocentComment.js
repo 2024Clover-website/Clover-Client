@@ -32,36 +32,36 @@ function DocentComment() {
 		fetchData();
 	}, [teamId]);
 
-	useEffect(() => {
-		const handleResize = () => {
-			const windowHeight = window.innerHeight;
-			const inputElement = document.querySelector(".textinput");
-			const keyboardHeight =
-				windowHeight - inputElement.getBoundingClientRect().bottom;
+	// useEffect(() => {
+	// 	const handleResize = () => {
+	// 		const windowHeight = window.innerHeight;
+	// 		const inputElement = document.querySelector(".textinput");
+	// 		const keyboardHeight =
+	// 			windowHeight - inputElement.getBoundingClientRect().bottom;
 
-			// 키보드가 나타날 때 높이 조절
-			if (keyboardHeight > 0) {
-				// const footerElement = document.querySelector(".commentInput");
-				const bgElement = document.querySelector(".background");
-				// footerElement.style.bottom = keyboardHeight + "px";
-				bgElement.style.width = window.innerWidth;
-				bgElement.style.height = window.innerHeight;
-			} else {
-				// 키보드가 사라질 때 높이 초기화
-				const bgElement = document.querySelector(".commentInput");
-				// const footerElement = document.querySelector(".background");
-				// footerElement.style.bottom = "60px";
-				bgElement.style.width = window.innerWidth;
-				bgElement.style.height = window.innerHeight;
-			}
-		};
+	// 		// 키보드가 나타날 때 높이 조절
+	// 		if (keyboardHeight > 0) {
+	// 			// const footerElement = document.querySelector(".commentInput");
+	// 			const bgElement = document.querySelector(".background");
+	// 			// footerElement.style.bottom = keyboardHeight + "px";
+	// 			bgElement.style.width = window.innerWidth;
+	// 			bgElement.style.height = window.innerHeight;
+	// 		} else {
+	// 			// 키보드가 사라질 때 높이 초기화
+	// 			const bgElement = document.querySelector(".commentInput");
+	// 			// const footerElement = document.querySelector(".background");
+	// 			// footerElement.style.bottom = "60px";
+	// 			bgElement.style.width = window.innerWidth;
+	// 			bgElement.style.height = window.innerHeight;
+	// 		}
+	// 	};
 
-		window.addEventListener("resize", handleResize);
+	// 	window.addEventListener("resize", handleResize);
 
-		return () => {
-			window.removeEventListener("resize", handleResize);
-		};
-	}, []);
+	// 	return () => {
+	// 		window.removeEventListener("resize", handleResize);
+	// 	};
+	// }, []);
 
 	const commentCard = comment.map((comment, index) => {
 		const now = new Date();
@@ -114,13 +114,12 @@ function DocentComment() {
 		<>
 			<div
 				style={{ width: window.innerWidth, height: window.innerHeight }}
-				className={styles.backdrop}
-			></div>
-
-			<div
-				style={{ width: window.innerWidth, height: window.innerHeight }}
 				className={styles.background}
 			>
+				<div
+					style={{ width: "100%", height: "100%" }}
+					className={styles.backdrop}
+				></div>
 				{background === "" ? (
 					<div></div>
 				) : (
