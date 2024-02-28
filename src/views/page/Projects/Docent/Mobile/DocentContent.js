@@ -149,7 +149,7 @@ function DocentContent() {
 					<source src={background} type="video/mp4" />
 				</video>
 			)}
-			<audio ref={audioRef} autoPlay={true} muted={isMuted}>
+			<audio ref={audioRef} autoPlay={true} muted={isMuted} playsInline>
 				<source src={record} type="audio/mp3" />
 			</audio>
 			{/** 헤더 */}
