@@ -133,18 +133,12 @@ function PodcastContent() {
 					<div className={styles.avatar}>{profileList(script)}</div>
 
 					<p
-						style={
+						className={
 							audioRef.current &&
 							audioRef.current.currentTime <= script.end_time &&
 							audioRef.current.currentTime >= script.start_time
-								? {
-										opacity: 1,
-										transition: "opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1)",
-								  }
-								: {
-										opacity: 0.4,
-										transition: "opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1)",
-								  }
+								? styles.activeP
+								: styles.inactiveP
 						}
 						onClick={() => {
 							if (audioRef.current) {
