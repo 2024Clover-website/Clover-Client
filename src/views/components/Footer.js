@@ -4,7 +4,9 @@ import "../../styles/components/Footer.css";
 
 function Footer() {
 	function handleInstagramClick() {
-		window.location.replace("https://www.instagram.com");
+		window.location.replace(
+			"https://www.instagram.com/clover_vimf?igsh=MW9jMXF3MzY2MzhjYw=="
+		);
 	}
 
 	return (
