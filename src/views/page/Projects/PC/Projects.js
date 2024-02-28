@@ -137,7 +137,7 @@ function Projects() {
 		} else {
 			setModalIsOpen(false);
 		}
-	}, [timeRemaining]);
+	}, [timeRemaining,setModalIsOpen]);
 
 	return (
 		<div className={styles.container}>
@@ -145,7 +145,7 @@ function Projects() {
 				className={styles.CTMain}
 				onClick={() => setIsDescriptionContainer2Visible(false)}
 			>
-				<img alt src="/img/CTMain.png" />
+				<img alt="" src="/img/CTMain.png" />
 				<div>
 					<img
 						className={`${styles.CTA} ${styles.hoverImage}`}
