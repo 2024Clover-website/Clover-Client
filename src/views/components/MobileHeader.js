@@ -26,7 +26,7 @@ function MobileHeader() {
 					</div>
 					<Menu />
 					<div className="menu-footer">
-						<img src="../img/menuINAROW.png" alt="INALOW Logo"></img>
+						<img src="../img/menuINAROW.png" className="menu-INAROW" alt="INALOW Logo"></img>
 						<p>MJU Division of Design CLOVER Final Exhibition 2024</p>
 					</div>
 				</>
