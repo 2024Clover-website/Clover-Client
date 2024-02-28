@@ -16,19 +16,21 @@ function PodcastComment() {
 
 	const [text, setText] = useState("");
 	const [comment, setComment] = useState([]);
-	const type = "podcast";
 
 	useEffect(() => {
-		axios
-			.get(`https://api.clover-inarow.site/teams/${teamId}/comment/${type}`)
-			.then((res) => {
-				if (res.data.isSuccess) {
-					setComment(res.data.result);
-					console.log("comment get success!");
-				}
-			})
-			.catch((err) => console.log(err));
-	}, [teamId, type]);
+		let res;
+		async function fetchData() {
+			res = await axios.get(
+				`https://api.clover-inarow.site/teams/${teamId}/comment/podcast`
+			);
+			if (res.data.isSuccess) {
+				setComment(res.data.result);
+				console.log("comment get success!");
+			}
+		}
+
+		fetchData();
+	}, [teamId]);
 
 	useEffect(() => {
 		const handleResize = () => {
@@ -86,8 +88,8 @@ function PodcastComment() {
 		setText(e.target.value);
 	};
 
-	const onSubmit = () => {
-		axios
+	const onSubmit = async () => {
+		await axios
 			.post(`https://api.clover-inarow.site/teams/${teamId}/comment/podcast`, {
 				comment: `${text}`,
 			})
@@ -98,6 +100,8 @@ function PodcastComment() {
 			});
 
 		setText("");
+
+		window.location.href = "/projects/podcast/comment";
 	};
 
 	return (

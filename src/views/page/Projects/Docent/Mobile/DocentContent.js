@@ -22,7 +22,6 @@ function DocentContent() {
 	const [isMuted, setIsMuted] = useState(false);
 	const [script, setScript] = useState([]);
 	const [runningTime, setRunningTime] = useState(0);
-	const [isLoaded, setIsLoaded] = useState(false);
 
 	let relativePosition;
 
@@ -49,8 +48,6 @@ function DocentContent() {
 				console.log("successed!");
 				setScript(res.data.result);
 
-				setIsLoaded(!isLoaded);
-
 				const lastScript = res.data.result.slice(-1)[0];
 				if (lastScript) {
 					setRunningTime(lastScript.end_time);
@@ -73,7 +70,7 @@ function DocentContent() {
 		return () => {
 			clearTimeout(interval);
 		};
-	}, [runningTime, playbackRate, isLoaded, progress, teamId]);
+	}, [runningTime, playbackRate, progress, teamId]);
 
 	const scriptCard = script.map((script, index) => {
 		return (
