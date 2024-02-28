@@ -46,7 +46,6 @@ function Projects() {
 			designer: "권예지·조용욱·김혜신",
 			designer2: "기한나·안서경·허민영",
 			podcastTime: "15:28",
-
 			podcastqrImage: "../img/전시브랜딩팀_팟캐스트.png",
 		},
 		CTB: {
