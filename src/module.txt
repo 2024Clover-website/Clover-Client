@@ -1,0 +1,5 @@
+//캔버스2
+npm install html2canvas
+
+//파일 저장
+npm install file-saver --save

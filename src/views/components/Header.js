@@ -2,10 +2,11 @@ import React from "react";
 import "../../styles/components/Header.css";
 
 import { BsFillRecordFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 function Header() {
 	function handleAboutClick() {
-		window.location.href = "/";
+		window.location.href = "/About";
 	}
 
 	function handleProjectsClick() {
@@ -13,7 +14,7 @@ function Header() {
 	}
 
 	function handleRecordTapeClick() {
-		window.location.href = "/REC";
+		window.location.href = "/REC/start";
 	}
 
 	return (

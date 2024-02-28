@@ -1,2 +1,5 @@
-지도 사용할때 필요한 모듈
-npm install —save google-maps-react
+//캔버스2
+npm install html2canvas
+
+//파일 저장
+npm install file-saver --save
