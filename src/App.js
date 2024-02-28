@@ -57,7 +57,7 @@ function App() {
 
     console.log(currentHost);
     console.log(currentPath);
-	if(today<=isDay){
+	
 		if(currentSubdomain==="www"&&currentPath==="/"){
 		window.location.replace("https://www.clover-inarow.site/invite/public")
 		}
@@ -82,9 +82,9 @@ function App() {
 		}
 		
 		
-	}else{
+	
 
-	}
+	
 });
 
 	return (
@@ -96,9 +96,8 @@ function App() {
 	  </Pc>
   	  <Mobile>
 	   <MOBILE />
-  </Mobile>
+	</Mobile>
 
-  query: "(min-width:450px)",
        
 
 		</Suspense>
