@@ -55,9 +55,10 @@ function REC5(){
     const name = location.state.name;
     const pattern = location.state.pattern;
     const wish = location.state.wish;
+    const wishtitle = location.state.wishtitle;
     const navigate = useNavigate();
     function handleREC6click(){
-        navigate("/REC/tape", {state : {name : name, color : colorvalue, pattern : pattern, wish : wish}});
+        navigate("/REC/tape", {state : {name : name, color : colorvalue, pattern : pattern, wish : wish, wishtitle : wishtitle}});
         window.location.href = "/REC/tape";
     }
     

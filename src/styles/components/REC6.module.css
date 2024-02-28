@@ -48,6 +48,24 @@
     height: 100%;
     z-index: 4;
 }
+.forthaniout{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    opacity: 1;
+}
+@keyframes forthout {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.forthaniout{
+    animation: forthout 0.35s cubic-bezier(0.15,1,0.5,1) 0s forwards;
+}
 .fstpencilct{
     margin-top: 45px;
     justify-content: center;
@@ -413,7 +431,7 @@
 
 .lastment{
     /* z-index: 4; */
-    /* padding-left: 50%; */
+    padding-left: 50%;
     /* position: absolute; */
     font-family: 'YDIYGO350';
     font-style: normal;
@@ -441,7 +459,7 @@
 
     text-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
 }
-/* 
+
 @keyframes mentreading {
     0%{
         transform: translateX(0);
@@ -452,7 +470,7 @@
 }
 .lastment{
     animation: mentreading 24s cubic-bezier(0.25,0.25,0.25,0.25) 3s forwards;
-} */
+}
 
 .cardmakingtitle{
     opacity: 0;
@@ -576,6 +594,7 @@
     flex-direction: row;
 }
 .fifthct1{
+    opacity: 0;
     width: 360px;
     height: 515px;
     flex-shrink: 0;
@@ -585,6 +604,19 @@
     box-shadow: 0px 3px 18px 0px rgba(0, 0, 0, 0.20), 0px 4px 20px 0px rgba(211, 255, 56, 0.25) inset, 0px 3px 200px 0px rgba(255, 255, 255, 0.10) inset;
     backdrop-filter: blur(5px);
     margin-right: 200px;
+}
+@keyframes fifcard {
+    0%{
+        transform: translateY(70px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.fifthct1{
+    animation: fifcard 0.75s cubic-bezier(0.15,1,0.5,1) 0.5s forwards;
 }
 .fifthcd1{
     display: flex;
@@ -601,8 +633,30 @@
     display:inline-block;
 }
 .fifthcd2{
+    padding: 30px;
     width: 360px;
     height: 220px;
+
+    font-family: 'YDIYGO350';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 130%;
+    /* identical to box height, or 26px */
+
+    color: #FFFFFF;
+}
+.fifthcd2 > p{
+    padding-top: 20px;
+    padding-right: 60px;
+    font-family: 'YDIYGO330';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 150%;
+    /* or 22px */
+
+    color: #FFFFFF;
 }
 .fifthct2{
     width: 720px;
@@ -613,6 +667,20 @@
 .fifthtxt1{
     width: 740px;
     margin-bottom: 20px;
+    opacity: 0;
+}
+@keyframes fiftext1 {
+    0%{
+        transform: translateY(70px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.fifthtxt1{
+    animation: fiftext1 0.75s cubic-bezier(0.15,1,0.5,1) 0.7s forwards;
 }
 .fifthtxt1 > p{
     color: #FFF;
@@ -626,6 +694,20 @@
 }
 .fifthtxt2{
     width: 740px;
+    opacity: 0;
+}
+@keyframes fiftext2 {
+    0%{
+        transform: translateY(70px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.fifthtxt2{
+    animation: fiftext2 0.75s cubic-bezier(0.15,1,0.5,1) 0.9s forwards;
 }
 .fifthtxt2 > p{
     color: #FFF;
@@ -639,17 +721,34 @@
     text-align: start;
 }
 .fifthtxt3{
+    opacity: 0;
     display: flex;
     width: 740px;
     height: 79px;
     flex-direction: row;
 }
+@keyframes fifbut {
+    0%{
+        transform: translateY(70px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.fifthtxt3{
+    animation: fifbut 0.75s cubic-bezier(0.15,1,0.5,1) 1.1s forwards;
+}
 .fifthbutt1{
+    cursor: pointer;
     width: 304px;
     height: 79px;
     margin-right: 30px;
 }
 .imgbutt{
+    cursor: pointer;
+
     width: 304px;
     height: 79px;
     display: inline-flex;

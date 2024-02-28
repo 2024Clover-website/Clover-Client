@@ -24,7 +24,7 @@ function REC6(){
     const patternId = location.state.pattern;
     const colorId = location.state.color;
     const name = location.state.name;
-    let wish;
+    const [wish, setwish] = useState("");
     const cardRef = useRef(null);
 
 	const handleDownload = async () => {
@@ -58,14 +58,16 @@ function REC6(){
     const [showoutment1, setShowoutment1] = useState(false);
     const [showlastment, setShowLastment] = useState(false);
     const [showoutlastment, setShowOutLastment] = useState(false);
+    const [showoutcardct, setShowOutCardct] = useState(false);
+    
     useEffect(() => {
-        if(location.state.wish === 1) wish = "타인이 갖는 기대";
-        else if(location.state.wish === 2) wish = "어떤 재화를 갖고 싶게끔하는 상황";
-        else if(location.state.wish === 3) wish = "본받고 싶은 타인의 모습";
-        else if(location.state.wish === 4) wish = "진심어린 칭찬과 위로";
-        else if(location.state.wish === 5) wish = "시간적 여유";
-        else wish = location.state.wishtitle;
-    },[])
+        if(location.state.wish === 1) setwish("타인이 갖는 기대");
+        else if(location.state.wish === 2) setwish("어떤 재화를 갖고 싶게끔하는 상황");
+        else if(location.state.wish === 3) setwish("본받고 싶은 타인의 모습");
+        else if(location.state.wish === 4) setwish("진심어린 칭찬과 위로");
+        else if(location.state.wish === 5) setwish("시간적 여유");
+        else setwish(location.state.wishtitle);
+    },[wish])
     useEffect(()=> {
         let res;
         async function fetchData() {
@@ -89,13 +91,15 @@ function REC6(){
         setTimeout(()=> setShowLastment(true), 11500);
         // setTimeout(() => setShowContainer2(false), 12000);
         setTimeout(()=> setShowContainer3(true), 12000);
-        // setTimeout(()=> setShowOutLastment(true), 40000);엔딩 크레딧
+        setTimeout(()=> setShowOutLastment(true), 40000);
 
         // setTimeout(() => setShowContainer2(false), 7500);
         // setTimeout(() => setShowContainer4(true), 11500);
         // setTimeout(() => setShowContainer5(true), 15500);
-        // setTimeout(() => setShowContainer4(true), 41000);일상 작업 카드
-        // setTimeout(() => setShowContainer5(true), 15500);
+        setTimeout(() => setShowContainer4(true), 41000);
+        setTimeout(() => setShowOutCardct(true), 46000);
+        // setTimeout(() => setShowContainer4(false), 46100);
+        setTimeout(() => setShowContainer5(true), 46000);
     }, [])
 
     const elRef = useRef();
@@ -152,7 +156,7 @@ function REC6(){
                 </div>
             </CSSTransition>
             <CSSTransition in={showContainer4} timeout={750} delay={500} classNames="motion-slide" mountOnEnter unmountOnExit>
-                <div className={styles.forthani}>
+                <div className={showoutcardct ? styles.forthaniout : styles.forthani}>
                     <div className={styles.cardmakingtitle}>일상 자극 카드를 만드는 중..</div>
                     <div className={styles.cardct}>
                         <div className={styles.card}>
@@ -175,7 +179,9 @@ function REC6(){
 							<div className={styles.fifthcd1}>
 								<img alt src={hero} />
 							</div>
-							<div className={styles.fifthcd2}>타인이 갖는 기대</div>
+							<div className={styles.fifthcd2}>{wish}
+                                <p className="">기대가 크다는것은 {name}님의 잠재력을 알아봤다는 뜻이겠죠. 지금보다 나아지지 않더라도 괜찮아요. 그저 나아가는 모습을 보여주면, {name}님을 향한 믿음은 사라지지 않을 거예요.</p>
+                            </div>
 						</div>
 						<div className={styles.fifthct2}>
 							<div className={styles.fifthtxt1}>
