@@ -63,6 +63,8 @@
 .speedButton > p {
 	margin: 0;
 
+	margin-top: 2px;
+
 	font-family: "Avenir-Black";
 	font-style: normal;
 	font-weight: 900;
