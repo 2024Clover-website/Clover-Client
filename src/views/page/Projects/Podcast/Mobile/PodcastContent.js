@@ -189,9 +189,8 @@ function PodcastContent() {
 				<audio ref={audioRef} autoPlay={true} muted={isMuted}>
 					<source src={record} type="audio/mp3" />
 				</audio>
-				{/** 헤더 */}
-				<div className={styles.header}>
-					{/** 음소거 버튼 */}
+
+				{/* <div className={styles.header}>
 					<div
 						className={styles.soundButton}
 						onClick={() => {
@@ -204,7 +203,6 @@ function PodcastContent() {
 							<img alt="" src={process.env.PUBLIC_URL + "/on.png"} />
 						)}
 					</div>
-					{/** 뒤로가기 버튼 */}
 					<svg
 						width="40"
 						height="40"
@@ -276,23 +274,19 @@ function PodcastContent() {
 							</filter>
 						</defs>
 					</svg>
-					{/** 배속 버튼 */}
 					<div className={styles.speedButton} onClick={handleSpeedClick}>
 						<p>{playbackRate}x</p>
 					</div>
-				</div>
+				</div> */}
 
-				{/** 내용 container */}
-				<div className={styles.container}>
+				{/* <div className={styles.container}>
 					<br />
 					<br />
 					<br />
 					{scriptCard}
-				</div>
+				</div> */}
 
-				{/** 푸터 */}
-				<div className={styles.footer}>
-					{/** 총 재생시간 */}
+				{/* <div className={styles.footer}>
 					<div className={styles.playTime}>
 						<p>
 							{Math.floor(runningTime / 60)}:{Math.floor(runningTime % 60)}
@@ -544,7 +538,7 @@ function PodcastContent() {
 							/>
 						</svg>
 					</div>
-				</div>
+				</div> */}
 			</div>
 		);
 	}
