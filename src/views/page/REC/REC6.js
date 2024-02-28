@@ -23,21 +23,11 @@ import Modal from 'react-modal';
 import { useLocation } from "react-router-dom";
 
 
-function REC6() {
-
-
-
 function REC6(){
     const [wish, setwish] = useState("");
     const [littlewish, setlittlewish] = useState("");
   
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-	const handleDownloads = async () => {
-		setIsModalOpen(true);
-	};
-
-
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
 	const LinkQRCodeGenerator = ({ link }) => {
 		return <QRCode value={link} size={200} />;
@@ -67,7 +57,7 @@ function REC6(){
 	};
 
 	function handleBack() {
-		window.location.href = "/REC";
+		window.location.href = "/REC/start";
 	}
 
     const [hero, setHero] = useState("");
@@ -133,6 +123,8 @@ function REC6(){
         setTimeout(() => setShowOutCardct(true), 46000);
         setTimeout(() => setShowContainer4(false), 46100);
         setTimeout(() => setShowContainer5(true), 46100);
+        setTimeout(() => setIsModalOpen(true), 52100);
+        setIsModalOpen(true)
         // setTimeout(() => setlodingcircle(2), 47000);
         // setTimeout(() => setlodingcircle(3), 48000);
         // setTimeout(() => setlodingcircle(4), 49000);
@@ -270,7 +262,7 @@ function REC6(){
 							<div className={styles.fifthtxt3}>
 								<div className={styles.fifthbutt1}>
 
-									<button className={styles.imgbutt} onClick={handleDownloads}>
+									<button className={styles.imgbutt} onClick={handleDownload}>
 										<p>이미지 저장하기</p>
 									</button>
 								</div>

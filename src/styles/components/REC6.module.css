@@ -1014,25 +1014,25 @@ flex-grow: 0;
 .back > p{
 /* 처음으로 */
 
-width: 111px;
-height: 39px;
+    width: 111px;
+    height: 39px;
 
-font-family: 'YDIYGO350';
-font-style: normal;
-font-weight: 400;
-font-size: 30px;
-line-height: 130%;
-/* identical to box height, or 39px */
+    font-family: 'YDIYGO350';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 130%;
+    /* identical to box height, or 39px */
 
-color: #FFFFFF;
+    color: #FFFFFF;
 
 
-/* Inside auto layout */
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
 .loding1{
     position: absolute;
     justify-self: right;
