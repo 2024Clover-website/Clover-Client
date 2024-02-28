@@ -25,13 +25,13 @@ function Projects() {
 
 	const [isDescriptionContainer2Visible, setIsDescriptionContainer2Visible] =
 		useState(true);
-	const [setModalIsOpen] = useState(false);
+	const [modalOpen,setModalIsOpen] = useState(false);
 	const [timeRemaining, setTimeRemaining] = useState(10 * 60);
 	const [description, setDescription] = useState({});
 	const [isDescriptionVisible, setIsDescriptionVisible] = useState(false);
 	const [podcastModalIsOpen, setPodcastModalIsOpen] = useState(false);
 	const [docentModalIsOpen, setDocentModalIsOpen] = useState(false);
-	const [ setImageSrc] = useState({
+	const [ imageSrc,setImageSrc] = useState({
 		CTA: "/img/CTA.png",
 		CTB: "/img/CTB.png",
 		CTC: "/img/CTC.png",
@@ -118,6 +118,8 @@ function Projects() {
 	}
 
 	function handleImageClick(image) {
+		const temp=imageSrc;
+		console.log(temp);
 		setDescription(descriptions[image]);
 		setIsDescriptionVisible(true);
 		setImageSrc((prevState) => ({
@@ -129,6 +131,8 @@ function Projects() {
 
 
 	useEffect(() => {
+		const temp=modalOpen;
+		console.log(temp);
 		if (timeRemaining > 0) {
 			const timerId = setTimeout(() => {
 				setTimeRemaining(timeRemaining - 1);
@@ -137,7 +141,7 @@ function Projects() {
 		} else {
 			setModalIsOpen(false);
 		}
-	}, [timeRemaining,setModalIsOpen]);
+	}, [timeRemaining,setModalIsOpen,modalOpen]);
 
 	return (
 		<div className={styles.container}>
