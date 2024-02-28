@@ -32,6 +32,7 @@
 }
 
 .menu-footer {
+
 	position: fixed;
 	display: flex;
 	flex-direction: column;
@@ -43,12 +44,22 @@
 }
 
 .menu-footer > p {
-	font-family: "Avenir";
+	margin-top: 20px;
+	/* font-family: 'Avenir'; */
 	font-style: normal;
 	font-weight: 400;
 	font-size: 13px;
 	line-height: 150%;
+	/* identical to box height, or 20px */
 	text-align: center;
+	
+	color: #FFFFFF;
+}
 
-	color: #ffffff;
+img {
+	margin-top: 30px;
+    width: 73.12px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
