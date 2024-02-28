@@ -37,7 +37,7 @@ function PC() {
 
 	const isPodcastAnnounce =
 		window.location.pathname === "/projects/podcastAnnounce";
-
+	const isInviteAnnounce = location.pathname.startsWith("/invite");
 	return (
 		<div>
 			{!(isDocentAnnounce || isPodcastAnnounce) && <Header />}
@@ -65,7 +65,7 @@ function PC() {
 					<Route exact path="/invite/옥수수수염" element={<AnnouncementT5 />} />
 				</Routes>
       		)}
-			{!(isDocentAnnounce || isPodcastAnnounce) && <Footer />}
+			{!(isDocentAnnounce || isPodcastAnnounce||isInviteAnnounce)&& <Footer />}
 		</div>
 	);
 }
