@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 
 import axios from "axios";
 
-import { useNavigate, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 import styles from "../../../../../styles/Projects/Docent/Mobile/DocentContent.module.css";
 
@@ -18,13 +18,13 @@ function PodcastContent() {
 	// const commentCount = location.state.commentCount;
 
 	const [progress, setProgress] = useState(100);
-	const [playbackRate, setPlaybackRate] = useState(1);
+	const [playbackRate] = useState(1);
 	const [isMuted] = useState(false);
-	const [script, setScript] = useState([]);
+	const [, setScript] = useState([]);
 	const [runningTime, setRunningTime] = useState(0);
 	const [isLoading, setIsLoading] = useState(true);
 
-	let relativePosition;
+	// let relativePosition;
 
 	// const handleSpeedClick = () => {
 	// 	if (audioRef.current) {
