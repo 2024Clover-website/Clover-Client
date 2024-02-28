@@ -3,11 +3,11 @@ import { CSSTransition } from 'react-transition-group';
 import html2canvas from 'html2canvas';
 import { saveAs } from 'file-saver';
 import axios from "axios";
-import loding1 from "../../../circle1.png";
-import loding2 from "../../../circle2.png";
-import loding3 from "../../../circle3.png";
-import loding4 from "../../../circle4.png";
-import loding5 from "../../../circle5.png";
+// import loding1 from "../../../circle1.png";
+// import loding2 from "../../../circle2.png";
+// import loding3 from "../../../circle3.png";
+// import loding4 from "../../../circle4.png";
+// import loding5 from "../../../circle5.png";
 
 import styles from "../../../styles/components/REC6.module.css";
 import videoREC from "../../../video/recBG.mp4";
@@ -54,7 +54,7 @@ function REC6(){
     const [hero, setHero] = useState("");
 
     // const scrollRef = useHorizontalScroll();
-    const [lodingcircle, setlodingcircle] = useState(1);
+    // const [lodingcircle, setlodingcircle] = useState(1);
     const [showContainer1, setShowContainer1] = useState(true);
     const [showContainer2, setShowContainer2] = useState(false);
     const [showContainer3, setShowContainer3] = useState(false);
@@ -109,15 +109,15 @@ function REC6(){
         // setTimeout(() => setShowContainer4(true), 11500);
         // setTimeout(() => setShowContainer5(true), 15500);
         // setTimeout(() => setShowContainer4(true), 41000);일상 작업 카드
-        setTimeout(() => setShowContainer5(true), 15500);
+        // setTimeout(() => setShowContainer5(true), 15500);
         setTimeout(() => setShowContainer4(true), 41000);
         setTimeout(() => setShowOutCardct(true), 46000);
         setTimeout(() => setShowContainer4(false), 46100);
-        setTimeout(() => setShowContainer5(true), 46000);
-        setTimeout(() => setlodingcircle(2), 47000);
-        setTimeout(() => setlodingcircle(3), 48000);
-        setTimeout(() => setlodingcircle(4), 49000);
-        setTimeout(() => setlodingcircle(5), 50000);
+        setTimeout(() => setShowContainer5(true), 46100);
+        // setTimeout(() => setlodingcircle(2), 47000);
+        // setTimeout(() => setlodingcircle(3), 48000);
+        // setTimeout(() => setlodingcircle(4), 49000);
+        // setTimeout(() => setlodingcircle(5), 50000);
     }, [])
 
     const elRef = useRef();
@@ -203,7 +203,7 @@ function REC6(){
             mountOnEnter unmountOnExit
             style={{ pointerEvents: "none" }}
             >
-                <div className={styles.forthani}>
+                <div className={showoutcardct ? styles.forthaniout : styles.forthani}>
                     <div className={styles.cardmakingtitle}>일상 자극 카드를 만드는 중..</div>
                     <div className={styles.cardct}>
                         <div className={styles.card}>
@@ -221,11 +221,11 @@ function REC6(){
 				unmountOnExit
 			>
 				<div className={styles.fifthani}>
-                    <img className={styles.loding1} art = "" src = {loding1}/>
+                    {/* <img className={styles.loding1} art = "" src = {loding1}/>
                     <img className={styles.loding2} art = "" src = {loding2}/>
                     <img className={styles.loding3} art = "" src = {loding3}/>
                     <img className={styles.loding4} art = "" src = {loding4}/>
-                    <img className={styles.loding5} art = "" src = {loding5}/>
+                    <img className={styles.loding5} art = "" src = {loding5}/> */}
 					<div className={styles.fifthct}>
 						<div className={styles.fifthct1} ref={cardRef}>
 							<div className={styles.fifthcd1}>
