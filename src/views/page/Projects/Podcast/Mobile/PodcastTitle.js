@@ -7,7 +7,7 @@ import podStyle from "../../../../../styles/Projects/Podcast/Mobile/PodcastTitle
 import { useNavigate } from "react-router-dom";
 
 function PodcastTitle() {
-	const videoRef = useRef();
+	
 
 	const navigate = useNavigate();
 
@@ -73,7 +73,7 @@ function PodcastTitle() {
 			});
 			window.location.href = "/projects/podcast/content";
 		}, 5000);
-	}, []);
+	}, [navigate,teamId]);
 
 	const memberCard = member.map((member, index) => {
 		return (

@@ -5,7 +5,7 @@ import PC from "./views/PC.js";
 import MOBILE from "./views/MOBILE.js";
 
 import React, { Suspense, useEffect } from "react";
-import { Route, Routes } from "react-router-dom";
+
 import { useMediaQuery } from "react-responsive";
 
 
@@ -53,7 +53,6 @@ function App() {
     var currentHost = window.location.host;
     var currentPath = window.location.pathname;
 	let today = new Date();
-	let date= today.getDate();
 	const isDay= new Date(today.getFullYear,1,28);
 
     console.log(currentHost);
@@ -84,7 +83,7 @@ function App() {
 		
 		
 	}else{
-		
+
 	}
 });
 

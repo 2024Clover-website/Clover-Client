@@ -73,13 +73,13 @@ function PodcastContent() {
 		return () => {
 			clearTimeout(interval);
 		};
-	}, [runningTime, playbackRate]);
+	}, [runningTime, playbackRate,teamId,progress]);
 
 	const scriptCard = script.map((script, index) => {
 		return (
 			<>
 				<div className={styles.avatar}>
-					<img alt src={script.profile} />
+					<img alt="" src={script.profile} />
 				</div>
 				<p
 					style={
@@ -141,9 +141,9 @@ function PodcastContent() {
 					}}
 				>
 					{isMuted ? (
-						<img alt src={process.env.PUBLIC_URL + "/off.png"} />
+						<img alt="" src={process.env.PUBLIC_URL + "/off.png"} />
 					) : (
-						<img alt src={process.env.PUBLIC_URL + "/on.png"} />
+						<img alt="" src={process.env.PUBLIC_URL + "/on.png"} />
 					)}
 				</div>
 				{/** 뒤로가기 버튼 */}
@@ -248,7 +248,7 @@ function PodcastContent() {
 						window.location.href = "/projects/podcast/comment";
 					}}
 				>
-					<img alt src={process.env.PUBLIC_URL + "/comment(1x).png"} />
+					<img alt="" src={process.env.PUBLIC_URL + "/comment(1x).png"} />
 					<p>{commentCount}</p>
 				</div>
 
