@@ -60,27 +60,35 @@ function PodcastContent() {
 			} catch (error) {
 				console.error("Error fetching data: ", error);
 			} finally {
-				setIsLoading(false);
+				isLoadingControl();
 			}
 		}
 
-		if (progress === 100) fetchData();
+		fetchData();
+	}, [teamId]);
 
-		const interval = setInterval(() => {
-			setProgress((progress) => {
-				const newProgress = progress - (1 / runningTime) * playbackRate;
-				return parseFloat(newProgress.toFixed(5));
-			});
-		}, 10);
+	function isLoadingControl() {
+		setIsLoading(false);
+	}
 
-		setTimeout(() => {
-			clearInterval(interval);
-		}, runningTime * 1000);
+	useEffect(() => {
+		if (!isLoading) {
+			const interval = setInterval(() => {
+				setProgress((progress) => {
+					const newProgress = progress - (1 / runningTime) * playbackRate;
+					return parseFloat(newProgress.toFixed(5));
+				});
+			}, 10);
 
-		return () => {
-			clearTimeout(interval);
-		};
-	}, [runningTime, playbackRate, progress, teamId, script.isSuccess]);
+			setTimeout(() => {
+				clearInterval(interval);
+			}, runningTime * 1000);
+
+			return () => {
+				clearTimeout(interval);
+			};
+		}
+	}, [progress, runningTime, playbackRate, isLoading]);
 
 	const handleProgressBar = (event) => {
 		if (!isLoading) {
@@ -121,46 +129,44 @@ function PodcastContent() {
 			<div key={index}>Loading...</div> // Placeholder while loading
 		) : (
 			<>
-				{script.profile !== "" ? (
-					<>
-						<div className={styles.avatar}>{profileList(script)}</div>
+				<>
+					<div className={styles.avatar}>{profileList(script)}</div>
 
-						<p
-							style={
-								audioRef.current &&
-								audioRef.current.currentTime <= script.end_time &&
-								audioRef.current.currentTime >= script.start_time
-									? {
-											opacity: 1,
-											transition: "opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1)",
-									  }
-									: {
-											opacity: 0.4,
-											transition: "opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1)",
-									  }
+					<p
+						style={
+							audioRef.current &&
+							audioRef.current.currentTime <= script.end_time &&
+							audioRef.current.currentTime >= script.start_time
+								? {
+										opacity: 1,
+										transition: "opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1)",
+								  }
+								: {
+										opacity: 0.4,
+										transition: "opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1)",
+								  }
+						}
+						onClick={() => {
+							if (audioRef.current) {
+								audioRef.current.play();
+								audioRef.current.currentTime = script.start_time;
+								setProgress(100 - (script.start_time * 100) / runningTime);
 							}
-							onClick={() => {
-								if (audioRef.current) {
-									audioRef.current.play();
-									audioRef.current.currentTime = script.start_time;
-									setProgress(100 - (script.start_time * 100) / runningTime);
-								}
-							}}
-						>
-							{script.script}
-						</p>
-						<br />
-					</>
-				) : (
-					<div key={index} /> // Empty div with a key for correct rendering
-				)}
+						}}
+					>
+						{script.script}
+					</p>
+					<br />
+				</>
 			</>
 		);
 	});
 
 	if (isLoading) {
+		console.log("loading");
 		return <div>Loading...</div>;
 	} else {
+		console.log("loaded");
 		return (
 			<div
 				style={{ width: window.screen.width, height: window.screen.height }}
