@@ -19,7 +19,7 @@ function PodcastContent() {
 
 	const [progress, setProgress] = useState(100);
 	const [playbackRate, setPlaybackRate] = useState(1);
-	// const [isMuted, setIsMuted] = useState(false);
+	const [isMuted] = useState(false);
 	const [script, setScript] = useState([]);
 	const [runningTime, setRunningTime] = useState(0);
 	const [isLoading, setIsLoading] = useState(true);
