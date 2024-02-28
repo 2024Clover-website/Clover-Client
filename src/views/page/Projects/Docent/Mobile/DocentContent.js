@@ -60,24 +60,35 @@ function DocentContent() {
 			} catch (error) {
 				console.error("Error fetching data: ", error);
 			} finally {
-				setIsLoading(false);
+				isLoadingControl();
 			}
 		}
 
-		if (progress === 100) fetchData();
+		fetchData();
+	}, [teamId]);
 
-		const interval = setInterval(() => {
-			setProgress((progress) => progress - 0.01);
-		}, 10);
+	function isLoadingControl() {
+		setIsLoading(false);
+	}
 
-		setTimeout(() => {
-			clearInterval(interval);
-		}, runningTime * 1000);
+	useEffect(() => {
+		if (!isLoading) {
+			const interval = setInterval(() => {
+				setProgress((progress) => {
+					const newProgress = progress - (1 / runningTime) * playbackRate;
+					return parseFloat(newProgress.toFixed(5));
+				});
+			}, 10);
 
-		return () => {
-			clearTimeout(interval);
-		};
-	}, [runningTime, playbackRate, progress, teamId, isLoading]);
+			setTimeout(() => {
+				clearInterval(interval);
+			}, runningTime * 1000);
+
+			return () => {
+				clearTimeout(interval);
+			};
+		}
+	}, [progress, runningTime, playbackRate, isLoading]);
 
 	const scriptCard = script.map((script, index) => {
 		// Use a ternary operator to ensure a value is returned in every iteration
