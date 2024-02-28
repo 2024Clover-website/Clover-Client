@@ -16,7 +16,7 @@ import { ScrollMenu, VisibilityContext }from "react-horizontal-scrolling-menu";
 // type scrollVisibilityApiType = React.ContextType<typeof VisibilityContext>;
 import usePreventBodyScroll from "./enableBodyScroll";
 import 'react-horizontal-scrolling-menu/dist/styles.css';
-import { url } from "inspector";
+
 
 function REC6(){
     const { disableScroll, enableScroll } = usePreventBodyScroll();
@@ -79,7 +79,7 @@ function REC6(){
             }
         }
         fetchData();
-
+        console.log(number)
         console.log(hero)
     },[hero]);
     // const scrollRef = useHorizontalScroll();
@@ -116,7 +116,8 @@ function REC6(){
         }
     }, [elRef]);
 
-
+    let number = `./${patternId}${colorId}.png` 
+    
     return(
         <div className={styles.backcolor}>
             <video loop muted autoPlay playsInline>
@@ -132,7 +133,7 @@ function REC6(){
                 <div className={styles.firstani}>
                     <div className={styles.starttitle}>{name}님만의 연필이 완성됐어요</div>
                     <div className={styles.fstpencilct}>
-                        <img className={styles.fstpencil} alt src='./img/{patternId}{colorId}.png'/>
+                        <img className={styles.fstpencil} src = {hero}/>
                     </div>
                 </div>
             </CSSTransition>
@@ -200,7 +201,7 @@ function REC6(){
 					<div className={styles.fifthct}>
 						<div className={styles.fifthct1} ref={cardRef}>
 							<div className={styles.fifthcd1}>
-								<img alt src={hero} />
+								<img alt src = {require(`../../../../public/${patternId}${colorId}.png`)} />
 							</div>
 							<div className={styles.fifthcd2}>타인이 갖는 기대</div>
 						</div>
