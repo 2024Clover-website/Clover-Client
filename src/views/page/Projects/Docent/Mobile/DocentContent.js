@@ -77,7 +77,7 @@ function DocentContent() {
 		return () => {
 			clearTimeout(interval);
 		};
-	}, [runningTime, playbackRate, progress, teamId, script.isSuccess]);
+	}, [runningTime, playbackRate, progress, teamId, isLoading]);
 
 	const scriptCard = script.map((script, index) => {
 		// Use a ternary operator to ensure a value is returned in every iteration
