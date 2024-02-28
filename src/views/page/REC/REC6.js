@@ -36,7 +36,7 @@ function REC6() {
 	};
 
 	function handleBack() {
-		window.location.href = "/REC/tape";
+		window.location.href = "/REC";
 	}
 	const [hero, setHero] = useState("");
 
