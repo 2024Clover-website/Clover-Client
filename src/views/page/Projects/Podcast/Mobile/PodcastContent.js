@@ -22,6 +22,7 @@ function PodcastContent() {
 	const [isMuted, setIsMuted] = useState(false);
 	const [script, setScript] = useState([]);
 	const [runningTime, setRunningTime] = useState(0);
+	const [isLoaded, setIsLoaded] = useState(false);
 
 	let relativePosition;
 
@@ -47,6 +48,8 @@ function PodcastContent() {
 			if (res.data.isSuccess) {
 				console.log("successed!");
 				setScript(res.data.result);
+
+				setIsLoaded(!isLoaded);
 
 				const lastScript = res.data.result.slice(-1)[0];
 				if (lastScript) {
@@ -75,7 +78,7 @@ function PodcastContent() {
 		return () => {
 			clearTimeout(interval);
 		};
-	}, [runningTime, playbackRate, teamId, progress]);
+	}, [runningTime, playbackRate, isLoaded, teamId, progress]);
 
 	const handleProgressBar = (event) => {
 		// 클릭한 위치의 x 좌표 구하기
