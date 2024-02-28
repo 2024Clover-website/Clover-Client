@@ -39,42 +39,30 @@ function Projects() {
 				</div>
 			</div>
 			<div className={styles.ps}>
-				<img src="../../../img/Mobilemap.png"/>
+				<img src="../../../img/MAMap.png"/>
 			</div>
 			
 			<div className={styles.descriptionContainer}>
 				<div className={styles.titleBox}>
 					<p className={styles.section}>A</p>
 					<p className={styles.title}>
-						Dopamine Addiction: Visualization of symptoms
+						About In a row
 					</p>
-					<p className={styles.category}>3D Motion Graphic</p>
+					<p className={styles.category}>ART DIRECT</p>
 				</div>
 
 				<div className={styles.innerBox}>
 					<div className={styles.tag}>
 						<p>디자이너</p>
 					</div>
-					<p className={styles.tagContents}>강지수·박규리</p>
-				</div>
-				<div className={styles.innerBox}>
-					<div className={styles.tag}>
-						<p>도슨트</p>
-					</div>
-					<p className={styles.tagContents}>
-						2:00
-						<img
-							src="../../../img/Button01.png"
-							onClick={handleDocentButton}
-						/>
-					</p>
+					<p className={styles.tagContents4}>권예지·조용욱·김혜신<br />기한나·안서경·허민영</p>
 				</div>
 				<div className={styles.innerBox}>
 					<div className={styles.tag}>
 						<p>팟캐스트</p>
 					</div>
 					<p className={styles.tagContents}>
-						10:00
+						15:28
 						<img
 							src="../../../img/Button01.png"
 							onClick={handlePodcastButton}
@@ -83,29 +71,29 @@ function Projects() {
 				</div>
 			</div>
 			<div className={styles.ps}>
-				<img src="../../../img/Mobilemap.png"/>
+			<img src="../../../img/MBMap.png"/>
 			</div>
 			<div className={styles.descriptionContainer}>
 				<div className={styles.titleBox}>
 					<p className={styles.section}>B</p>
 					<p className={styles.title}>
-						Dopamine Addiction: Visualization of symptoms
+						KEYCLE
 					</p>
-					<p className={styles.category}>3D Motion Graphic</p>
+					<p className={styles.category}>SERVICE DESIGN</p>
 				</div>
 
 				<div className={styles.innerBox}>
 					<div className={styles.tag}>
 						<p>디자이너</p>
 					</div>
-					<p className={styles.tagContents}>강지수·박규리</p>
+					<p className={styles.tagContents4}>최재정·김경은<br/>김동재·노유정</p>
 				</div>
 				<div className={styles.innerBox}>
 					<div className={styles.tag}>
 						<p>도슨트</p>
 					</div>
 					<p className={styles.tagContents}>
-						2:00
+					2:19
 						<img
 							src="../../../img/Button01.png"
 							onClick={handleDocentButton}
@@ -117,7 +105,7 @@ function Projects() {
 						<p>팟캐스트</p>
 					</div>
 					<p className={styles.tagContents}>
-						10:00
+						10:30
 						<img
 							src="../../../img/Button01.png"
 							onClick={handlePodcastButton}
@@ -126,29 +114,29 @@ function Projects() {
 				</div>
 			</div>
 			<div className={styles.ps}>
-				<img src="../../../img/Mobilemap.png"/>
+				<img src="../../../img/MCMap.png"/>
 			</div>
 			<div className={styles.descriptionContainer}>
 				<div className={styles.titleBox}>
 					<p className={styles.section}>C</p>
 					<p className={styles.title}>
-						Dopamine Addiction: Visualization of symptoms
+						악의 불변
 					</p>
-					<p className={styles.category}>3D Motion Graphic</p>
+					<p className={styles.category}>GRAPHIC DESIG</p>
 				</div>
 
 				<div className={styles.innerBox}>
 					<div className={styles.tag}>
 						<p>디자이너</p>
 					</div>
-					<p className={styles.tagContents}>강지수·박규리</p>
+					<p className={styles.tagContents4}>임로빈·김성연<br/>박금주·박지현</p>
 				</div>
 				<div className={styles.innerBox}>
 					<div className={styles.tag}>
 						<p>도슨트</p>
 					</div>
 					<p className={styles.tagContents}>
-						2:00
+						2:48
 						<img
 							src="../../../img/Button01.png"
 							onClick={handleDocentButton}
@@ -160,7 +148,7 @@ function Projects() {
 						<p>팟캐스트</p>
 					</div>
 					<p className={styles.tagContents}>
-						10:00
+						9:45
 						<img
 							src="../../../img/Button01.png"
 							onClick={handlePodcastButton}
@@ -169,29 +157,29 @@ function Projects() {
 				</div>
 			</div>
 			<div className={styles.ps}>
-				<img src="../../../img/Mobilemap.png"/>
+				<img src="../../../img/MDMap.png"/>
 			</div>
 			<div className={styles.descriptionContainer}>
 				<div className={styles.titleBox}>
 					<p className={styles.section}>D</p>
 					<p className={styles.title}>
-						Dopamine Addiction: Visualization of symptoms
+					VIBE MAKERS
 					</p>
-					<p className={styles.category}>3D Motion Graphic</p>
+					<p className={styles.category}>CHARATER POP-UP</p>
 				</div>
 
 				<div className={styles.innerBox}>
 					<div className={styles.tag}>
 						<p>디자이너</p>
 					</div>
-					<p className={styles.tagContents}>강지수·박규리</p>
+					<p className={styles.tagContents4}>정지윤·김나연·박도은<br/>송지윤·오시헌</p>
 				</div>
 				<div className={styles.innerBox}>
 					<div className={styles.tag}>
 						<p>도슨트</p>
 					</div>
 					<p className={styles.tagContents}>
-						2:00
+						2:54
 						<img
 							src="../../../img/Button01.png"
 							onClick={handleDocentButton}
@@ -203,7 +191,7 @@ function Projects() {
 						<p>팟캐스트</p>
 					</div>
 					<p className={styles.tagContents}>
-						10:00
+						6:06
 						<img
 							src="../../../img/Button01.png"
 							onClick={handlePodcastButton}
@@ -212,7 +200,7 @@ function Projects() {
 				</div>
 			</div>
 			<div className={styles.ps}>
-				<img src="../../../img/Mobilemap.png"/>
+			<img src="../../../img/MEMap.png"/>
 			</div>
 			<div className={styles.descriptionContainer}>
 				<div className={styles.titleBox}>
@@ -220,21 +208,21 @@ function Projects() {
 					<p className={styles.title}>
 						Dopamine Addiction: Visualization of symptoms
 					</p>
-					<p className={styles.category}>3D Motion Graphic</p>
+					<p className={styles.category}>SIDE PROJECT</p>
 				</div>
 
 				<div className={styles.innerBox}>
 					<div className={styles.tag}>
 						<p>디자이너</p>
 					</div>
-					<p className={styles.tagContents}>강지수·박규리</p>
+					<p className={styles.tagContents4}>정지윤·김나연</p>
 				</div>
 				<div className={styles.innerBox}>
 					<div className={styles.tag}>
 						<p>도슨트</p>
 					</div>
 					<p className={styles.tagContents}>
-						2:00
+						3:01
 						<img
 							src="../../../img/Button01.png"
 							onClick={handleDocentButton}
@@ -246,7 +234,7 @@ function Projects() {
 						<p>팟캐스트</p>
 					</div>
 					<p className={styles.tagContents}>
-						10:00
+						16:27
 						<img
 							src="../../../img/Button01.png"
 							onClick={handlePodcastButton}
@@ -255,29 +243,29 @@ function Projects() {
 				</div>
 			</div>
 			<div className={styles.ps}>
-				<img src="../../../img/Mobilemap.png"/>
+			<img src="../../../img/MFMap.png"/>
 			</div>
 			<div className={styles.descriptionContainer}>
 				<div className={styles.titleBox}>
 					<p className={styles.section}>F</p>
 					<p className={styles.title}>
-						Dopamine Addiction: Visualization of symptoms
+					Perfect doll factory
 					</p>
-					<p className={styles.category}>3D Motion Graphic</p>
+					<p className={styles.category}>EXPERIENTIAL MEDIA ART</p>
 				</div>
 
 				<div className={styles.innerBox}>
 					<div className={styles.tag}>
 						<p>디자이너</p>
 					</div>
-					<p className={styles.tagContents}>강지수·박규리</p>
+					<p className={styles.tagContents4}>한승우·강지수<br/>박규리·임재윤</p>
 				</div>
 				<div className={styles.innerBox}>
 					<div className={styles.tag}>
 						<p>도슨트</p>
 					</div>
 					<p className={styles.tagContents}>
-						2:00
+						1:58
 						<img
 							src="../../../img/Button01.png"
 							onClick={handleDocentButton}
@@ -289,16 +277,13 @@ function Projects() {
 						<p>팟캐스트</p>
 					</div>
 					<p className={styles.tagContents}>
-						10:00
+						16:27
 						<img
 							src="../../../img/Button01.png"
 							onClick={handlePodcastButton}
 						/>
 					</p>
 				</div>
-			</div>
-			<div className={styles.ps}>
-				<img src="../../../img/Mobilemap.png"/>
 			</div>
 		</div>
 	);
