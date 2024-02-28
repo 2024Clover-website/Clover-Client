@@ -16,18 +16,21 @@ function DocentComment() {
 
 	const [text, setText] = useState("");
 	const [comment, setComment] = useState([]);
-	const type = "docent";
 
 	useEffect(() => {
-		axios
-			.get(`https://api.clover-inarow.site/teams/${teamId}/comment/${type}`)
-			.then((res) => {
-				if (res.data.isSuccess) {
-					setComment(res.data.result);
-					console.log("comment get success!");
-				}
-			});
-	}, [teamId, type]);
+		let res;
+		async function fetchData() {
+			res = await axios.get(
+				`https://api.clover-inarow.site/teams/${teamId}/comment/docent`
+			);
+			if (res.data.isSuccess) {
+				setComment(res.data.result);
+				console.log("comment get success!");
+			}
+		}
+
+		fetchData();
+	}, [teamId]);
 
 	useEffect(() => {
 		const handleResize = () => {
@@ -91,8 +94,8 @@ function DocentComment() {
 		setText(e.target.value);
 	};
 
-	const onSubmit = () => {
-		axios
+	const onSubmit = async () => {
+		await axios
 			.post(`https://api.clover-inarow.site/teams/${teamId}/comment/docent`, {
 				comment: `${text}`,
 			})
@@ -103,6 +106,8 @@ function DocentComment() {
 			})
 			.catch((err) => console.log(err));
 		setText("");
+
+		window.location.href = "/projects/podcast/comment";
 	};
 
 	return (

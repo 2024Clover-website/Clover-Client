@@ -59,8 +59,6 @@ function PodcastContent() {
 
 		if (progress === 100) fetchData();
 
-		console.log(runningTime);
-
 		const interval = setInterval(() => {
 			setProgress((progress) => {
 				const newProgress = progress - (1 / runningTime) * playbackRate;
@@ -75,7 +73,7 @@ function PodcastContent() {
 		return () => {
 			clearTimeout(interval);
 		};
-	}, [runningTime, playbackRate, teamId, progress]);
+	}, [runningTime, playbackRate, progress, teamId]);
 
 	const handleProgressBar = (event) => {
 		// 클릭한 위치의 x 좌표 구하기
