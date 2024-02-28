@@ -7,7 +7,7 @@ function About() {
 		<div className={styles.Mcontainer}>
 			<img
 				className={styles.responsiveImage}
-				src="./img/aboutMimg1.png"
+				src="./img/AboutMimg1.png"
 				alt="description"
 				autoPlay
 				loop

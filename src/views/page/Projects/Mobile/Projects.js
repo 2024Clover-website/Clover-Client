@@ -36,7 +36,7 @@ function Projects() {
 				</div>
 			</div>
 			<div className={styles.ps}>
-				<img alt="" src="/img/MAMap.png" autoPlay loop muted playsInline />
+				<img alt="" src="/img/MAmap.png" autoPlay loop muted playsInline />
 			</div>
 
 			<div className={styles.descriptionContainer}>
@@ -78,7 +78,7 @@ function Projects() {
 				</div>
 			</div>
 			<div className={styles.ps}>
-				<img alt="" src="/img/MBMap.png" autoPlay loop muted playsInline />
+				<img alt="" src="/img/MBmap.png" autoPlay loop muted playsInline />
 			</div>
 			<div className={styles.descriptionContainer}>
 				<div className={styles.titleBox}>
@@ -139,7 +139,7 @@ function Projects() {
 				</div>
 			</div>
 			<div className={styles.ps}>
-				<img alt="" src="/img/MCMap.png" autoPlay loop muted playsInline />
+				<img alt="" src="/img/MCmap.png" autoPlay loop muted playsInline />
 			</div>
 			<div className={styles.descriptionContainer}>
 				<div className={styles.titleBox}>
@@ -200,7 +200,7 @@ function Projects() {
 				</div>
 			</div>
 			<div className={styles.ps}>
-				<img alt="" src="/img/MDMap.png" autoPlay loop muted playsInline />
+				<img alt="" src="/img/MDmap.png" autoPlay loop muted playsInline />
 			</div>
 			<div className={styles.descriptionContainer}>
 				<div className={styles.titleBox}>
@@ -261,7 +261,7 @@ function Projects() {
 				</div>
 			</div>
 			<div className={styles.ps}>
-				<img alt="" src="/img/MEMap.png" autoPlay loop muted playsInline />
+				<img alt="" src="/img/MEmap.png" autoPlay loop muted playsInline />
 			</div>
 			<div className={styles.descriptionContainer}>
 				<div className={styles.titleBox}>
@@ -320,7 +320,7 @@ function Projects() {
 				</div>
 			</div>
 			<div className={styles.ps}>
-				<img alt="" src="/img/MFMap.png" autoPlay loop muted playsInline />
+				<img alt="" src="/img/MFMmap.png" autoPlay loop muted playsInline />
 			</div>
 			<div className={styles.descriptionContainer}>
 				<div className={styles.titleBox}>
