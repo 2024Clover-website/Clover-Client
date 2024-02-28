@@ -4,7 +4,7 @@ import styles from '../../../../styles/About/PC/About.module.css';
 function About() {
     return (
         <div className={styles.container}>
-            <video className={styles.responsiveImage} src="./img/WEB_main.mp4" alt="description" autoPlay loop muted />
+            <video className={styles.responsiveImage} src="./img/WEB_main.mp4" alt="description" autoPlay loop muted playsInline/>
             <div className={styles.page}>
                 <div className={styles.Linecontainer}></div>
                 <div className={styles.text}>
@@ -20,7 +20,7 @@ function About() {
                     </div>
                 </div>
             </div>
-            <video className={styles.responsiveImage} src="./img/About_1.mp4" alt="description" autoPlay loop muted />
+            <video className={styles.responsiveImage} src="./img/About_1.mp4" alt="description" autoPlay loop muted playsInline/>
             <div className={styles.page}>
                 <div className={styles.Linecontainer}></div>
                 <div className={styles.text}>
@@ -36,7 +36,7 @@ function About() {
                     </div>
                 </div>
             </div>
-            <video className={styles.responsiveImage} src="./img/About_2.mp4" alt="description" autoPlay loop muted />
+            <video className={styles.responsiveImage} src="./img/About_2.mp4" alt="description" autoPlay loop muted playsInline/>
             <div className={styles.page}>
                 <div className={styles.Linecontainer}></div>
                 <div className={styles.text}>
@@ -52,7 +52,7 @@ function About() {
                     </div>
                 </div>
             </div>
-            <video className={styles.responsiveImage} src="./img/About_3.mp4" alt="description" autoPlay loop muted />
+            <video className={styles.responsiveImage} src="./img/About_3.mp4" alt="description" autoPlay loop muted playsInline/>
             <div className={styles.page}>
                 <div className={styles.Linecontainer}></div>
                 <div className={styles.text}>
