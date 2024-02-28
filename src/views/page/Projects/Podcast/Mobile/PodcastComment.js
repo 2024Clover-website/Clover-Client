@@ -77,7 +77,7 @@ function PodcastComment() {
 
 	return (
 		<div
-			style={{ width: window.screen.width, height: window.screen.height }}
+			style={{ width: window.innerWidth, height: window.innerHeight }}
 			className={styles.background}
 		>
 			{background === "" ? (
@@ -95,7 +95,7 @@ function PodcastComment() {
 				</video>
 			)}
 			<div
-				style={{ width: window.screen.width, height: window.screen.height }}
+				style={{ width: window.innerWidth, height: window.innerHeight }}
 				className={styles.backdrop}
 			></div>
 			{/** 헤더 */}
@@ -174,7 +174,12 @@ function PodcastComment() {
 				</svg>
 			</div>
 			{/** 내용 */}
-			<div className={styles.container}>{commentCard}</div>
+			<div className={styles.container}>
+				<br />
+				<br />
+				<br />
+				{commentCard}
+			</div>
 			{/** 푸터 */}
 			<div className={styles.commentInput}>
 				<input

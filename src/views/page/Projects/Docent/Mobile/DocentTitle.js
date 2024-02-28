@@ -85,7 +85,7 @@ function DocentTitle() {
 			)}
 
 			<div
-				style={{ width: window.screen.width, height: window.screen.height }}
+				style={{ width: window.innerWidth, height: window.innerHeight }}
 				className={styles.container}
 			>
 				<svg

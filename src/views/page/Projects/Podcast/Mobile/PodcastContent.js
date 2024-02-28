@@ -75,7 +75,7 @@ function PodcastContent() {
 		return () => {
 			clearTimeout(interval);
 		};
-	}, [runningTime, playbackRate,teamId,progress]);
+	}, [runningTime, playbackRate, script, teamId,progress]);
 
 	const handleProgressBar = (event) => {
 		// 클릭한 위치의 x 좌표 구하기
@@ -258,7 +258,12 @@ function PodcastContent() {
 			</div>
 
 			{/** 내용 container */}
-			<div className={styles.container}>{scriptCard}</div>
+			<div className={styles.container}>
+				<br />
+				<br />
+				<br />
+				{scriptCard}
+			</div>
 
 			{/** 푸터 */}
 			<div className={styles.footer}>

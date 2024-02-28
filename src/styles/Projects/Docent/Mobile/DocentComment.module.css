@@ -40,7 +40,6 @@
 	flex-direction: column;
 	margin-top: 24.241%;
 	margin-bottom: 14.778%;
-	padding-top: 50px;
 	padding-left: 7.467%;
 	padding-right: 7.467%;
 	align-items: center;
@@ -114,7 +113,7 @@
 	width: 92%;
 	height: 60px;
 	left: 4%;
-	bottom: 20px;
+	bottom: 60px;
 
 	background: rgba(255, 255, 255, 0.25);
 	border: 2px solid rgba(255, 255, 255, 0.75);

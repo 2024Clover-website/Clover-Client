@@ -13,15 +13,51 @@ function Header() {
 	}
 
 	function handleRecordTapeClick() {
-		window.location.href = "/";
+		window.location.href = "/REC";
 	}
 
 	return (
-		<div className="header-container">
+		<div
+			style={
+				window.location.pathname === "/"
+					? {
+							borderTop: 0,
+							borderLeft: 0,
+							borderRight: 0,
+							borderBottom: 2,
+							borderStyle: "solid",
+							borderColor: "black",
+					  }
+					: {
+							borderTop: 0,
+							borderLeft: 0,
+							borderRight: 0,
+							borderBottom: 2,
+							borderStyle: "solid",
+							borderColor: "white",
+					  }
+			}
+			className="header-container"
+		>
 			<div className="logo-left">
-				<img src="../../../../img/Inarow logo.png" alt="Clover Logo" />
+				{window.location.pathname === "/" ? (
+					<img
+						style={{ width: 141, height: 24 }}
+						src="../../../../img/Inarow_black.png"
+						alt="Clover Logo"
+					/>
+				) : (
+					<img src="../../../../img/Inarow logo.png" alt="Clover Logo" />
+				)}
 			</div>
-			<div className="nav-element">
+			<div
+				className="nav-element"
+				style={
+					window.location.pathname === "/"
+						? { color: "black" }
+						: { color: "#f1f1f1" }
+				}
+			>
 				<div onClick={handleAboutClick}>
 					<p>About</p>
 				</div>
@@ -34,7 +70,15 @@ function Header() {
 				</div>
 			</div>
 			<div className="logo-right">
-				<img src="../../../../img/Clover logo.png" alt="Clover Logo" />
+				{window.location.pathname === "/" ? (
+					<img
+						style={{ width: 142.23, height: 20.46 }}
+						src="../../../../img/Clover_black.png"
+						alt="Clover Logo"
+					/>
+				) : (
+					<img src="../../../../img/Clover logo.png" alt="Clover Logo" />
+				)}
 			</div>
 		</div>
 	);
