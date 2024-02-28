@@ -1,10 +1,9 @@
-import React, { useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 
 import axios from "axios";
 
 import styles from "../../../../../styles/Projects/Docent/Mobile/DocentTitle.module.css";
 import { useNavigate } from "react-router-dom";
-
 
 function DocentTitle() {
 	const navigate = useNavigate();
@@ -35,7 +34,7 @@ function DocentTitle() {
 		fetchData();
 
 		const interval = setInterval(() => {
-			setProgress((progress) => progress + 0.1);
+			setProgress((progress) => progress + 0.2);
 		}, 10);
 
 		setTimeout(() => {
@@ -50,7 +49,7 @@ function DocentTitle() {
 			});
 			window.location.href = "/projects/docent/content";
 		}, 5000);
-	}, [teamId,navigate]);
+	}, [teamId, navigate]);
 
 	const memberCard = member.map((member, index) => {
 		return (
