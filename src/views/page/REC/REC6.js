@@ -21,6 +21,7 @@ import { useLocation } from "react-router-dom";
 // import usePreventBodyScroll from "./enableBodyScroll";
 import 'react-horizontal-scrolling-menu/dist/styles.css';
 
+
 function REC6(){
     const location = useLocation();
     const patternId = location.state.pattern;
@@ -38,7 +39,7 @@ function REC6(){
 			const canvas = await html2canvas(div, { scale: 2 });
 			canvas.toBlob((blob) => {
 				if (blob !== null) {
-					saveAs(blob, "result.png");
+					saveAs(blob, "myPencil.png");
 				}
 			});
 		} catch (error) {
@@ -91,7 +92,7 @@ function REC6(){
             }
         }
         fetchData();
-
+        console.log(number)
         console.log(hero)
     },[hero]);
     // const scrollRef = useHorizontalScroll();
@@ -107,6 +108,8 @@ function REC6(){
         // setTimeout(() => setShowContainer2(false), 7500);
         // setTimeout(() => setShowContainer4(true), 11500);
         // setTimeout(() => setShowContainer5(true), 15500);
+        // setTimeout(() => setShowContainer4(true), 41000);일상 작업 카드
+        setTimeout(() => setShowContainer5(true), 15500);
         setTimeout(() => setShowContainer4(true), 41000);
         setTimeout(() => setShowOutCardct(true), 46000);
         setTimeout(() => setShowContainer4(false), 46100);
@@ -134,13 +137,20 @@ function REC6(){
         }
     }, [elRef]);
 
-
+    let number = `./${patternId}${colorId}.png` 
+    
     return(
         <div className={styles.backcolor}>
             <video loop muted autoPlay playsInline>
                 <source src={videoREC} type='video/mp4'/>
             </video>
-            <CSSTransition in={showContainer1} timeout={1500} delay={1000} classNames="motion.slide" mountOnEnter unmountOnExit>
+            <CSSTransition
+            in={showContainer1} 
+            timeout={1500} delay={1000} 
+            classNames="motion.slide"
+            mountOnEnter 
+            unmountOnExit
+            style={{ pointerEvents: "none" }}>
                 <div className={styles.firstani}>
                     <div className={styles.starttitle}>{name}님만의 연필이 완성됐어요</div>
                     <div className={styles.fstpencilct}>
@@ -148,7 +158,13 @@ function REC6(){
                     </div>
                 </div>
             </CSSTransition>
-            <CSSTransition in={showContainer2} timeout={0} delay={0} classNames="motion-slide" mountOnEnter unmountOnExit>
+            <CSSTransition 
+            in={showContainer2} 
+            timeout={0} delay={0} 
+            classNames="motion-slide" 
+            mountOnEnter unmountOnExit 
+            style={{ pointerEvents: "none" }}
+            >
             <div className={styles.secondani}>
                 <div className={styles.secondct}>
                     <img className={ showlastment ? styles.pencilout : styles.secpencil} alt = "" src={hero}/>
@@ -158,7 +174,15 @@ function REC6(){
                 <div className={showlastment ? styles.secondmentout : styles.secondment}>이 무한의 과정 속에서 {name}님이<br/> 잊으면 안되는 사실이 있어요</div>
             </div>
             </CSSTransition>
-            <CSSTransition in={showContainer3} timeout={750} delay={500} classNames="motion-slide" mountOnEnter unmountOnExit>
+            <CSSTransition 
+            in={showContainer3} 
+            timeout={750} 
+            delay={500} 
+            classNames="motion-slide" 
+            mountOnEnter 
+            unmountOnExit
+            style={{ pointerEvents: "none" }}
+            >
                 <div className={showoutlastment ? styles.trdaniout : styles.trdani}>
                     <div className={styles.justthat}>그건 바로..</div>
                     <div className={styles.scrollct}>
@@ -172,8 +196,14 @@ function REC6(){
                     <div className={styles.mousement}>문구를 확인해보세요</div>
                 </div>
             </CSSTransition>
-            <CSSTransition in={showContainer4} timeout={750} delay={500} classNames="motion-slide" mountOnEnter unmountOnExit>
-                <div className={showoutcardct ? styles.forthaniout : styles.forthani}>
+            <CSSTransition 
+            in={showContainer4} 
+            timeout={750} delay={500} 
+            classNames="motion-slide" 
+            mountOnEnter unmountOnExit
+            style={{ pointerEvents: "none" }}
+            >
+                <div className={styles.forthani}>
                     <div className={styles.cardmakingtitle}>일상 자극 카드를 만드는 중..</div>
                     <div className={styles.cardct}>
                         <div className={styles.card}>
@@ -199,7 +229,7 @@ function REC6(){
 					<div className={styles.fifthct}>
 						<div className={styles.fifthct1} ref={cardRef}>
 							<div className={styles.fifthcd1}>
-								<img alt = "" src={hero} />
+								<img alt src = {require(`../../../../public/${patternId}${colorId}.png`)} />
 							</div>
 							<div className={styles.fifthcd2}>{wish}
                                 <p>{littlewish}</p>
