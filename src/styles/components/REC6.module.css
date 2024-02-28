@@ -812,6 +812,227 @@
     line-height: 130%; /* 39px */
     text-align: start;
 }
+
+.BackButton{
+/* 뒤로가기 */
+
+position: absolute;
+width: 100px;
+height: 100px;
+left: 75px;
+top: 195px;
+cursor: 'pointer'
+
+
+}
+
+/* .Ct01 > img{
+    width: 200px;
+    height: 199.98px;
+    
+    filter: drop-shadow(0px 3px 18px rgba(0, 0, 0, 0.2));
+
+} */
+
+.Ct01{
+/* 해당 레이아웃 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 50px;
+
+position: absolute;
+width: 770px;
+height: 585px;
+left: calc(50% - 770px/2);
+top: calc(50% - 385px/2 + 9.94px);
+
+
+}
+
+
+.Ct02{
+/* Frame 72 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px 0px 20px;
+gap: 20px;
+
+width: 453px;
+height: 206px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+}
+
+.Ct03{
+/* 이미지 저장하기 */
+
+width: 408px;
+height: 90px;
+
+font-family: 'YDIYGO350';
+font-style: normal;
+font-weight: 400;
+font-size: 60px;
+line-height: 150%;
+/* identical to box height, or 90px */
+
+color: #FFFFFF;
+
+text-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+
+.Ct04{
+/* {용욱}님의 연필을 소중히 간직할 수 있어요 카메라로 아래 QR코드를 찍어주세요 */
+
+width: 453px;
+height: 76px;
+
+font-family: 'YDIYGO320';
+font-style: normal;
+font-weight: 400;
+font-size: 25px;
+line-height: 150%;
+/* or 38px */
+
+color: #FFFFFF;
+
+text-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+}
+.Ct05{
+/* Frame 73 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 40px;
+
+width: 693px;
+height: 206px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+}
+.Ct06{
+    /* Frame 246 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 30px;
+
+width: 316px;
+height: 79px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+}
+.blankC{
+/* Line 8 */
+
+width: 770px;
+height: 0px;
+
+border: 2px solid rgba(255, 255, 255, 0.75);
+box-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+}
+
+.back{
+    /* Frame 28 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 20px 50px;
+
+width: 211px;
+height: 79px;
+
+background: rgba(255, 255, 255, 0.25);
+border: 3px solid rgba(255, 255, 255, 0.75);
+box-shadow: 0px 3px 18px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(2.5px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 100px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+
+.back > p{
+/* 처음으로 */
+
+width: 111px;
+height: 39px;
+
+font-family: 'YDIYGO350';
+font-style: normal;
+font-weight: 400;
+font-size: 30px;
+line-height: 130%;
+/* identical to box height, or 39px */
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
 .loding1{
     position: absolute;
     justify-self: right;

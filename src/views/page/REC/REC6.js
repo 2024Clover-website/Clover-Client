@@ -1,35 +1,54 @@
-import React, { useEffect, useState, useRef } from "react";
-import { CSSTransition } from 'react-transition-group';
+
+import axios from "axios";
+import QRCode from 'qrcode.react';
+import React, { useEffect, useRef, useState } from "react";
+import { CSSTransition } from "react-transition-group";
+import exclude from "../../../Exclude.png";
+import modalBG from '../../../img/ModalBG.png';
+import BackButton from '../../../img/뒤로가기.png';
 import html2canvas from 'html2canvas';
 import { saveAs } from 'file-saver';
-import axios from "axios";
 // import loding1 from "../../../circle1.png";
 // import loding2 from "../../../circle2.png";
 // import loding3 from "../../../circle3.png";
 // import loding4 from "../../../circle4.png";
 // import loding5 from "../../../circle5.png";
-
 import styles from "../../../styles/components/REC6.module.css";
-import videoREC from "../../../video/recBG.mp4";
+import 'react-horizontal-scrolling-menu/dist/styles.css';
 import tape from "../../../tape.png";
-import exclude from "../../../Exclude.png";
+import videoREC from "../../../video/recBG.mp4";
+import { useHorizontalScroll } from "./useSideScroll";
 
+import Modal from 'react-modal';
 import { useLocation } from "react-router-dom";
 
-// import { ScrollMenu, VisibilityContext }from "react-horizontal-scrolling-menu";
-// type scrollVisibilityApiType = React.ContextType<typeof VisibilityContext>;
-// import usePreventBodyScroll from "./enableBodyScroll";
-import 'react-horizontal-scrolling-menu/dist/styles.css';
+
+function REC6() {
+
 
 
 function REC6(){
-    const location = useLocation();
-    const patternId = location.state.pattern;
-    const colorId = location.state.color;
-    const name = location.state.name;
     const [wish, setwish] = useState("");
     const [littlewish, setlittlewish] = useState("");
-    const cardRef = useRef(null);
+  
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+	const handleDownloads = async () => {
+		setIsModalOpen(true);
+	};
+
+
+
+	const LinkQRCodeGenerator = ({ link }) => {
+		return <QRCode value={link} size={200} />;
+	};
+	const link = '../../../img/Hero.png'; // QR 코드로 변환하려는 링크로 변경하세요.
+
+	const location = useLocation();
+	const patternId = location.state.pattern;
+	const colorId = location.state.color;
+	const name = location.state.name;
+	const cardRef = useRef(null);
 
 	const handleDownload = async () => {
 		console.log("download called");
@@ -250,10 +269,65 @@ function REC6(){
 							</div>
 							<div className={styles.fifthtxt3}>
 								<div className={styles.fifthbutt1}>
-									<button className={styles.imgbutt} onClick={handleDownload}>
+
+									<button className={styles.imgbutt} onClick={handleDownloads}>
 										<p>이미지 저장하기</p>
 									</button>
 								</div>
+								<Modal
+									isOpen={isModalOpen}
+									onRequestClose={() => setIsModalOpen(false)}
+									style={{
+										content: {
+											top: '0%',
+											left: '0%',
+											right: '0%',
+											bottom: '0%',
+											backgroundImage: `url(${modalBG})`,
+											overflow: 'auto',
+											WebkitOverflowScrolling: 'touch',
+											borderRadius: '0', // 모달의 모서리를 직사각형으로 만듭니다.
+											outline: 'none',
+											padding: '0'
+										}
+									}}
+								>
+									<img
+										src={BackButton}
+										alt="뒤로가기"
+										onClick={() => setIsModalOpen(false)}
+										className={styles.BackButton}
+
+									/>
+									<div className={styles.Ct01}>
+										<div className={styles.Ct05}>
+											{/* <img src={QRSImage} alt="QRS" className={styles.qrs}/> */}
+											<div style={{ filter: 'drop-shadow(0px 3px 18px rgba(0, 0, 0, 0.2))' }}>
+												<LinkQRCodeGenerator link={link} />
+											</div>
+											<div className={styles.Ct02}>
+												<div className={styles.Ct03}>
+													<p>이미지 저장하기</p>
+												</div>
+												<div className={styles.Ct04}>
+													<p>{name} 님의 연필을 소중히 간직할 수 있어요 카메라로 아래 QR코드를 찍어주세요</p>
+												</div>
+
+											</div>
+
+										</div>
+										<div className={styles.blankC}></div>
+										<div className={styles.Ct06}>
+											<button className={styles.back} onClick={handleBack}>
+												<p>처음으로</p>
+											</button>
+
+										</div>
+
+									</div>
+
+								</Modal>
+
 								<div className={styles.fifthbutt2}>
 									<button className={styles.backbutt} onClick={handleBack}>
 										<p>처음으로</p>
@@ -264,24 +338,8 @@ function REC6(){
 					</div>
 				</div>
 			</CSSTransition>
-        </div>
-    )
+		</div>
+	);
 }
-
-// function onWheel(apiObj, ev) {
-//     const isThouchpad = Math.abs(ev.deltaX) !== 0 || Math.abs(ev.deltaY) < 15;
-//     console.log(ev);
-//     if (isThouchpad) {
-//       ev.stopPropagation();
-//       return;
-//     }
-  
-//     if (ev.deltaY < 0) {
-//       apiObj.scrollNext();
-//     } else if (ev.deltaY > 0) {
-//       apiObj.scrollPrev();
-//     }
-//   }
-
 
 export default REC6;
