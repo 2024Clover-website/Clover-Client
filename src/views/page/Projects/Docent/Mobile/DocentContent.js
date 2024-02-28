@@ -11,7 +11,7 @@ function DocentContent() {
 	const location = useLocation();
 
 	const audioRef = useRef();
-	const scrollRef = useRef([]);
+	
 
 	const record = location.state.record;
 	const teamId = location.state.teamId;
