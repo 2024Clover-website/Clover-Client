@@ -18,7 +18,7 @@ function PodcastTitle() {
 	const [member, setMember] = useState([]);
 	const [background, setBackground] = useState("");
 
-	let teamId = 5;
+	let teamId = 1;
 
 	useEffect(() => {
 		let res;
