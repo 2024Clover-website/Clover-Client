@@ -55,6 +55,8 @@ function PodcastTitle() {
 				case 6:
 					setTeamName("옥수수수염");
 					break;
+				default:
+					console.log("");
 			}
 		});
 		const interval = setInterval(() => {

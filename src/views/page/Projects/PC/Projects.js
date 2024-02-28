@@ -141,7 +141,7 @@ function Projects() {
     return (
         <div className={styles.container}>
             <div className={styles.CTMain} onClick={() => setIsDescriptionContainer2Visible(false)}>
-                <img alt src="/img/CTMain.png" />
+                <img alt="" src="/img/CTMain.png" />
                 <div>
                     <img className={`${styles.CTA} ${styles.hoverImage}`} alt="" src="/img/CTA.gif" onClick={() => handleImageClick('CTA')} />
                     <img className={`${styles.CTB} ${styles.hoverImage}`} alt="" src="/img/CTB.gif" onClick={() => handleImageClick('CTB')} />

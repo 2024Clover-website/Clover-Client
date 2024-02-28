@@ -15,6 +15,7 @@ function Announcement() {
 				onClick={() => {
 					navigate(-1);
 				}}
+				alt=""
 			/>
 			<div className={styles.docentContainer}>
 				<div className={styles.podcastbox}>
