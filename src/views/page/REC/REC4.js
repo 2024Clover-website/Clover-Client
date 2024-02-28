@@ -55,11 +55,12 @@ function REC4(){
         alert('도형을 선택하세요.');
     }
     function handleREC5click(){
-        navigate("/REC/color", {state: {name : name, pattern : shapevalue}});
+        navigate("/REC/color", {state: {name : name, pattern : shapevalue, wish : wish}});
         window.location.href = "/REC/color";
     }
     const location = useLocation();
     const name = location.state.nameval;
+    const wish = location.state.wish;
     return(
         <div className={styles.backcolor}>
             <video loop muted autoPlay playsInline>

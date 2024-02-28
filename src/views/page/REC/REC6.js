@@ -1,5 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { CSSTransition } from 'react-transition-group';
+import html2canvas from 'html2canvas';
+import { saveAs } from 'file-saver';
 import {useHorizontalScroll} from "./useSideScroll";
 import axios from "axios";
 
@@ -22,6 +24,7 @@ function REC6(){
     const patternId = location.state.pattern;
     const colorId = location.state.color;
     const name = location.state.name;
+    let wish;
     const cardRef = useRef(null);
 
 	const handleDownload = async () => {
@@ -55,7 +58,14 @@ function REC6(){
     const [showoutment1, setShowoutment1] = useState(false);
     const [showlastment, setShowLastment] = useState(false);
     const [showoutlastment, setShowOutLastment] = useState(false);
-
+    useEffect(() => {
+        if(location.state.wish === 1) wish = "타인이 갖는 기대";
+        else if(location.state.wish === 2) wish = "어떤 재화를 갖고 싶게끔하는 상황";
+        else if(location.state.wish === 3) wish = "본받고 싶은 타인의 모습";
+        else if(location.state.wish === 4) wish = "진심어린 칭찬과 위로";
+        else if(location.state.wish === 5) wish = "시간적 여유";
+        else wish = location.state.wishtitle;
+    },[])
     useEffect(()=> {
         let res;
         async function fetchData() {

@@ -19,7 +19,7 @@ function REC3(){
         alert('카드를 선택해주세요.');
     }
     function handleREC4click(){
-        navigate("/REC/graphic", {state: {nameval : name}});
+        navigate("/REC/graphic", {state: {nameval : name, wish : boxvalue}});
         window.location.href = "/REC/graphic";
         
     }
