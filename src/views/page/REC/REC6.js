@@ -187,7 +187,13 @@ function REC6() {
 					</div>
 				</div>
 			</CSSTransition>
-            <CSSTransition in={showContainer4} timeout={750} delay={500} classNames="motion-slide" mountOnEnter unmountOnExit>
+            <CSSTransition 
+            in={showContainer4} 
+            timeout={750} 
+            delay={500} 
+            classNames="motion-slide" 
+            mountOnEnter unmountOnExit
+            style={{ pointerEvents: "none" }}>
                 <div className={styles.forthani}>
                     <div className={styles.cardmakingtitle}>일상 자극 카드를 만드는 중..</div>
                     <div className={styles.cardct}>
@@ -207,9 +213,9 @@ function REC6() {
 			>
 				<div className={styles.fifthani}>
 					<div className={styles.fifthct}>
-						<div className={styles.fifthct1} ref={cardRef}>
+						<div className={styles.fifthct1}>
 							<div className={styles.fifthcd1}>
-								<img alt src={hero} />
+								<img alt src={hero} ref={cardRef} />
 							</div>
 							<div className={styles.fifthcd2}>타인이 갖는 기대</div>
 						</div>
