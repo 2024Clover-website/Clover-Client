@@ -36,3 +36,38 @@
 		transform: rotate(360deg);
 	}
 }
+@font-face {
+  font-family: "YDIYGO310";
+  font-style: normal;
+  font-weight: 100;
+  src: local("YDIYGO310")
+  url("../src/fonts/YDIYGO310.woff");
+}
+@font-face {
+  font-family: "YDIYGO320";
+  font-style: normal;
+  font-weight: 100;
+  src: local("YDIYGO320")
+  url("../src/fonts/YDIYGO320.woff");
+}
+@font-face {
+  font-family: "YDIYGO330";
+  font-style: normal;
+  font-weight: 100;
+  src: local("YDIYGO330")
+  url("../src/fonts/YDIYGO330.woff");
+}
+@font-face {
+  font-family: "YDIYGO340";
+  font-style: normal;
+  font-weight: 100;
+  src: local("YDIYGO340")
+  url("../src/fonts/YDIYGO340.woff") format('woff');
+}
+@font-face {
+  font-family: "YDIYGO350";
+  font-style: normal;
+  font-weight: 100;
+  src: local("YDIYGO350")
+  url("../src/fonts/YDIYGO350.woff") format('woff');
+}

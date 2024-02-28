@@ -22,6 +22,7 @@ const customStyles = {
 };
 
 function Projects() {
+
 	const [isDescriptionContainer2Visible, setIsDescriptionContainer2Visible] =
 		useState(true);
 	const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -46,6 +47,7 @@ function Projects() {
 			designer: "권예지·조용욱·김혜신",
 			designer2: "기한나·안서경·허민영",
 			podcastTime: "15:28",
+
 
 			podcastqrImage: "../img/전시브랜딩팀_팟캐스트.png",
 		},
@@ -109,6 +111,7 @@ function Projects() {
 		setTimeRemaining(10 * 60);
 	}
 
+
 	function handleDocentButton() {
 		setModalIsOpen(true);
 		setTimeRemaining(10 * 60);
@@ -127,10 +130,12 @@ function Projects() {
 		setTimeRemaining(10 * 60);
 	}
 
+
 	function handleDocentButton() {
 		setDocentModalIsOpen(true);
 		setTimeRemaining(10 * 60);
 	}
+
 
 	useEffect(() => {
 		if (timeRemaining > 0) {
@@ -223,6 +228,7 @@ function Projects() {
 				</div>
 			)}
 
+
 			{!isDescriptionContainer2Visible && isDescriptionVisible && (
 				<div className={styles.descriptionContainer}>
 					<div className={styles.titleBox}>
@@ -247,6 +253,7 @@ function Projects() {
 							<div className={styles.tag}>
 								<p>도슨트</p>
 							</div>
+
 
 							<p className={styles.tagContents}>
 								{description.docentTime}
@@ -338,6 +345,7 @@ function Projects() {
 						</div>
 						<p>{description.title}</p>
 					</div>
+
 
 					<div className={styles.LineContainer}></div>
 					<div className={styles.qrContainer}>

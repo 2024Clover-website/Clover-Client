@@ -39,7 +39,7 @@ function Projects() {
 				</div>
 			</div>
 			<div className={styles.ps}>
-				<img src="../../../img/Mobilemap.png"/>
+				<img src="../../../img/Mobilemap.png" alt=""/>
 			</div>
 			
 			<div className={styles.descriptionContainer}>
@@ -66,6 +66,7 @@ function Projects() {
 						<img
 							src="../../../img/Button01.png"
 							onClick={handleDocentButton}
+							alt=""
 						/>
 					</p>
 				</div>
@@ -78,12 +79,13 @@ function Projects() {
 						<img
 							src="../../../img/Button01.png"
 							onClick={handlePodcastButton}
+							alt=""
 						/>
 					</p>
 				</div>
 			</div>
 			<div className={styles.ps}>
-				<img src="../../../img/Mobilemap.png"/>
+				<img src="../../../img/Mobilemap.png" alt=""/>
 			</div>
 			<div className={styles.descriptionContainer}>
 				<div className={styles.titleBox}>
@@ -109,6 +111,7 @@ function Projects() {
 						<img
 							src="../../../img/Button01.png"
 							onClick={handleDocentButton}
+							alt=""
 						/>
 					</p>
 				</div>
@@ -121,12 +124,13 @@ function Projects() {
 						<img
 							src="../../../img/Button01.png"
 							onClick={handlePodcastButton}
+							alt=""
 						/>
 					</p>
 				</div>
 			</div>
 			<div className={styles.ps}>
-				<img src="../../../img/Mobilemap.png"/>
+				<img src="../../../img/Mobilemap.png" alt=""/>
 			</div>
 			<div className={styles.descriptionContainer}>
 				<div className={styles.titleBox}>
@@ -152,6 +156,7 @@ function Projects() {
 						<img
 							src="../../../img/Button01.png"
 							onClick={handleDocentButton}
+							alt=""
 						/>
 					</p>
 				</div>
@@ -164,12 +169,13 @@ function Projects() {
 						<img
 							src="../../../img/Button01.png"
 							onClick={handlePodcastButton}
+							alt=""
 						/>
 					</p>
 				</div>
 			</div>
 			<div className={styles.ps}>
-				<img src="../../../img/Mobilemap.png"/>
+				<img src="../../../img/Mobilemap.png" alt=""/>
 			</div>
 			<div className={styles.descriptionContainer}>
 				<div className={styles.titleBox}>
@@ -195,6 +201,7 @@ function Projects() {
 						<img
 							src="../../../img/Button01.png"
 							onClick={handleDocentButton}
+							alt=""
 						/>
 					</p>
 				</div>
@@ -207,12 +214,13 @@ function Projects() {
 						<img
 							src="../../../img/Button01.png"
 							onClick={handlePodcastButton}
+							alt=""
 						/>
 					</p>
 				</div>
 			</div>
 			<div className={styles.ps}>
-				<img src="../../../img/Mobilemap.png"/>
+				<img src="../../../img/Mobilemap.png" alt=""/>
 			</div>
 			<div className={styles.descriptionContainer}>
 				<div className={styles.titleBox}>
@@ -238,6 +246,7 @@ function Projects() {
 						<img
 							src="../../../img/Button01.png"
 							onClick={handleDocentButton}
+							alt=""
 						/>
 					</p>
 				</div>
@@ -250,12 +259,13 @@ function Projects() {
 						<img
 							src="../../../img/Button01.png"
 							onClick={handlePodcastButton}
+							alt=""
 						/>
 					</p>
 				</div>
 			</div>
 			<div className={styles.ps}>
-				<img src="../../../img/Mobilemap.png"/>
+				<img src="../../../img/Mobilemap.png" alt=""/>
 			</div>
 			<div className={styles.descriptionContainer}>
 				<div className={styles.titleBox}>
@@ -281,6 +291,7 @@ function Projects() {
 						<img
 							src="../../../img/Button01.png"
 							onClick={handleDocentButton}
+							alt=""
 						/>
 					</p>
 				</div>
@@ -293,12 +304,13 @@ function Projects() {
 						<img
 							src="../../../img/Button01.png"
 							onClick={handlePodcastButton}
+							alt=""
 						/>
 					</p>
 				</div>
 			</div>
 			<div className={styles.ps}>
-				<img src="../../../img/Mobilemap.png"/>
+				<img src="../../../img/Mobilemap.png" alt=""/>
 			</div>
 		</div>
 	);

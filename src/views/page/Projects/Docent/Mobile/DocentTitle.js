@@ -1,12 +1,13 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState} from "react";
 
 import axios from "axios";
 
 import styles from "../../../../../styles/Projects/Docent/Mobile/DocentTitle.module.css";
 import { useNavigate } from "react-router-dom";
 
+
 function DocentTitle() {
-	const videoRef = useRef();
+	
 
 	const navigate = useNavigate();
 
@@ -51,13 +52,13 @@ function DocentTitle() {
 			});
 			window.location.href = "/projects/docent/content";
 		}, 5000);
-	}, []);
+	}, [teamId,navigate]);
 
 	const memberCard = member.map((member, index) => {
 		return (
 			<div className={styles.designer}>
 				<div className={styles.profile}>
-					<img alt src={member.profile} />
+					<img alt="" src={member.profile} />
 				</div>
 				<p>
 					{member.name}·{member.role}

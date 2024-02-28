@@ -28,7 +28,7 @@ function PodcastComment() {
 				}
 			})
 			.catch((err) => console.log(err));
-	}, []);
+	}, [teamId,type]);
 
 	const commentCard = comment.map((comment, index) => {
 		const now = new Date();

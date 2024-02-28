@@ -15,6 +15,7 @@ function Announcement() {
 				onClick={() => {
 					navigate(-1);
 				}}
+				alt=""
 			/>
 			<div className={styles.docentContainer}>
 				<div className={styles.podcastbox}>
@@ -25,7 +26,7 @@ function Announcement() {
 			<div className={styles.LineContainer}></div>
 			<div className={styles.qrContainer}>
 				<div className={styles.imgContainer}>
-					<img src="../img/podcast qr_Image.png" alt />
+					<img src="../img/podcast qr_Image.png" alt="" />
 				</div>
 				<div className={styles.textContainer}>
 					<p1>모바일로 봐주세요!</p1> <br />

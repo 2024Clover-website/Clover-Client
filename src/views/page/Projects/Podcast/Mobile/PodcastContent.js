@@ -75,7 +75,7 @@ function PodcastContent() {
 		return () => {
 			clearTimeout(interval);
 		};
-	}, [runningTime, playbackRate]);
+	}, [runningTime, playbackRate,teamId,progress]);
 
 	const handleProgressBar = (event) => {
 		// 클릭한 위치의 x 좌표 구하기
@@ -111,7 +111,9 @@ function PodcastContent() {
 	const scriptCard = script.map((script, index) => {
 		return (
 			<>
+
 				<div className={styles.avatar}>{profileList(script)}</div>
+
 				<p
 					style={
 						audioRef.current.currentTime <= script.end_time &&
@@ -172,9 +174,9 @@ function PodcastContent() {
 					}}
 				>
 					{isMuted ? (
-						<img alt src={process.env.PUBLIC_URL + "/off.png"} />
+						<img alt="" src={process.env.PUBLIC_URL + "/off.png"} />
 					) : (
-						<img alt src={process.env.PUBLIC_URL + "/on.png"} />
+						<img alt="" src={process.env.PUBLIC_URL + "/on.png"} />
 					)}
 				</div>
 				{/** 뒤로가기 버튼 */}
@@ -279,7 +281,7 @@ function PodcastContent() {
 						window.location.href = "/projects/podcast/comment";
 					}}
 				>
-					<img alt src={process.env.PUBLIC_URL + "/comment(1x).png"} />
+					<img alt="" src={process.env.PUBLIC_URL + "/comment(1x).png"} />
 					<p>{commentCount}</p>
 				</div>
 

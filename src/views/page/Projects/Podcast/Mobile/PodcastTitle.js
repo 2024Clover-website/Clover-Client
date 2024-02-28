@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState} from "react";
 
 import axios from "axios";
 
@@ -7,7 +7,7 @@ import podStyle from "../../../../../styles/Projects/Podcast/Mobile/PodcastTitle
 import { useNavigate } from "react-router-dom";
 
 function PodcastTitle() {
-	const videoRef = useRef();
+	
 
 	const navigate = useNavigate();
 
@@ -55,6 +55,8 @@ function PodcastTitle() {
 				case 6:
 					setTeamName("옥수수수염");
 					break;
+				default:
+					console.log("");
 			}
 		});
 		const interval = setInterval(() => {
@@ -73,13 +75,13 @@ function PodcastTitle() {
 			});
 			window.location.href = "/projects/podcast/content";
 		}, 5000);
-	}, []);
+	}, [navigate,teamId]);
 
 	const memberCard = member.map((member, index) => {
 		return (
 			<div className={styles.designer}>
 				<div className={styles.profile}>
-					<img alt src={member.profile} />
+					<img alt="" src={member.profile} />
 				</div>
 				<p>
 					{member.name}·{member.role}
