@@ -84,11 +84,11 @@ function Projects() {
 			title: "Dopamine Addiction: Visualization of symptoms",
 			section: "E",
 			category: "SIDE PROJECT",
-			designer: "정지윤·김나연",
+			designer: "강지수·박규리",
 			docentTime: "3:01",
 			podcastTime: "16:27",
 			docentqrImage: "../img/도파민중독자들_도슨트.png",
-			podcastqrImage: "../img/도파민중독자들_도슨트.png",
+			podcastqrImage: "../img/옥수수수염_팟캐스트.png",
 			ps: "E팀과 F팀은 팟캐스트를 공유합니다.",
 		},
 		CTF: {
@@ -99,7 +99,7 @@ function Projects() {
 			docentTime: "1:58",
 			podcastTime: "16:27",
 			docentqrImage: "../img/옥수수수염_도슨트.png",
-			podcastqrImage: "../img/옥수수수염_팟케스트.png",
+			podcastqrImage: "../img/옥수수수염_팟캐스트.png",
 			ps: "E팀과 F팀은 팟캐스트를 공유합니다.",
 		},
 	};
