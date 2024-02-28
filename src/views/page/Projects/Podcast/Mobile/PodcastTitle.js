@@ -4,10 +4,13 @@ import axios from "axios";
 
 import styles from "../../../../../styles/Projects/Docent/Mobile/DocentTitle.module.css";
 import podStyle from "../../../../../styles/Projects/Podcast/Mobile/PodcastTitle.module.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 function PodcastTitle() {
 	const navigate = useNavigate();
+	const location = useLocation();
+
+	const teamId = location.state.teamId;
 
 	const [progress, setProgress] = useState(0);
 
@@ -15,8 +18,6 @@ function PodcastTitle() {
 	const [teamName, setTeamName] = useState("");
 	const [member, setMember] = useState([]);
 	const [background, setBackground] = useState("");
-
-	let teamId = 1;
 
 	useEffect(() => {
 		let res;

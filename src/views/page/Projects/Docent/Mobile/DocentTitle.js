@@ -3,18 +3,19 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 import styles from "../../../../../styles/Projects/Docent/Mobile/DocentTitle.module.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 function DocentTitle() {
 	const navigate = useNavigate();
+	const location = useLocation();
+
+	const teamId = location.state.teamId;
 
 	const [progress, setProgress] = useState(0);
 
 	const [title, setTitle] = useState("");
 	const [member, setMember] = useState([]);
 	const [background, setBackground] = useState("");
-
-	let teamId = 2;
 
 	useEffect(() => {
 		let res;

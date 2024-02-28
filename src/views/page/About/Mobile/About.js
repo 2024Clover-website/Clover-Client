@@ -6,6 +6,7 @@ function About() {
 	return (
 		<div className={styles.Mcontainer}>
 			<img className={styles.responsiveImage} src="./img/aboutMimg1.png" alt="description" />
+			
 			<div className={styles.Mpage}>
 				<div className={styles.MLinecontainer}></div>
 				<div className={styles.MC1}>
@@ -21,7 +22,8 @@ function About() {
 						무언가의 힘을 빌려 본래의 선율을 되찾기 때문이죠.</p>
 				</div>
 			</div>
-			<video className={styles.responsiveImage} src="./img/About_1.mp4" alt="description" autoPlay loop muted />
+			<video className={styles.responsiveImage} src="./img/About_1.mp4" alt="description" autoPlay loop muted playsInline />
+			
 			<div className={styles.Mpage}>
 				<div className={styles.MLinecontainer}></div>
 				<div className={styles.MC1}>
@@ -37,7 +39,7 @@ function About() {
 						를 살아갑니다.</p1>
 				</div>
 			</div>
-			<video className={styles.responsiveImage} src="./img/About_2.mp4" alt="description" autoPlay loop muted />
+			<video className={styles.responsiveImage} src="./img/About_2.mp4" alt="description" autoPlay loop muted playsInline/>
 			<div className={styles.Mpage}>
 				<div className={styles.MLinecontainer}></div>
 				<div className={styles.MC1}>
@@ -53,7 +55,7 @@ function About() {
 						돌아보면, 내가 좋아하는 것들이 무엇인지 알 수 있어요.</p1>
 				</div>
 			</div>
-			<video className={styles.responsiveImage} src="./img/About_3.mp4" alt="description" autoPlay loop muted />
+			<video className={styles.responsiveImage} src="./img/About_3.mp4" alt="description" autoPlay loop muted playsInline/>
 			<div className={styles.Mpage}>
 				<div className={styles.MLinecontainer}></div>
 				<div className={styles.MC1}>
@@ -69,7 +71,7 @@ function About() {
 						모르지만, 지금의 감정은 이루 다 말할 수 없어요.</p1>
 				</div>
 			</div>
-			<video className={styles.responsiveImage} src="./img/About_4.mp4" alt="description" autoPlay loop muted />
+			<video className={styles.responsiveImage} src="./img/About_4.mp4" alt="description" autoPlay loop muted playsInline/>
 			<div className={styles.Mpage}>
 				<div className={styles.MC3}>
 					<p>알파벳 순서대로 보면 보다 쾌적하게 전시를 관람할수 있습니다. 또한 기프트존을 따로 마련해두었습니다.
