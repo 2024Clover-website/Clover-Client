@@ -10,6 +10,13 @@
 	src: url(../../../fonts/YDIYGO350.woff) format("woff"),
 		url(../../../fonts/YDIYGO350.ttf) format("truetype");
 }
+.hoverImage {
+	opacity: 0;
+}
+
+.hoverImage:hover {
+	opacity: 1;
+}
 
 .png{
 	width: 20px;
@@ -216,16 +223,13 @@
 }
 
 .ps {
-	margin-top: 60px;
-	
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
 	align-items: flex-start;
 	padding: 22px 14px;
 
-	width: 303px;
-	height: 190px;
+
 }
 
 .ps > p {
@@ -373,4 +377,10 @@
 
 	text-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
 
+}
+
+
+.ps > img{
+	width: 303px;
+	height: 190px;
 }
