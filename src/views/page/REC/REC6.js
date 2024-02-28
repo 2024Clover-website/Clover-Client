@@ -2,6 +2,8 @@ import React, { useEffect, useState, useRef } from "react";
 import { CSSTransition } from 'react-transition-group';
 import {useHorizontalScroll} from "./useSideScroll";
 import axios from "axios";
+import html2canvas from "html2canvas";
+import saveAs from "file-saver";
 
 import styles from "../../../styles/components/REC6.module.css";
 import videoREC from "../../../video/recBG.mp4";
@@ -15,7 +17,28 @@ function REC6(){
     const patternId = location.state.pattern;
     const colorId = location.state.color;
     const name = location.state.name;
+    const cardRef = useRef(null);
 
+    const handleDownload = async () => {
+        if (!cardRef.current)
+            return;
+        try {
+            const div = cardRef.current;
+            const canvas = await html2canvas(div, { scale: 2 });
+            canvas.toBlob((blob) => {
+                if (blob !== null) {
+                    saveAs(blob, "result.png");
+                }
+            });
+        }
+        catch (error) {
+            console.error("Error converting div to image:", error);
+        }
+    };
+
+    function handleBack(){
+        window.location.href = "/REC/tape";
+    }
     const [hero, setHero] = useState("");
 
     // const scrollRef = useHorizontalScroll();
@@ -57,7 +80,7 @@ function REC6(){
         // setTimeout(() => setShowContainer4(true), 11500);
         setTimeout(() => setShowContainer5(true), 15500);
         setTimeout(() => setShowContainer4(true), 41000);
-        // setTimeout(() => setShowContainer5(true), 15500);
+        setTimeout(() => setShowContainer5(true), 15500);
     }, [])
 
     const elRef = useRef();
@@ -114,12 +137,41 @@ function REC6(){
                     <div className={styles.mousement}>마우스 휠을 굴려 문구를 확인해보세요</div>
                 </div>
             </CSSTransition>
-            <CSSTransition in={showContainer4} timeout={750} delay={500} classNames="motion-slide" mountOnEnter unmountOnExit>
-                <div className={styles.forthani}>
-                    <div className={styles.cardmakingtitle}>일상 자극 카드를 만드는 중..</div>
-                    <div className={styles.cardct}>
-                        <div className={styles.card}>
-                            <div className={styles.question}>{'?'}</div>
+            <CSSTransition in={showContainer5} timeout={0} delay={0} classNames="motion-slide" mountOnEnter unmountOnExit>
+                <div className={styles.fifthani}>
+                    <div className={styles.fifthct}>
+                        <div className={styles.fifthct1} ref={cardRef}>
+                            <div className={styles.fifthcd1}>
+                                <img alt src={hero}/>
+                            </div>
+                            <div className={styles.fifthcd2}>
+                                타인이 갖는 기대
+                            </div>
+                        </div>
+                        <div className={styles.fifthct2}>
+                            <div className={styles.fifthtxt1}>
+                                <p>{name}님의 일상이 궁금해요</p>
+                            </div>
+                            <div className={styles.fifthtxt2}>
+                                <p>
+                                슬럼프가 끝나고 나면, 다시 만난 일상이 새롭게 보일때가 있어요. {name}님에게는 잃고
+                                싶지 않은 소중한 일상이 있나요? 좋아하는 사람, 좋아하는 일, 좋아하는 취미 등 나를 움
+                                직이던 것들 말이에요. 시간이 괜찮다면 종이와 펜에 {name}님의 생각을 적어주세요.
+                                그리고 이것을 다른 사람들에게도 알려주세요.
+                                </p>
+                            </div>
+                            <div className={styles.fifthtxt3}>
+                                <div className={styles.fifthbutt1}>
+                                    <button className={styles.imgbutt} onClick={handleDownload}>
+                                        <p>이미지 저장하기</p>
+                                    </button>
+                                </div>
+                                <div className={styles.fifthbutt2}>
+                                    <button className={styles.backbutt} onClick={handleBack}>
+                                        <p>처음으로</p>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
