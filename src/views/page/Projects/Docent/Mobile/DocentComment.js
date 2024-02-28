@@ -107,7 +107,7 @@ function DocentComment() {
 			.catch((err) => console.log(err));
 		setText("");
 
-		window.location.href = "/projects/podcast/comment";
+		window.location.href = "/projects/docent/comment";
 	};
 
 	return (
