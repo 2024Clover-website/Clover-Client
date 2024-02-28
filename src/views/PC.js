@@ -67,14 +67,16 @@ function PC() {
 					element={<AnnouncementPodcast />}
 				/>
 			</Routes>
-			<Route exact path="/REC/start" element={<REC />} />
-			<Route exact path="/REC/naming" element={<REC2 />} />
-			<Route exact path="/REC/stimulation" element={<REC3 />} />
-			<Route exact path="/REC/stimulation/self" element={<REC3sec />} />
-			<Route exact path="/REC/graphic" element={<REC4 />} />
-			<Route exact path="/REC/color" element={<REC5 />} />
-			<Route exact path="/REC/tape" element={<REC6 />} />
-			<Routes></Routes>
+
+			<Routes>
+				<Route exact path="/REC/start" element={<REC />} />
+				<Route exact path="/REC/naming" element={<REC2 />} />
+				<Route exact path="/REC/stimulation" element={<REC3 />} />
+				<Route exact path="/REC/stimulation/self" element={<REC3sec />} />
+				<Route exact path="/REC/graphic" element={<REC4 />} />
+				<Route exact path="/REC/color" element={<REC5 />} />
+				<Route exact path="/REC/tape" element={<REC6 />} />
+			</Routes>
 			{currentSubdomain === "www" && (
 				<Routes>
 					<Route exact path="/invite/public" element={<Announcement />} />
