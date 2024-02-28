@@ -104,11 +104,10 @@
 
 .container {
 	display: flex;
-	height: 71.429%;
+	height: 68.55%;
 	flex-direction: column;
 	margin-top: 24.241%;
 	margin-bottom: 14.778%;
-	padding-top: 50px;
 	padding-left: 7.467%;
 	padding-right: 7.467%;
 	align-items: center;
