@@ -40,7 +40,7 @@ function PC() {
 	const isInviteAnnounce = window.location.pathname.startsWith("/invite");
 	return (
 		<div>
-			{!(isDocentAnnounce || isPodcastAnnounce) && <Header />}
+			{!(isDocentAnnounce || isPodcastAnnounce||isInviteAnnounce) && <Header />}
 			<Routes>
 				<Route exact path="/" element={<About />} />
 				<Route exact path="/projects" element={<Projects />} />
