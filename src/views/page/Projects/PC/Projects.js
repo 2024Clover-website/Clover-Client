@@ -143,43 +143,49 @@ function Projects() {
 				className={styles.CTMain}
 				onClick={() => setIsDescriptionContainer2Visible(false)}
 			>
-				<img alt="" src="/img/CTMain.png" />
+				<img alt="" src="/img/CTMain.png" playsInline/>
 				<div>
 					<img
 						className={`${styles.CTA} ${styles.hoverImage}`}
 						alt=""
 						src="/img/CTA.gif"
 						onClick={() => handleImageClick("CTA")}
+						playsInline
 					/>
 					<img
 						className={`${styles.CTB} ${styles.hoverImage}`}
 						alt=""
 						src="/img/CTB.gif"
 						onClick={() => handleImageClick("CTB")}
+						playsInline
 					/>
 					<img
 						className={`${styles.CTC} ${styles.hoverImage}`}
 						alt=""
 						src="/img/CTC.gif"
 						onClick={() => handleImageClick("CTC")}
+						playsInline
 					/>
 					<img
 						className={`${styles.CTD} ${styles.hoverImage}`}
 						alt=""
 						src="/img/CTD.gif"
 						onClick={() => handleImageClick("CTD")}
+						playsInline
 					/>
 					<img
 						className={`${styles.CTE} ${styles.hoverImage}`}
 						alt=""
 						src="/img/CTE.gif"
 						onClick={() => handleImageClick("CTE")}
+						playsInline
 					/>
 					<img
 						className={`${styles.CTF} ${styles.hoverImage}`}
 						alt=""
 						src="/img/CTF.gif"
 						onClick={() => handleImageClick("CTF")}
+						playsInline
 					/>
 				</div>
 			</div>
