@@ -63,6 +63,8 @@
 .speedButton > p {
 	margin: 0;
 
+	margin-top: 2px;
+
 	font-family: "Avenir-Black";
 	font-style: normal;
 	font-weight: 900;
@@ -142,7 +144,8 @@
 }
 
 .avatar {
-	width: 30px;
+	display: flex;
+	flex-direction: row;
 	height: 30px;
 
 	margin-bottom: 10px;
@@ -154,8 +157,10 @@
 }
 
 .avatar > img {
-	width: 100%;
-	height: 100%;
+	width: 30px;
+	height: 30px;
+
+	margin-right: 10px;
 
 	border-radius: 50%;
 

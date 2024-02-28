@@ -27,7 +27,7 @@ function DocentComment() {
 					console.log("comment get success!");
 				}
 			});
-	}, []);
+	}, [teamId,type]);
 
 	const commentCard = comment.map((comment, index) => {
 		const now = new Date();

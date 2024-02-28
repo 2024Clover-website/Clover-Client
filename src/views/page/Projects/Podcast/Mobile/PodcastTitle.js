@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState} from "react";
 
 import axios from "axios";
 
@@ -16,7 +16,7 @@ function PodcastTitle() {
 	const [member, setMember] = useState([]);
 	const [background, setBackground] = useState("");
 
-	let teamId = 5;
+	let teamId = 1;
 
 	useEffect(() => {
 		let res;
@@ -53,6 +53,8 @@ function PodcastTitle() {
 				case 6:
 					setTeamName("옥수수수염");
 					break;
+				default:
+					console.log("");
 			}
 		});
 		const interval = setInterval(() => {
@@ -71,13 +73,13 @@ function PodcastTitle() {
 			});
 			window.location.href = "/projects/podcast/content";
 		}, 5000);
-	}, []);
+	}, [navigate,teamId]);
 
 	const memberCard = member.map((member, index) => {
 		return (
 			<div className={styles.designer}>
 				<div className={styles.profile}>
-					<img alt src={member.profile} />
+					<img alt="" src={member.profile} />
 				</div>
 				<p>
 					{member.name}·{member.role}

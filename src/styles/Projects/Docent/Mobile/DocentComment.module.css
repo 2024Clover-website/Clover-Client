@@ -21,7 +21,6 @@
 
 .background {
 	position: fixed;
-	overflow-y: scroll;
 	background-image: url(../../../../../public/docent.png);
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -115,7 +114,7 @@
 	width: 92%;
 	height: 60px;
 	left: 4%;
-	/* bottom: 60px; */
+	bottom: 20px;
 
 	background: rgba(255, 255, 255, 0.25);
 	border: 2px solid rgba(255, 255, 255, 0.75);
