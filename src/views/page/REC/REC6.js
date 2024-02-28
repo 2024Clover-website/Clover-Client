@@ -281,7 +281,7 @@ function REC6() {
 										<div className={styles.Ct05}>
 											{/* <img src={QRSImage} alt="QRS" className={styles.qrs}/> */}
 											<div style={{ filter: 'drop-shadow(0px 3px 18px rgba(0, 0, 0, 0.2))' }}>
-												<QRCode value={link} size={200} />
+												<LinkQRCodeGenerator value={link} size={200} />
 											</div>
 											<div className={styles.Ct02}>
 												<div className={styles.Ct03}>
