@@ -194,7 +194,7 @@ function About() {
 			<div className={styles.Mpage}>
 				<div className={styles.MLinecontainer}></div>
 				<div className={styles.MC6}>
-					<p0>VIBE MAKERS</p0>
+					<p0>VIBE<br/>MAKERS</p0>
 					<p1>04</p1>
 				</div>
 				<div className={styles.MC7}>
@@ -227,7 +227,7 @@ function About() {
 			<div className={styles.Mpage}>
 				<div className={styles.MLinecontainer}></div>
 				<div className={styles.MC6}>
-					<p0>도파민 중독자들</p0>
+					<p0>도파민<br/>중독자들</p0>
 					<p1>05</p1>
 				</div>
 				<div className={styles.MC7}>
