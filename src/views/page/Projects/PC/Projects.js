@@ -123,6 +123,8 @@ function Projects() {
 			[image]: `/img/${image}.gif`,
 		}));
 	}
+	
+
 
 	useEffect(() => {
 		const temp=modalOpen;
