@@ -187,6 +187,16 @@ function REC6() {
 					</div>
 				</div>
 			</CSSTransition>
+            <CSSTransition in={showContainer4} timeout={750} delay={500} classNames="motion-slide" mountOnEnter unmountOnExit>
+                <div className={styles.forthani}>
+                    <div className={styles.cardmakingtitle}>일상 자극 카드를 만드는 중..</div>
+                    <div className={styles.cardct}>
+                        <div className={styles.card}>
+                            <div className={styles.question}>{'?'}</div>
+                        </div>
+                    </div>
+                </div>
+            </CSSTransition>
 			<CSSTransition
 				in={showContainer5}
 				timeout={0}
