@@ -74,6 +74,18 @@ function DocentContent() {
 		return (
 			<>
 				<p
+					style={
+						audioRef.current.currentTime <= script.end_time &&
+						audioRef.current.currentTime >= script.start_time
+							? {
+									opacity: 1,
+									transition: "opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1)",
+							  }
+							: {
+									opacity: 0.4,
+									transition: "opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1)",
+							  }
+					}
 					onClick={() => {
 						if (audioRef.current) {
 							audioRef.current.play();
