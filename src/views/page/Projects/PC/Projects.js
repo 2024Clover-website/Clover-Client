@@ -22,7 +22,6 @@ const customStyles = {
 };
 
 function Projects() {
-
 	const [isDescriptionContainer2Visible, setIsDescriptionContainer2Visible] =
 		useState(true);
 	const [setModalIsOpen] = useState(false);
@@ -31,7 +30,7 @@ function Projects() {
 	const [isDescriptionVisible, setIsDescriptionVisible] = useState(false);
 	const [podcastModalIsOpen, setPodcastModalIsOpen] = useState(false);
 	const [docentModalIsOpen, setDocentModalIsOpen] = useState(false);
-	const [ setImageSrc] = useState({
+	const [setImageSrc] = useState({
 		CTA: "/img/CTA.png",
 		CTB: "/img/CTB.png",
 		CTC: "/img/CTC.png",
@@ -47,7 +46,6 @@ function Projects() {
 			designer: "권예지·조용욱·김혜신",
 			designer2: "기한나·안서경·허민영",
 			podcastTime: "15:28",
-
 
 			podcastqrImage: "../img/전시브랜딩팀_팟캐스트.png",
 		},
@@ -111,7 +109,6 @@ function Projects() {
 		setTimeRemaining(10 * 60);
 	}
 
-
 	function handleDocentButton() {
 		setModalIsOpen(true);
 		setTimeRemaining(10 * 60);
@@ -125,8 +122,6 @@ function Projects() {
 			[image]: `/img/${image}.gif`,
 		}));
 	}
-	
-
 
 	useEffect(() => {
 		if (timeRemaining > 0) {
@@ -137,7 +132,7 @@ function Projects() {
 		} else {
 			setModalIsOpen(false);
 		}
-	}, [timeRemaining,setModalIsOpen]);
+	}, [timeRemaining, setModalIsOpen]);
 
 	return (
 		<div className={styles.container}>
@@ -219,7 +214,6 @@ function Projects() {
 				</div>
 			)}
 
-
 			{!isDescriptionContainer2Visible && isDescriptionVisible && (
 				<div className={styles.descriptionContainer}>
 					<div className={styles.titleBox}>
@@ -245,11 +239,10 @@ function Projects() {
 								<p>도슨트</p>
 							</div>
 
-
 							<p className={styles.tagContents}>
 								{description.docentTime}
 								<img
-									alt =""
+									alt=""
 									src="../../../img/Button01.png"
 									className={styles.playButton}
 									onClick={handleDocentButton}
@@ -266,7 +259,7 @@ function Projects() {
 						<p className={styles.tagContents}>
 							{description.podcastTime}
 							<img
-								alt =""
+								alt=""
 								src="../../../img/Button01.png"
 								className={styles.playButton}
 								onClick={handlePodcastButton}
@@ -288,7 +281,7 @@ function Projects() {
 			>
 				<div className={styles.Modalcontainer}>
 					<img
-						alt =""
+						alt=""
 						src="../../../img/뒤로가기.png"
 						className={styles.backButton}
 						onClick={() => {
@@ -326,7 +319,7 @@ function Projects() {
 			>
 				<div className={styles.Modalcontainer}>
 					<img
-						alt =""
+						alt=""
 						src="../../../img/뒤로가기.png"
 						className={styles.backButton}
 						onClick={() => {
@@ -340,7 +333,6 @@ function Projects() {
 						</div>
 						<p>{description.title}</p>
 					</div>
-
 
 					<div className={styles.LineContainer}></div>
 					<div className={styles.qrContainer}>
