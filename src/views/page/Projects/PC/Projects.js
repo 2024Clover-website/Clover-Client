@@ -23,13 +23,13 @@ const customStyles = {
 
 function Projects() {
     const [isDescriptionContainer2Visible, setIsDescriptionContainer2Visible] = useState(true);
-    const [modalIsOpen, setModalIsOpen] = useState(false);
+    const [setModalIsOpen] = useState(false);
     const [timeRemaining, setTimeRemaining] = useState(10 * 60);
     const [description, setDescription] = useState({});
     const [isDescriptionVisible, setIsDescriptionVisible] = useState(false);
     const [podcastModalIsOpen, setPodcastModalIsOpen] = useState(false);
     const [docentModalIsOpen, setDocentModalIsOpen] = useState(false);
-    const [imageSrc, setImageSrc] = useState({
+    const [setImageSrc] = useState({
         CTA: "/img/CTA.png",
         CTB: "/img/CTB.png",
         CTC: "/img/CTC.png",
@@ -116,15 +116,15 @@ function Projects() {
         setIsDescriptionVisible(true);
         setImageSrc(prevState => ({ ...prevState, [image]: `/img/${image}.gif` }))
     }
-    function handlePodcastButton() {
-        setPodcastModalIsOpen(true);
-        setTimeRemaining(10 * 60);
-    }
+    // function handlePodcastButton() {
+    //     setPodcastModalIsOpen(true);
+    //     setTimeRemaining(10 * 60);
+    // }
 
-    function handleDocentButton() {
-        setDocentModalIsOpen(true);
-        setTimeRemaining(10 * 60);
-    }
+    // function handleDocentButton() {
+    //     setDocentModalIsOpen(true);
+    //     setTimeRemaining(10 * 60);
+    // }
 
 
     useEffect(() => {
@@ -143,12 +143,12 @@ function Projects() {
             <div className={styles.CTMain} onClick={() => setIsDescriptionContainer2Visible(false)}>
                 <img alt src="/img/CTMain.png" />
                 <div>
-                    <img className={`${styles.CTA} ${styles.hoverImage}`} alt src="/img/CTA.gif" onClick={() => handleImageClick('CTA')} />
-                    <img className={`${styles.CTB} ${styles.hoverImage}`} alt src="/img/CTB.gif" onClick={() => handleImageClick('CTB')} />
-                    <img className={`${styles.CTC} ${styles.hoverImage}`} alt src="/img/CTC.gif" onClick={() => handleImageClick('CTC')} />
-                    <img className={`${styles.CTD} ${styles.hoverImage}`} alt src="/img/CTD.gif" onClick={() => handleImageClick('CTD')} />
-                    <img className={`${styles.CTE} ${styles.hoverImage}`} alt src="/img/CTE.gif" onClick={() => handleImageClick('CTE')} />
-                    <img className={`${styles.CTF} ${styles.hoverImage}`} alt src="/img/CTF.gif" onClick={() => handleImageClick('CTF')} />
+                    <img className={`${styles.CTA} ${styles.hoverImage}`} alt="" src="/img/CTA.gif" onClick={() => handleImageClick('CTA')} />
+                    <img className={`${styles.CTB} ${styles.hoverImage}`} alt="" src="/img/CTB.gif" onClick={() => handleImageClick('CTB')} />
+                    <img className={`${styles.CTC} ${styles.hoverImage}`} alt="" src="/img/CTC.gif" onClick={() => handleImageClick('CTC')} />
+                    <img className={`${styles.CTD} ${styles.hoverImage}`} alt="" src="/img/CTD.gif" onClick={() => handleImageClick('CTD')} />
+                    <img className={`${styles.CTE} ${styles.hoverImage}`} alt="" src="/img/CTE.gif" onClick={() => handleImageClick('CTE')} />
+                    <img className={`${styles.CTF} ${styles.hoverImage}`} alt="" src="/img/CTF.gif" onClick={() => handleImageClick('CTF')} />
                 </div>
             </div>
             {isDescriptionContainer2Visible && (
@@ -213,6 +213,7 @@ function Projects() {
                                 src="../../../img/Button01.png"
                                 className={styles.playButton}
                                 onClick={handleDocentButton}
+                                alt=""
                             />
                         </p>
                     </div>
@@ -226,6 +227,7 @@ function Projects() {
                                 src="../../../img/Button01.png"
                                 className={styles.playButton}
                                 onClick={handlePodcastButton}
+                                alt=""
                             />
                         </p>
                     </div>

@@ -209,9 +209,9 @@ function DocentContent() {
 					}}
 				>
 					{isMuted ? (
-						<img alt src={process.env.PUBLIC_URL + "/off.png"} />
+						<img alt="" src={process.env.PUBLIC_URL + "/off.png"} />
 					) : (
-						<img alt src={process.env.PUBLIC_URL + "/on.png"} />
+						<img alt="" src={process.env.PUBLIC_URL + "/on.png"} />
 					)}
 				</div>
 			</div>
@@ -240,7 +240,7 @@ function DocentContent() {
 						window.location.href = "/projects/docent/comment";
 					}}
 				>
-					<img alt src={process.env.PUBLIC_URL + "/comment(1x).png"} />
+					<img alt="" src={process.env.PUBLIC_URL + "/comment(1x).png"} />
 					<p>{commentCount}</p>
 				</div>
 

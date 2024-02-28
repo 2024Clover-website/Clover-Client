@@ -26,7 +26,7 @@ function Announcement() {
 				<p>강지수·박규리</p>
 			</div>
 			<div className={styles.qrContainer}>
-				<img src="../../../../../../public/mobileInvitationQRcode.jpeg" alt />
+				<img src="../../../../../../public/mobileInvitationQRcode.jpeg" alt="" />
 			</div>
 			<div className={styles.textContainer}>
 				<p>
