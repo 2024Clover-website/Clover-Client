@@ -1,10 +1,10 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState} from "react";
 
 import axios from "axios";
 
 import styles from "../../../../../styles/Projects/Docent/Mobile/DocentTitle.module.css";
 import { useNavigate } from "react-router-dom";
-import { nullableTypeAnnotation } from "@babel/types";
+
 
 function DocentTitle() {
 	
