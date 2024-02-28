@@ -15,39 +15,38 @@ function Projects() {
 		<div className={styles.container}>
 			<div className={styles.descriptionContainer}>
 				<div className={styles.titleBox2}>
-					<p className={styles.title2}>
-						자세히 보고싶은 프로젝트가 있나요?
+					<p className={styles.title2}>자세히 보고싶은 프로젝트가 있나요?</p>
+					<p className={styles.category2}>
+						도슨트와 팟캐스트가 준비되어 있어요.
 					</p>
-					<p className={styles.category2}>도슨트와 팟캐스트가 준비되어 있어요.</p>
 				</div>
 				<div className={styles.innerBox}>
 					<div className={styles.tag}>
 						<p>도슨트</p>
 					</div>
 					<p className={styles.tagContents2}>
-						작품에 대한 자세한 설명을
-						들을 수 있어요
+						작품에 대한 자세한 설명을 들을 수 있어요
 					</p>
 				</div>
 				<div className={styles.innerBox}>
 					<div className={styles.tag}>
 						<p>팟캐스트</p>
 					</div>
-				<p className={styles.tagContents3} style={{ whiteSpace: 'pre-wrap' }}>
-					{'번아웃과 슬럼프,\n그리고 새로운 자극에 대한\n각자만의 스토리를 들을 수 있어요'}
-				</p>
+					<p className={styles.tagContents3} style={{ whiteSpace: "pre-wrap" }}>
+						{
+							"번아웃과 슬럼프,\n그리고 새로운 자극에 대한\n각자만의 스토리를 들을 수 있어요"
+						}
+					</p>
 				</div>
 			</div>
 			<div className={styles.ps}>
-				<img src="../../../img/MAMap.png"/>
+				<img alt="" src="../../../img/MAMap.png" />
 			</div>
-			
+
 			<div className={styles.descriptionContainer}>
 				<div className={styles.titleBox}>
 					<p className={styles.section}>A</p>
-					<p className={styles.title}>
-						About In a row
-					</p>
+					<p className={styles.title}>About In a row</p>
 					<p className={styles.category}>ART DIRECT</p>
 				</div>
 
@@ -55,7 +54,11 @@ function Projects() {
 					<div className={styles.tag}>
 						<p>디자이너</p>
 					</div>
-					<p className={styles.tagContents4}>권예지·조용욱·김혜신<br />기한나·안서경·허민영</p>
+					<p className={styles.tagContents4}>
+						권예지·조용욱·김혜신
+						<br />
+						기한나·안서경·허민영
+					</p>
 				</div>
 				<div className={styles.innerBox}>
 					<div className={styles.tag}>
@@ -72,15 +75,12 @@ function Projects() {
 				</div>
 			</div>
 			<div className={styles.ps}>
-			<img src="../../../img/MBMap.png"/>
-
+				<img alt="" src="../../../img/MBMap.png" />
 			</div>
 			<div className={styles.descriptionContainer}>
 				<div className={styles.titleBox}>
 					<p className={styles.section}>B</p>
-					<p className={styles.title}>
-						KEYCLE
-					</p>
+					<p className={styles.title}>KEYCLE</p>
 					<p className={styles.category}>SERVICE DESIGN</p>
 				</div>
 
@@ -88,14 +88,18 @@ function Projects() {
 					<div className={styles.tag}>
 						<p>디자이너</p>
 					</div>
-					<p className={styles.tagContents4}>최재정·김경은<br/>김동재·노유정</p>
+					<p className={styles.tagContents4}>
+						최재정·김경은
+						<br />
+						김동재·노유정
+					</p>
 				</div>
 				<div className={styles.innerBox}>
 					<div className={styles.tag}>
 						<p>도슨트</p>
 					</div>
 					<p className={styles.tagContents}>
-					2:19
+						2:19
 						<img
 							src="../../../img/Button01.png"
 							onClick={handleDocentButton}
@@ -118,15 +122,12 @@ function Projects() {
 				</div>
 			</div>
 			<div className={styles.ps}>
-				<img src="../../../img/MCMap.png"/>
-
+				<img alt="" src="../../../img/MCMap.png" />
 			</div>
 			<div className={styles.descriptionContainer}>
 				<div className={styles.titleBox}>
 					<p className={styles.section}>C</p>
-					<p className={styles.title}>
-						악의 불변
-					</p>
+					<p className={styles.title}>악의 불변</p>
 					<p className={styles.category}>GRAPHIC DESIG</p>
 				</div>
 
@@ -134,7 +135,11 @@ function Projects() {
 					<div className={styles.tag}>
 						<p>디자이너</p>
 					</div>
-					<p className={styles.tagContents4}>임로빈·김성연<br/>박금주·박지현</p>
+					<p className={styles.tagContents4}>
+						임로빈·김성연
+						<br />
+						박금주·박지현
+					</p>
 				</div>
 				<div className={styles.innerBox}>
 					<div className={styles.tag}>
@@ -164,15 +169,12 @@ function Projects() {
 				</div>
 			</div>
 			<div className={styles.ps}>
-				<img src="../../../img/MDMap.png"/>
-
+				<img alt="" src="../../../img/MDMap.png" />
 			</div>
 			<div className={styles.descriptionContainer}>
 				<div className={styles.titleBox}>
 					<p className={styles.section}>D</p>
-					<p className={styles.title}>
-					VIBE MAKERS
-					</p>
+					<p className={styles.title}>VIBE MAKERS</p>
 					<p className={styles.category}>CHARATER POP-UP</p>
 				</div>
 
@@ -180,7 +182,11 @@ function Projects() {
 					<div className={styles.tag}>
 						<p>디자이너</p>
 					</div>
-					<p className={styles.tagContents4}>정지윤·김나연·박도은<br/>송지윤·오시헌</p>
+					<p className={styles.tagContents4}>
+						정지윤·김나연·박도은
+						<br />
+						송지윤·오시헌
+					</p>
 				</div>
 				<div className={styles.innerBox}>
 					<div className={styles.tag}>
@@ -210,7 +216,7 @@ function Projects() {
 				</div>
 			</div>
 			<div className={styles.ps}>
-			<img src="../../../img/MEMap.png"/>
+				<img alt="" src="../../../img/MEMap.png" />
 			</div>
 			<div className={styles.descriptionContainer}>
 				<div className={styles.titleBox}>
@@ -255,14 +261,12 @@ function Projects() {
 				</div>
 			</div>
 			<div className={styles.ps}>
-			<img src="../../../img/MFMap.png"/>
+				<img alt="" src="../../../img/MFMap.png" />
 			</div>
 			<div className={styles.descriptionContainer}>
 				<div className={styles.titleBox}>
 					<p className={styles.section}>F</p>
-					<p className={styles.title}>
-					Perfect doll factory
-					</p>
+					<p className={styles.title}>Perfect doll factory</p>
 					<p className={styles.category}>EXPERIENTIAL MEDIA ART</p>
 				</div>
 
@@ -270,7 +274,11 @@ function Projects() {
 					<div className={styles.tag}>
 						<p>디자이너</p>
 					</div>
-					<p className={styles.tagContents4}>한승우·강지수<br/>박규리·임재윤</p>
+					<p className={styles.tagContents4}>
+						한승우·강지수
+						<br />
+						박규리·임재윤
+					</p>
 				</div>
 				<div className={styles.innerBox}>
 					<div className={styles.tag}>
