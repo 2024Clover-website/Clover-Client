@@ -80,7 +80,7 @@ function MOBILE() {
 		window.location.pathname === "/projects/podcast/title" ||
 		window.location.pathname === "/projects/podcast/content" ||
 		window.location.pathname === "/projects/podcast/comment";
-	const isInviteAnnounce = location.pathname.startsWith("/invite");
+	const isInviteAnnounce = winodw.location.pathname.startsWith("/invite");
 	return (
 		<div>
 			{!(isDocent || isPodcast||isInviteAnnounce) && <MobileHeader />}

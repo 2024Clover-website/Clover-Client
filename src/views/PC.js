@@ -37,7 +37,7 @@ function PC() {
 
 	const isPodcastAnnounce =
 		window.location.pathname === "/projects/podcastAnnounce";
-	const isInviteAnnounce = location.pathname.startsWith("/invite");
+	const isInviteAnnounce = window.location.pathname.startsWith("/invite");
 	return (
 		<div>
 			{!(isDocentAnnounce || isPodcastAnnounce) && <Header />}
