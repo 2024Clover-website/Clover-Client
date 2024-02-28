@@ -716,13 +716,13 @@ cursor: 'pointer'
 
 }
 
-.Ct01 > img{
+/* .Ct01 > img{
     width: 200px;
     height: 199.98px;
     
     filter: drop-shadow(0px 3px 18px rgba(0, 0, 0, 0.2));
 
-}
+} */
 
 .Ct01{
 /* 해당 레이아웃 */

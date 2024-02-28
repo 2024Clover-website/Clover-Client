@@ -25,7 +25,7 @@ function REC6() {
 	const LinkQRCodeGenerator = ({ link }) => {
 		return <QRCode value={link} size={200} />;
 	};
-	const link = 'https://www.naver.com'; // QR 코드로 변환하려는 링크로 변경하세요.
+	const link = '../../../img/Hero.png'; // QR 코드로 변환하려는 링크로 변경하세요.
 
 	const location = useLocation();
 	const patternId = location.state.pattern;
@@ -280,8 +280,8 @@ function REC6() {
 									<div className={styles.Ct01}>
 										<div className={styles.Ct05}>
 											{/* <img src={QRSImage} alt="QRS" className={styles.qrs}/> */}
-											<div>
-												<LinkQRCodeGenerator link={link} />
+											<div style={{ filter: 'drop-shadow(0px 3px 18px rgba(0, 0, 0, 0.2))' }}>
+												<QRCode value={link} size={200} />
 											</div>
 											<div className={styles.Ct02}>
 												<div className={styles.Ct03}>
