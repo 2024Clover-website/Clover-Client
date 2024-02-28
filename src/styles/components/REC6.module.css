@@ -459,13 +459,14 @@
 
     text-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
 }
+/*스크롤 */
 
 @keyframes mentreading {
     0%{
         transform: translateX(0);
     }
     100%{
-        transform: translateX(-9800px);
+        transform: translateX(-10300px);
     }
 }
 .lastment{
@@ -801,4 +802,67 @@
     font-weight: 400;
     line-height: 130%; /* 39px */
     text-align: start;
+}
+.loding1{
+    position: absolute;
+    justify-self: right;
+    padding-left: 1800px;
+    padding-bottom: 580px;
+    z-index: 5;
+}
+@keyframes lod1 {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.loding1{
+    animation: lod1 1s linear 1s forwards;
+}
+.loding2{
+    animation: lod1 1s linear 2s forwards;
+}
+.loding3{
+    animation: lod1 1s linear 3s forwards;
+}
+.loding4{
+    animation: lod1 1s linear 4s forwards;
+}
+.loding2{
+    position: absolute;
+    justify-self: right;
+    padding-left: 1800px;
+    padding-bottom: 580px;
+    z-index: 4;
+    /* transform: rotate(40deg);
+    transition-duration: 1s; */
+}
+.loding3{
+    position: absolute;
+    justify-self: right;
+    padding-left: 1800px;
+    padding-bottom: 580px;
+    /* transform: rotate(40deg);
+    transition-duration: 1s; */
+    z-index: 3;
+}
+.loding4{
+    position: absolute;
+    justify-self: right;
+    padding-left: 1800px;
+    padding-bottom: 580px;
+    /* transform: rotate(40deg);
+    transition-duration: 1s; */
+    z-index: 2;
+}
+.loding5{
+    position: absolute;
+    justify-self: right;
+    padding-left: 1800px;
+    padding-bottom: 580px;
+    /* transform: rotate(40deg);
+    transition-duration: 1s; */
+    z-index: 1;
 }
