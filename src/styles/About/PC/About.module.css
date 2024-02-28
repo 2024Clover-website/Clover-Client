@@ -8,11 +8,7 @@ body {
     align-items: flex-start;
     padding: 150px 190px 130px;
     gap: 80px;
-    /* width: 100%; */
-    /* width: 1520px; */
-    
-    
-    background: #FFFFFF;
+
 }
 .Linecontainer{
     width: 100%;
@@ -382,5 +378,5 @@ body {
 .responsiveImage {
     width: 100%;
     height: auto;
-  }
-  
+    position: relative;
+}
