@@ -10,6 +10,13 @@
 	src: url(../../../fonts/YDIYGO350.woff) format("woff"),
 		url(../../../fonts/YDIYGO350.ttf) format("truetype");
 }
+.hoverImage {
+	opacity: 0;
+}
+
+.hoverImage:hover {
+	opacity: 1;
+}
 
 .png{
 	width: 20px;
