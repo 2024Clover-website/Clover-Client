@@ -116,48 +116,46 @@ function PodcastContent() {
 		});
 
 	const scriptCard = script.map((script, index) => {
-		if (!isLoading) {
-			return (
-				<>
-					{script.profile !== "" ? (
-						<>
-							<div className={styles.avatar}>{profileList(script)}</div>
+		// Use a ternary operator to ensure a value is returned
+		return isLoading ? (
+			<div key={index}>Loading...</div> // Placeholder while loading
+		) : (
+			<>
+				{script.profile !== "" ? (
+					<>
+						<div className={styles.avatar}>{profileList(script)}</div>
 
-							<p
-								style={
-									audioRef.current &&
-									audioRef.current.currentTime <= script.end_time &&
-									audioRef.current.currentTime >= script.start_time
-										? {
-												opacity: 1,
-												transition:
-													"opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1)",
-										  }
-										: {
-												opacity: 0.4,
-												transition:
-													"opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1)",
-										  }
+						<p
+							style={
+								audioRef.current &&
+								audioRef.current.currentTime <= script.end_time &&
+								audioRef.current.currentTime >= script.start_time
+									? {
+											opacity: 1,
+											transition: "opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1)",
+									  }
+									: {
+											opacity: 0.4,
+											transition: "opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1)",
+									  }
+							}
+							onClick={() => {
+								if (audioRef.current) {
+									audioRef.current.play();
+									audioRef.current.currentTime = script.start_time;
+									setProgress(100 - (script.start_time * 100) / runningTime);
 								}
-								onClick={() => {
-									if (audioRef.current) {
-										audioRef.current.play();
-										audioRef.current.currentTime = script.start_time;
-										setProgress(100 - (script.start_time * 100) / runningTime);
-									}
-								}}
-							>
-								{script.script}
-							</p>
-							<br />
-						</>
-
-					) : (
-						<div></div>
-					)}
-				</>
-			);
-		}
+							}}
+						>
+							{script.script}
+						</p>
+						<br />
+					</>
+				) : (
+					<div key={index} /> // Empty div with a key for correct rendering
+				)}
+			</>
+		);
 	});
 
 	if (isLoading) {

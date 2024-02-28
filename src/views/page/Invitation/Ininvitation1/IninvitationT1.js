@@ -16,7 +16,7 @@ function AnimatedText({children, delay, className}) {
         </CSSTransition>
     );
 }
-
+// 
 function IninvitationT1() {
     function handleClick(e) {
         window.location.href = '/invite/태산/2'
