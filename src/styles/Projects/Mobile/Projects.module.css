@@ -223,16 +223,13 @@
 }
 
 .ps {
-	margin-top: 60px;
-	
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
 	align-items: flex-start;
 	padding: 22px 14px;
 
-	width: 303px;
-	height: 190px;
+
 }
 
 .ps > p {
@@ -383,3 +380,7 @@
 }
 
 
+.ps > img{
+	width: 303px;
+	height: 190px;
+}
