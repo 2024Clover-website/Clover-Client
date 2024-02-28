@@ -70,7 +70,9 @@ function Menu() {
 					</p>
 				</div>
 				<div className={styles.menuBox} onClick={handleInstagramClick}>
-					<a>Instagram</a>
+					<a href="https://www.instagram.com/clover_vimf?igshid=MW9jMXF3MzY2MzhjYw==">
+						Instagram
+					</a>
 				</div>
 				<div
 					className={styles.MobilecoloverLogo}
@@ -84,7 +86,6 @@ function Menu() {
 				>
 					<img src="../img/Mobile cloverLogo.png" alt="Clover Logo"></img>
 				</div>
-
 			</div>
 		</>
 	);
