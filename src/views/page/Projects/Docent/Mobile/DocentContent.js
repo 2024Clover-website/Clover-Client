@@ -70,7 +70,7 @@ function DocentContent() {
 		return () => {
 			clearTimeout(interval);
 		};
-	}, [runningTime, playbackRate,progress,teamId]);
+	}, [runningTime, playbackRate, progress, teamId]);
 
 	const scriptCard = script.map((script, index) => {
 		return (
@@ -245,7 +245,12 @@ function DocentContent() {
 			</div>
 
 			{/** 내용 container */}
-			<div className={styles.container}>{scriptCard}</div>
+			<div className={styles.container}>
+				<br />
+				<br />
+				<br />
+				{scriptCard}
+			</div>
 
 			{/** 푸터 */}
 			<div className={styles.footer}>

@@ -109,7 +109,7 @@
 	align-items: center;
 	justify-content: space-between;
 
-	position: absolute;
+	position: fixed;
 	width: 92%;
 	height: 60px;
 	left: 4%;
