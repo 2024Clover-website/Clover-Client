@@ -10,6 +10,13 @@
 	src: url(../../../fonts/YDIYGO350.woff) format("woff"),
 		url(../../../fonts/YDIYGO350.ttf) format("truetype");
 }
+.hoverImage {
+	opacity: 0;
+}
+
+.hoverImage:hover {
+	opacity: 1;
+}
 
 .png{
 	width: 20px;
@@ -374,3 +381,5 @@
 	text-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
 
 }
+
+
