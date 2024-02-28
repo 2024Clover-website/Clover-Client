@@ -105,12 +105,12 @@ function Projects() {
 	};
 
 	function handlePodcastButton() {
-		setModalIsOpen(true);
+		setPodcastModalIsOpen(true);
 		setTimeRemaining(10 * 60);
 	}
 
 	function handleDocentButton() {
-		setModalIsOpen(true);
+		setDocentModalIsOpen(true);
 		setTimeRemaining(10 * 60);
 	}
 
@@ -124,6 +124,8 @@ function Projects() {
 			[image]: `/img/${image}.gif`,
 		}));
 	}
+	
+
 
 	useEffect(() => {
 		const temp=modalOpen;
