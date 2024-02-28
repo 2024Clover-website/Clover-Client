@@ -27,7 +27,38 @@ function DocentComment() {
 					console.log("comment get success!");
 				}
 			});
-	}, [teamId,type]);
+	}, [teamId, type]);
+
+	useEffect(() => {
+		const handleResize = () => {
+			const windowHeight = window.innerHeight;
+			const inputElement = document.querySelector(".textinput");
+			const keyboardHeight =
+				windowHeight - inputElement.getBoundingClientRect().bottom;
+
+			// 키보드가 나타날 때 높이 조절
+			if (keyboardHeight > 0) {
+				// const footerElement = document.querySelector(".commentInput");
+				const bgElement = document.querySelector(".background");
+				// footerElement.style.bottom = keyboardHeight + "px";
+				bgElement.style.width = window.innerWidth;
+				bgElement.style.height = window.innerHeight;
+			} else {
+				// 키보드가 사라질 때 높이 초기화
+				const bgElement = document.querySelector(".commentInput");
+				// const footerElement = document.querySelector(".background");
+				// footerElement.style.bottom = "60px";
+				bgElement.style.width = window.innerWidth;
+				bgElement.style.height = window.innerHeight;
+			}
+		};
+
+		window.addEventListener("resize", handleResize);
+
+		return () => {
+			window.removeEventListener("resize", handleResize);
+		};
+	}, []);
 
 	const commentCard = comment.map((comment, index) => {
 		const now = new Date();
@@ -71,6 +102,7 @@ function DocentComment() {
 				}
 			})
 			.catch((err) => console.log(err));
+		setText("");
 	};
 
 	return (

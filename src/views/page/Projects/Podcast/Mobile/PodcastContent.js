@@ -75,7 +75,7 @@ function PodcastContent() {
 		return () => {
 			clearTimeout(interval);
 		};
-	}, [runningTime, playbackRate, script, teamId,progress]);
+	}, [runningTime, playbackRate, teamId, progress]);
 
 	const handleProgressBar = (event) => {
 		// 클릭한 위치의 x 좌표 구하기
@@ -111,7 +111,6 @@ function PodcastContent() {
 	const scriptCard = script.map((script, index) => {
 		return (
 			<>
-
 				<div className={styles.avatar}>{profileList(script)}</div>
 
 				<p

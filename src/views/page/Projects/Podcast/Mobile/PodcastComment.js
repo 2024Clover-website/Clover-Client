@@ -28,7 +28,32 @@ function PodcastComment() {
 				}
 			})
 			.catch((err) => console.log(err));
-	}, [teamId,type]);
+	}, [teamId, type]);
+
+	useEffect(() => {
+		const handleResize = () => {
+			const windowHeight = window.innerHeight;
+			const inputElement = document.querySelector(".textinput");
+			const keyboardHeight =
+				windowHeight - inputElement.getBoundingClientRect().bottom;
+
+			// 키보드가 나타날 때 높이 조절
+			if (keyboardHeight > 0) {
+				const footerElement = document.querySelector(".commentInput");
+				footerElement.style.bottom = keyboardHeight + "px";
+			} else {
+				// 키보드가 사라질 때 높이 초기화
+				const footerElement = document.querySelector(".commentInput");
+				footerElement.style.bottom = "60px";
+			}
+		};
+
+		window.addEventListener("resize", handleResize);
+
+		return () => {
+			window.removeEventListener("resize", handleResize);
+		};
+	}, []);
 
 	const commentCard = comment.map((comment, index) => {
 		const now = new Date();
