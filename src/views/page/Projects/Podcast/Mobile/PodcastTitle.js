@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState} from "react";
 
 import axios from "axios";
 
@@ -79,7 +79,7 @@ function PodcastTitle() {
 		return (
 			<div className={styles.designer}>
 				<div className={styles.profile}>
-					<img alt src={member.profile} />
+					<img alt="" src={member.profile} />
 				</div>
 				<p>
 					{member.name}·{member.role}

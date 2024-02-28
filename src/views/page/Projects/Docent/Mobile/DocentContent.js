@@ -68,7 +68,7 @@ function DocentContent() {
 		return () => {
 			clearTimeout(interval);
 		};
-	}, [runningTime, playbackRate]);
+	}, [runningTime, playbackRate,progress,teamId]);
 
 	const scriptCard = script.map((script, index) => {
 		return (

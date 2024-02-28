@@ -136,7 +136,7 @@ function Projects() {
         } else {
             setModalIsOpen(false);
         }
-    }, [timeRemaining]);
+    }, [timeRemaining,setModalIsOpen]);
 
     return (
         <div className={styles.container}>
@@ -247,6 +247,7 @@ function Projects() {
                             setPodcastModalIsOpen(false);
                             setDocentModalIsOpen(false);
                         }}
+                        alt=""
                     />
 <div className={styles.docentContainer}>
     <div className={styles.podcastbox}>
@@ -284,6 +285,7 @@ function Projects() {
                             setPodcastModalIsOpen(false);
                             setDocentModalIsOpen(false);
                         }}
+                        alt=""
                     />
 <div className={styles.docentContainer}>
     <div className={styles.podcastbox}>
