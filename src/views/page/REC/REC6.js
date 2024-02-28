@@ -124,7 +124,6 @@ function REC6(){
         setTimeout(() => setShowContainer4(false), 46100);
         setTimeout(() => setShowContainer5(true), 46100);
         setTimeout(() => setIsModalOpen(true), 52100);
-        setIsModalOpen(true)
         // setTimeout(() => setlodingcircle(2), 47000);
         // setTimeout(() => setlodingcircle(3), 48000);
         // setTimeout(() => setlodingcircle(4), 49000);
@@ -266,7 +265,19 @@ function REC6(){
 										<p>이미지 저장하기</p>
 									</button>
 								</div>
-								<Modal
+								
+
+								<div className={styles.fifthbutt2}>
+									<button className={styles.backbutt} onClick={handleBack}>
+										<p>처음으로</p>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</CSSTransition>
+            <Modal
 									isOpen={isModalOpen}
 									onRequestClose={() => setIsModalOpen(false)}
 									style={{
@@ -319,17 +330,6 @@ function REC6(){
 									</div>
 
 								</Modal>
-
-								<div className={styles.fifthbutt2}>
-									<button className={styles.backbutt} onClick={handleBack}>
-										<p>처음으로</p>
-									</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</CSSTransition>
 		</div>
 	);
 }
