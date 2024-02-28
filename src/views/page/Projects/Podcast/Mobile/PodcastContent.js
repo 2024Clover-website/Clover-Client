@@ -2,12 +2,12 @@ import React, { useState, useEffect, useRef } from "react";
 
 import axios from "axios";
 
-import { useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 import styles from "../../../../../styles/Projects/Docent/Mobile/DocentContent.module.css";
 
 function PodcastContent() {
-	// const navigate = useNavigate();
+	const navigate = useNavigate();
 	const location = useLocation();
 
 	const audioRef = useRef();
@@ -15,30 +15,30 @@ function PodcastContent() {
 	const record = location.state.record;
 	const teamId = location.state.teamId;
 	const background = location.state.background;
-	// const commentCount = location.state.commentCount;
+	const commentCount = location.state.commentCount;
 
 	const [progress, setProgress] = useState(100);
-	const [playbackRate] = useState(1);
-	const [isMuted] = useState(false);
-	const [, setScript] = useState([]);
+	const [playbackRate, setPlaybackRate] = useState(1);
+	const [isMuted, setIsMuted] = useState(false);
+	const [script, setScript] = useState([]);
 	const [runningTime, setRunningTime] = useState(0);
 	const [isLoading, setIsLoading] = useState(true);
 
-	// let relativePosition;
+	let relativePosition;
 
-	// const handleSpeedClick = () => {
-	// 	if (audioRef.current) {
-	// 		if (!audioRef.current.paused) {
-	// 			if (playbackRate !== 2) {
-	// 				setPlaybackRate(playbackRate * 2);
-	// 				audioRef.current.playbackRate *= 2;
-	// 			} else {
-	// 				setPlaybackRate(0.5);
-	// 				audioRef.current.playbackRate = 0.5;
-	// 			}
-	// 		}
-	// 	}
-	// };
+	const handleSpeedClick = () => {
+		if (audioRef.current) {
+			if (!audioRef.current.paused) {
+				if (playbackRate !== 2) {
+					setPlaybackRate(playbackRate * 2);
+					audioRef.current.playbackRate *= 2;
+				} else {
+					setPlaybackRate(0.5);
+					audioRef.current.playbackRate = 0.5;
+				}
+			}
+		}
+	};
 
 	useEffect(() => {
 		async function fetchData() {
@@ -90,77 +90,77 @@ function PodcastContent() {
 		}
 	}, [progress, runningTime, playbackRate, isLoading]);
 
-	// const handleProgressBar = (event) => {
-	// 	if (!isLoading) {
-	// 		// 클릭한 위치의 x 좌표 구하기
-	// 		const clickX = event.clientX;
+	const handleProgressBar = (event) => {
+		if (!isLoading) {
+			// 클릭한 위치의 x 좌표 구하기
+			const clickX = event.clientX;
 
-	// 		// div 요소 가져오기
-	// 		const div = document.getElementById("play");
+			// div 요소 가져오기
+			const div = document.getElementById("play");
 
-	// 		// div의 위치 및 너비 구하기
-	// 		const divRect = div.getBoundingClientRect();
-	// 		const divX = divRect.left;
-	// 		const divWidth = divRect.width;
+			// div의 위치 및 너비 구하기
+			const divRect = div.getBoundingClientRect();
+			const divX = divRect.left;
+			const divWidth = divRect.width;
 
-	// 		// 클릭한 위치의 div 내부에서의 상대적인 x 좌표 구하기
-	// 		const relativeX = clickX - divX;
+			// 클릭한 위치의 div 내부에서의 상대적인 x 좌표 구하기
+			const relativeX = clickX - divX;
 
-	// 		// 클릭한 위치의 div 내부에서의 상대적인 위치 (0 ~ 1) 구하기
-	// 		relativePosition = (relativeX / divWidth).toFixed(3);
+			// 클릭한 위치의 div 내부에서의 상대적인 위치 (0 ~ 1) 구하기
+			relativePosition = (relativeX / divWidth).toFixed(3);
 
-	// 		// 상대적인 위치 출력
-	// 		console.log("Relative position:", relativePosition);
+			// 상대적인 위치 출력
+			console.log("Relative position:", relativePosition);
 
-	// 		audioRef.current.play();
-	// 		audioRef.current.currentTime = relativePosition * runningTime;
-	// 		setProgress(100 - relativePosition * 100);
-	// 	}
-	// };
+			audioRef.current.play();
+			audioRef.current.currentTime = relativePosition * runningTime;
+			setProgress(100 - relativePosition * 100);
+		}
+	};
 
-	// const profileList = (script) =>
-	// 	script.profile.map((profile, index) => {
-	// 		return <img alt="" src={profile} />;
-	// 	});
+	const profileList = (script) =>
+		script.profile.map((profile, index) => {
+			return <img alt="" src={profile} />;
+		});
 
-	// const scriptCard = script.map((script, index) => {
-	// 	// Use a ternary operator to ensure a value is returned
-	// 	return isLoading ? (
-	// 		<div key={index}>Loading...</div> // Placeholder while loading
-	// 	) : (
-	// 		<>
-	// 			<>
-	// 				<div className={styles.avatar}>{profileList(script)}</div>
+	const scriptCard = script.map((script, index) => {
+		// Use a ternary operator to ensure a value is returned
+		return isLoading ? (
+			<div key={index}>Loading...</div> // Placeholder while loading
+		) : (
+			<>
+				<>
+					<div className={styles.avatar}>{profileList(script)}</div>
 
-	// 				<p
-	// 					style={
-	// 						audioRef.current &&
-	// 						audioRef.current.currentTime <= script.end_time &&
-	// 						audioRef.current.currentTime >= script.start_time
-	// 							? {
-	// 									opacity: 1,
-	// 									transition: "opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1)",
-	// 							  }
-	// 							: {
-	// 									opacity: 0.4,
-	// 									transition: "opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1)",
-	// 							  }
-	// 					}
-	// 					onClick={() => {
-	// 						if (audioRef.current) {
-	// 							audioRef.current.play();
-	// 							audioRef.current.currentTime = script.start_time;
-	// 							setProgress(100 - (script.start_time * 100) / runningTime);
-	// 						}
-	// 					}}
-	// 				>
-	// 					{script.script}
-	// 				</p>
-	// 				<br />
-	// 			</>
-	// 		</>
-	// 	);
-	// });
+					<p
+						style={
+							audioRef.current &&
+							audioRef.current.currentTime <= script.end_time &&
+							audioRef.current.currentTime >= script.start_time
+								? {
+										opacity: 1,
+										transition: "opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1)",
+								  }
+								: {
+										opacity: 0.4,
+										transition: "opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1)",
+								  }
+						}
+						onClick={() => {
+							if (audioRef.current) {
+								audioRef.current.play();
+								audioRef.current.currentTime = script.start_time;
+								setProgress(100 - (script.start_time * 100) / runningTime);
+							}
+						}}
+					>
+						{script.script}
+					</p>
+					<br />
+				</>
+			</>
+		);
+	});
 
 	if (isLoading) {
 		console.log("loading");
@@ -189,8 +189,9 @@ function PodcastContent() {
 				<audio ref={audioRef} autoPlay={true} muted={isMuted}>
 					<source src={record} type="audio/mp3" />
 				</audio>
-
-				{/* <div className={styles.header}>
+				{/** 헤더 */}
+				<div className={styles.header}>
+					{/** 음소거 버튼 */}
 					<div
 						className={styles.soundButton}
 						onClick={() => {
@@ -203,6 +204,7 @@ function PodcastContent() {
 							<img alt="" src={process.env.PUBLIC_URL + "/on.png"} />
 						)}
 					</div>
+					{/** 뒤로가기 버튼 */}
 					<svg
 						width="40"
 						height="40"
@@ -274,19 +276,23 @@ function PodcastContent() {
 							</filter>
 						</defs>
 					</svg>
+					{/** 배속 버튼 */}
 					<div className={styles.speedButton} onClick={handleSpeedClick}>
 						<p>{playbackRate}x</p>
 					</div>
-				</div> */}
+				</div>
 
-				{/* <div className={styles.container}>
+				{/** 내용 container */}
+				<div className={styles.container}>
 					<br />
 					<br />
 					<br />
 					{scriptCard}
-				</div> */}
+				</div>
 
-				{/* <div className={styles.footer}>
+				{/** 푸터 */}
+				<div className={styles.footer}>
+					{/** 총 재생시간 */}
 					<div className={styles.playTime}>
 						<p>
 							{Math.floor(runningTime / 60)}:{Math.floor(runningTime % 60)}
@@ -538,7 +544,7 @@ function PodcastContent() {
 							/>
 						</svg>
 					</div>
-				</div> */}
+				</div>
 			</div>
 		);
 	}

@@ -131,7 +131,7 @@ function About() {
 			</div>
 			<img
 				className={styles.responsiveImage}
-				src="./img/aboutMimg6.png"
+				src="./img/AboutMimg6.png"
 				alt="description"
 				autoPlay
 				loop
@@ -151,7 +151,7 @@ function About() {
 			</div>
 			<img
 				className={styles.responsiveImage}
-				src="./img/aboutMimg7.png"
+				src="./img/AboutMimg7.png"
 				alt="description"
 				autoPlay
 				loop
@@ -163,7 +163,7 @@ function About() {
 			</div>
 			<img
 				className={styles.responsiveImage}
-				src="./img/aboutMimg8.png"
+				src="./img/AboutMimg8.png"
 				alt="description"
 				autoPlay
 				loop
@@ -172,7 +172,7 @@ function About() {
 			/>
 			<img
 				className={styles.responsiveImage}
-				src="./img/aboutMimg9.png"
+				src="./img/AboutMimg9.png"
 				alt="description"
 				autoPlay
 				loop
@@ -181,7 +181,7 @@ function About() {
 			/>
 			<img
 				className={styles.responsiveImage}
-				src="./img/aboutMimg10.png"
+				src="./img/AboutMimg10.png"
 				alt="description"
 				autoPlay
 				loop
@@ -190,7 +190,7 @@ function About() {
 			/>
 			<img
 				className={styles.responsiveImage}
-				src="./img/aboutMimg11.png"
+				src="./img/AboutMimg11.png"
 				alt="description"
 				autoPlay
 				loop
@@ -199,7 +199,7 @@ function About() {
 			/>
 			<img
 				className={styles.responsiveImage}
-				src="./img/aboutMimg12.png"
+				src="./img/AboutMimg12.png"
 				alt="description"
 				autoPlay
 				loop
