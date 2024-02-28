@@ -25,6 +25,15 @@ function Menu() {
 	return (
 		<>
 			<div
+				style={{
+					position: "fixed",
+					width: window.screen.width,
+					height: window.screen.height,
+					background: "rgb(113, 111, 111, 0.2)",
+					backdropFilter: "blur(50)",
+				}}
+			></div>
+			<div
 				style={
 					window.location.pathname === "/"
 						? {
@@ -47,16 +56,6 @@ function Menu() {
 						  }
 				}
 			>
-				<div
-					style={{
-						top: -100,
-						position: "fixed",
-						width: window.screen.width,
-						height: window.screen.height,
-						background: "rgb(113, 111, 111, 0.2)",
-						backdropFilter: "blur(50)",
-					}}
-				></div>
 				<div className={styles.menuBox}>
 					<p onClick={handleAboutClick}>ABOUT</p>
 				</div>
