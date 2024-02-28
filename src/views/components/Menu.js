@@ -13,7 +13,13 @@ function Menu() {
 	}
 
 	function handleRecClick() {
-		window.location.href = "/";
+		window.location.href = "/REC";
+	}
+
+	function handleInstagramClick() {
+		window.location.replace(
+			"https://www.instagram.com/clover_vimf?igsh=MW9jMXF3MzY2MzhjYw=="
+		);
 	}
 
 	return (
@@ -23,8 +29,8 @@ function Menu() {
 				width: window.screen.width,
 				height: window.screen.height,
 				backgroundImage: "url('../../../../img/Mobilebg.png')",
-				backgroundSize: 'cover',
-				backgroundRepeat: 'no-repeat'
+				backgroundSize: "cover",
+				backgroundRepeat: "no-repeat",
 			}}
 		>
 			<div className={styles.menuBox}>
@@ -39,17 +45,19 @@ function Menu() {
 					<BsFillRecordFill className={styles.record} />
 				</p>
 			</div>
-			<div className={styles.menuBox}>
+			<div className={styles.menuBox} onClick={handleInstagramClick}>
 				<a>Instagram</a>
 			</div>
-			<div className={styles.MobilecoloverLogo} 
+			<div
+				className={styles.MobilecoloverLogo}
 				style={{
-					position: 'absolute',
-					width: '84px',
-					height: '12px',
-					left: 'calc(50% - 84px/2 + 0.5px)',
-					top: '680px'
-				}}>
+					position: "absolute",
+					width: "84px",
+					height: "12px",
+					left: "calc(50% - 84px/2 + 0.5px)",
+					top: "680px",
+				}}
+			>
 				<img src="../img/Mobile cloverLogo.png" alt="Clover Logo"></img>
 			</div>
 		</div>
