@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "../../styles/components/Footer.css";
+import "../../styles/components/Footer.css";
 
 function Footer() {
 	function handleInstagramClick() {
@@ -11,7 +11,7 @@ function Footer() {
 
 	return (
 		<div
-			className={styles.container}
+			className="container"
 			style={
 				window.location.pathname === "/"
 					? { color: "black" }
