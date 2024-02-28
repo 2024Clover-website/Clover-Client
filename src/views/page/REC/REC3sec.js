@@ -13,7 +13,7 @@ function REC3sec(){
         alert('내용을 입력해주세요.');
     }
     function handleREC4click(){
-        navigate("/REC/graphic", {state: {nameval : name}});
+        navigate("/REC/graphic", {state: {nameval : name, wishtitle : TitleValue, wish : 0}});
         window.location.href = "/REC/graphic";
         //여기다 보낼 페이지 적어야댐 이름, 내용 포함
     }

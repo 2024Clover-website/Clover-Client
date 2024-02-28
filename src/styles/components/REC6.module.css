@@ -12,24 +12,28 @@
     width: 100%;
     height: 100%;
     z-index: 1;
+    pointer-events: none;
 }
 .secondani{
     position:absolute;
     width: 100%;
     height: 100%;
     z-index: 2;
+    pointer-events: none;
 }
 .trdani{
     position:absolute;
     width: 100%;
     height: 100%;
     z-index: 3;
+    pointer-events: none;
 }
 .trdaniout{
     position:absolute;
     width: 100%;
     height: 100%;
     z-index: 3;
+    pointer-events: none;
 }
 @keyframes trdout {
     0%{
@@ -47,6 +51,26 @@
     width: 100%;
     height: 100%;
     z-index: 4;
+    pointer-events: none;
+}
+.forthaniout{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    opacity: 1;
+    pointer-events: none;
+}
+@keyframes forthout {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.forthaniout{
+    animation: forthout 0.35s cubic-bezier(0.15,1,0.5,1) 0s forwards;
 }
 .fstpencilct{
     margin-top: 45px;
@@ -441,13 +465,14 @@
 
     text-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
 }
+/*스크롤 */
 
 @keyframes mentreading {
     0%{
         transform: translateX(0);
     }
     100%{
-        transform: translateX(-9800px);
+        transform: translateX(-10300px);
     }
 }
 .lastment{
@@ -506,6 +531,7 @@
     align-items: center;
 
     text-align: center;
+    /* transform: perspective(2400px); */
 }
 @keyframes Card {
     0%{
@@ -519,24 +545,23 @@
 }
 @keyframes Cardrotate {
     0%{
-        transform: rotateX('-50deg');
-        transform: rotateY('-50deg');
-        transform: rotateZ('-50deg');
-    }
-    50%{
-        transform: rotateX('0');
-        transform: rotateY('0');
-        transform: rotateZ('0');
+        transform: rotate3d(0)
     }
     100%{
-        
-        transform: rotateX('50deg');
-        transform: rotateY('50deg');
-        transform: rotateZ('50deg');
+        transform: rotate3d(1,1,1,-5deg);
+    }
+}
+@keyframes Cardrotate1 {
+    0%{
+        transform: rotate3d(0)
+    }
+    100%{
+        transform: rotate3d(1,1,1,-5deg);
     }
 }
 .card{
-    animation: Cardrotate 5s linear 0.45s infinite;
+    transform: rotateX('50deg');
+    animation: Cardrotate 5s linear 0.45s forwards;
     animation: Card 0.75s cubic-bezier(0.15,1,0.5,1) 0.45s forwards;
     
 }
@@ -559,13 +584,15 @@
     text-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
 
 }
+/* 5번째 화면 */
 .fifthani{
     display: flex;
     width: 100%;
     height: 100%;
-    z-index: 5;
+    z-index: 99;
     justify-content: center;
 	align-items: center;
+    position: static;
 }
 .fifthct{
     display: flex;
@@ -575,16 +602,31 @@
     flex-direction: row;
 }
 .fifthct1{
+    /* opacity: 0; */
     width: 360px;
     height: 515px;
-    flex-shrink: 0;
+    /* flex-shrink: 0; */
     border-radius: 35px;
     border: 3px solid #FFF;
-    background: rgba(255, 255, 255, 0.40);
-    box-shadow: 0px 3px 18px 0px rgba(0, 0, 0, 0.20), 0px 4px 20px 0px rgba(211, 255, 56, 0.25) inset, 0px 3px 200px 0px rgba(255, 255, 255, 0.10) inset;
+    background-color: 	#90AFFF;
+    /* background: rgba(255, 255, 255, 0.40); */
+    /* box-shadow: 0px 3px 18px 0px rgba(0, 0, 0, 0.20), 0px 4px 20px 0px rgba(211, 255, 56, 0.25) inset, 0px 3px 200px 0px rgba(255, 255, 255, 0.10) inset; */
     backdrop-filter: blur(5px);
     margin-right: 200px;
 }
+/* @keyframes fifcard {
+    0%{
+        transform: translateY(70px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.fifthct1{
+    animation: fifcard 0.75s cubic-bezier(0.15,1,0.5,1) 0.5s forwards;
+} */
 .fifthcd1{
     display: flex;
     width: 360px;
@@ -600,8 +642,30 @@
     display:inline-block;
 }
 .fifthcd2{
+    padding: 30px;
     width: 360px;
     height: 220px;
+
+    font-family: 'YDIYGO350';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 130%;
+    /* identical to box height, or 26px */
+
+    color: #FFFFFF;
+}
+.fifthcd2 > p{
+    padding-top: 20px;
+    padding-right: 60px;
+    font-family: 'YDIYGO330';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 150%;
+    /* or 22px */
+
+    color: #FFFFFF;
 }
 .fifthct2{
     width: 720px;
@@ -612,6 +676,20 @@
 .fifthtxt1{
     width: 740px;
     margin-bottom: 20px;
+    opacity: 0;
+}
+@keyframes fiftext1 {
+    0%{
+        transform: translateY(70px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.fifthtxt1{
+    animation: fiftext1 0.75s cubic-bezier(0.15,1,0.5,1) 0.7s forwards;
 }
 .fifthtxt1 > p{
     color: #FFF;
@@ -625,6 +703,20 @@
 }
 .fifthtxt2{
     width: 740px;
+    opacity: 0;
+}
+@keyframes fiftext2 {
+    0%{
+        transform: translateY(70px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.fifthtxt2{
+    animation: fiftext2 0.75s cubic-bezier(0.15,1,0.5,1) 0.9s forwards;
 }
 .fifthtxt2 > p{
     color: #FFF;
@@ -638,17 +730,34 @@
     text-align: start;
 }
 .fifthtxt3{
+    opacity: 0;
     display: flex;
     width: 740px;
     height: 79px;
     flex-direction: row;
 }
+@keyframes fifbut {
+    0%{
+        transform: translateY(70px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.fifthtxt3{
+    animation: fifbut 0.75s cubic-bezier(0.15,1,0.5,1) 1.1s forwards;
+}
 .fifthbutt1{
+    cursor: pointer;
     width: 304px;
     height: 79px;
     margin-right: 30px;
 }
 .imgbutt{
+    cursor: pointer;
+
     width: 304px;
     height: 79px;
     display: inline-flex;
@@ -678,6 +787,7 @@
     height: 79px; 
 }
 .backbutt{
+    cursor: pointer;
     width: 305px;
     height: 79px;
     display: inline-flex;
@@ -923,4 +1033,66 @@ order: 0;
 align-self: stretch;
 flex-grow: 0;
 
+.loding1{
+    position: absolute;
+    justify-self: right;
+    padding-left: 1800px;
+    padding-bottom: 580px;
+    z-index: 5;
+}
+@keyframes lod1 {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.loding1{
+    animation: lod1 1s linear 1s forwards;
+}
+.loding2{
+    animation: lod1 1s linear 2s forwards;
+}
+.loding3{
+    animation: lod1 1s linear 3s forwards;
+}
+.loding4{
+    animation: lod1 1s linear 4s forwards;
+}
+.loding2{
+    position: absolute;
+    justify-self: right;
+    padding-left: 1800px;
+    padding-bottom: 580px;
+    z-index: 4;
+    /* transform: rotate(40deg);
+    transition-duration: 1s; */
+}
+.loding3{
+    position: absolute;
+    justify-self: right;
+    padding-left: 1800px;
+    padding-bottom: 580px;
+    /* transform: rotate(40deg);
+    transition-duration: 1s; */
+    z-index: 3;
+}
+.loding4{
+    position: absolute;
+    justify-self: right;
+    padding-left: 1800px;
+    padding-bottom: 580px;
+    /* transform: rotate(40deg);
+    transition-duration: 1s; */
+    z-index: 2;
+}
+.loding5{
+    position: absolute;
+    justify-self: right;
+    padding-left: 1800px;
+    padding-bottom: 580px;
+    /* transform: rotate(40deg);
+    transition-duration: 1s; */
+    z-index: 1;
 }

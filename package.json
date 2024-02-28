@@ -12,6 +12,7 @@
 		"@types/react-responsive": "^8.0.8",
 		"antd": "^5.12.8",
 		"axios": "^1.6.7",
+		"dom-to-image": "^2.6.0",
 		"dropzone": "^6.0.0-beta.2",
 		"file-saver": "^2.0.5",
 		"formik": "^2.4.5",

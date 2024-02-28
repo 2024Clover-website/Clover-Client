@@ -54,9 +54,14 @@ function REC5(){
     const location = useLocation();
     const name = location.state.name;
     const pattern = location.state.pattern;
+    const wish = location.state.wish;
+    const wishtitle = location.state.wishtitle;
     const navigate = useNavigate();
+    function handlefalse(){
+        alert("색깔을 선택하세요.");
+    }
     function handleREC6click(){
-        navigate("/REC/tape", {state : {name : name, color : colorvalue, pattern : pattern}});
+        navigate("/REC/tape", {state : {name : name, color : colorvalue, pattern : pattern, wish : wish, wishtitle : wishtitle}});
         window.location.href = "/REC/tape";
     }
     
@@ -75,7 +80,7 @@ function REC5(){
             
             </div>
             <div className={styles.IconContainer}>
-                <svg className={styles.NextIcon} onClick={handleREC6click} width="136" height="136" viewBox="0 0 136 136" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className={styles.NextIcon} onClick={colorvalue === 0 ? handlefalse :handleREC6click} width="136" height="136" viewBox="0 0 136 136" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g filter="url(#filter0_bd_890_5617)">
                     <circle cx="68" cy="65" r="50" fill="white" fill-opacity="0.25" shape-rendering="crispEdges"/>
                     <circle cx="68" cy="65" r="48.5" stroke="white" stroke-opacity="0.75" stroke-width="3" shape-rendering="crispEdges"/>
