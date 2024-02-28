@@ -28,7 +28,7 @@ function App() {
 	};
 
 	
-  const currentSubdomain = window.location.host.split(".")[0];
+//   const currentSubdomain = window.location.host.split(".")[0];
   useEffect(()=>{
     // if(currentSubdomain==="m"&&window.innerWidth>450){
     //   //공용
