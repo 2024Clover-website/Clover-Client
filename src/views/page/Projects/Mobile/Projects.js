@@ -39,7 +39,7 @@ function Projects() {
 				</div>
 			</div>
 			<div className={styles.ps}>
-				<img src="../../../img/Mobilemap.png"/>
+				<img src="../../../img/MAMap.png"/>
 			</div>
 			
 			<div className={styles.descriptionContainer}>
@@ -55,7 +55,7 @@ function Projects() {
 					<div className={styles.tag}>
 						<p>디자이너</p>
 					</div>
-					<p className={styles.tagContents}>권예지·조용욱·김혜신 기한나·안서경·허민영</p>
+					<p className={styles.tagContents4}>권예지·조용욱·김혜신<br />기한나·안서경·허민영</p>
 				</div>
 				<div className={styles.innerBox}>
 					<div className={styles.tag}>
@@ -71,7 +71,7 @@ function Projects() {
 				</div>
 			</div>
 			<div className={styles.ps}>
-			<img src="../../../img/MAMap.png"/>
+			<img src="../../../img/MBMap.png"/>
 			</div>
 			<div className={styles.descriptionContainer}>
 				<div className={styles.titleBox}>
@@ -86,7 +86,7 @@ function Projects() {
 					<div className={styles.tag}>
 						<p>디자이너</p>
 					</div>
-					<p className={styles.tagContents}>최재정·김경은·김동재·노유정</p>
+					<p className={styles.tagContents4}>최재정·김경은<br/>김동재·노유정</p>
 				</div>
 				<div className={styles.innerBox}>
 					<div className={styles.tag}>
@@ -114,7 +114,7 @@ function Projects() {
 				</div>
 			</div>
 			<div className={styles.ps}>
-				<img src="../../../img/MBMap.png"/>
+				<img src="../../../img/MCMap.png"/>
 			</div>
 			<div className={styles.descriptionContainer}>
 				<div className={styles.titleBox}>
@@ -129,7 +129,7 @@ function Projects() {
 					<div className={styles.tag}>
 						<p>디자이너</p>
 					</div>
-					<p className={styles.tagContents}>임로빈·김성연·박금주·박지현</p>
+					<p className={styles.tagContents4}>임로빈·김성연<br/>박금주·박지현</p>
 				</div>
 				<div className={styles.innerBox}>
 					<div className={styles.tag}>
@@ -157,7 +157,7 @@ function Projects() {
 				</div>
 			</div>
 			<div className={styles.ps}>
-				<img src="../../../img/MCMap.png"/>
+				<img src="../../../img/MDMap.png"/>
 			</div>
 			<div className={styles.descriptionContainer}>
 				<div className={styles.titleBox}>
@@ -172,7 +172,7 @@ function Projects() {
 					<div className={styles.tag}>
 						<p>디자이너</p>
 					</div>
-					<p className={styles.tagContents}>정지윤·김나연·박도은 송지윤·오시헌</p>
+					<p className={styles.tagContents4}>정지윤·김나연·박도은<br/>송지윤·오시헌</p>
 				</div>
 				<div className={styles.innerBox}>
 					<div className={styles.tag}>
@@ -200,7 +200,7 @@ function Projects() {
 				</div>
 			</div>
 			<div className={styles.ps}>
-			<img src="../../../img/MDMap.png"/>
+			<img src="../../../img/MEMap.png"/>
 			</div>
 			<div className={styles.descriptionContainer}>
 				<div className={styles.titleBox}>
@@ -215,7 +215,7 @@ function Projects() {
 					<div className={styles.tag}>
 						<p>디자이너</p>
 					</div>
-					<p className={styles.tagContents}>정지윤·김나연</p>
+					<p className={styles.tagContents4}>정지윤·김나연</p>
 				</div>
 				<div className={styles.innerBox}>
 					<div className={styles.tag}>
@@ -243,7 +243,7 @@ function Projects() {
 				</div>
 			</div>
 			<div className={styles.ps}>
-			<img src="../../../img/MEMap.png"/>
+			<img src="../../../img/MFMap.png"/>
 			</div>
 			<div className={styles.descriptionContainer}>
 				<div className={styles.titleBox}>
@@ -258,7 +258,7 @@ function Projects() {
 					<div className={styles.tag}>
 						<p>디자이너</p>
 					</div>
-					<p className={styles.tagContents}>한승우·강지수·박규리·임재윤</p>
+					<p className={styles.tagContents4}>한승우·강지수<br/>박규리·임재윤</p>
 				</div>
 				<div className={styles.innerBox}>
 					<div className={styles.tag}>
@@ -284,9 +284,6 @@ function Projects() {
 						/>
 					</p>
 				</div>
-			</div>
-			<div className={styles.ps}>
-			<img src="../../../img/MFMap.png"/>
 			</div>
 		</div>
 	);

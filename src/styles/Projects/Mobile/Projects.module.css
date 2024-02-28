@@ -10,15 +10,17 @@
 	src: url(../../../fonts/YDIYGO350.woff) format("woff"),
 		url(../../../fonts/YDIYGO350.ttf) format("truetype");
 }
+
 .png{
 	width: 20px;
 }
 
 
 .ps img {
-	padding: 50px;
-    width: 303px;
-    height: 190px;
+	
+    padding: 30px;
+    width: 100%;
+    height: 100%;
 }
 
 .container {
@@ -181,7 +183,6 @@
 }
 
 .tagContents {
-	width: auto;
 	height: 40px;
 	display: flex;
 	flex-direction: row;
@@ -351,4 +352,25 @@
 	flex: none;
 	order: 0;
 	flex-grow: 0;
+}
+.tagContents4 {
+	height: 40px;
+	display: flex;
+	flex-direction: row;
+	margin: 0;
+
+	font-family: "YDIYGO350";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 23px;
+	line-height: 150%;
+	/* or 39px */
+	display: flex;
+	align-items: center;
+	text-align: right;
+
+	color: #ffffff;
+
+	text-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
+
 }
