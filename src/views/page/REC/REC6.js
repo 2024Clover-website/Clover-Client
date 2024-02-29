@@ -13,7 +13,7 @@ import { saveAs } from 'file-saver';
 // import loding3 from "../../../circle3.png";
 // import loding4 from "../../../circle4.png";
 // import loding5 from "../../../circle5.png";
-import styles from "../../../styles/components/REC6.module.css";
+import styles from "../../../styles/REC/REC6.module.css";
 import 'react-horizontal-scrolling-menu/dist/styles.css';
 import tape from "../../../tape.png";
 import videoREC from "../../../video/recBG.mp4";

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../../styles/components/REC.module.css"
+import styles from "../../../styles/REC/REC.module.css"
 import pencilimg from "../../../img/Hero.png";
 import videoREC from "../../../video/recBG.mp4";
 

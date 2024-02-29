@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "../../../styles/components/REC2.module.css"
+import styles from "../../../styles/REC/REC2.module.css"
 import { useNavigate } from "react-router-dom";
 import videoREC from "../../../video/recBG.mp4";
 
