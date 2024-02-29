@@ -363,58 +363,68 @@ function REC6() {
 					</div>
 				</div>
 			</CSSTransition>
-			<Modal
-				isOpen={isModalOpen}
-				onRequestClose={() => setIsModalOpen(false)}
-				style={{
-					content: {
-						top: "0%",
-						left: "0%",
-						right: "0%",
-						bottom: "0%",
-						backgroundImage: `url(${modalBG})`,
-						overflow: "auto",
-						WebkitOverflowScrolling: "touch",
-						borderRadius: "0", // 모달의 모서리를 직사각형으로 만듭니다.
-						outline: "none",
-						padding: "0",
-					},
-				}}
+			<CSSTransition
+				in={isModalOpen}
+				timeout={0}
+				delay={0}
+				classNames="motion-slide"
+				mountOnEnter
+				unmountOnExit
 			>
-				<img
-					src={BackButton}
-					alt="뒤로가기"
-					onClick={() => setIsModalOpen(false)}
-					className={styles.BackButton}
-				/>
-				<div className={styles.Ct01}>
-					<div className={styles.Ct05}>
-						{/* <img src={QRSImage} alt="QRS" className={styles.qrs}/> */}
-						<div
-							style={{ filter: "drop-shadow(0px 3px 18px rgba(0, 0, 0, 0.2))" }}
-						>
-							<LinkQRCodeGenerator link={qrLink} />
+				<Modal
+					isOpen={isModalOpen}
+					onRequestClose={() => setIsModalOpen(false)}
+					style={{
+						content: {
+							top: "0%",
+							left: "0%",
+							right: "0%",
+							bottom: "0%",
+							backgroundImage: `url(${modalBG})`,
+							overflow: "auto",
+							WebkitOverflowScrolling: "touch",
+							borderRadius: "0", // 모달의 모서리를 직사각형으로 만듭니다.
+							outline: "none",
+							padding: "0",
+						},
+					}}
+				>
+					
+					<img
+						src={BackButton}
+						alt="뒤로가기"
+						onClick={() => setIsModalOpen(false)}
+						className={styles.BackButton}
+					/>
+					<div className={styles.Ct01}>
+						<div className={styles.Ct05}>
+							{/* <img src={QRSImage} alt="QRS" className={styles.qrs}/> */}
+							<div
+								style={{ filter: "drop-shadow(0px 3px 18px rgba(0, 0, 0, 0.2))" }}
+							>
+								<LinkQRCodeGenerator link={qrLink} />
+							</div>
+							<div className={styles.Ct02}>
+								<div className={styles.Ct03}>
+									<p>이미지 저장하기</p>
+								</div>
+								<div className={styles.Ct04}>
+									<p>
+										{name} 님의 연필을 소중히 간직할 수 있어요 카메라로 아래
+										QR코드를 찍어주세요
+									</p>
+								</div>
+							</div>
 						</div>
-						<div className={styles.Ct02}>
-							<div className={styles.Ct03}>
-								<p>이미지 저장하기</p>
-							</div>
-							<div className={styles.Ct04}>
-								<p>
-									{name} 님의 연필을 소중히 간직할 수 있어요 카메라로 아래
-									QR코드를 찍어주세요
-								</p>
-							</div>
+						<div className={styles.blankC}></div>
+						<div className={styles.Ct06}>
+							<button className={styles.back} onClick={handleBack}>
+								<p>처음으로</p>
+							</button>
 						</div>
 					</div>
-					<div className={styles.blankC}></div>
-					<div className={styles.Ct06}>
-						<button className={styles.back} onClick={handleBack}>
-							<p>처음으로</p>
-						</button>
-					</div>
-				</div>
-			</Modal>
+				</Modal>
+			</CSSTransition>
 		</div>
 	);
 }
