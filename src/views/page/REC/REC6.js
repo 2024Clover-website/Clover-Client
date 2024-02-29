@@ -209,7 +209,7 @@ function REC6() {
 						/>
 						<img
 							className={showlastment ? styles.tapeout : styles.sectape}
-							art=""
+							alt=""
 							src={tape}
 						/>
 					</div>
