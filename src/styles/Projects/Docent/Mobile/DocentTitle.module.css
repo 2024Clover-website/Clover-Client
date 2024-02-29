@@ -1,14 +1,14 @@
 @font-face {
 	font-family: "Avenir-Black";
-	src: url(../../../../../src/fonts/AvenirLTStd-Black.ttf);
+	src: url(../../../../fonts/AvenirLTStd-Black.ttf);
 }
 
 @font-face {
 	font-family: "YDIYGO340";
 	font-style: normal;
 	font-weight: 100;
-	src: url(../../../../../src/fonts/YDIYGO340.woff) format("woff"),
-		url(../../../../../src/fonts/YDIYGO340.ttf) format("truetype");
+	src: url(../../../../fonts/YDIYGO340.woff) format("woff"),
+		url(../../../../fonts/YDIYGO340.ttf) format("truetype");
 }
 
 .container {
