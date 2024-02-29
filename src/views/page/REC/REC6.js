@@ -72,6 +72,8 @@ function REC6() {
 	const [showoutlastment, setShowOutLastment] = useState(false);
 	const [showoutcardct, setShowOutCardct] = useState(false);
 
+	let number = `./${patternId}${colorId}.png`;
+
 	useEffect(() => {
 		if (location.state.wish === 1) setwish("타인이 갖는 기대");
 		else if (location.state.wish === 2)
@@ -165,8 +167,6 @@ function REC6() {
 			return () => el.removeEventListener("wheel", onWheel);
 		}
 	}, [elRef]);
-
-	let number = `./${patternId}${colorId}.png`;
 
 	return (
 		<div className={styles.backcolor}>
