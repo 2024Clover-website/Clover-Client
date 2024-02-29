@@ -1,22 +1,22 @@
 @font-face {
 	font-family: "Avenir";
-	src: url(../../../../../src/fonts/AvenirLTStd-Black.ttf);
+	src: url(../../../../../public/fonts/AvenirLTStd-Black.ttf);
 }
 
 @font-face {
 	font-family: "YDIYGO350";
 	font-style: normal;
 	font-weight: 100;
-	src: url(../../../../../src/fonts/YDIYGO350.woff) format("woff"),
-		url(../../../../../src/fonts/YDIYGO350.ttf) format("truetype");
+	src: url(../../../../../public/fonts/YDIYGO350.woff) format("woff"),
+		url(../../../../../public/fonts/YDIYGO350.ttf) format("truetype");
 }
 
 @font-face {
 	font-family: "YDIYGO320";
 	font-style: normal;
 	font-weight: 100;
-	src: url(../../../../../src/fonts/YDIYGO320.woff) format("woff"),
-		url(../../../../../src/fonts/YDIYGO320.ttf) format("truetype");
+	src: url(../../../../../public/fonts/YDIYGO320.woff) format("woff"),
+		url(../../../../../public/fonts/YDIYGO320.ttf) format("truetype");
 }
 
 .container {
