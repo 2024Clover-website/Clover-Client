@@ -1,0 +1,155 @@
+.backcolor{
+    width: 1920px;
+    height: 100vh;
+    position: absolute;
+}
+.title{
+    margin-top: 205px;
+    color: #FFF;
+    text-align: center;
+    font-family: YDIYGO350;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 45px */
+    text-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
+}
+
+.WishContainer{
+    margin-top: 60px;
+    flex-direction: row;
+    justify-content: center;
+    display: flex;
+    height: 300px;
+    gap: 50px;
+    flex-shrink: 0;
+}
+.Wish{
+    cursor: pointer;
+    box-sizing: border-box;
+    border-radius: 35px;
+    border: 3px solid rgba(255, 255, 255, 0.75);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.25);
+    width: 300px;
+    height: 300px;
+    flex-shrink: 0;
+
+    color: #FFF;;
+    font-family: YDIYGO350;
+    padding: 30px;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 39px */
+}
+.wishdown{
+    cursor: pointer;
+    box-sizing: border-box;
+    border-radius: 35px;
+    border: 3px solid rgba(255, 255, 255, 0.75);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.25);
+    width: 300px;
+    height: 300px;
+    flex-shrink: 0;
+
+    color: #FFF;;
+    font-family: YDIYGO350;
+    padding: 30px;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 39px */
+
+    scale: 0.98;
+    opacity: 0.4;
+    transition: cubic-bezier(0.25,1,0.25,1);
+    transition-duration: 0.3s;
+}
+.Wish:active{
+    /* transition-timing-function:cubic-bezier(0.77, 0, 0.175, 1); */
+    scale: 0.97;
+    transition: cubic-bezier(0.15,1,0.5,1);
+    transition-duration: 0.2s;
+    opacity: 0.4;
+}
+.wishdown:active{
+    scale: 0.97;
+    transition: cubic-bezier(0.15,1,0.5,1);
+    transition-duration: 0.2s;
+    opacity: 0.4;
+}
+.Wishup{
+    cursor: pointer;
+    box-sizing: border-box;
+    border-radius: 35px;
+    border: 3px solid rgba(255, 255, 255, 0.75);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.25);
+    width: 300px;
+    height: 300px;
+    flex-shrink: 0;
+
+    color: #FFF;;
+    font-family: YDIYGO350;
+    padding: 30px;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 39px */
+
+    scale: 1.05;
+    opacity: 1;
+    transition: cubic-bezier(0.15,1,0.5,1);
+    transition-duration: 0.5s;
+}
+.WishText{
+    padding-top: 20px;
+    color: #FFF;
+    font-family: YDIYGO330;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+.IconContainer{
+    text-align: right;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    margin-top: 50px;
+}
+.space{
+    position: relative;
+    opacity: 0;
+    padding-left: 110px;
+}
+.SelfWish{
+    cursor: pointer;
+    position: relative;
+    color: #FFF;
+    padding-right: 110px;
+    text-align: right;
+    font-family: YDIYGO330;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    text-shadow: 0px 3px 18px rgba(0, 0, 0, 0.2);
+}
+.NextIcon{
+    cursor: pointer;
+    transition: cubic-bezier(0.15,1.25,0.25,1);
+    transition-duration: 0.3s;
+}
+.NextIcon:active{
+    cursor: pointer;
+    scale: 0.97;
+    transition: cubic-bezier(0.15,1,0.5,1);
+    transition-duration: 0.2s;
+}
