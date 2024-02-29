@@ -13,7 +13,7 @@ function PodcastTitle() {
 	
 	const currentSubdomain = window.location.host.split(".")[0];
 	let teamId = location.state ? location.state.teamId : null;;
-	
+	if(!teamId){
 		if (currentSubdomain === "m") {
 			if (location.state.teamId === null) {
 				teamId = 1;
@@ -31,6 +31,7 @@ function PodcastTitle() {
 		}else{
 			teamId=2;
 		}
+	}
 	console.log(teamId);
 
 	const [progress, setProgress] = useState(0);
