@@ -18,9 +18,9 @@ function PodcastTitle() {
 			if (location.state.teamId === null) {
 				teamId = 1;
 			}
-		} else if (currentSubdomain === "it") {
-			teamId = 2;
 		} else if (currentSubdomain === "ts") {
+			teamId = 2;
+		} else if (currentSubdomain === "it") {
 			teamId = 3;
 		} else if (currentSubdomain === "vm") {
 			teamId = 4;

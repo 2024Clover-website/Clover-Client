@@ -7,6 +7,8 @@ import modalBG from "../../../img/ModalBG.png";
 import BackButton from "../../../img/뒤로가기.png";
 import html2canvas from "html2canvas";
 import { saveAs } from "file-saver";
+
+
 // import loding1 from "../../../circle1.png";
 // import loding2 from "../../../circle2.png";
 // import loding3 from "../../../circle3.png";
@@ -37,13 +39,33 @@ function REC6() {
 	const colorId = location.state.color;
 	const name = location.state.name;
 	const cardRef = useRef(null);
-
+	const uploadImgur = async(url)=>{
+		const apiBase='https://api.imgur.com/3/image';
+		axios.post(apiBase,{
+			image:url,
+			type:'base64'
+		},{
+			headers:{
+				Authorization:'client-ID' + "a64c4f7b53be5ba"
+			}
+		}).then(res =>{
+			
+			console.log(res.data.link)
+		}).catch(e=>{
+			console.log(e)
+		})
+	}
 	const handleDownload = async () => {
 		console.log("download called");
 		if (!cardRef.current) return;
 		try {
 			const div = cardRef.current;
-			const canvas = await html2canvas(div, { scale: 2 });
+			let url="";
+			const canvas = (await html2canvas(div, { scale: 2 })).then(async (canvas)=>{
+				url=await canvas.toDataURL("image/png").split('.')[1];
+				
+			});
+			await uploadImgur(url);
 			canvas.toBlob((blob) => {
 				if (blob !== null) {
 					saveAs(blob, "myPencil.png");
