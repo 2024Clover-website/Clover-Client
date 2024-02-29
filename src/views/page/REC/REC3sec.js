@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import styles from "../../../styles/components/REC3sec.module.css"
+import styles from "../../../styles/REC/REC3sec.module.css"
 import videoREC from "../../../video/recBG.mp4";
 
 function REC3sec(){

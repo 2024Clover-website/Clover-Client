@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "../../../styles/components/REC5.module.css";
+import styles from "../../../styles/REC/REC5.module.css";
 import { useLocation, useNavigate } from "react-router-dom";
 import videoREC from "../../../video/recBG.mp4";
 
