@@ -120,7 +120,7 @@ function REC6() {
 			}
 		}
 		fetchData();
-		console.log(number);
+		// console.log(number);
 		console.log(hero);
 	}, [hero, colorId, number, patternId]);
 	// const scrollRef = useHorizontalScroll();
