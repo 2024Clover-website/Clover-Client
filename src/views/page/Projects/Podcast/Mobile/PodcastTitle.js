@@ -12,7 +12,7 @@ function PodcastTitle() {
 
 	const currentSubdomain = window.location.host.split(".")[0];
 	let teamId = location.state.teamId;
-
+	console.log(currentSubdomain);
 	if (currentSubdomain === "m") {
 		if (location.state.teamId === null) {
 			teamId = 1;
@@ -40,10 +40,26 @@ function PodcastTitle() {
 
 	useEffect(() => {
 		let res;
+		if (currentSubdomain === "m") {
+			if (location.state.teamId === null) {
+				teamId = 1;
+			}
+		} else if (currentSubdomain === "it") {
+			teamId = 2;
+		} else if (currentSubdomain === "ts") {
+			teamId = 3;
+		} else if (currentSubdomain === "vm") {
+			teamId = 4;
+		} else if (currentSubdomain === "dj") {
+			teamId = 5;
+		} else if (currentSubdomain === "os") {
+			teamId = 6;
+		}
 		async function fetchData() {
 			res = await axios.get(
 				`https://api.clover-inarow.site/teams/${teamId}/podcast`
 			);
+			console.log(res);
 			if (res.data.isSuccess) {
 				setTitle(res.data.result.title);
 				setMember(res.data.result.member);

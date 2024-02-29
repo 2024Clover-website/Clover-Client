@@ -38,6 +38,21 @@ function DocentTitle() {
 
 	useEffect(() => {
 		let res;
+		if (currentSubdomain === "m") {
+			if (location.state.teamId === null) {
+				teamId = 1;
+			}
+		} else if (currentSubdomain === "it") {
+			teamId = 2;
+		} else if (currentSubdomain === "ts") {
+			teamId = 3;
+		} else if (currentSubdomain === "vm") {
+			teamId = 4;
+		} else if (currentSubdomain === "dj") {
+			teamId = 5;
+		} else if (currentSubdomain === "os") {
+			teamId = 6;
+		}
 		async function fetchData() {
 			res = await axios.get(
 				`https://api.clover-inarow.site/teams/${teamId}/docent`
