@@ -12,6 +12,7 @@ function DocentComment() {
 	const location = useLocation();
 
 	const teamId = location.state.teamId;
+
 	const background = location.state.background;
 
 	const [text, setText] = useState("");

@@ -10,7 +10,26 @@ function PodcastTitle() {
 	const navigate = useNavigate();
 	const location = useLocation();
 
-	const teamId = location.state.teamId;
+	const currentSubdomain = window.location.host.split(".")[0];
+	let teamId = location.state.teamId;
+
+	if (currentSubdomain === "m") {
+		if (location.state.teamId === null) {
+			teamId = 1;
+		}
+	} else if (location.state.teamId === "it") {
+		teamId = 2;
+	} else if (location.state.teamId === "ts") {
+		teamId = 3;
+	} else if (location.state.teamId === "vm") {
+		teamId = 4;
+	} else if (location.state.teamId === "dj") {
+		teamId = 5;
+	} else if (location.state.teamId === "os") {
+		teamId = 6;
+	}
+
+	console.log(teamId);
 
 	const [progress, setProgress] = useState(0);
 
