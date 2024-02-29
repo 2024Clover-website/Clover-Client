@@ -16,15 +16,15 @@ function DocentTitle() {
 		if (location.state.teamId === null) {
 			teamId = 1;
 		}
-	} else if (location.state.teamId === "it") {
+	} else if (currentSubdomain === "it") {
 		teamId = 2;
-	} else if (location.state.teamId === "ts") {
+	} else if (currentSubdomain === "ts") {
 		teamId = 3;
-	} else if (location.state.teamId === "vm") {
+	} else if (currentSubdomain === "vm") {
 		teamId = 4;
-	} else if (location.state.teamId === "dj") {
+	} else if (currentSubdomain === "dj") {
 		teamId = 5;
-	} else if (location.state.teamId === "os") {
+	} else if (currentSubdomain === "os") {
 		teamId = 6;
 	}
 

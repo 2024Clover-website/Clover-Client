@@ -5,7 +5,7 @@ import { BsFillRecordFill } from "react-icons/bs";
 
 function Header() {
 	function handleAboutClick() {
-		window.location.href = "/About";
+		window.location.href = "/";
 	}
 
 	function handleProjectsClick() {
