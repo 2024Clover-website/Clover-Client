@@ -2,21 +2,21 @@
 	font-family: "YDIYGO340";
 	font-style: normal;
 	font-weight: 100;
-	src: url(../../../../fonts/YDIYGO340.woff) format("woff"),
-		url(../../../../fonts/YDIYGO340.ttf) format("truetype");
+	src: url(../../../../../public/fonts/YDIYGO340.woff) format("woff"),
+		url(../../../../../public/fonts/YDIYGO340.ttf) format("truetype");
 }
 
 @font-face {
 	font-family: "YDIYGO330";
 	font-style: normal;
 	font-weight: 100;
-	src: url(../../../../fonts/YDIYGO330.woff) format("woff"),
-		url(../../../../fonts/YDIYGO330.ttf) format("truetype");
+	src: url(../../../../../public/fonts/YDIYGO330.woff) format("woff"),
+		url(../../../../../public/fonts/YDIYGO330.ttf) format("truetype");
 }
 
 @font-face {
 	font-family: "Avenir-Black";
-	src: url(../../../../fonts/AvenirLTStd-Black.ttf);
+	src: url(../../../../../public/fonts/AvenirLTStd-Black.ttf);
 }
 
 .background {
