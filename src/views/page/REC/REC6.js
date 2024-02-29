@@ -26,51 +26,62 @@ import { useLocation } from "react-router-dom";
 function REC6() {
 	const [wish, setwish] = useState("");
 	const [littlewish, setlittlewish] = useState("");
-
+	const [qrLink, setQRLink] = useState("");
 	const [isModalOpen, setIsModalOpen] = useState(false);
 
 	const LinkQRCodeGenerator = ({ link }) => {
 		return <QRCode value={link} size={200} />;
 	};
-	const link = "../../../img/Hero.png"; // QR 코드로 변환하려는 링크로 변경하세요.
+	let link = "www.clover-inarow.site"; // QR 코드로 변환하려는 링크로 변경하세요.
 
 	const location = useLocation();
 	const patternId = location.state.pattern;
 	const colorId = location.state.color;
 	const name = location.state.name;
 	const cardRef = useRef(null);
-	const uploadImgur = async(url)=>{
-		const apiBase='https://api.imgur.com/3/image';
-		axios.post(apiBase,{
-			image:url,
-			type:'base64'
-		},{
-			headers:{
-				Authorization:'client-ID' + "a64c4f7b53be5ba"
-			}
-		}).then(res =>{
+	const uploadImgur = async (url) => {
+		try {
+			const apiBase = 'https://api.imgbb.com/1/upload';
+			const CLIENT_ID = '';
+
+			let body= new FormData()
+			body.set('key','836bfb3fbab7fe820615f1ba0324ab80')
+			body.append('image',url)
+			console.log(url);
 			
-			console.log(res.data.link)
-		}).catch(e=>{
-			console.log(e)
-		})
-	}
+			const response = await axios({
+				method: 'post',
+				url:apiBase,
+				data: body
+			})
+			setQRLink(response.data.data.url);
+	
+			console.log('Image upload successful:', response.data.data.url);
+			return response.data.data.url;
+		} catch (error) {
+			console.error('Error uploading image:', error);
+			// 적절하게 오류 처리, 예: 사용자에게 오류 메시지 표시
+		}
+	};
 	const handleDownload = async () => {
 		console.log("download called");
 		if (!cardRef.current) return;
 		try {
 			const div = cardRef.current;
 			let url="";
-			const canvas = (await html2canvas(div, { scale: 2 })).then(async (canvas)=>{
-				url=await canvas.toDataURL("image/png").split('.')[1];
+			const canvas = await html2canvas(div, { scale: 2 });
+			url=canvas.toDataURL("image/png").split(',')[1];
+			link=await uploadImgur(url);
+
+			setIsModalOpen(true);
+			// canvas.toBlob(async (blob) => {
+			// 	console.log("블롭",blob)
 				
-			});
-			await uploadImgur(url);
-			canvas.toBlob((blob) => {
-				if (blob !== null) {
-					saveAs(blob, "myPencil.png");
-				}
-			});
+			// 	if (blob !== null) {
+					
+			// 		saveAs(blob, "myPencil.png");
+			// 	}
+			// });
 		} catch (error) {
 			console.error("Error converting div to image:", error);
 		}
@@ -166,7 +177,7 @@ function REC6() {
 		setTimeout(() => setShowOutCardct(true), 58000);
 		setTimeout(() => setShowContainer4(false), 58100);
 		setTimeout(() => setShowContainer5(true), 58100);
-		setTimeout(() => setIsModalOpen(true), 64100);
+		// setTimeout(() => setIsModalOpen(true), 64100);
 		// setTimeout(() => setlodingcircle(2), 47000);
 		// setTimeout(() => setlodingcircle(3), 48000);
 		// setTimeout(() => setlodingcircle(4), 49000);
@@ -310,7 +321,7 @@ function REC6() {
                     <img className={styles.loding4} art = "" src = {loding4}/>
                     <img className={styles.loding5} art = "" src = {loding5}/> */}
 					<div className={styles.fifthct}>
-						<div className={styles.fifthct1} ref={cardRef}>
+						<div id ="card" className={styles.fifthct1} ref={cardRef}>
 							<div className={styles.fifthcd1}>
 								<img
 									alt=""
@@ -352,58 +363,68 @@ function REC6() {
 					</div>
 				</div>
 			</CSSTransition>
-			<Modal
-				isOpen={isModalOpen}
-				onRequestClose={() => setIsModalOpen(false)}
-				style={{
-					content: {
-						top: "0%",
-						left: "0%",
-						right: "0%",
-						bottom: "0%",
-						backgroundImage: `url(${modalBG})`,
-						overflow: "auto",
-						WebkitOverflowScrolling: "touch",
-						borderRadius: "0", // 모달의 모서리를 직사각형으로 만듭니다.
-						outline: "none",
-						padding: "0",
-					},
-				}}
+			<CSSTransition
+				in={isModalOpen}
+				timeout={0}
+				delay={0}
+				classNames="motion-slide"
+				mountOnEnter
+				unmountOnExit
 			>
-				<img
-					src={BackButton}
-					alt="뒤로가기"
-					onClick={() => setIsModalOpen(false)}
-					className={styles.BackButton}
-				/>
-				<div className={styles.Ct01}>
-					<div className={styles.Ct05}>
-						{/* <img src={QRSImage} alt="QRS" className={styles.qrs}/> */}
-						<div
-							style={{ filter: "drop-shadow(0px 3px 18px rgba(0, 0, 0, 0.2))" }}
-						>
-							<LinkQRCodeGenerator link={link} />
+				<Modal
+					isOpen={isModalOpen}
+					onRequestClose={() => setIsModalOpen(false)}
+					style={{
+						content: {
+							top: "0%",
+							left: "0%",
+							right: "0%",
+							bottom: "0%",
+							backgroundImage: `url(${modalBG})`,
+							overflow: "auto",
+							WebkitOverflowScrolling: "touch",
+							borderRadius: "0", // 모달의 모서리를 직사각형으로 만듭니다.
+							outline: "none",
+							padding: "0",
+						},
+					}}
+				>
+					
+					<img
+						src={BackButton}
+						alt="뒤로가기"
+						onClick={() => setIsModalOpen(false)}
+						className={styles.BackButton}
+					/>
+					<div className={styles.Ct01}>
+						<div className={styles.Ct05}>
+							{/* <img src={QRSImage} alt="QRS" className={styles.qrs}/> */}
+							<div
+								style={{ filter: "drop-shadow(0px 3px 18px rgba(0, 0, 0, 0.2))" }}
+							>
+								<LinkQRCodeGenerator link={qrLink} />
+							</div>
+							<div className={styles.Ct02}>
+								<div className={styles.Ct03}>
+									<p>이미지 저장하기</p>
+								</div>
+								<div className={styles.Ct04}>
+									<p>
+										{name} 님의 연필을 소중히 간직할 수 있어요 카메라로 아래
+										QR코드를 찍어주세요
+									</p>
+								</div>
+							</div>
 						</div>
-						<div className={styles.Ct02}>
-							<div className={styles.Ct03}>
-								<p>이미지 저장하기</p>
-							</div>
-							<div className={styles.Ct04}>
-								<p>
-									{name} 님의 연필을 소중히 간직할 수 있어요 카메라로 아래
-									QR코드를 찍어주세요
-								</p>
-							</div>
+						<div className={styles.blankC}></div>
+						<div className={styles.Ct06}>
+							<button className={styles.back} onClick={handleBack}>
+								<p>처음으로</p>
+							</button>
 						</div>
 					</div>
-					<div className={styles.blankC}></div>
-					<div className={styles.Ct06}>
-						<button className={styles.back} onClick={handleBack}>
-							<p>처음으로</p>
-						</button>
-					</div>
-				</div>
-			</Modal>
+				</Modal>
+			</CSSTransition>
 		</div>
 	);
 }
