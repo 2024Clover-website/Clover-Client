@@ -133,18 +133,18 @@ function REC6() {
 		setTimeout(() => setShowLastment(true), 11500);
 		// setTimeout(() => setShowContainer2(false), 12000);
 		setTimeout(() => setShowContainer3(true), 12000);
-		setTimeout(() => setShowOutLastment(true), 40000);
+		setTimeout(() => setShowOutLastment(true), 52000);
 
 		// setTimeout(() => setShowContainer2(false), 7500);
 		// setTimeout(() => setShowContainer4(true), 11500);
 		// setTimeout(() => setShowContainer5(true), 15500);
 		// setTimeout(() => setShowContainer4(true), 41000);일상 작업 카드
 		// setTimeout(() => setShowContainer5(true), 15500);
-		setTimeout(() => setShowContainer4(true), 41000);
-		setTimeout(() => setShowOutCardct(true), 46000);
-		setTimeout(() => setShowContainer4(false), 46100);
-		setTimeout(() => setShowContainer5(true), 46100);
-		setTimeout(() => setIsModalOpen(true), 52100);
+		setTimeout(() => setShowContainer4(true), 53000);
+		setTimeout(() => setShowOutCardct(true), 58000);
+		setTimeout(() => setShowContainer4(false), 58100);
+		setTimeout(() => setShowContainer5(true), 58100);
+		setTimeout(() => setIsModalOpen(true), 64100);
 		// setTimeout(() => setlodingcircle(2), 47000);
 		// setTimeout(() => setlodingcircle(3), 48000);
 		// setTimeout(() => setlodingcircle(4), 49000);
