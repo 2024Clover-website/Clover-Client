@@ -10,36 +10,10 @@ function PodcastTitle() {
 	const navigate = useNavigate();
 	const location = useLocation();
 
+	
 	const currentSubdomain = window.location.host.split(".")[0];
-	let teamId = location.state.teamId;
-	console.log(currentSubdomain);
-	if (currentSubdomain === "m") {
-		if (location.state.teamId === null) {
-			teamId = 1;
-		}
-	} else if (currentSubdomain === "it") {
-		teamId = 2;
-	} else if (currentSubdomain === "ts") {
-		teamId = 3;
-	} else if (currentSubdomain === "vm") {
-		teamId = 4;
-	} else if (currentSubdomain === "dj") {
-		teamId = 5;
-	} else if (currentSubdomain === "os") {
-		teamId = 6;
-	}
-
-	console.log(teamId);
-
-	const [progress, setProgress] = useState(0);
-
-	const [title, setTitle] = useState("");
-	const [teamName, setTeamName] = useState("");
-	const [member, setMember] = useState([]);
-	const [background, setBackground] = useState("");
-
-	useEffect(() => {
-		let res;
+	let teamId = location.state ? location.state.teamId : null;;
+	
 		if (currentSubdomain === "m") {
 			if (location.state.teamId === null) {
 				teamId = 1;
@@ -54,7 +28,21 @@ function PodcastTitle() {
 			teamId = 5;
 		} else if (currentSubdomain === "os") {
 			teamId = 6;
+		}else{
+			teamId=2;
 		}
+	console.log(teamId);
+
+	const [progress, setProgress] = useState(0);
+
+	const [title, setTitle] = useState("");
+	const [teamName, setTeamName] = useState("");
+	const [member, setMember] = useState([]);
+	const [background, setBackground] = useState("");
+
+	useEffect(() => {
+		let res;
+		
 		async function fetchData() {
 			res = await axios.get(
 				`https://api.clover-inarow.site/teams/${teamId}/podcast`
