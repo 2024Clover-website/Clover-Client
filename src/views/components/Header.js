@@ -2,7 +2,6 @@ import React from "react";
 import "../../styles/components/Header.css";
 
 import { BsFillRecordFill } from "react-icons/bs";
-import { Link } from "react-router-dom";
 
 function Header() {
 	function handleAboutClick() {
