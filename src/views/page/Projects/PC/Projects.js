@@ -24,13 +24,13 @@ const customStyles = {
 function Projects() {
 	const [isDescriptionContainer2Visible, setIsDescriptionContainer2Visible] =
 		useState(true);
-	const [modalOpen,setModalIsOpen] = useState(false);
+	const [modalOpen, setModalIsOpen] = useState(false);
 	const [timeRemaining, setTimeRemaining] = useState(10 * 60);
 	const [description, setDescription] = useState({});
 	const [isDescriptionVisible, setIsDescriptionVisible] = useState(false);
 	const [podcastModalIsOpen, setPodcastModalIsOpen] = useState(false);
 	const [docentModalIsOpen, setDocentModalIsOpen] = useState(false);
-	const [ imageSrc,setImageSrc] = useState({
+	const [imageSrc, setImageSrc] = useState({
 		CTA: "/img/CTA.png",
 		CTB: "/img/CTB.png",
 		CTC: "/img/CTC.png",
@@ -77,7 +77,7 @@ function Projects() {
 			docentTime: "2:54",
 			podcastTime: "6:06",
 			docentqrImage: "../img/바이브 메이커스_도슨트.png",
-			podcastqrImage: "../img/바이브 메이커스_도슨트.png",
+			podcastqrImage: "../img/바이브 메이커스_팟캐스트.png",
 		},
 		CTE: {
 			title: "Dopamine Addiction: Visualization of symptoms",
@@ -114,7 +114,7 @@ function Projects() {
 	}
 
 	function handleImageClick(image) {
-		const temp=imageSrc;
+		const temp = imageSrc;
 		console.log(temp);
 		setDescription(descriptions[image]);
 		setIsDescriptionVisible(true);
@@ -123,11 +123,9 @@ function Projects() {
 			[image]: `/img/${image}.gif`,
 		}));
 	}
-	
-
 
 	useEffect(() => {
-		const temp=modalOpen;
+		const temp = modalOpen;
 		console.log(temp);
 		if (timeRemaining > 0) {
 			const timerId = setTimeout(() => {
@@ -137,7 +135,7 @@ function Projects() {
 		} else {
 			setModalIsOpen(false);
 		}
-	}, [timeRemaining,setModalIsOpen,modalOpen]);
+	}, [timeRemaining, setModalIsOpen, modalOpen]);
 
 	return (
 		<div className={styles.container}>
@@ -145,49 +143,67 @@ function Projects() {
 				className={styles.CTMain}
 				onClick={() => setIsDescriptionContainer2Visible(false)}
 			>
-				<img alt="" src="/img/CTMain.png" autoPlay loop muted playsInline/>
+				<img alt="" src="/img/CTMain.png" autoPlay loop muted playsInline />
 				<div>
 					<img
 						className={`${styles.CTA} ${styles.hoverImage}`}
 						alt=""
 						src="/img/CTA.gif"
 						onClick={() => handleImageClick("CTA")}
-						autoPlay loop muted playsInline
+						autoPlay
+						loop
+						muted
+						playsInline
 					/>
 					<img
 						className={`${styles.CTB} ${styles.hoverImage}`}
 						alt=""
 						src="/img/CTB.gif"
 						onClick={() => handleImageClick("CTB")}
-						autoPlay loop muted playsInline
+						autoPlay
+						loop
+						muted
+						playsInline
 					/>
 					<img
 						className={`${styles.CTC} ${styles.hoverImage}`}
 						alt=""
 						src="/img/CTC.gif"
 						onClick={() => handleImageClick("CTC")}
-						autoPlay loop muted playsInline
+						autoPlay
+						loop
+						muted
+						playsInline
 					/>
 					<img
 						className={`${styles.CTD} ${styles.hoverImage}`}
 						alt=""
 						src="/img/CTD.gif"
 						onClick={() => handleImageClick("CTD")}
-						autoPlay loop muted playsInline
+						autoPlay
+						loop
+						muted
+						playsInline
 					/>
 					<img
 						className={`${styles.CTE} ${styles.hoverImage}`}
 						alt=""
 						src="/img/CTE.gif"
 						onClick={() => handleImageClick("CTE")}
-						autoPlay loop muted playsInline
+						autoPlay
+						loop
+						muted
+						playsInline
 					/>
 					<img
 						className={`${styles.CTF} ${styles.hoverImage}`}
 						alt=""
 						src="/img/CTF.gif"
 						onClick={() => handleImageClick("CTF")}
-						autoPlay loop muted playsInline
+						autoPlay
+						loop
+						muted
+						playsInline
 					/>
 				</div>
 			</div>

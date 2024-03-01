@@ -320,7 +320,7 @@ function Projects() {
 				</div>
 			</div>
 			<div className={styles.ps}>
-				<img alt="" src="/img/MFMmap.png" autoPlay loop muted playsInline />
+				<img alt="" src="/img/MFmap.png" autoPlay loop muted playsInline />
 			</div>
 			<div className={styles.descriptionContainer}>
 				<div className={styles.titleBox}>
