@@ -1,10 +1,11 @@
 body {
     overflow-x: hidden;
 }
-.responsiveImage{
+.responsiveImage {
     width: 100%;
-    
+    position: relative;
 }
+
 .Mpage{
     display: flex;
     flex-direction: column;
@@ -243,8 +244,3 @@ body {
     
 }
 
-.responsiveImage {
-    width: 100%;
-    height: auto;
-    position: relative;
-}
