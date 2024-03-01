@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 
-import axios from "axios";
+//import axios from "axios";
 
 import { useNavigate, useLocation } from "react-router-dom";
 
@@ -16,11 +16,12 @@ function PodcastContent() {
 	const teamId = location.state.teamId;
 	const background = location.state.background;
 	const commentCount = location.state.commentCount;
+	const script = location.state.script;
 
 	const [progress, setProgress] = useState(100);
 	const [playbackRate, setPlaybackRate] = useState(1);
 	const [isMuted, setIsMuted] = useState(false);
-	const [script, setScript] = useState([]);
+	// const [script, setScript] = useState([]);
 	const [runningTime, setRunningTime] = useState(0);
 	const [isLoading, setIsLoading] = useState(true);
 
@@ -41,38 +42,39 @@ function PodcastContent() {
 	};
 
 	useEffect(() => {
-		async function fetchData() {
-			try {
-				const res = await axios.get(
-					`https://api.clover-inarow.site/teams/${teamId}/podcast/script`
-				);
-				if (res.data.isSuccess) {
-					console.log("successed!");
-					setScript(res.data.result);
+		// async function fetchData() {
+		// 	try {
+		// 		const res = await axios.get(
+		// 			`https://api.clover-inarow.site/teams/${teamId}/podcast/script`
+		// 		);
+		// 		if (res.data.isSuccess) {
+		// 			console.log("successed!");
+		// 			setScript(res.data.result);
 
-					const lastScript = res.data.result.slice(-1)[0];
-					if (lastScript) {
-						setRunningTime(lastScript.end_time);
-					}
-				} else {
-					console.log("failed");
-				}
-			} catch (error) {
-				console.error("Error fetching data: ", error);
-			} finally {
-				isLoadingControl();
-			}
+		// 		} else {
+		// 			console.log("failed");
+		// 		}
+		// 	} catch (error) {
+		// 		console.error("Error fetching data: ", error);
+		// 	} finally {
+		// 		isLoadingControl();
+		// 	}
+		// }
+		const lastScript = script.slice(-1)[0];
+		if (lastScript) {
+			setRunningTime(lastScript.end_time);
 		}
 
-		fetchData();
-	}, [teamId, isLoading]);
+		isLoadingControl();
+
+		// fetchData();
+	}, [script]);
 
 	function isLoadingControl() {
 		setIsLoading(false);
 	}
 
 	useEffect(() => {
-		console.log(isLoading);
 		if (!isLoading) {
 			const interval = setInterval(() => {
 				setProgress((progress) => {
@@ -159,7 +161,28 @@ function PodcastContent() {
 
 	if (isLoading) {
 		console.log("loading");
-		return <div>Loading...</div>;
+		return (
+			<div>Loading</div>
+			// <div
+			// 	style={{ width: window.innerWidth, height: window.innerHeight }}
+			// 	className={styles.background}
+			// >
+			// 	{background === "" ? (
+			// 		<div></div>
+			// 	) : (
+			// 		<video
+			// 			loop
+			// 			muted
+			// 			playsInline
+			// 			autoPlay={true}
+			// 			style={{ height: "100%" }}
+			// 			className={styles.background}
+			// 		>
+			// 			<source src={background} type="video/mp4" />
+			// 		</video>
+			// 	)}
+			// </div>
+		);
 	} else {
 		console.log("loaded");
 		return (
