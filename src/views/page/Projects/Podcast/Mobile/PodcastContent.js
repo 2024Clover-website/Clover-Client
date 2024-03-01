@@ -1,31 +1,29 @@
 import React, { useState, useEffect, useRef } from "react";
 
-//import axios from "axios";
-
+import axios from "axios";
+import { List, AutoSizer } from "react-virtualized";
 import { useNavigate, useLocation } from "react-router-dom";
 
 import styles from "../../../../../styles/Projects/Docent/Mobile/DocentContent.module.css";
 
+
 function PodcastContent() {
 	const navigate = useNavigate();
-	const location = useLocation();
+    const location = useLocation();
+    const audioRef = useRef();
+    const record = location.state.record;
+    const teamId = location.state.teamId;
+    const background = location.state.background;
+    const commentCount = location.state.commentCount;
+    const [progress, setProgress] = useState(100);
+    const [playbackRate, setPlaybackRate] = useState(1);
+    const [isMuted, setIsMuted] = useState(false);
+    const [script, setScript] = useState([]);
+    const [runningTime, setRunningTime] = useState(0);
+    const [isLoading, setIsLoading] = useState(true);
+    let relativePosition;
 
-	const audioRef = useRef();
-
-	const record = location.state.record;
-	const teamId = location.state.teamId;
-	const [background] = useState(location.state.background);
-	const commentCount = location.state.commentCount;
-	const script = location.state.script;
-
-	const [progress, setProgress] = useState(100);
-	const [playbackRate, setPlaybackRate] = useState(1);
-	const [isMuted, setIsMuted] = useState(false);
-	// const [script, setScript] = useState([]);
-	const [runningTime, setRunningTime] = useState(0);
-	const [isLoading, setIsLoading] = useState(true);
-
-	let relativePosition;
+	
 
 	const handleSpeedClick = () => {
 		if (audioRef.current) {
@@ -42,42 +40,38 @@ function PodcastContent() {
 	};
 
 	useEffect(() => {
-		if (script !== null) {
-			console.log(script);
-		}
-		// async function fetchData() {
-		// 	try {
-		// 		const res = await axios.get(
-		// 			`https://api.clover-inarow.site/teams/${teamId}/podcast/script`
-		// 		);
-		// 		if (res.data.isSuccess) {
-		// 			console.log("successed!");
-		// 			setScript(res.data.result);
+		async function fetchData() {
+			try {
+				const res = await axios.get(
+					`https://api.clover-inarow.site/teams/${teamId}/podcast/script`
+				);
+				if (res.data.isSuccess) {
+					console.log("successed!");
+					setScript(res.data.result);
 
-		// 		} else {
-		// 			console.log("failed");
-		// 		}
-		// 	} catch (error) {
-		// 		console.error("Error fetching data: ", error);
-		// 	} finally {
-		// 		isLoadingControl();
-		// 	}
-		// }
-		const lastScript = script.slice(-1)[0];
-		if (lastScript) {
-			setRunningTime(lastScript.end_time);
+					const lastScript = res.data.result.slice(-1)[0];
+					if (lastScript) {
+						setRunningTime(lastScript.end_time);
+					}
+				} else {
+					console.log("failed");
+				}
+			} catch (error) {
+				console.error("Error fetching data: ", error);
+			} finally {
+				isLoadingControl();
+			}
 		}
 
-		isLoadingControl();
-
-		// fetchData();
-	}, [script]);
+		fetchData();
+	}, [teamId, isLoading]);
 
 	function isLoadingControl() {
 		setIsLoading(false);
 	}
 
 	useEffect(() => {
+		console.log(isLoading);
 		if (!isLoading) {
 			const interval = setInterval(() => {
 				setProgress((progress) => {
@@ -94,7 +88,7 @@ function PodcastContent() {
 				clearTimeout(interval);
 			};
 		}
-	}, [playbackRate, isLoading, progress]);
+	}, [progress, runningTime, playbackRate, isLoading]);
 
 	const handleProgressBar = (event) => {
 		if (!isLoading) {
@@ -128,7 +122,36 @@ function PodcastContent() {
 		script.profile.map((profile, index) => {
 			return <img alt="" src={profile} />;
 		});
-
+	const rowRenderer = ({ index, key, style }) => {
+		// 가상 스크롤을 위한 rowRenderer 함수를 정의합니다.
+		const scriptItem = script[index];
+		return (
+			<>
+				<div className={styles.avatar}>{profileList(scriptItem)}</div>
+				<p
+					className={
+						audioRef.current &&
+						audioRef.current.currentTime <= scriptItem.end_time &&
+						audioRef.current.currentTime >= scriptItem.start_time
+							? styles.activeP
+							: styles.inactiveP
+					}
+					onClick={() => {
+						if (audioRef.current) {
+							audioRef.current.play();
+							audioRef.current.currentTime = scriptItem.start_time;
+							setProgress(
+								100 - (scriptItem.start_time * 100) / runningTime
+							);
+						}
+					}}
+				>
+					{scriptItem.script}
+				</p>
+				<br />
+			</>
+		);
+	};
 	const scriptCard = script.map((script, index) => {
 		// Use a ternary operator to ensure a value is returned
 		return isLoading ? (
@@ -164,28 +187,7 @@ function PodcastContent() {
 
 	if (isLoading) {
 		console.log("loading");
-		return (
-			<div>Loading</div>
-			// <div
-			// 	style={{ width: window.innerWidth, height: window.innerHeight }}
-			// 	className={styles.background}
-			// >
-			// 	{background === "" ? (
-			// 		<div></div>
-			// 	) : (
-			// 		<video
-			// 			loop
-			// 			muted
-			// 			playsInline
-			// 			autoPlay={true}
-			// 			style={{ height: "100%" }}
-			// 			className={styles.background}
-			// 		>
-			// 			<source src={background} type="video/mp4" />
-			// 		</video>
-			// 	)}
-			// </div>
-		);
+		return <div>Loading...</div>;
 	} else {
 		console.log("loaded");
 		return (
@@ -193,16 +195,20 @@ function PodcastContent() {
 				style={{ width: window.screen.width, height: window.screen.height }}
 				className={styles.background}
 			>
-				<video
-					loop
-					muted
-					playsInline
-					autoPlay={true}
-					style={{ height: "100%" }}
-					className={styles.background}
-				>
-					<source src={background} type="video/mp4" />
-				</video>
+				{background === "" ? (
+					<div></div>
+				) : (
+					<video
+						loop
+						muted
+						playsInline
+						autoPlay={true}
+						style={{ height: "100%" }}
+						className={styles.background}
+					>
+						<source src={background} type="video/mp4" />
+					</video>
+				)}
 				<audio ref={audioRef} autoPlay={true} muted={isMuted}>
 					<source src={record} type="audio/mp3" />
 				</audio>
@@ -300,12 +306,24 @@ function PodcastContent() {
 				</div>
 
 				{/** 내용 container */}
-				<div className={styles.container}>
-					<br />
-					<br />
-					<br />
-					{scriptCard}
-				</div>
+				<div className={styles.tempContainer}
+					
+                    
+                >
+					
+                    <AutoSizer disableHeight>
+                        {({ width,height }) => (
+                            <List
+								
+                                width={window.innerWidth}
+                                height={window.innerHeight} // 가상 스크롤의 높이를 조절합니다.
+                                rowCount={script.length}
+                                rowHeight={100} // 각 항목의 높이를 조절합니다.
+                                rowRenderer={rowRenderer} // rowRenderer 함수를 전달합니다.
+                            />
+                        )}
+                    </AutoSizer>
+                </div>
 
 				{/** 푸터 */}
 				<div className={styles.footer}>

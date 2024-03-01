@@ -122,7 +122,26 @@
 		rgba(217, 217, 217, 0) 100%
 	);
 }
+.tempContainer{
+	display: flex;
+	
+	height: 68.55%;
+	flex-direction: column;
+	margin-top: 24.241%;
+	margin-bottom: 14.778%;
+	
+	align-items: center;
+	overflow-x: hidden;
+	overflow-y: scroll;
 
+	mask-image: linear-gradient(
+		180deg,
+		rgba(217, 217, 217, 0) 0%,
+		#d9d9d9 12.62%,
+		#d9d9d9 86.77%,
+		rgba(217, 217, 217, 0) 100%
+	);
+}
 .container > p {
 	width: 100%;
 
