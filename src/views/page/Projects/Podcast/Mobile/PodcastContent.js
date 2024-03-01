@@ -14,7 +14,7 @@ function PodcastContent() {
 
 	const record = location.state.record;
 	const teamId = location.state.teamId;
-	const background = location.state.background;
+	const [background] = useState(location.state.background);
 	const commentCount = location.state.commentCount;
 	const script = location.state.script;
 
