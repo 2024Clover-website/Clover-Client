@@ -42,6 +42,9 @@ function PodcastContent() {
 	};
 
 	useEffect(() => {
+		if (script !== null) {
+			console.log(script);
+		}
 		// async function fetchData() {
 		// 	try {
 		// 		const res = await axios.get(
@@ -91,7 +94,7 @@ function PodcastContent() {
 				clearTimeout(interval);
 			};
 		}
-	}, [progress, runningTime, playbackRate, isLoading]);
+	}, [playbackRate, isLoading, progress]);
 
 	const handleProgressBar = (event) => {
 		if (!isLoading) {
@@ -190,20 +193,16 @@ function PodcastContent() {
 				style={{ width: window.screen.width, height: window.screen.height }}
 				className={styles.background}
 			>
-				{background === "" ? (
-					<div></div>
-				) : (
-					<video
-						loop
-						muted
-						playsInline
-						autoPlay={true}
-						style={{ height: "100%" }}
-						className={styles.background}
-					>
-						<source src={background} type="video/mp4" />
-					</video>
-				)}
+				<video
+					loop
+					muted
+					playsInline
+					autoPlay={true}
+					style={{ height: "100%" }}
+					className={styles.background}
+				>
+					<source src={background} type="video/mp4" />
+				</video>
 				<audio ref={audioRef} autoPlay={true} muted={isMuted}>
 					<source src={record} type="audio/mp3" />
 				</audio>
