@@ -276,7 +276,7 @@ function Projects() {
 					<div className={styles.tag}>
 						<p>디자이너</p>
 					</div>
-					<p className={styles.tagContents4}>정지윤·김나연</p>
+					<p className={styles.tagContents4}>강지수·박규리</p>
 				</div>
 				<div className={styles.innerBox}>
 					<div className={styles.tag}>

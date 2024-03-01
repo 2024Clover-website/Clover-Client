@@ -86,8 +86,9 @@ function About() {
 				</div>
 			</div>
 			<video
-				className={styles.responsiveImage}
+				className={styles.responsiveImage2}
 				src="./img/About_3.mp4"
+				
 				alt="description"
 				autoPlay
 				loop
@@ -266,7 +267,7 @@ function About() {
 						<p1>UIUX design</p1>
 					</div>
 					<div className={styles.Member}>
-						<p0>김동제</p0>
+						<p0>김동재</p0>
 						<p1>Product design</p1>
 					</div>
 					<div className={styles.Member}>
@@ -299,7 +300,7 @@ function About() {
 						<p1>Graphic design</p1>
 					</div>
 					<div className={styles.Member}>
-						<p0>박지헌</p0>
+						<p0>박지현</p0>
 						<p1>Graphic design</p1>
 					</div>
 				</div>
@@ -336,7 +337,7 @@ function About() {
 						<p1>Visual design</p1>
 					</div>
 					<div className={styles.Member}>
-						<p0>오시현</p0>
+						<p0>오시헌</p0>
 						<p1>Product design</p1>
 					</div>
 				</div>
@@ -408,7 +409,7 @@ function About() {
 				<div className={styles.MC8}>
 					<div className={styles.Member}>
 						<p0>장준용</p0>
-						<p1>Dev/Server</p1>
+						<p1>Server/BE</p1>
 					</div>
 					<div className={styles.Member}>
 						<p0>김성진</p0>
