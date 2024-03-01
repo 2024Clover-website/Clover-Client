@@ -122,6 +122,12 @@ function PodcastContent() {
 		script.profile.map((profile, index) => {
 			return <img alt="" src={profile} />;
 		});
+	const getRowHeight = ({ index }) => {
+		const content = script[index].script;
+		// 계산된 높이 반환 (예: 글자 수 * 폰트 크기)
+		return content.length * 20; // 예시로 폰트 크기를 20으로 가정
+	};
+	
 	const rowRenderer = ({ index, key, style }) => {
 		// 가상 스크롤을 위한 rowRenderer 함수를 정의합니다.
 		const scriptItem = script[index];
@@ -308,14 +314,17 @@ function PodcastContent() {
 				{/** 내용 container */}
 				<div className={styles.tempContainer}>
 					
-                    <AutoSizer disableHeight style={{display: "flex", width: window.innerWidth, }} className={styles.innerContainer}>
+                    <AutoSizer disableHeight style={{display: "flex", width: "100%", height:"100%"}} className={styles.innerContainer}>
                         {({ width,height }) => (
                             <List
 								className={styles.scriptList}
                                 width={window.innerWidth}
                                 height={window.innerHeight} // 가상 스크롤의 높이를 조절합니다.
                                 rowCount={script.length}
-                                rowHeight={100} // 각 항목의 높이를 조절합니다.
+								overscanRowCount={
+									100
+								}
+                                rowHeight={getRowHeight} // 각 항목의 높이를 조절합니다.
                                 rowRenderer={rowRenderer} // rowRenderer 함수를 전달합니다.
                             />
                         )}

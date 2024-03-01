@@ -164,6 +164,8 @@
 .scriptList {
 	width: 100%;
 
+	position: relative;
+
 	margin: 0px 8px;
 
 	margin-bottom: 30px;
