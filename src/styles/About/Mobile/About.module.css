@@ -1,10 +1,22 @@
 body {
     overflow-x: hidden;
 }
+
 .responsiveImage {
+    
     width: 100%;
+    height: 100%;
+    /* transform: none; */
     position: relative;
 }
+.Mcontainer > video {
+    
+    
+    object-fit: contain;
+    margin-top: -90%;
+    margin-bottom: -90%;
+  }
+  
 
 .Mpage{
     display: flex;
