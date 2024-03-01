@@ -86,7 +86,7 @@ function About() {
 				</div>
 			</div>
 			<video
-				className={styles.responsiveImage}
+				className={styles.responsiveImage2}
 				src="./img/About_3.mp4"
 				
 				alt="description"

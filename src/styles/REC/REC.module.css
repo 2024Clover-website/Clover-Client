@@ -26,7 +26,7 @@ video {
 	object-fit: cover;
 	/* transform: scaleX(-1); */
 	width: 100%;
-	min-height: 110svh;
+	/* min-height: 110svh; */
 	z-index: -2;
 }
 .backcolor {
