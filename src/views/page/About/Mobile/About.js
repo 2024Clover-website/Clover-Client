@@ -88,6 +88,7 @@ function About() {
 			<video
 				className={styles.responsiveImage}
 				src="./img/About_3.mp4"
+				
 				alt="description"
 				autoPlay
 				loop
