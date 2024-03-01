@@ -155,7 +155,27 @@ function DocentContent() {
 	};
 
 	if (isLoading) {
-		return <div>Loading...</div>;
+		return (
+			<div
+				style={{ width: window.innerWidth, height: window.innerHeight }}
+				className={styles.background}
+			>
+				{background === "" ? (
+					<div></div>
+				) : (
+					<video
+						loop
+						muted
+						playsInline
+						autoPlay={true}
+						style={{ height: "100%" }}
+						className={styles.background}
+					>
+						<source src={background} type="video/mp4" />
+					</video>
+				)}
+			</div>
+		);
 	} else {
 		return (
 			<>

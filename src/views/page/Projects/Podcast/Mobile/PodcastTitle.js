@@ -10,27 +10,26 @@ function PodcastTitle() {
 	const navigate = useNavigate();
 	const location = useLocation();
 
-	
 	const currentSubdomain = window.location.host.split(".")[0];
-	let teamId = location.state ? location.state.teamId : null;;
-	
-		if (currentSubdomain === "m") {
-			if (location.state.teamId === null) {
-				teamId = 1;
-			}
-		} else if (currentSubdomain === "it") {
-			teamId = 2;
-		} else if (currentSubdomain === "ts") {
-			teamId = 3;
-		} else if (currentSubdomain === "vm") {
-			teamId = 4;
-		} else if (currentSubdomain === "dj") {
-			teamId = 5;
-		} else if (currentSubdomain === "os") {
-			teamId = 6;
-		}else{
-			teamId=2;
+	let teamId = location.state ? location.state.teamId : null;
+
+	if (currentSubdomain === "m") {
+		if (location.state.teamId === null) {
+			teamId = 1;
 		}
+	} else if (currentSubdomain === "it") {
+		teamId = 2;
+	} else if (currentSubdomain === "ts") {
+		teamId = 3;
+	} else if (currentSubdomain === "vm") {
+		teamId = 4;
+	} else if (currentSubdomain === "dj") {
+		teamId = 5;
+	} else if (currentSubdomain === "os") {
+		teamId = 6;
+	} else {
+		teamId = 2;
+	}
 	console.log(teamId);
 
 	const [progress, setProgress] = useState(0);
@@ -42,7 +41,8 @@ function PodcastTitle() {
 
 	useEffect(() => {
 		let res;
-		
+		let response;
+
 		async function fetchData() {
 			res = await axios.get(
 				`https://api.clover-inarow.site/teams/${teamId}/podcast`
@@ -52,6 +52,15 @@ function PodcastTitle() {
 				setTitle(res.data.result.title);
 				setMember(res.data.result.member);
 				setBackground(res.data.result.background);
+			} else {
+				console.log("failed");
+			}
+
+			response = await axios.get(
+				`https://api.clover-inarow.site/teams/${teamId}/podcast/script`
+			);
+			if (response.data.isSuccess) {
+				console.log("successed!");
 			} else {
 				console.log("failed");
 			}
@@ -93,6 +102,7 @@ function PodcastTitle() {
 					background: res.data.result.background,
 					teamId: teamId,
 					commentCount: res.data.result.comment_count,
+					script: response.data.result,
 				},
 			});
 			window.location.href = "/projects/podcast/content";
