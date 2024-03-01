@@ -50,7 +50,7 @@
     background-image: url("../../../../img/cornFake.png");
     background-size: cover;
 }
-video{
+.mp4piles{
     position:fixed;
     object-fit: cover;
     width: 100%;

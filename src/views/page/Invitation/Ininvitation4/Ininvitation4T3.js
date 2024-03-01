@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
-import ininvitationStyles from '../../../style/Invitation/Ininvitation1/Ininvitation1.module.css';
 import video5 from '../../../../video/vibemakerTeamVideo.mp4';
+import ininvitationStyles from '../../../style/Invitation/Ininvitation1/Ininvitation1.module.css';
 
 function AnimatedText({children, delay, className}) {
     const [show, setShow] = useState(false);
@@ -24,7 +24,7 @@ function Ininvitation4T3() {
 
     return (
         <div className={ininvitationStyles.container4}>
-            <video style={{height: window.screen.height}} loop muted autoPlay playsInline>
+            <video className={ininvitationStyles.mp4piles} loop muted autoPlay playsInline>
                 <source src={video5} type='video/mp4'/>
             </video>
             <div className={ininvitationStyles.topContainer}>

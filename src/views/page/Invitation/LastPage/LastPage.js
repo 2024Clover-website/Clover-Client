@@ -1,12 +1,12 @@
+import moment from "moment";
 import React, { useEffect, useState } from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { Link } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
+import video2 from '../../../../video/publicPageVideo.mp4';
 import lastpageStyles from '../../../style/Invitation/LastPage/LastPage.module.css';
 import Backdrop from './components/Backdrop/Backdrop';
 import Modal from './components/Modal/Modal';
-import video2 from '../../../../video/publicPageVideo.mp4';
-import moment from "moment";
 
 function LastPage() {
     const [value, setValue] = useState('서울특별시 종로구 관훈동 196-10');
@@ -74,7 +74,7 @@ function LastPage() {
 
     return (
         <div className={lastpageStyles.ContainerF1}>
-            <video style={{height: window.screen.height}} loop muted autoPlay playsInline>
+            <video className={lastpageStyles.mp4piles} loop muted autoPlay playsInline>
                 <source src={video2} type='video/mp4'/>
             </video>
             <CSSTransition in={showContainer1} timeout={300} classNames="motion-slide" unmountOnExit>
