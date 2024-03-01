@@ -152,38 +152,38 @@ function PodcastContent() {
 			</>
 		);
 	};
-	const scriptCard = script.map((script, index) => {
-		// Use a ternary operator to ensure a value is returned
-		return isLoading ? (
-			<div key={index}>Loading...</div> // Placeholder while loading
-		) : (
-			<>
-				<>
-					<div className={styles.avatar}>{profileList(script)}</div>
+	// const scriptCard = script.map((script, index) => {
+	// 	// Use a ternary operator to ensure a value is returned
+	// 	return isLoading ? (
+	// 		<div key={index}>Loading...</div> // Placeholder while loading
+	// 	) : (
+	// 		<>
+	// 			<>
+	// 				<div className={styles.avatar}>{profileList(script)}</div>
 
-					<p
-						className={
-							audioRef.current &&
-							audioRef.current.currentTime <= script.end_time &&
-							audioRef.current.currentTime >= script.start_time
-								? styles.activeP
-								: styles.inactiveP
-						}
-						onClick={() => {
-							if (audioRef.current) {
-								audioRef.current.play();
-								audioRef.current.currentTime = script.start_time;
-								setProgress(100 - (script.start_time * 100) / runningTime);
-							}
-						}}
-					>
-						{script.script}
-					</p>
-					<br />
-				</>
-			</>
-		);
-	});
+	// 				<p
+	// 					className={
+	// 						audioRef.current &&
+	// 						audioRef.current.currentTime <= script.end_time &&
+	// 						audioRef.current.currentTime >= script.start_time
+	// 							? styles.activeP
+	// 							: styles.inactiveP
+	// 					}
+	// 					onClick={() => {
+	// 						if (audioRef.current) {
+	// 							audioRef.current.play();
+	// 							audioRef.current.currentTime = script.start_time;
+	// 							setProgress(100 - (script.start_time * 100) / runningTime);
+	// 						}
+	// 					}}
+	// 				>
+	// 					{script.script}
+	// 				</p>
+	// 				<br />
+	// 			</>
+	// 		</>
+	// 	);
+	// });
 
 	if (isLoading) {
 		console.log("loading");
@@ -306,15 +306,12 @@ function PodcastContent() {
 				</div>
 
 				{/** 내용 container */}
-				<div className={styles.tempContainer}
+				<div className={styles.tempContainer}>
 					
-                    
-                >
-					
-                    <AutoSizer disableHeight>
+                    <AutoSizer disableHeight style={{display: "flex", width: window.innerWidth, }} className={styles.innerContainer}>
                         {({ width,height }) => (
                             <List
-								
+								className={styles.scriptList}
                                 width={window.innerWidth}
                                 height={window.innerHeight} // 가상 스크롤의 높이를 조절합니다.
                                 rowCount={script.length}
