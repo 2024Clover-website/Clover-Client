@@ -12,13 +12,14 @@ function DocentTitle() {
 	const currentSubdomain = window.location.host.split(".")[0];
 	let teamId = location.state ? location.state.teamId : null;;
 	
+	if(!teamId){
 		if (currentSubdomain === "m") {
 			if (location.state.teamId === null) {
 				teamId = 1;
 			}
-		} else if (currentSubdomain === "it") {
-			teamId = 2;
 		} else if (currentSubdomain === "ts") {
+			teamId = 2;
+		} else if (currentSubdomain === "it") {
 			teamId = 3;
 		} else if (currentSubdomain === "vm") {
 			teamId = 4;
@@ -29,6 +30,7 @@ function DocentTitle() {
 		}else{
 			teamId=2;
 		}
+	}
 	
 	
 

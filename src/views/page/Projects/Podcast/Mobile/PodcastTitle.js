@@ -11,24 +11,25 @@ function PodcastTitle() {
 	const location = useLocation();
 
 	const currentSubdomain = window.location.host.split(".")[0];
-	let teamId = location.state ? location.state.teamId : null;
-
-	if (currentSubdomain === "m") {
-		if (location.state.teamId === null) {
-			teamId = 1;
+	let teamId = location.state ? location.state.teamId : null;;
+	if(!teamId){
+		if (currentSubdomain === "m") {
+			if (location.state.teamId === null) {
+				teamId = 1;
+			}
+		} else if (currentSubdomain === "ts") {
+			teamId = 2;
+		} else if (currentSubdomain === "it") {
+			teamId = 3;
+		} else if (currentSubdomain === "vm") {
+			teamId = 4;
+		} else if (currentSubdomain === "dj") {
+			teamId = 5;
+		} else if (currentSubdomain === "os") {
+			teamId = 6;
+		}else{
+			teamId=2;
 		}
-	} else if (currentSubdomain === "it") {
-		teamId = 2;
-	} else if (currentSubdomain === "ts") {
-		teamId = 3;
-	} else if (currentSubdomain === "vm") {
-		teamId = 4;
-	} else if (currentSubdomain === "dj") {
-		teamId = 5;
-	} else if (currentSubdomain === "os") {
-		teamId = 6;
-	} else {
-		teamId = 2;
 	}
 	console.log(teamId);
 
