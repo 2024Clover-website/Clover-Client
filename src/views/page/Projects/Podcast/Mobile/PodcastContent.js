@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 
 import axios from "axios";
-import { List, AutoSizer } from "react-virtualized";
+import { WindowScroller, CellMeasurer, CellMeasurerCache, AutoSizer, List, ListRowProps } from "react-virtualized";
 import { useNavigate, useLocation } from "react-router-dom";
 
 import styles from "../../../../../styles/Projects/Docent/Mobile/DocentContent.module.css";
@@ -11,6 +11,8 @@ function PodcastContent() {
 	const navigate = useNavigate();
     const location = useLocation();
     const audioRef = useRef();
+
+	const listRef = useRef<List | null>(null);
     const record = location.state.record;
     const teamId = location.state.teamId;
     const background = location.state.background;
@@ -23,7 +25,10 @@ function PodcastContent() {
     const [isLoading, setIsLoading] = useState(true);
     let relativePosition;
 
-	
+	const cache = new CellMeasurerCache({
+		defaultWidth: 100,
+		fixedWidth: true
+	});
 
 	const handleSpeedClick = () => {
 		if (audioRef.current) {
@@ -128,11 +133,12 @@ function PodcastContent() {
 		return content.length * 20; // 예시로 폰트 크기를 20으로 가정
 	};
 	
-	const rowRenderer = ({ index, key, style }) => {
+	const rowRenderer = ({ index, key, parent,style, }) => {
 		// 가상 스크롤을 위한 rowRenderer 함수를 정의합니다.
+		
 		const scriptItem = script[index];
 		return (
-			<>
+			<CellMeasurer cache={cache} parent={parent}key={key}columnIndex={0}rowIndex={index}>
 				<div className={styles.avatar}>{profileList(scriptItem)}</div>
 				<p
 					className={
@@ -155,7 +161,7 @@ function PodcastContent() {
 					{scriptItem.script}
 				</p>
 				<br />
-			</>
+			</CellMeasurer>
 		);
 	};
 	// const scriptCard = script.map((script, index) => {
@@ -313,22 +319,33 @@ function PodcastContent() {
 
 				{/** 내용 container */}
 				<div className={styles.tempContainer}>
-					
-                    <AutoSizer disableHeight style={{display: "flex", width: "100%", height:"100%"}} className={styles.innerContainer}>
-                        {({ width,height }) => (
-                            <List
-								className={styles.scriptList}
-                                width={window.innerWidth}
-                                height={window.innerHeight} // 가상 스크롤의 높이를 조절합니다.
-                                rowCount={script.length}
-								overscanRowCount={
-									100
-								}
-                                rowHeight={getRowHeight} // 각 항목의 높이를 조절합니다.
-                                rowRenderer={rowRenderer} // rowRenderer 함수를 전달합니다.
-                            />
-                        )}
-                    </AutoSizer>
+					<WindowScroller>
+						{({height,scrollTop,isScrollling,onChildScroll})=>(
+							<AutoSizer disableHeight style={{display: "flex", width: "100%", height:"100%"}} className={styles.innerContainer}>
+							{({ width }) => (
+								<List
+									className={styles.scriptList}
+									ref={listRef}
+									width={width}
+									autoHeight
+									height={height} // 가상 스크롤의 높이를 조절합니다.
+									rowCount={script.length}
+									overscanRowCount={
+										150
+									}
+									scrollToAlignment="center"
+									isScrolling={isScrollling}
+									scrollTop={scrollTop}
+									onScroll={onChildScroll}
+									deferredMeasurementCache={cache}
+									rowHeight={getRowHeight} // 각 항목의 높이를 조절합니다.
+									rowRenderer={rowRenderer} // rowRenderer 함수를 전달합니다.
+								/>
+							)}
+						</AutoSizer>
+						)}
+					</WindowScroller>
+                    
                 </div>
 
 				{/** 푸터 */}
