@@ -155,7 +155,7 @@ function PodcastTitle() {
 					xmlns="http://www.w3.org/2000/svg"
 					className={styles.backButton}
 					onClick={() => {
-						navigate(-1);
+						window.location.href="/projects";
 					}}
 				>
 					<g filter="url(#filter0_bd_875_3731)">
